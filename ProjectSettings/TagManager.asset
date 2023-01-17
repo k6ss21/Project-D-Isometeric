@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Elevation
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Elevation
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3031155943
+    locked: 0
+  - name: Edge
+    uniqueID: 3788631737
+    locked: 0
+  - name: LeftWall
+    uniqueID: 4032368891
+    locked: 0
+  - name: SickChar
+    uniqueID: 3062470029
+    locked: 0
+  - name: Player
+    uniqueID: 1185239315
+    locked: 0
+  - name: Right Wall
+    uniqueID: 125240931
+    locked: 0
+  - name: Elavation
+    uniqueID: 3482197027
+    locked: 0
+  - name: Fog
+    uniqueID: 1786535521
+    locked: 0
