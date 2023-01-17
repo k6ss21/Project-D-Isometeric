@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private Vector3 shootDir;
 
-    public float damage; 
+    public float damage;
     public float shootSpeed;
     public void Setup(Vector3 dir)
     {
@@ -31,7 +31,8 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        EnemyAI target = other.GetComponent<EnemyAI>();
+
+        var target = other.gameObject.GetComponent (typeof (IDamagable)) as  IDamagable;
         if (target != null)
         {
             target.TakeDamage(damage);
@@ -39,8 +40,9 @@ public class Projectile : MonoBehaviour
         }
         if (other.CompareTag("Elevation"))
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
+
     }
 
 

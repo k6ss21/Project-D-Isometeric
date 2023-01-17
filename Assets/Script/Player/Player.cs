@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
-    public int healCount;
-    public bool IsHealing = false;
-    public TextMeshProUGUI _healCountText;
 
     public float angle;
     public Transform projectilePf;
 
-    public SpriteRenderer spriteRenderer;
+
     void OnEnable()
     {
         SickChar.OnHealComplete += AddHealCount;
@@ -26,14 +23,12 @@ public class Player : MonoBehaviour
         SickChar.OnSetHealing -= SetHealing;
     }
 
-    void Awake()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
     void Start()
     {
         UpdateHealCountText();
+        currentHealth = health;
+        currentTemperature = temperature;
+        UpdateHealthBar();
     }
     void Update()
     {
@@ -41,7 +36,17 @@ public class Player : MonoBehaviour
         {
             Attack();
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            CoolDown(10);
+        }
     }
+
+    #region HEALING
+
+    public int healCount;
+    public bool IsHealing = false;
+    public TextMeshProUGUI _healCountText;
 
     void AddHealCount()
     {
@@ -55,16 +60,81 @@ public class Player : MonoBehaviour
         _healCountText.text = healCount.ToString();
     }
 
-    public void TakeDamage(float damage)
-    {
-        Debug.Log("Taking DAMAGE!!!! " + damage);
-    }
-
     void SetHealing(bool healing)
     {
         IsHealing = healing;
     }
 
+    #endregion
+
+    #region Health
+
+    [Header("Heath")]
+    public float health;
+    float currentHealth;
+    public Slider healthBarSlider;
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        UpdateHealthBar();
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Player Is DEAD!!");
+        }
+    }
+
+    public void TakeHealth(float h)
+    {
+        currentHealth += h;
+        UpdateHealthBar();
+        if (currentHealth >= health)
+        {
+            currentHealth = health;
+        }
+    }
+
+    public void UpdateHealthBar()
+    {
+        float value = currentHealth / health;
+        healthBarSlider.value = value;
+    }
+
+    #endregion
+
+    #region TEMPERATURE
+
+    [Header("Temperature")]
+    public float temperature; //Total Body Temperature
+    float currentTemperature; // Current Temperature
+    public Slider temperatureBarSlider; //UI Slider for temperature 
+
+    public void CoolDown(float temp) //Function for decrease player temp
+    {
+        currentTemperature -= temp;
+        UpdateTemperatureBar();
+        if (currentTemperature <= 0)
+        {
+            //Do Something
+        }
+    }
+
+    public void WarmUp(float temp) //Function for Increase player temp
+    {
+        currentHealth += temp;
+        UpdateTemperatureBar();
+        if (currentTemperature >= temperature)
+        {
+            currentTemperature = temperature;
+        }
+    }
+
+    public void UpdateTemperatureBar()
+    {
+        float value = currentTemperature / temperature;
+        temperatureBarSlider.value = value;
+    }
+
+    #endregion
     void Attack()
     {
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -86,8 +156,6 @@ public class Player : MonoBehaviour
         if (n < 0) n += 360;
         return n;
     }
-
-
 
     void ChangeDirectionUsingAngle()
     {
@@ -131,6 +199,9 @@ public class Player : MonoBehaviour
         }
 
     }
+
+
 }
+
 
 

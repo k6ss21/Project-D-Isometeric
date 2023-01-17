@@ -7,3 +7,8 @@ public interface IAnimationManager
     void Walk(string dir);
   
 }
+
+public interface IDamagable
+{
+    void TakeDamage(float damage);
+}
