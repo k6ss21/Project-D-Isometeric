@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Transform projectilePf;
 
 
+
     void OnEnable()
     {
         SickChar.OnHealComplete += AddHealCount;
@@ -29,9 +30,14 @@ public class Player : MonoBehaviour
         currentHealth = health;
         currentTemperature = temperature;
         UpdateHealthBar();
+        UpdateTemperatureBar();
+        coolTimer = coolInterval;
     }
     void Update()
     {
+        CoolOverTime();
+        AutoSelfHeal(); //Auto heal when health is low 95
+
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
@@ -40,6 +46,12 @@ public class Player : MonoBehaviour
         {
             CoolDown(10);
         }
+        if (isLowTemp)
+        {
+            LowTemperatureEffect();
+        }
+
+    
     }
 
     #region HEALING
@@ -99,6 +111,7 @@ public class Player : MonoBehaviour
         healthBarSlider.value = value;
     }
 
+
     #endregion
 
     #region TEMPERATURE
@@ -107,20 +120,46 @@ public class Player : MonoBehaviour
     public float temperature; //Total Body Temperature
     float currentTemperature; // Current Temperature
     public Slider temperatureBarSlider; //UI Slider for temperature 
+    float coolTimer;
+    public float coolInterval;
+    public float coolRate;
 
+    float lowTempTimer;
+    public float lowTempEffectInterval;
+    public float lowTempDamage;
+
+    bool isLowTemp;
+
+    public void CoolOverTime()
+    {
+        coolTimer -= Time.deltaTime;
+
+        if (coolTimer <= 0)
+        {
+            CoolDown(coolRate);
+            coolTimer = coolInterval;
+        }
+    }
     public void CoolDown(float temp) //Function for decrease player temp
     {
         currentTemperature -= temp;
         UpdateTemperatureBar();
         if (currentTemperature <= 0)
         {
-            //Do Something
+            currentTemperature = 0;
+            isLowTemp = true;
+        }
+        else
+        {
+            isLowTemp = false;
         }
     }
 
     public void WarmUp(float temp) //Function for Increase player temp
     {
-        currentHealth += temp;
+
+        currentTemperature += temp;
+
         UpdateTemperatureBar();
         if (currentTemperature >= temperature)
         {
@@ -134,6 +173,18 @@ public class Player : MonoBehaviour
         temperatureBarSlider.value = value;
     }
 
+    public void LowTemperatureEffect()
+    {
+        lowTempTimer -= Time.deltaTime;
+
+        if (lowTempTimer <= 0)
+        {
+            TakeDamage(5);
+            lowTempTimer = lowTempEffectInterval;
+            //ADD CAMERA SHAKE LATER
+        }
+
+    }
     #endregion
     void Attack()
     {
@@ -200,6 +251,22 @@ public class Player : MonoBehaviour
 
     }
 
+    #region  Self Funtions
+
+    public float selfHealInterval;
+    float selfHealTimer;
+    public float selfHealRate;
+    void AutoSelfHeal()
+    {
+        selfHealTimer -= Time.deltaTime;
+
+        if (!isLowTemp && health >= 95)
+        {
+            TakeHealth(selfHealRate);
+            selfHealTimer = selfHealInterval;
+        }
+    }
+    #endregion
 
 }
 
