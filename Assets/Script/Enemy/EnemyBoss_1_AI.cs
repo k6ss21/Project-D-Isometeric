@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
-{   
+{
     public GameObject ratPrefab;
 
 
@@ -19,6 +19,8 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     [Space(10)]
 
     [Header("Spawn")]
+
+    public bool canSpawn;
     int spawnCount;
     public Transform SpawnPoint;
     [Space(10)]
@@ -39,12 +41,14 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     void Update()
     {
         spawnTimer -= Time.deltaTime;
-
-        if (spawnTimer <= 0)
+        if (canSpawn)
         {
-            Debug.Log("SpawnRat");
-            SpawnEnemy();
-            GetRandomTimeAndCount();
+            if (spawnTimer <= 0)
+            {
+                Debug.Log("SpawnRat");
+                SpawnEnemy();
+                GetRandomTimeAndCount();
+            }
         }
     }
 
@@ -69,7 +73,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }

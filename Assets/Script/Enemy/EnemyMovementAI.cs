@@ -42,7 +42,8 @@ public class EnemyMovementAI : MonoBehaviour
         direction = aiPath.desiredVelocity.normalized;
         angle = GetAngleFromVectorFloat(direction);
 
-        ChangeSpriteUsingAngle();
+       // ChangeSpriteUsingAngle();
+       ChangeSpriteUsingAngleTEST();
     }
     void ChangeSprite()
     {
@@ -141,6 +142,34 @@ public class EnemyMovementAI : MonoBehaviour
         {
             // Debug.Log("N");
             animationManager.Walk("N");
+        }
+
+    }
+
+     void ChangeSpriteUsingAngleTEST()
+    {
+        if (angle <= 89 && angle >= 1)
+        {
+            animationManager.Walk("NE");
+            // Debug.Log("NE");
+        }
+      
+        if (angle <= 360 && angle >= 271)
+        {
+            //  Debug.Log("SE");
+            animationManager.Walk("SE");
+        }
+
+        if (angle <= 270 && angle >= 180)
+        {
+            // Debug.Log("SW");
+            animationManager.Walk("SW");
+        }
+       
+        if (angle <= 179 && angle >= 90)
+        {
+            // Debug.Log("NW");
+            animationManager.Walk("NW");
         }
 
     }

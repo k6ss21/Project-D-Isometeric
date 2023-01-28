@@ -32,14 +32,18 @@ public class Projectile : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        var target = other.gameObject.GetComponent (typeof (IDamagable)) as  IDamagable;
+       var target = other.gameObject.GetComponentInParent (typeof (IDamagable)) as  IDamagable;
+        
         if (target != null)
         {
             target.TakeDamage(damage);
             Destroy(gameObject);
         }
+        Debug.Log(other.gameObject.name);
         if (other.CompareTag("Elevation"))
         {
+
+            Debug.Log("hiting Elevation");
             Destroy(gameObject);
         }
 

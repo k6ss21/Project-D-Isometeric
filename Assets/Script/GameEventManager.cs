@@ -29,6 +29,10 @@ public class GameEventManager : MonoBehaviour
             spawnTimer = Random.Range(minTime, maxTime);
 
         }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+             OnSpawnWaveCall?.Invoke();
+        }
 
     }
 

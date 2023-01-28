@@ -14,8 +14,8 @@ TagManager:
   - UI
   - Player
   - Elevation
-  - 
-  - 
+  - PPLayer
+  - Nopost
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1185239315
+    locked: 0
+  - name: ' Projectile'
+    uniqueID: 1954869489
     locked: 0
   - name: Right Wall
     uniqueID: 125240931

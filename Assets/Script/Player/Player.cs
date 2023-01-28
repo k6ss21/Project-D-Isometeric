@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    public float angle;
-    public Transform projectilePf;
 
-
+    public PlayerAttack playerAttack;
 
     void OnEnable()
     {
@@ -26,22 +24,23 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        playerAttack = GetComponent<PlayerAttack>();
         UpdateHealCountText();
         currentHealth = health;
         currentTemperature = temperature;
+        currentImmunity = totalImmunity;
         UpdateHealthBar();
         UpdateTemperatureBar();
+        UpdateImmunitySlider();
         coolTimer = coolInterval;
+
     }
     void Update()
     {
         CoolOverTime();
         AutoSelfHeal(); //Auto heal when health is low 95
+        TakeImmunityTimer();
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Attack();
-        }
         if (Input.GetKeyDown(KeyCode.K))
         {
             CoolDown(10);
@@ -51,16 +50,16 @@ public class Player : MonoBehaviour
             LowTemperatureEffect();
         }
 
-    
+
     }
 
-    #region HEALING
+    #region HEALING SICK CHAR
 
     public int healCount;
     public bool IsHealing = false;
     public TextMeshProUGUI _healCountText;
 
-    void AddHealCount()
+    void AddHealCount() //ADD H
     {
         healCount++;
         IsHealing = false;
@@ -186,70 +185,57 @@ public class Player : MonoBehaviour
 
     }
     #endregion
-    void Attack()
+
+    #region INFECTION
+
+    [Header("Immunity")]
+    [Space(5)]
+    public float totalImmunity;
+    float currentImmunity;
+
+    float ImmunityLossTimer;
+    public float ImmunityLossInterval;
+
+    bool immunityLossTimeOut;
+
+    public Slider immunitySlider;
+
+    void TakeImmunityTimer()
     {
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        var projectile = Instantiate(projectilePf, transform.position, Quaternion.identity);
-
-        Vector3 shootDir = (mousePos - transform.position).normalized;
-        angle = GetAngleFromVectorFloat(shootDir);
-        ChangeDirectionUsingAngle();
-        projectile.GetComponent<Projectile>().Setup(shootDir);
-
-        //CinemachineCameraShake.Instance.ShakeCamera(.2f, .05f); // Fix  it Later..
-    }
-
-    public static float GetAngleFromVectorFloat(Vector3 dir)
-    {
-        dir = dir.normalized;
-        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        if (n < 0) n += 360;
-        return n;
-    }
-
-    void ChangeDirectionUsingAngle()
-    {
-        if (angle <= 75 && angle >= 15)
+        ImmunityLossTimer -= Time.deltaTime;
+        if (ImmunityLossTimer <= 0)
         {
-            Debug.Log("NE");
+            immunityLossTimeOut = false;
         }
-        if (angle <= 14 && angle >= 346)
+        else
         {
-            Debug.Log("E");
-        }
-        if (angle <= 345 && angle >= 285)
-        {
-            Debug.Log("SE");
-        }
-
-        if (angle <= 284 && angle >= 255)
-        {
-            Debug.Log("S");
-
-        }
-        if (angle <= 254 && angle >= 195)
-        {
-            Debug.Log("SW");
-
-        }
-        if (angle <= 194 && angle >= 165)
-        {
-            Debug.Log("W");
-
-        }
-        if (angle <= 164 && angle >= 105)
-        {
-            Debug.Log("NW");
-
-        }
-        if (angle <= 104 && angle >= 74)
-        {
-            Debug.Log("N");
-
+            immunityLossTimeOut = true;
         }
 
     }
+
+    public void TakeImmunity(float value)
+    {
+        if (immunityLossTimeOut) return;
+        currentImmunity -= value;
+        ImmunityLossTimer = ImmunityLossInterval;
+        UpdateImmunitySlider();
+        if (currentImmunity <= 0)
+        {
+            currentImmunity = 0;
+            //DO SOMETHING
+        }
+    }
+
+    void UpdateImmunitySlider()
+    {
+        float value = currentImmunity / totalImmunity;
+        immunitySlider.value = value;
+    }
+
+
+    #endregion
+
 
     #region  Self Funtions
 

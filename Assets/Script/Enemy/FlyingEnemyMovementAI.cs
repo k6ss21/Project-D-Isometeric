@@ -50,10 +50,18 @@ public class FlyingEnemyMovementAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         SickChar sickChar = other.GetComponent<SickChar>();
+        Player player = other.GetComponent<Player>();
+        if(player!= null)
+        {
+            player.TakeImmunity(10);
+        }
         if(sickChar != null)
         {
             Debug.Log("heal cancel");
             sickChar.CancelHealing();
+
         }
     }
+
+    
 }
