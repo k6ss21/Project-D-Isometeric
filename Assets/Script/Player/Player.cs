@@ -9,17 +9,27 @@ public class Player : MonoBehaviour
 
     public PlayerAttack playerAttack;
 
+    public TextMeshProUGUI totalSickCount;
+
+
     void OnEnable()
     {
         SickChar.OnHealComplete += AddHealCount;
         EnemyAI.OnAttack += TakeDamage;
         SickChar.OnSetHealing += SetHealing;
+
+        //Ability Events
+        Ab_Healing.OnAbilityHeal += TakeHealth;
+        Ab_shield.OnShieldActive += ActivateShield;
     }
     void OnDisable()
     {
         SickChar.OnHealComplete -= AddHealCount;
         EnemyAI.OnAttack -= TakeDamage;
         SickChar.OnSetHealing -= SetHealing;
+
+        //Ability Events
+        Ab_Healing.OnAbilityHeal -= TakeHealth;
     }
 
     void Start()
@@ -33,6 +43,8 @@ public class Player : MonoBehaviour
         UpdateTemperatureBar();
         UpdateImmunitySlider();
         coolTimer = coolInterval;
+        totalSickCount.text = FindObjectOfType<GameEventManager>().sickPersonCount.ToString();
+        DeActivateShield();
 
     }
     void Update()
@@ -41,9 +53,9 @@ public class Player : MonoBehaviour
         AutoSelfHeal(); //Auto heal when health is low 95
         TakeImmunityTimer();
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))    //Test Input
         {
-            CoolDown(10);
+            
         }
         if (isLowTemp)
         {
@@ -84,18 +96,28 @@ public class Player : MonoBehaviour
     public float health;
     float currentHealth;
     public Slider healthBarSlider;
+
+    bool invulnerability;
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        UpdateHealthBar();
-        if (currentHealth <= 0)
+        if (!invulnerability)
         {
-            Debug.Log("Player Is DEAD!!");
+            currentHealth -= damage;
+            UpdateHealthBar();
+            if (currentHealth <= 0)
+            {
+                Debug.Log("Player Is DEAD!!");
+            }
+        }
+        else
+        {
+            Debug.Log("Invulnerable");
         }
     }
 
     public void TakeHealth(float h)
     {
+
         currentHealth += h;
         UpdateHealthBar();
         if (currentHealth >= health)
@@ -246,13 +268,41 @@ public class Player : MonoBehaviour
     {
         selfHealTimer -= Time.deltaTime;
 
-        if (!isLowTemp && health >= 95)
+        if (!isLowTemp && health >= 95 && selfHealTimer <= 0)
         {
             TakeHealth(selfHealRate);
             selfHealTimer = selfHealInterval;
         }
     }
     #endregion
+
+    #region SHIELD
+    [Header("Heath")]
+    [Space(5)]
+    public GameObject shield;
+
+    void ActivateShield(float time)
+    {
+        shield.SetActive(true);
+        invulnerability = true;
+        StartCoroutine(InvulnerableTimer(time));
+
+    }
+    IEnumerator InvulnerableTimer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        DeActivateShield();
+    }
+
+    void DeActivateShield()
+    {
+        invulnerability = false;
+        shield.SetActive(false);
+
+    }
+
+    #endregion
+
 
 }
 

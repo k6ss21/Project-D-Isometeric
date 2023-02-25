@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 1185239315
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5645a4882eb4c46428a7375c45009091, type: 3}
+  m_Sprite: {fileID: -648577457, guid: ea175748c568922448c4235c784c0869, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 5888700803722226322}
   - component: {fileID: 5888700803722226323}
   - component: {fileID: 6040801900922296572}
+  - component: {fileID: 1958973805}
   m_Layer: 0
   m_Name: EnemyBoss1
   m_TagString: Untagged
@@ -327,9 +328,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.81
+  slowdownDistance: 0.84
   pickNextWaypointDist: 0.13
-  endReachedDistance: 0.65
+  endReachedDistance: 0.74
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -364,7 +365,9 @@ MonoBehaviour:
   aiPath: {fileID: 5888700803722226313}
   aIDestinationSetter: {fileID: 5888700803722226312}
   spriteRenderer: {fileID: 5888700803555448796}
+  isIdle: 0
   angle: 0
+  isTopDown: 0
 --- !u!114 &5888700803722226322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,3 +416,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5888700803555448796}
   isStatic: 0
+--- !u!114 &1958973805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5888700803722226314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f4aaeb89c1493047a3f881e9d366fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTimer: 0
+  attackInterval: 2
+  attackTimerActivate: 0

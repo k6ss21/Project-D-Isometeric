@@ -20,6 +20,10 @@ public class SickChar : MonoBehaviour
     public float circleRadius;
     public LayerMask playerLayer;
 
+    public float disableRadius;
+
+    Material material;
+
 
     [Header("Floating Test")]
     [SerializeField] private GameObject _floatingTextPrefab;
@@ -41,7 +45,7 @@ public class SickChar : MonoBehaviour
     public Animator animator;
 
 
-
+    InstructionBox instructionBox;
 
     public static event Action OnHealComplete;
     public static event Action<bool> OnSetHealing;
@@ -49,6 +53,8 @@ public class SickChar : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        material = GetComponent<SpriteRenderer>().material;
+        instructionBox = FindObjectOfType<InstructionBox>();
         maxValue = healingDuration;
         sliderCanvas.gameObject.SetActive(false);
         UpdateProgressBar();
@@ -58,6 +64,7 @@ public class SickChar : MonoBehaviour
     {
 
         HealPrompt();
+        DisableOutline();
         if (IsHealing)
         {
             healingProgress += healingRate * Time.deltaTime;
@@ -99,7 +106,7 @@ public class SickChar : MonoBehaviour
             {
                 if (collider.GetComponent<Player>().IsHealing)
                 {
-                    ShowInstructionCantHealText();
+                    // ShowInstructionCantHealText();
                 }
                 else
                 {
@@ -109,7 +116,18 @@ public class SickChar : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (collider.GetComponent<Player>().IsHealing) { Debug.Log("You can Only heal One Person at a Time"); return; }
+                if (collider.GetComponent<Player>().IsHealing)
+                {
+                    // Debug.Log("You can Only heal One Person at a Time");
+                    if (instructionBox != null)
+                    {
+                        if (!IsHealing)
+                        {
+                            instructionBox.SpawnInstructionPopUpText("You can only heal person at a time");
+                        }
+                    }
+                    return;
+                }
                 Debug.Log("Healing Started");
                 //collider.GetComponent<Player>().IsHealing = true;
                 sliderCanvas.gameObject.SetActive(true);
@@ -127,10 +145,27 @@ public class SickChar : MonoBehaviour
 
     }
 
+    public void DisableOutline()
+    {
+        var collider = Physics2D.OverlapCircle(transform.position, disableRadius, playerLayer);
+
+        if (collider != null)
+        {
+            material.SetInt("_Outline", 0);
+            //  Debug.Log("ouline = " + false);
+        }
+        else
+        {
+            material.SetInt("_Outline", 1);
+            //   Debug.Log("ouline = " + true);
+        }
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, circleRadius);
+        Gizmos.DrawWireSphere(transform.position, disableRadius);
+
     }
 
     void ShowInstructionText()
@@ -144,17 +179,17 @@ public class SickChar : MonoBehaviour
 
         }
     }
-    void ShowInstructionCantHealText()
-    {
-        if (_floatingTextPrefab)
-        {
-            _textVisible = true;
-            floatingText = Instantiate(_floatingTextPrefab, promptPoint.position, Quaternion.identity);
-            floatingText.transform.SetParent(this.transform);
-            floatingText.GetComponentInChildren<TextMesh>().text = cantHealtext;
+    // void ShowInstructionCantHealText()
+    // {
+    //     if (_floatingTextPrefab)
+    //     {
+    //         _textVisible = true;
+    //         floatingText = Instantiate(_floatingTextPrefab, promptPoint.position, Quaternion.identity);
+    //         floatingText.transform.SetParent(this.transform);
+    //         floatingText.GetComponentInChildren<TextMesh>().text = cantHealtext;
 
-        }
-    }
+    //     }
+    // }
 
     void DestroyText()
     {

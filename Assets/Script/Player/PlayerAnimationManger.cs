@@ -35,6 +35,21 @@ public class PlayerAnimationManger : MonoBehaviour
 
     #endregion
 
+    #region ATTACK1 ANIMATION
+
+    const string PLAYER_ATTACK1_NE = "Player_Attack1_NE";
+    const string PLAYER_ATTACK1_NW = "Player_Attack1_NW";
+    const string PLAYER_ATTACK1_SE = "Player_Attack1_SE";
+    const string PLAYER_ATTACK1_SW = "Player_Attack1_SW";
+
+    const string PLAYER_ATTACK1_E = "Player_Attack1_E";
+    const string PLAYER_ATTACK1_W = "Player_Attack1_W";
+    const string PLAYER_ATTACK1_N = "Player_Attack1_N";
+    const string PLAYER_ATTACK1_S = "Player_Attack1_S";
+
+    #endregion
+
+
 
     void Start()
     {
@@ -112,6 +127,37 @@ public class PlayerAnimationManger : MonoBehaviour
         ChangeAnimationState(PLAYER_IDLE);
     }
 
+    public void Attack(string dir)
+    {
+        switch (dir)
+        {
+            case "NE":
+                ChangeAnimationState(PLAYER_ATTACK1_NE);
+                break;
+            case "NW":
+                ChangeAnimationState(PLAYER_ATTACK1_NW);
+                break;
+            case "SE":
+                ChangeAnimationState(PLAYER_ATTACK1_SE);
+                break;
+            case "SW":
+                ChangeAnimationState(PLAYER_ATTACK1_SW);
+                break;
+            case "N":
+                ChangeAnimationState(PLAYER_ATTACK1_N);
+                break;
+            case "S":
+                ChangeAnimationState(PLAYER_ATTACK1_S);
+                break;
+            case "E":
+                ChangeAnimationState(PLAYER_ATTACK1_E);
+                break;
+            case "W":
+                ChangeAnimationState(PLAYER_ATTACK1_W);
+                break;
+        }
+
+    }
 
     public void ChangeAnimationState(string newState)
     {

@@ -5,10 +5,13 @@ using UnityEngine;
 public class IsoCharacterController : MonoBehaviour
 {
     public Rigidbody2D rb;
+
+    public float defaultWalkSpeed;
     public float walkSpeed;
     public float frameRate;
 
     PlayerAnimationManger _playerAnimator;
+    PlayerAttack playerAttack;
 
     Vector2 inputDir;
 
@@ -16,9 +19,22 @@ public class IsoCharacterController : MonoBehaviour
 
     public string lastMoveDir;
 
+    void OnEnable()
+    {
+        Ab_Speed.OnSpeedBoost += SpeedBoost;
+    }
+    void OnDisable()
+    {
+        Ab_Speed.OnSpeedBoost -= SpeedBoost;
+    }
+
     void Start()
     {
+        isTopDown = FindObjectOfType<GameEventManager>().topDown;
         _playerAnimator = GetComponent<PlayerAnimationManger>();
+        playerAttack = GetComponent<PlayerAttack>();
+        lastMoveDir = "SE";
+        walkSpeed = defaultWalkSpeed;
         IdleAnim();
     }
     void Update()
@@ -31,25 +47,47 @@ public class IsoCharacterController : MonoBehaviour
         }
         else
         {
-            HandleMovement();
+            if (!playerAttack.isAttacking) //cant move when attacking 
+            {
+                HandleMovement();
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
         }
 
 
-        if (rb.velocity == Vector2.zero)
+        // if (rb.velocity == Vector2.zero)
+        // {
+        //     IdleAnim();
+        // }
+        if (inputDir == Vector2.zero && !playerAttack.isAttacking)
         {
-           IdleAnim();
+            IdleAnim();
         }
 
     }
+
 
     void IdleAnim()
     {
         _playerAnimator.PlayerIdle(lastMoveDir);
-      
+
     }
 
-   
+    void SpeedBoost(float speed, float time)
+    {
+        Debug.Log("speed Boost");
+        walkSpeed = speed;
+        StartCoroutine(SpeedBoostTimer(time));
+    }
 
+    IEnumerator SpeedBoostTimer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        walkSpeed = defaultWalkSpeed;
+    }
     void TestMovement()
     {
 
@@ -80,22 +118,22 @@ public class IsoCharacterController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))//  MOve NW
         {
             dir += Vector2.up;
-             lastMoveDir = "NW";
+            lastMoveDir = "NW";
             _playerAnimator.PlayerWalk("NW");
-           
+
 
         }
         else if (Input.GetKey(KeyCode.A)) //Move SW
         {
             dir += Vector2.left;
-             lastMoveDir = "SW";
+            lastMoveDir = "SW";
             _playerAnimator.PlayerWalk("SW");
 
         }
         else if (Input.GetKey(KeyCode.D)) //  Move NE
         {
             dir += Vector2.right;
-             lastMoveDir = "NE";
+            lastMoveDir = "NE";
             _playerAnimator.PlayerWalk("NE");
         }
 
@@ -103,7 +141,7 @@ public class IsoCharacterController : MonoBehaviour
         else if (Input.GetKey(KeyCode.S)) // Move SE
         {
             dir += Vector2.down;
-             lastMoveDir = "SE";
+            lastMoveDir = "SE";
             _playerAnimator.PlayerWalk("SE");
         }
         // Debug.Log("Nor =" + dir);
@@ -122,21 +160,21 @@ public class IsoCharacterController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))//  MOve N
         {
             dir += Vector2.up;
-             lastMoveDir = "N";
+            lastMoveDir = "N";
             _playerAnimator.PlayerWalk("N");
 
         }
         else if (Input.GetKey(KeyCode.A)) //Move W
         {
             dir += Vector2.left;
-             lastMoveDir = "W";
+            lastMoveDir = "W";
             _playerAnimator.PlayerWalk("W");
 
         }
         else if (Input.GetKey(KeyCode.D)) //  Move E
         {
             dir += Vector2.right;
-             lastMoveDir = "E";
+            lastMoveDir = "E";
             _playerAnimator.PlayerWalk("E");
         }
 
@@ -144,7 +182,7 @@ public class IsoCharacterController : MonoBehaviour
         else if (Input.GetKey(KeyCode.S)) // Move S
         {
             dir += Vector2.down;
-             lastMoveDir = "S";
+            lastMoveDir = "S";
             _playerAnimator.PlayerWalk("S");
         }
         // Debug.Log("Nor =" + dir);

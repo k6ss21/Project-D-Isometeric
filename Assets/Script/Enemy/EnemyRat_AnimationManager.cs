@@ -52,9 +52,17 @@ public class EnemyRat_AnimationManager : MonoBehaviour, IAnimationManager
         }
 
     }
+    public void Idle(string dir)
+    {
+        
+    }
+    public void Attack1(string dir)
+    {
+        
+    }
     public void ChangeAnimationState(string newState)
     {
-        Debug.Log("change animation state");
+        //Debug.Log("change animation state");
         if (_currentState == newState) return;
 
         animator.Play(newState);

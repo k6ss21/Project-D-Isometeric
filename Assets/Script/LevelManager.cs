@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     static LevelManager instance;
 
-
+    
     void Awake()
     {
         if (instance == null)
