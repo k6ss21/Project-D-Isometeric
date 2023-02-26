@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
     {
         if (!invulnerability)
         {
+            //Debug.Log("Taking Damage(player)" );
             currentHealth -= damage;
             UpdateHealthBar();
             if (currentHealth <= 0)

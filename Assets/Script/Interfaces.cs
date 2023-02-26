@@ -19,4 +19,5 @@ public interface IDamagable
 public interface IEnemyAttackManger
 {
     bool isAttacking {get; set;}
+    void EndAttackAnim();
 }
