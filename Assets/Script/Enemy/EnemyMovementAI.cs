@@ -28,16 +28,19 @@ public class EnemyMovementAI : MonoBehaviour
     public float angle;
     public bool isTopDown;
     private string lastMoveDir;
+    
+  
 
     void Start()
     {
-        aIDestinationSetter.target = FindObjectOfType<Player>().transform;
+        aIDestinationSetter.target = FindObjectOfType<Player>().RandomFollowPos();
         isTopDown = FindObjectOfType<GameEventManager>().topDown;
         animationManager = GetComponent(typeof(IAnimationManager)) as IAnimationManager;
         enemyAttackManger = gameObject.GetComponent<IEnemyAttackManger>();
         minSpeed = enemyData.minSpeed;
         maxSpeed = enemyData.maxSpeed;
-        speed = Random.Range(minSpeed, maxSpeed);
+        speed =Mathf.Round(((Random.Range(minSpeed, maxSpeed))*100))/100;
+        
         aiPath.maxSpeed = speed;
         lastMoveDir = "N";
         animationManager.Idle(lastMoveDir);
@@ -74,6 +77,7 @@ public class EnemyMovementAI : MonoBehaviour
 
     }
 
+    
     void LookAtTargetWhenIdle()
     {
         Vector3 targetDir = (aIDestinationSetter.target.position - transform.position).normalized;

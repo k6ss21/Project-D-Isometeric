@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229205003}
   - component: {fileID: 1229205004}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TriggerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,54 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0020666122, y: 0.018865049}
   m_Size: {x: 0.111980796, y: 0.38877356}
   m_Direction: 0
+--- !u!1 &534372271596881270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3028992795804298480}
+  - component: {fileID: 1250535509874499139}
+  m_Layer: 10
+  m_Name: Solid Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3028992795804298480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534372271596881270}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5888700803722226317}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1250535509874499139
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534372271596881270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003823325, y: -0.098061986}
+  serializedVersion: 2
+  m_Radius: 0.0792535
 --- !u!1 &3982640082328954193
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +107,7 @@ GameObject:
   - component: {fileID: 9090536254679458895}
   - component: {fileID: 8431809170934508217}
   - component: {fileID: 229602644198426764}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5888700802334709773}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +201,7 @@ GameObject:
   - component: {fileID: 5888700803555448796}
   - component: {fileID: 5888700803555448738}
   - component: {fileID: 54079599}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +319,6 @@ GameObject:
   - component: {fileID: 5888700803722226317}
   - component: {fileID: 5888700803722226316}
   - component: {fileID: 5888700803722226319}
-  - component: {fileID: 5888700803722226318}
   - component: {fileID: 5888700803722226313}
   - component: {fileID: 5888700803722226312}
   - component: {fileID: 5888700803722226315}
@@ -279,7 +326,7 @@ GameObject:
   - component: {fileID: 5888700803722226323}
   - component: {fileID: 6040801900922296572}
   - component: {fileID: 1958973805}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyBoss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,6 +348,7 @@ Transform:
   - {fileID: 5888700803555448797}
   - {fileID: 5888700802334709773}
   - {fileID: 1229205003}
+  - {fileID: 3028992795804298480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -353,22 +401,6 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!58 &5888700803722226318
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5888700803722226314}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.003823325, y: -0.098061986}
-  serializedVersion: 2
-  m_Radius: 0.0792535
 --- !u!114 &5888700803722226313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.27
+  radius: 0.19
   height: 2
   canMove: 1
   maxSpeed: 0.79
@@ -405,7 +437,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0.57
-  pickNextWaypointDist: 0.13
+  pickNextWaypointDist: 0.24
   endReachedDistance: 0.44
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1

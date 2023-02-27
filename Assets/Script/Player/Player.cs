@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))    //Test Input
         {
-            
+
         }
         if (isLowTemp)
         {
@@ -64,6 +64,17 @@ public class Player : MonoBehaviour
 
 
     }
+
+    #region OTHERS
+    public List<Transform> followPoints = new List<Transform>();
+    public Transform RandomFollowPos()
+    {
+        int rdm = Random.Range(0,followPoints.Count);
+        return  followPoints[rdm];
+        
+    }   
+
+    #endregion
 
     #region HEALING SICK CHAR
 

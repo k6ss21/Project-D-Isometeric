@@ -17,8 +17,8 @@ TagManager:
   - Elevation
   - PPLayer
   - Nopost
-  - 
-  - 
+  - EnemySolidCollider
+  - Enemy
   - 
   - 
   - 
