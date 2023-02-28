@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.Events;
+
 public class SickChar : MonoBehaviour
 {
     // Healing duration in seconds
@@ -23,6 +24,7 @@ public class SickChar : MonoBehaviour
     public float disableRadius;
 
     Material material;
+
 
 
     [Header("Floating Test")]
@@ -73,7 +75,7 @@ public class SickChar : MonoBehaviour
             if (healingProgress >= healingDuration)
             {
                 healingProgress = 0f;
-                Heal();
+                HealComplete();
             }
         }
     }
@@ -86,7 +88,7 @@ public class SickChar : MonoBehaviour
 
     }
 
-    void Heal()
+    void HealComplete()
     {
         IsHealing = false;
         OnHealComplete?.Invoke();
@@ -130,9 +132,9 @@ public class SickChar : MonoBehaviour
                 }
                 Debug.Log("Healing Started");
                 //collider.GetComponent<Player>().IsHealing = true;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.healStarted,this.transform.position);
                 sliderCanvas.gameObject.SetActive(true);
                 OnSetHealing?.Invoke(true);
-
                 IsHealing = true;
 
             }

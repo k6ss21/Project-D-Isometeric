@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+
+
+[RequireComponent(typeof(StudioEventEmitter))]
 public class HomePoint : MonoBehaviour
 {
 
@@ -27,10 +31,13 @@ public class HomePoint : MonoBehaviour
 
     InstructionBox instructionBox;
 
+    private StudioEventEmitter emitter;
 
     void Start()
     {
         instructionBox = FindObjectOfType<InstructionBox>();
+        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.FirePlace, this.gameObject);
+        emitter.Play();
         skillCanvas.gameObject.SetActive(false);
         SkillMenuOpen = false;
     }

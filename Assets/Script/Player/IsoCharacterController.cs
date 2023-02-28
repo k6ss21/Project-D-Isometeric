@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class IsoCharacterController : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class IsoCharacterController : MonoBehaviour
 
     public string lastMoveDir;
 
+    private EventInstance playerFootsteps;
+
     void OnEnable()
     {
         Ab_Speed.OnSpeedBoost += SpeedBoost;
@@ -33,6 +36,7 @@ public class IsoCharacterController : MonoBehaviour
         isTopDown = FindObjectOfType<GameEventManager>().topDown;
         _playerAnimator = GetComponent<PlayerAnimationManger>();
         playerAttack = GetComponent<PlayerAttack>();
+        playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.PlayerFootSteps);
         lastMoveDir = "SE";
         walkSpeed = defaultWalkSpeed;
         IdleAnim();
@@ -43,17 +47,28 @@ public class IsoCharacterController : MonoBehaviour
 
         if (isTopDown)
         {
-            HandleMovementTopDown();
+            if (!playerAttack.isAttacking) //cant move when attacking 
+            {
+                HandleMovementTopDown();
+                UpdateSound();
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+                UpdateSound();
+            }
         }
         else
         {
             if (!playerAttack.isAttacking) //cant move when attacking 
             {
                 HandleMovement();
+                UpdateSound();
             }
             else
             {
                 rb.velocity = Vector2.zero;
+                UpdateSound();
             }
         }
 
@@ -200,4 +215,20 @@ public class IsoCharacterController : MonoBehaviour
         return pos;
     }
 
+    void UpdateSound()
+    {
+        if (rb.velocity != Vector2.zero)
+        {
+            PLAYBACK_STATE playbackState;
+            playerFootsteps.getPlaybackState(out playbackState);
+            if (playbackState.Equals(PLAYBACK_STATE.STOPPED))
+            {
+                playerFootsteps.start();
+            }
+        }
+        else
+        {
+            playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
+        }
+    }
 }

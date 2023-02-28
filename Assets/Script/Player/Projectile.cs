@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
 
     public float damage;
     public float shootSpeed;
+    public GameObject ImpactPrefab;
     public void Setup(Vector3 dir)
     {
         shootDir = dir;
@@ -36,14 +37,15 @@ public class Projectile : MonoBehaviour
         
         if (target != null)
         {
+            Instantiate(ImpactPrefab, transform.position,Quaternion.identity);
             target.TakeDamage(damage);
             Destroy(gameObject);
         }
-        Debug.Log(other.gameObject.name);
+//        Debug.Log(other.gameObject.name);
         if (other.CompareTag("Elevation"))
         {
 
-            Debug.Log("hiting Elevation");
+          //  Debug.Log("hiting Elevation");
             Destroy(gameObject);
         }
 

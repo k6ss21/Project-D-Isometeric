@@ -46,6 +46,12 @@ public class PlayerAttack : MonoBehaviour
             }
 
         }
+        
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("Attack shoot");
+            Attack(); 
+        }
     }
 
     IEnumerator AttackDelayRoutine(float t)
