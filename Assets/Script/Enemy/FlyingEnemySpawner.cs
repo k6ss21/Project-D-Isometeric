@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
 public class FlyingEnemySpawner : MonoBehaviour
 {
 
@@ -21,6 +19,7 @@ public class FlyingEnemySpawner : MonoBehaviour
     }
     public Direction direction;
     private Vector2 dir;
+    private bool isWaveActive;
 
     void OnEnable()
     {
@@ -35,6 +34,10 @@ public class FlyingEnemySpawner : MonoBehaviour
     void Start()
     {
         DirectonSelector();
+    }
+    void Update()
+    {
+       // UpdateSound();
     }
 
   
@@ -64,11 +67,12 @@ public class FlyingEnemySpawner : MonoBehaviour
 
     public void Spawn()
     {
-       
+
             GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             enemy.GetComponent<FlyingEnemyMovementAI>().SetDir(dir);
-
             nextSpawnTime = Time.time + spawnRate;
         
     }
+
+ 
 }

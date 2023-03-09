@@ -44,6 +44,7 @@ public class AudioManager : MonoBehaviour
         musicEventInstance.start();
     }
 
+   
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, GameObject emitterGameobject)
     {
         StudioEventEmitter emitter = emitterGameobject.GetComponent<StudioEventEmitter>();

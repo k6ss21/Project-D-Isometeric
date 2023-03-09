@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public TextMeshProUGUI totalSickCount;
 
+    public UI_BloodOverlay bloodOverlay;
 
     void OnEnable()
     {
@@ -55,7 +56,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))    //Test Input
         {
-
+            ScreenCapture.CaptureScreenshot("screenshot.png");
+            Debug.Log("SS Taken");
         }
         if (isLowTemp)
         {
@@ -69,10 +71,10 @@ public class Player : MonoBehaviour
     public List<Transform> followPoints = new List<Transform>();
     public Transform RandomFollowPos()
     {
-        int rdm = Random.Range(0,followPoints.Count);
-        return  followPoints[rdm];
-        
-    }   
+        int rdm = Random.Range(0, followPoints.Count);
+        return followPoints[rdm];
+
+    }
 
     #endregion
 
@@ -106,7 +108,8 @@ public class Player : MonoBehaviour
     [Header("Heath")]
     public float health;
     float currentHealth;
-    public Slider healthBarSlider;
+    public Slider r_healthBarSlider;
+    public Slider l_healthBarSlider;
 
     bool invulnerability;
     public void TakeDamage(float damage)
@@ -114,6 +117,8 @@ public class Player : MonoBehaviour
         if (!invulnerability)
         {
             //Debug.Log("Taking Damage(player)" );
+            bloodOverlay.ShowBloodOverlay();
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.PlayerHurt, this.transform.position);
             currentHealth -= damage;
             UpdateHealthBar();
             if (currentHealth <= 0)
@@ -141,7 +146,8 @@ public class Player : MonoBehaviour
     public void UpdateHealthBar()
     {
         float value = currentHealth / health;
-        healthBarSlider.value = value;
+        r_healthBarSlider.value = value;
+        l_healthBarSlider.value = value;
     }
 
 

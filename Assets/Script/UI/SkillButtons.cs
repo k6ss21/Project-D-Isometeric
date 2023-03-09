@@ -30,7 +30,7 @@ public class SkillButtons : MonoBehaviour
         b2.color = defaultColor;
         b3.color = defaultColor;
 
-        
+        PlayClickSound();
 
         page3.gameObject.SetActive(false);
         page2.gameObject.SetActive(false);
@@ -42,7 +42,7 @@ public class SkillButtons : MonoBehaviour
         b2.color = Color.white;
         b3.color = defaultColor;
 
-        
+        PlayClickSound();
 
         page3.gameObject.SetActive(false);
         page2.gameObject.SetActive(true);
@@ -53,12 +53,15 @@ public class SkillButtons : MonoBehaviour
         b1.color = defaultColor;
         b2.color = defaultColor;
         b3.color = Color.white;
+        PlayClickSound();
         page3.gameObject.SetActive(true);
         page2.gameObject.SetActive(false);
         page1.gameObject.SetActive(false);
     }
 
-
-
+    public void PlayClickSound()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.clickSound, this.transform.position);
+    }
 
 }

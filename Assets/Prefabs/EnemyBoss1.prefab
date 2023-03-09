@@ -502,6 +502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ratPrefab: {fileID: 3135791245418865870, guid: 7f29a6cdaee0d934ab64bfc03e53e55f, type: 3}
+  floatinTextPrefab: {fileID: 1116508723222782441, guid: 5bb20e6639b22ce44b66cca4b4223774, type: 3}
   minTime: 2
   maxTime: 5
   minCount: 3
@@ -510,6 +511,7 @@ MonoBehaviour:
   SpawnPoint: {fileID: 5888700802334709773}
   health: 100
   currentHealth: 0
+  deadPS_VFX_Prefab: {fileID: 4481791881957023830, guid: 685e15be5a107bd4393d25885074794e, type: 3}
 --- !u!114 &6040801900922296572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTimer: 0
-  attackInterval: 2
+  attackInterval: 1
   attackTimerActivate: 0
   animtestTime: 0

@@ -49,6 +49,33 @@ public class PlayerAnimationManger : MonoBehaviour
 
     #endregion
 
+    // #region ATTACK2 ANIMATION
+
+    // const string PLAYER_ATTACK2_NE = "Player_Attack2_NE";
+    // const string PLAYER_ATTACK2_NW = "Player_Attack2_NW";
+    // const string PLAYER_ATTACK2_SE = "Player_Attack2_SE";
+    // const string PLAYER_ATTACK2_SW = "Player_Attack2_SW";
+
+    // const string PLAYER_ATTACK2_E = "Player_Attack2_E";
+    // const string PLAYER_ATTACK2_W = "Player_Attack2_W";
+    // const string PLAYER_ATTACK2_N = "Player_Attack2_N";
+    // const string PLAYER_ATTACK2_S = "Player_Attack2_S";
+
+    // #endregion
+
+    #region ATTACK2IDLE ANIMATION
+
+    const string PLAYER_ATTACK2IDLE_NE = "Player_Attack2Idle_NE";
+    const string PLAYER_ATTACK2IDLE_NW = "Player_Attack2Idle_NW";
+    const string PLAYER_ATTACK2IDLE_SE = "Player_Attack2Idle_SE";
+    const string PLAYER_ATTACK2IDLE_SW = "Player_Attack2Idle_SW";
+
+    const string PLAYER_ATTACK2IDLE_E = "Player_Attack2Idle_E";
+    const string PLAYER_ATTACK2IDLE_W = "Player_Attack2Idle_W";
+    const string PLAYER_ATTACK2IDLE_N = "Player_Attack2Idle_N";
+    const string PLAYER_ATTACK2IDLE_S = "Player_Attack2Idle_S";
+
+    #endregion
 
 
     void Start()
@@ -158,6 +185,71 @@ public class PlayerAnimationManger : MonoBehaviour
         }
 
     }
+
+    // public void Attack2Walk(string dir)
+    // {
+    //     switch (dir)
+    //     {
+    //         case "NE":
+    //             ChangeAnimationState(PLAYER_ATTACK2_NE);
+    //             break;
+    //         case "NW":
+    //             ChangeAnimationState(PLAYER_ATTACK2_NW);
+    //             break;
+    //         case "SE":
+    //             ChangeAnimationState(PLAYER_ATTACK2_SE);
+    //             break;
+    //         case "SW":
+    //             ChangeAnimationState(PLAYER_ATTACK2_SW);
+    //             break;
+    //         case "N":
+    //             ChangeAnimationState(PLAYER_ATTACK2_N);
+    //             break;
+    //         case "S":
+    //             ChangeAnimationState(PLAYER_ATTACK2_S);
+    //             break;
+    //         case "E":
+    //             ChangeAnimationState(PLAYER_ATTACK2_E);
+    //             break;
+    //         case "W":
+    //             ChangeAnimationState(PLAYER_ATTACK2_W);
+    //             break;
+    //     }
+
+    // }
+
+    public void Attack2Idle(string dir)
+    {
+        switch (dir)
+        {
+            case "NE":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_NE);
+                break;
+            case "NW":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_NW);
+                break;
+            case "SE":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_SE);
+                break;
+            case "SW":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_SW);
+                break;
+            case "N":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_N);
+                break;
+            case "S":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_S);
+                break;
+            case "E":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_E);
+                break;
+            case "W":
+                ChangeAnimationState(PLAYER_ATTACK2IDLE_W);
+                break;
+        }
+
+    }
+
 
     public void ChangeAnimationState(string newState)
     {

@@ -24,6 +24,7 @@ public class AbilitySpace : MonoBehaviour
 
     public void StoreData()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.clickSound, this.transform.position);
         OnStoreData?.Invoke(AbilityButtonList);
     }
 }

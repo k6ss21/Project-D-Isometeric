@@ -6,6 +6,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 {
     public GameObject ratPrefab;
 
+    public GameObject floatinTextPrefab;
 
     [Header("Timer")]
     public float minTime;
@@ -30,6 +31,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     public float health;
     public float currentHealth;
 
+    public GameObject deadPS_VFX_Prefab;
 
 
     void Start()
@@ -73,11 +75,22 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        if(floatinTextPrefab && currentHealth > 0)
+        {
+            ShowFloatingText(currentHealth);
+        }
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.enemyDamage,this.transform.position);
         if (currentHealth <= 0)
         {
+            Instantiate(deadPS_VFX_Prefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 
     }
 
+    void ShowFloatingText(float text)
+    {
+       var popUp = Instantiate(floatinTextPrefab, transform.position,  Quaternion.identity, transform);
+       popUp.GetComponent<TextMesh>().text = text.ToString();
+    }
 }

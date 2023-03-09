@@ -63,7 +63,7 @@ public class EnemyMovementAI : MonoBehaviour
             ChangeSpriteUsingAngle();
         }
         
-        Debug.Log(enemyAttackManger.isAttacking );
+//        Debug.Log(enemyAttackManger.isAttacking );
         if (aiPath.velocity == Vector3.zero && !enemyAttackManger.isAttacking)
         {
             isIdle = true;

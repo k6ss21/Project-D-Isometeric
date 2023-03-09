@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4388320582065210111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4388320582065210104}
+  - component: {fileID: 4388320582065210105}
+  m_Layer: 0
+  m_Name: FMOD Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4388320582065210104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388320582065210111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4388320582716075239}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4388320582065210105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388320582065210111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907f67ccb98056e478a065dda834aae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <healStarted>k__BackingField:
+    Guid:
+      Data1: -163280388
+      Data2: 1235713081
+      Data3: -1744276812
+      Data4: 1498899053
+    Path: event:/SFX/Sick Char/Heal
+  <PlayerFootSteps>k__BackingField:
+    Guid:
+      Data1: -546611508
+      Data2: 1280305907
+      Data3: -1739693123
+      Data4: 763348538
+    Path: event:/SFX/Player/PlayerFootsteps
+  <slashAttack>k__BackingField:
+    Guid:
+      Data1: -587172637
+      Data2: 1115461076
+      Data3: 975886245
+      Data4: -648754805
+    Path: event:/SFX/Player/Slash
+  <PlayerHurt>k__BackingField:
+    Guid:
+      Data1: 1870189512
+      Data2: 1319658564
+      Data3: 481356972
+      Data4: -88455234
+    Path: event:/SFX/Player/PlayerHurt
+  <FirePlace>k__BackingField:
+    Guid:
+      Data1: 919291965
+      Data2: 1246829955
+      Data3: 1978555523
+      Data4: 1615794362
+    Path: event:/SFX/Env/FirePlace
+  <music>k__BackingField:
+    Guid:
+      Data1: -1824666829
+      Data2: 1311868869
+      Data3: -1453949527
+      Data4: 296062439
+    Path: event:/SFX/Music/Level1Music
+  <enemyDamage>k__BackingField:
+    Guid:
+      Data1: 894629959
+      Data2: 1086827618
+      Data3: -1724632923
+      Data4: 1299443446
+    Path: event:/SFX/Enemy/Damage
+  <batsFlying>k__BackingField:
+    Guid:
+      Data1: 1955992608
+      Data2: 1250510626
+      Data3: -416282212
+      Data4: -413705970
+    Path: event:/SFX/Enemy/Bats Flying
+  <singleBatFlying>k__BackingField:
+    Guid:
+      Data1: -1795197793
+      Data2: 1085502234
+      Data3: 2016452767
+      Data4: 1878270452
+    Path: event:/SFX/Enemy/Single Bat Flying
+  <clickSound>k__BackingField:
+    Guid:
+      Data1: 1165139149
+      Data2: 1096443846
+      Data3: -1115876185
+      Data4: 477057991
+    Path: event:/SFX/UI/Click
+--- !u!1 &4388320582716075238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4388320582716075239}
+  - component: {fileID: 4388320582716075232}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4388320582716075239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388320582716075238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4388320582065210104}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4388320582716075232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388320582716075238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2bbb4f06e538143927b31942fdf108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

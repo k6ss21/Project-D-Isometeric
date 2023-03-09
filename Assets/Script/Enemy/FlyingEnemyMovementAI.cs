@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using FMODUnity;
 public class FlyingEnemyMovementAI : MonoBehaviour
 {
     public float speedMin;
@@ -11,11 +11,15 @@ public class FlyingEnemyMovementAI : MonoBehaviour
     public Vector2 moveDir;
     private Rigidbody2D rb;
 
+    private StudioEventEmitter emitter;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         speed = Random.Range(speedMin, speedMax);
-
+       emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.singleBatFlying, this.gameObject);
+        emitter.Play();
+        StartCoroutine(DestroyGameObject());
     }
     void Update()
     {
@@ -30,8 +34,15 @@ public class FlyingEnemyMovementAI : MonoBehaviour
         Vector2 temp = CarToIso(motion);
         rb.velocity = temp;
 
-        Destroy(gameObject, 10f);
+        
     }
+
+     IEnumerator DestroyGameObject()
+     {
+        yield return new WaitForSeconds(10f);
+        Destroy(this.gameObject);
+        
+     }
 
     Vector2 CarToIso(Vector2 car)
     {

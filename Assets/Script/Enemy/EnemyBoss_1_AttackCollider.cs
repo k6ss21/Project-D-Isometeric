@@ -20,7 +20,7 @@ public class EnemyBoss_1_AttackCollider : MonoBehaviour
         {
             target.TakeDamage(damage);
            // isDamaged = true;
-            Debug.Log("Player Damage ");
+         //   Debug.Log("Player Damage ");
         }
     }
 
