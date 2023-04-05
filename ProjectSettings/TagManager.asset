@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Elevation
   - Projectile
+  - SickChar
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Nopost
   - EnemySolidCollider
   - Enemy
-  - 
+  - SickChar
   - 
   - 
   - 
@@ -49,8 +50,17 @@ TagManager:
   - name: Edge
     uniqueID: 3788631737
     locked: 0
+  - name: N_Wall
+    uniqueID: 2238422159
+    locked: 0
+  - name: Stairway
+    uniqueID: 648074147
+    locked: 0
   - name: LeftWall
     uniqueID: 4032368891
+    locked: 0
+  - name: Items
+    uniqueID: 3697979807
     locked: 0
   - name: SickChar
     uniqueID: 3062470029
@@ -63,6 +73,9 @@ TagManager:
     locked: 0
   - name: Right Wall
     uniqueID: 125240931
+    locked: 0
+  - name: Light
+    uniqueID: 1449729725
     locked: 0
   - name: Elavation
     uniqueID: 3482197027

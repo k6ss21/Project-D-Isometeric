@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6319617939273669762}
   m_LocalRotation: {x: -0, y: -0, z: -0.014852559, w: 0.99988973}
-  m_LocalPosition: {x: -0.06, y: -0.006, z: 0}
+  m_LocalPosition: {x: -0.04, y: 0.002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 9091234731909837566}
   - component: {fileID: 1175750786704937510}
   - component: {fileID: 5317020159096227525}
+  - component: {fileID: 3818904716530462309}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -187,8 +188,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1954869489
-  m_SortingLayer: 6
+  m_SortingLayerID: 1185239315
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -311404980, guid: aaba0d89dd547f54f8c968bb2e244140, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -233,7 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 108750f50ae28534bbb953ec056f8e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
   shootSpeed: 5
   ImpactPrefab: {fileID: 263573659014887356, guid: 1bfea6e44186474428d3886f46f8b38f, type: 3}
 --- !u!50 &9091234731909837566
@@ -322,8 +322,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1954869489
-  m_SortingLayer: 6
+  m_SortingLayerID: 1185239315
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Time: 0.3
   m_Parameters:
@@ -356,7 +356,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 0.8405448, b: 0.04150939, a: 1}
-      key1: {r: 1, g: 0.8675166, b: 0.1830188, a: 1}
+      key1: {r: 1, g: 0.8675166, b: 0.1830188, a: 0.101960786}
       key2: {r: 1, g: 0.8744331, b: 0.2396226, a: 0}
       key3: {r: 1, g: 0.9495824, b: 0.6924528, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -391,3 +391,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &3818904716530462309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606473528039418175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952f6cf3242827b44a2799c5da42e3bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4158606134852032103}
+  trailRenderer: {fileID: 5317020159096227525}
+  isStatic: 0
+  isProjectile: 1

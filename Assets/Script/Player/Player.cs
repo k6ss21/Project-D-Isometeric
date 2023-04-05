@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    IsoCharacterController isoCharacterController;
 
-    public PlayerAttack playerAttack;
 
-    public TextMeshProUGUI totalSickCount;
+    private PlayerAttack playerAttack;
 
-    public UI_BloodOverlay bloodOverlay;
+    [SerializeField] private TextMeshProUGUI totalSickCount;
+    [SerializeField] private UI_BloodOverlay bloodOverlay;
 
     void OnEnable()
     {
@@ -36,6 +37,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerAttack = GetComponent<PlayerAttack>();
+        isoCharacterController = GetComponent<IsoCharacterController>();
         UpdateHealCountText();
         currentHealth = health;
         currentTemperature = temperature;
@@ -75,23 +77,36 @@ public class Player : MonoBehaviour
         return followPoints[rdm];
 
     }
+    public void EnableInput(bool b)
+    {
+        isoCharacterController.canMove = b;
+        playerAttack.canAttack = b;
+    }
+
+    public void RechargePlayer()
+    {
+        currentHealth = health;
+        currentTemperature = temperature;
+        currentImmunity = totalImmunity;
+    }
+
 
     #endregion
 
     #region HEALING SICK CHAR
 
-    public int healCount;
+    public int healCount; //Sick Char Healed Count.
     public bool IsHealing = false;
     public TextMeshProUGUI _healCountText;
 
-    void AddHealCount() //ADD H
+    void AddHealCount() //ADD Heal count to Update UI.
     {
         healCount++;
         IsHealing = false;
         UpdateHealCountText();
     }
 
-    void UpdateHealCountText()
+    void UpdateHealCountText() //Update Heal Count UI.
     {
         _healCountText.text = healCount.ToString();
     }
@@ -156,18 +171,18 @@ public class Player : MonoBehaviour
     #region TEMPERATURE
 
     [Header("Temperature")]
-    public float temperature; //Total Body Temperature
-    float currentTemperature; // Current Temperature
-    public Slider temperatureBarSlider; //UI Slider for temperature 
-    float coolTimer;
-    public float coolInterval;
-    public float coolRate;
+    [SerializeField] private float temperature; //Total Body Temperature
+    private float currentTemperature; // Current Temperature
+    [SerializeField] private Slider temperatureBarSlider; //UI Slider for temperature 
+    private float coolTimer;
+    [SerializeField] private float coolInterval;
+    [SerializeField] private float coolRate;
 
-    float lowTempTimer;
-    public float lowTempEffectInterval;
-    public float lowTempDamage;
+    private float lowTempTimer;
+    [SerializeField] private float lowTempEffectInterval;
+    [SerializeField] private float lowTempDamage;
 
-    bool isLowTemp;
+    private bool isLowTemp;
 
     public void CoolOverTime()
     {
@@ -218,7 +233,7 @@ public class Player : MonoBehaviour
 
         if (lowTempTimer <= 0)
         {
-            TakeDamage(5);
+            TakeDamage(lowTempDamage);
             lowTempTimer = lowTempEffectInterval;
             //ADD CAMERA SHAKE LATER
         }

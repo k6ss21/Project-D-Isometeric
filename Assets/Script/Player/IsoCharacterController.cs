@@ -13,27 +13,33 @@ public class IsoCharacterController : MonoBehaviour
 
     #region  PLAYER 
     [Header("Speed Setting")]
+
+   
     public float defaultWalkSpeed; //Player default Walk Speed.
     private float walkSpeed; //Player changing walkspeed when abilities active.
 
     private Vector2 inputDir; // Movement Input Vector.
 
     public bool isIdle { get; set; }
-    public bool isTopDown;
+    private bool isTopDown;
 
-    public string lastMoveDir; // String Contains Direction of last input Direction.
+    private string lastMoveDir; // String Contains Direction of last input Direction.
 
     private EventInstance playerFootsteps; //SFX Instance  for Footsteps. 
+
+     public bool canMove { get; set; } //Boolean to Stop Movement.
 
     #endregion
 
     void OnEnable()
     {
         Ab_Speed.OnSpeedBoost += SpeedBoost;
+        Stairway.OnPlayerTeleport += Teleport;
     }
     void OnDisable()
     {
         Ab_Speed.OnSpeedBoost -= SpeedBoost;
+          Stairway.OnPlayerTeleport -= Teleport;
     }
     void Start()
     {
@@ -43,8 +49,9 @@ public class IsoCharacterController : MonoBehaviour
         playerAttack = GetComponent<PlayerAttack>();
 
         playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.PlayerFootSteps); //Setting FMOD Evnets 
-        lastMoveDir = "SE";
+        lastMoveDir = "SW";
         walkSpeed = defaultWalkSpeed;
+        canMove = true;
     }
     void Update()
     {
@@ -52,7 +59,11 @@ public class IsoCharacterController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        UpdateMovement();
+        if (canMove)
+        {
+            UpdateMovement();
+        }
+        HandleIdle();
     }
 
     #region PLAYER MOVEMENT
@@ -96,28 +107,20 @@ public class IsoCharacterController : MonoBehaviour
             dir += Vector2.up;
             lastMoveDir = "NW";
             _playerAnimator.PlayerWalk("NW");
-
-
-
         }
         else if (Input.GetKey(KeyCode.A)) //Move SW
         {
             dir += Vector2.left;
             lastMoveDir = "SW";
             _playerAnimator.PlayerWalk("SW");
-
-
         }
         else if (Input.GetKey(KeyCode.D)) //  Move NE
         {
             dir += Vector2.right;
             lastMoveDir = "NE";
-
             _playerAnimator.PlayerWalk("NE");
 
         }
-
-
         else if (Input.GetKey(KeyCode.S)) // Move SE
         {
             dir += Vector2.down;
@@ -177,6 +180,7 @@ public class IsoCharacterController : MonoBehaviour
     #endregion
 
     #region PLAYER IDLE
+
     void HandleIdle()
     {
 
@@ -211,7 +215,14 @@ public class IsoCharacterController : MonoBehaviour
     }
     #endregion
 
+    #region OTHERS
 
+    public void Teleport(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
+    #endregion  
 
     #region SFX & OTHERS
 

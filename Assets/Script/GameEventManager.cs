@@ -8,23 +8,25 @@ using TMPro;
 public class GameEventManager : MonoBehaviour
 {
     private float spawnTimer;
-    public float minTime; //Min time for flying enemy wave
-    public float maxTime; //Max time for flying enemy wave
+    [Header("Flyinng Enemy Wave Settings")]
+    [SerializeField] private float minTime; //Min time for flying enemy wave
+    [SerializeField] private float maxTime; //Max time for flying enemy wave
     public static event Action OnSpawnWaveCall;
-
+    [Space(10)]
     public bool topDown;
 
     public int sickPersonCount;
 
-    public float maxLevelTimer;
+    [Header("Level Timer Settings")]
+    [SerializeField]private float maxLevelTimer;
     private float timeRemaining;
-
-   public float defaultTimeMulti;
+    [SerializeField]private float defaultTimeMulti;
     private float timeMulti;
     private float min;
     private float sec;
-    public TextMeshProUGUI minText; //Minute Text
-    public TextMeshProUGUI secText; //Sec Text
+    [Space(10)]
+    [SerializeField] private TextMeshProUGUI minText; //Minute Text
+    [SerializeField] private TextMeshProUGUI secText; //Sec Text
 
     void OnEnable()
     {
@@ -39,8 +41,8 @@ public class GameEventManager : MonoBehaviour
         spawnTimer = Random.Range(minTime, maxTime);
         timeMulti = defaultTimeMulti;
         timeRemaining = maxLevelTimer;
-        min=  Mathf.FloorToInt(timeRemaining/60);
-        sec = Mathf.FloorToInt(timeRemaining%60);
+        min = Mathf.FloorToInt(timeRemaining / 60);
+        sec = Mathf.FloorToInt(timeRemaining % 60);
         UpdateTimerText();
     }
 
@@ -48,8 +50,8 @@ public class GameEventManager : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime;
         timeRemaining -= Time.deltaTime * timeMulti;
-        min=  Mathf.FloorToInt(timeRemaining/60);
-        sec = Mathf.FloorToInt(timeRemaining%60);
+        min = Mathf.FloorToInt(timeRemaining / 60);
+        sec = Mathf.FloorToInt(timeRemaining % 60);
         UpdateTimerText();
         GameOverCheck();
 
@@ -59,9 +61,9 @@ public class GameEventManager : MonoBehaviour
             spawnTimer = Random.Range(minTime, maxTime);
 
         }
-        if(Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-             OnSpawnWaveCall?.Invoke();
+            OnSpawnWaveCall?.Invoke();
         }
 
     }
@@ -69,7 +71,7 @@ public class GameEventManager : MonoBehaviour
     void GameOverCheck()
 
     {
-        if(timeRemaining<=0)
+        if (timeRemaining <= 0)
         {
             Debug.Log("TIMEOUT!!! GAME OVER!!");
         }
@@ -93,5 +95,5 @@ public class GameEventManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         timeMulti = defaultTimeMulti;
     }
-} 
+}
 

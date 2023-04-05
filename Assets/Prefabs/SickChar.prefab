@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5094214600605666838}
   - component: {fileID: 4762130577585813245}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: SickChar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6855408474227354347}
   - component: {fileID: 6855408474227354348}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealingBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6855408475359495909}
   - component: {fileID: 6855408475359495911}
   - component: {fileID: 6855408475359495910}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6855408475554482113}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Prompt Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 6855408475714692212}
   - component: {fileID: 6855408475714692214}
   - component: {fileID: 6855408475714692213}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,9 +335,9 @@ GameObject:
   - component: {fileID: 48395082274162915}
   - component: {fileID: 4986378362925944097}
   - component: {fileID: -6846384021108843235}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SickChar
-  m_TagString: Untagged
+  m_TagString: SickChar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1185239315
-  m_SortingLayer: 5
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -1136474959, guid: f84f1176ca9e6d341bdb67b8d70312d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -432,13 +432,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   disableRadius: 1
-  healStartSound:
-    Guid:
-      Data1: -163280388
-      Data2: 1235713081
-      Data3: -1744276812
-      Data4: 1498899053
-    Path: event:/Heal
   _floatingTextPrefab: {fileID: 7567314636701734159, guid: 4d53b6a32b564b149a8f5b61f8cc517c, type: 3}
   text: Press F to Heal
   cantHealtext: Already Healing
@@ -502,7 +495,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6855408475788735608}
+  trailRenderer: {fileID: 0}
   isStatic: 1
+  isProjectile: 0
 --- !u!1 &6855408476074209536
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +510,7 @@ GameObject:
   - component: {fileID: 6855408476074209540}
   - component: {fileID: 6855408476074209539}
   - component: {fileID: 6855408476074209538}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Progress Bar Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

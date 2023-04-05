@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
     public float minTime;
     public float maxTime;
-
+    public bool canSpawn;
     float spawnTimer;
 
     void Start()
@@ -18,17 +18,20 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        spawnTimer -= Time.deltaTime;
-        if (spawnTimer<=0)
+        if (canSpawn)
         {
-          
-            GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            GetTime();
+            spawnTimer -= Time.deltaTime;
+            if (spawnTimer <= 0)
+            {
+
+                GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+                GetTime();
+            }
         }
     }
 
     void GetTime()
     {
-        spawnTimer = Random.Range(minTime,maxTime);
+        spawnTimer = Random.Range(minTime, maxTime);
     }
 }

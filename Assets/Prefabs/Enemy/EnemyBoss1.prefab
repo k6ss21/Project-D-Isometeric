@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3cbdc9e27c7553478bbd7e6307036c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 5
 --- !u!1 &5888700802334709772
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1185239315
-  m_SortingLayer: 5
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -648577457, guid: ea175748c568922448c4235c784c0869, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -343,7 +343,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.659, y: -0.931, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5888700803555448797}
   - {fileID: 5888700802334709773}
@@ -525,7 +525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5888700803555448796}
+  trailRenderer: {fileID: 0}
   isStatic: 0
+  isProjectile: 0
 --- !u!114 &1958973805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4aaeb89c1493047a3f881e9d366fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTimer: 0
   attackInterval: 1
-  attackTimerActivate: 0
+  canAttack: 0
+  circleRadius: 0.5
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   animtestTime: 0

@@ -5,13 +5,15 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Vector3 shootDir;
+    private float damage;
 
-    public float damage;
+    [Header("Projectile Settings")]
     public float shootSpeed;
     public GameObject ImpactPrefab;
-    public void Setup(Vector3 dir)
+    public void Setup(Vector3 dir,float value) //Setup Direction and Damage value of projectile
     {
         shootDir = dir;
+        damage = value;
         transform.eulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(shootDir));
 
     }
@@ -45,7 +47,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Elevation"))
         {
 
-          //  Debug.Log("hiting Elevation");
+           Debug.Log("hiting Elevation");
             Destroy(gameObject);
         }
 

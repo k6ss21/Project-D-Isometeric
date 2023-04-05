@@ -8,17 +8,22 @@ public class AbilityBar : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+
+        ManageInput();
+
+    }
+
+    void ManageInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-          //  CurrentAbilityList[0].GetComponent<Button>().onClick.Invoke();
+            //  CurrentAbilityList[0].GetComponent<Button>().onClick.Invoke();
             this.transform.GetChild(0).gameObject.GetComponent<Button>().onClick.Invoke();
         }
-          if(Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //CurrentAbilityList[1].GetComponent<Button>().onClick.Invoke();
             this.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.Invoke();
         }
-        
-        
     }
 }

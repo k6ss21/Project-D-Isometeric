@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class EnemyBoss_1_AttackAI : MonoBehaviour, IEnemyAttackManger
 {
+    #region COMPONENTS
     IAnimationManager animationManager;
-
     EnemyMovementAI enemyMovementAI;
     Animator animator;
-    public float attackTimer;
+    #endregion
+
+
+    [Header("Attack Settings")]
     public float attackInterval;
-    public bool attackTimerActivate;
+    public bool canAttack;
+    public float circleRadius;
+    public LayerMask playerLayerMask;
+    private float attackTimer;
+    private bool attackTimerActivate;
 
-
-    public bool isAttacking{get; set;}
+    public bool isAttacking { get; set; }
 
 
     //test (DELETE)
@@ -27,16 +33,18 @@ public class EnemyBoss_1_AttackAI : MonoBehaviour, IEnemyAttackManger
         animator = GetComponentInChildren<Animator>();
         attackTimer = attackInterval;
         isAttacking = false;
-       
+
     }
 
     void Update()
     {
+        PlayerCheck();
+
         if (attackTimerActivate)
         {
             attackTimer -= Time.deltaTime;
         }
-        if (enemyMovementAI.isIdle)
+        if (enemyMovementAI.isIdle && canAttack)
         {
             attackTimerActivate = true;
             Attack();
@@ -45,6 +53,23 @@ public class EnemyBoss_1_AttackAI : MonoBehaviour, IEnemyAttackManger
         {
             attackTimer = attackInterval;
             attackTimerActivate = false;
+        }
+
+
+    }
+
+    void PlayerCheck()
+    {
+        var collider2D = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayerMask);
+
+        if (collider2D != null)
+        {
+            canAttack = true;
+
+        }
+        else
+        {
+            canAttack = false;
         }
     }
 
@@ -56,25 +81,30 @@ public class EnemyBoss_1_AttackAI : MonoBehaviour, IEnemyAttackManger
             isAttacking = true;
             attackTimer = attackInterval;
             animationManager.Attack1(enemyMovementAI.GetLastMoveDir());
-          //  StartCoroutine(AttackAnimInterval((animator.GetCurrentAnimatorStateInfo(0).normalizedTime)% 1< 0.99fz));
+            //  StartCoroutine(AttackAnimInterval((animator.GetCurrentAnimatorStateInfo(0).normalizedTime)% 1< 0.99fz));
         }
     }
 
-    IEnumerator AttackAnimInterval(float t)
-    {
-        animtestTime = t;
-        yield return new WaitForSeconds(t);
-        attackTimerActivate = true;
-        isAttacking = false;
+    // IEnumerator AttackAnimInterval(float t)
+    // {
+    //     animtestTime = t;
+    //     yield return new WaitForSeconds(t);
+    //     attackTimerActivate = true;
+    //     isAttacking = false;
 
-    }
+    // }
 
 
     public void EndAttackAnim()
     {
-         attackTimerActivate = true;
+        attackTimerActivate = true;
         isAttacking = false;
     }
 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, circleRadius);
+    }
 
 }

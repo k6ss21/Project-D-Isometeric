@@ -18,25 +18,29 @@ public class PlayerAttack : MonoBehaviour
 
     [Header("Attack Points")]
     private Transform attackPoint;
-    public Transform attackPoint_SENE;
-    public Transform attackPoint_SWNW;
-    public Transform attackPoint_N;
-    public Transform attackPoint_S;
-    public Transform attackPoint_E;
-    public Transform attackPoint_W;
+    [SerializeField] private Transform attackPoint_SENE;
+    [SerializeField] private Transform attackPoint_SWNW;
+    [SerializeField] private Transform attackPoint_N;
+    [SerializeField] private Transform attackPoint_S;
+    [SerializeField] private Transform attackPoint_E;
+    [SerializeField] private Transform attackPoint_W;
     [Space(5)]
 
 
 
     private float attackDelay;
-    public bool isAttacking{get; private set;}
+    public bool canAttack { get; set; }
+    public bool isAttacking { get; private set; }
     public bool isAttackSword { get; private set; }
     public bool isAttackShoot { get; private set; }
     private float attackShootTimer;
-    public float attackShootTime;
-    public float DefaultDamageValue;
 
+    [Header("Attack Settings")]
 
+    [SerializeField] private float DefaultDamageValue;
+    [SerializeField] private float shootDamage;
+
+    [SerializeField] float attackShootTime;
 
     private EventInstance slashAttack_SFX;
     void Start()
@@ -48,14 +52,17 @@ public class PlayerAttack : MonoBehaviour
         animator = GetComponent<Animator>();
 
         slashAttack_SFX = AudioManager.instance.CreateEventInstance(FMODEvents.instance.slashAttack);
-
+        canAttack = true;
         isAttacking = false;
         isAttackSword = false;
         isAttackShoot = false;
     }
     void Update()
     {
-        ManageInput();
+        if (canAttack)
+        {
+            ManageInput();
+        }
         AttackShootTimer();
         UpdateSound();
 
@@ -67,7 +74,7 @@ public class PlayerAttack : MonoBehaviour
         {
 
             if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
-            if (!isAttacking)       
+            if (!isAttacking)
             {
                 isAttacking = true;
                 isAttackSword = true;
@@ -90,7 +97,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 isAttacking = true;
                 AttackShoot();
-                StartCoroutine(AttackDelayRoutine(0.5f));
+                StartCoroutine(AttackDelayRoutine(attackShootTime));
             }
         }
     }
@@ -116,7 +123,7 @@ public class PlayerAttack : MonoBehaviour
         ChangeAttackPoint(dir);
         playerAnimationManger.Attack2Idle(dir);
         var projectile = Instantiate(projectilePf, attackPoint.position, Quaternion.identity);
-        projectile.GetComponent<Projectile>().Setup(shootDir);
+        projectile.GetComponent<Projectile>().Setup(shootDir, shootDamage);
 
 
         //CinemachineCameraShake.Instance.ShakeCamera(.2f, .05f); // Fix  it Later..

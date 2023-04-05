@@ -47,3 +47,8 @@ MonoBehaviour:
   minTime: 15
   maxTime: 20
   topDown: 0
+  sickPersonCount: 0
+  maxLevelTimer: 0
+  defaultTimeMulti: 0
+  minText: {fileID: 0}
+  secText: {fileID: 0}

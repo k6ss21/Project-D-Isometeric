@@ -55,14 +55,14 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     }
 
 
-    void GetRandomTimeAndCount()
+    void GetRandomTimeAndCount()  //Function for getting random and count to spawn child rat enemies
     {
 
         spawnTimer = Random.Range(minTime, maxTime);
         spawnCount = Random.Range(minCount, maxCount);
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy() //Funtion for Spawning child rat enemy 
     {
 
         for (int i = 0; i < spawnCount; i++)
@@ -71,6 +71,8 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
             var ratSpawm = Instantiate(ratPrefab, rdmPos, Quaternion.identity);
         }
     }
+
+    #region HEALTH
 
     public void TakeDamage(float damage)
     {
@@ -88,7 +90,9 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 
     }
 
-    void ShowFloatingText(float text)
+    #endregion
+
+    void ShowFloatingText(float text) //PopUp Current Health.
     {
        var popUp = Instantiate(floatinTextPrefab, transform.position,  Quaternion.identity, transform);
        popUp.GetComponent<TextMesh>().text = text.ToString();
