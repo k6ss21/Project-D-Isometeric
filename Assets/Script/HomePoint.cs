@@ -158,7 +158,7 @@ public class HomePoint : MonoBehaviour
     void HomePointRange() //Home Point Range Function
     {
         Collider2D collider = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayerMask);
-
+        
         if (collider != null)
         {
             canAccessSkill = true;

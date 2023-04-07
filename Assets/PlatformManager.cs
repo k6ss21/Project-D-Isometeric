@@ -5,23 +5,34 @@ using UnityEngine;
 public class PlatformManager : MonoBehaviour
 {
     public List<EnemySpawner> enemySpawners = new List<EnemySpawner>();
-
+    public List<MovingLight> movingLights = new List<MovingLight>();
     public bool sick;
-     
-     public Transform boxPos;
-     public Vector2 boxVectors;
+    public GameObject stairway;
+
+    public Transform boxPos;
+    public Vector2 boxVectors;
     public LayerMask SickCharMask;
 
 
     void Update()
     {
-        var collider2D = Physics2D.OverlapBox(boxPos.position, boxVectors,27,SickCharMask);
-        if(collider2D!= null)
+        var collider2D = Physics2D.OverlapBox(boxPos.position, boxVectors, 27, SickCharMask);
+        if (collider2D != null)
         {
             sick = true;
+            if (stairway != null)
+            {
+
+                stairway.SetActive(false);
+            }
         }
-        else{
+        else
+        {
             sick = false;
+            if (stairway != null)
+            {
+                stairway.SetActive(true);
+            }
         }
 
 
@@ -33,9 +44,14 @@ public class PlatformManager : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+
             foreach (EnemySpawner enemySpawner in enemySpawners)
             {
                 enemySpawner.canSpawn = true;
+            }
+            foreach (MovingLight movingLight in movingLights)
+            {
+                movingLight.isOpen = true;
             }
         }
 
@@ -50,6 +66,10 @@ public class PlatformManager : MonoBehaviour
             {
                 enemySpawner.canSpawn = false;
             }
+            foreach (MovingLight movingLight in movingLights)
+            {
+                movingLight.isOpen = false;
+            }
 
         }
 
@@ -63,5 +83,5 @@ public class PlatformManager : MonoBehaviour
         Gizmos.DrawWireCube(Vector3.zero, Vector3.one);
     }
 
-   
+
 }

@@ -52,12 +52,12 @@ public class AbilityFill : MonoBehaviour
     void ClearAbilityChildGameObject()
     {
         int childCount = transform.childCount;
-        Debug.Log("ChildCount = " + childCount);
+      //  Debug.Log("ChildCount = " + childCount);
         if (childCount > 0)
         {
             foreach(Transform child in transform)
             {
-                Debug.Log("Destroyed = "+ child.gameObject.name);
+               // Debug.Log("Destroyed = "+ child.gameObject.name);
                 Destroy(child.gameObject);
             }
 

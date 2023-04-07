@@ -44,10 +44,10 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 //        Debug.Log(other.gameObject.name);
-        if (other.CompareTag("Elevation"))
+        if (other.CompareTag("Projecitle Destroy"))
         {
 
-           Debug.Log("hiting Elevation");
+           //Debug.Log("hiting Elevation");
             Destroy(gameObject);
         }
 

@@ -7,6 +7,7 @@ TagManager:
   - Elevation
   - Projectile
   - SickChar
+  - Projecitle Destroy
   layers:
   - Default
   - TransparentFX
