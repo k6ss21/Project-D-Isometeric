@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Projecitle Destroy"))
         {
 
-           //Debug.Log("hiting Elevation");
+           //zzDebug.Log("hiting Elevation");
             Destroy(gameObject);
         }
 

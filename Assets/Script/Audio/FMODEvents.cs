@@ -11,7 +11,8 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference PlayerFootSteps { get; private set; }
     [field: SerializeField] public EventReference slashAttack { get; private set; }
-     [field: SerializeField] public EventReference PlayerHurt { get; private set; }
+    [field: SerializeField] public EventReference PlayerHurt { get; private set; }
+    [field: SerializeField] public EventReference ProjectileShoot { get; private set; }
 
     [field: Header("Env SFX")]
     [field: SerializeField] public EventReference FirePlace { get; private set; }
@@ -20,8 +21,10 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Enemy")]
     [field: SerializeField] public EventReference enemyDamage { get; private set; }
-     [field: SerializeField] public EventReference batsFlying { get; private set; }
-     [field: SerializeField] public EventReference singleBatFlying { get; private set; }
+    [field: SerializeField] public EventReference batsFlying { get; private set; }
+    [field: SerializeField] public EventReference singleBatFlying { get; private set; }
+    
+    [field: SerializeField] public EventReference enemySpawn { get; private set; }
 
     [field: Header("UI")]
     [field: SerializeField] public EventReference clickSound { get; private set; }

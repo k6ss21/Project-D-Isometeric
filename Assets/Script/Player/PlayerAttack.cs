@@ -96,6 +96,7 @@ public class PlayerAttack : MonoBehaviour
             if (!isAttacking)
             {
                 isAttacking = true;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.ProjectileShoot,this.transform.position);
                 AttackShoot();
                 StartCoroutine(AttackDelayRoutine(attackShootTime));
             }

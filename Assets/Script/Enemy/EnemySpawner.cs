@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
             spawnTimer -= Time.deltaTime;
             if (spawnTimer <= 0)
             {
-
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.enemySpawn, this.transform.position);
                 GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
                 GetTime();
             }

@@ -38,7 +38,9 @@ public class HomePoint : MonoBehaviour
         instructionBox = FindObjectOfType<InstructionBox>();
         emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.FirePlace, this.gameObject);
         emitter.Play();
+        if(skillCanvas!= null){
         skillCanvas.gameObject.SetActive(false);
+        }
         SkillMenuOpen = false;
     }
 
@@ -47,7 +49,9 @@ public class HomePoint : MonoBehaviour
         coolDownTimer -= Time.deltaTime;
         HomePointRange();
         CoolDown();
+        if(skillCanvas!=null){
         SkillMenu();
+        }
      //   PopUpText();
 
 
