@@ -14,7 +14,7 @@ public class IsoCharacterController : MonoBehaviour
     #region  PLAYER 
     [Header("Speed Setting")]
 
-   
+
     public float defaultWalkSpeed; //Player default Walk Speed.
     private float walkSpeed; //Player changing walkspeed when abilities active.
 
@@ -23,11 +23,11 @@ public class IsoCharacterController : MonoBehaviour
     public bool isIdle { get; set; }
     private bool isTopDown;
 
-    private string lastMoveDir; // String Contains Direction of last input Direction.
+    public string lastMoveDir; // String Contains Direction of last input Direction.
 
     private EventInstance playerFootsteps; //SFX Instance  for Footsteps. 
 
-     public bool canMove { get; set; } //Boolean to Stop Movement.
+    public bool canMove { get; set; } //Boolean to Stop Movement.
 
     #endregion
 
@@ -35,11 +35,15 @@ public class IsoCharacterController : MonoBehaviour
     {
         Ab_Speed.OnSpeedBoost += SpeedBoost;
         Stairway.OnPlayerTeleport += Teleport;
+        HomePoint.OnTeleportToLab += Teleport;
+        LabPoint.OnReturnLastPos += TeleportToLastPos;
     }
     void OnDisable()
     {
         Ab_Speed.OnSpeedBoost -= SpeedBoost;
-          Stairway.OnPlayerTeleport -= Teleport;
+        Stairway.OnPlayerTeleport -= Teleport;
+        HomePoint.OnTeleportToLab -= Teleport;
+        LabPoint.OnReturnLastPos -= TeleportToLastPos;
     }
     void Start()
     {
@@ -217,9 +221,17 @@ public class IsoCharacterController : MonoBehaviour
 
     #region OTHERS
 
+    private Vector3 lastPos;
+
     public void Teleport(Vector3 pos)
     {
+        lastPos = transform.position;
         transform.position = pos;
+
+    }
+    public void TeleportToLastPos()
+    {
+        transform.position = lastPos;
     }
 
     #endregion  

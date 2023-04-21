@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4926277841881399923}
   - component: {fileID: 5450832486300401521}
   - component: {fileID: 1535795700284362062}
+  - component: {fileID: -1920092258866261718}
   m_Layer: 5
   m_Name: Test Ability 5
   m_TagString: Untagged
@@ -121,3 +122,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1920092258866261718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7726437955011195586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8629807c8f8a64b8d7ce69e24251e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  description: 

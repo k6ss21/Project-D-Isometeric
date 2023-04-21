@@ -72,6 +72,13 @@ MonoBehaviour:
       Data3: 481356972
       Data4: -88455234
     Path: event:/SFX/Player/PlayerHurt
+  <ProjectileShoot>k__BackingField:
+    Guid:
+      Data1: -1493439857
+      Data2: 1096646614
+      Data3: -537906501
+      Data4: 2067618383
+    Path: event:/SFX/Player/Projectile/ProjectileFire
   <FirePlace>k__BackingField:
     Guid:
       Data1: 919291965
@@ -107,6 +114,13 @@ MonoBehaviour:
       Data3: 2016452767
       Data4: 1878270452
     Path: event:/SFX/Enemy/Single Bat Flying
+  <enemySpawn>k__BackingField:
+    Guid:
+      Data1: -1501809033
+      Data2: 1295933184
+      Data3: -1356646264
+      Data4: -1607509338
+    Path: event:/SFX/Enemy/Enemy Spawn
   <clickSound>k__BackingField:
     Guid:
       Data1: 1165139149

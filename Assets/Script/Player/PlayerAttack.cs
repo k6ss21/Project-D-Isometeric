@@ -1,8 +1,7 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Pool;
 using FMOD.Studio;
 public class PlayerAttack : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     PlayerAttackCollider playerAttackCollider;
     #endregion
 
-    public Transform projectilePf;
+    public Projectile projectilePf;
 
     [Header("Attack Points")]
     private Transform attackPoint;
@@ -51,6 +50,7 @@ public class PlayerAttack : MonoBehaviour
         mouseOverUICheck = GetComponent<MouseOverUICheck>();
         animator = GetComponent<Animator>();
 
+        CreatePooledProjectileObjects();
         slashAttack_SFX = AudioManager.instance.CreateEventInstance(FMODEvents.instance.slashAttack);
         canAttack = true;
         isAttacking = false;
@@ -96,14 +96,19 @@ public class PlayerAttack : MonoBehaviour
             if (!isAttacking)
             {
                 isAttacking = true;
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.ProjectileShoot,this.transform.position);
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.ProjectileShoot, this.transform.position);
                 AttackShoot();
                 StartCoroutine(AttackDelayRoutine(attackShootTime));
             }
         }
     }
 
-    #region ATTACK FUNTIONS
+    #region ATTACK FUNCTIONS
+
+    void SetCanAttack(bool b)
+    {
+        canAttack = b;
+    }
     IEnumerator AttackDelayRoutine(float t)
     {
         attackDelay = t;
@@ -122,9 +127,19 @@ public class PlayerAttack : MonoBehaviour
         float angle = GetAngleFromVectorFloat(shootDir);
         string dir = ChangeDirectionUsingAngle(angle);
         ChangeAttackPoint(dir);
+        characterController.lastMoveDir = dir;
         playerAnimationManger.Attack2Idle(dir);
-        var projectile = Instantiate(projectilePf, attackPoint.position, Quaternion.identity);
-        projectile.GetComponent<Projectile>().Setup(shootDir, shootDamage);
+        //var projectile = Instantiate(projectilePf, attackPoint.position, Quaternion.identity);
+
+        Projectile projectile = GetPooledProjectileObject();
+
+        if (projectile != null)
+        {
+            projectile.transform.position = attackPoint.position;
+            projectile.gameObject.SetActive(true);
+            projectile.Setup(shootDir, shootDamage);
+            projectile.Init(DestroyProjectile);
+        }
 
 
         //CinemachineCameraShake.Instance.ShakeCamera(.2f, .05f); // Fix  it Later..
@@ -150,12 +165,51 @@ public class PlayerAttack : MonoBehaviour
         // Debug.Log("Angle  =" + angle);
         string dir = ChangeDirectionUsingAngle(angle);
         //  Debug.Log("Dir = " + dir);
+        characterController.lastMoveDir = dir;
         playerAnimationManger.Attack(dir);
 
 
     }
 
+
+
     #endregion
+
+    #region OBJECT POOL
+    private List<Projectile> projectilePooledObjects = new List<Projectile>();
+
+    private int amountToPool = 10;
+
+    private void CreatePooledProjectileObjects()
+    {
+        for (int i = 0; i < amountToPool; i++)
+        {
+            Projectile obj = Instantiate(projectilePf, transform.position, Quaternion.identity, this.transform);
+            obj.gameObject.SetActive(false);
+            projectilePooledObjects.Add(obj);
+        }
+    }
+
+    private Projectile GetPooledProjectileObject()
+    {
+        for (int i = 0; i < projectilePooledObjects.Count; i++)
+        {
+            if (!projectilePooledObjects[i].gameObject.activeInHierarchy)
+            {
+                return projectilePooledObjects[i];
+            }
+        }
+        return null;
+    }
+
+    private void DestroyProjectile(Projectile projectile)
+    {
+        projectile.gameObject.transform.position = transform.position;
+        projectile.gameObject.SetActive(false);
+        //   Destroy(projectile.gameObject);
+    }
+
+    #endregion  
 
     #region SFX & OTHERS
 

@@ -7,6 +7,7 @@ public class PlatformManager : MonoBehaviour
     public List<EnemySpawner> enemySpawners = new List<EnemySpawner>();
     public List<MovingLight> movingLights = new List<MovingLight>();
     public bool sick;
+    //public bool isLaboratory;
     public GameObject stairway;
 
     public Transform boxPos;

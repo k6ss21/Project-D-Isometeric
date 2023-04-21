@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
+using Random = UnityEngine.Random;
 public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 {
     public GameObject ratPrefab;
@@ -23,7 +24,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 
     public bool canSpawn;
     int spawnCount;
-    public Transform SpawnPoint;
+    public Transform spawnPoint;
     [Space(10)]
 
     [Header("Health")]
@@ -33,7 +34,15 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 
     public GameObject deadPS_VFX_Prefab;
 
+    public GameObject deathReward;
 
+    private Action<EnemyBoss_1_AI> destroyAction;
+
+
+    public void Init(Action<EnemyBoss_1_AI> destroy)
+    {
+        destroyAction = destroy;
+    }
     void Start()
     {
         GetRandomTimeAndCount();
@@ -67,7 +76,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 
         for (int i = 0; i < spawnCount; i++)
         {
-            Vector3 rdmPos = SpawnPoint.position + new Vector3(Random.Range(.01f, .02f), Random.Range(.01f, .02f));
+            Vector3 rdmPos = spawnPoint.position + new Vector3(Random.Range(.01f, .02f), Random.Range(.01f, .02f));
             var ratSpawm = Instantiate(ratPrefab, rdmPos, Quaternion.identity);
         }
     }
@@ -84,8 +93,9 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
         AudioManager.instance.PlayOneShot(FMODEvents.instance.enemyDamage,this.transform.position);
         if (currentHealth <= 0)
         {
+            Instantiate(deathReward, spawnPoint.position , Quaternion.identity);
             Instantiate(deadPS_VFX_Prefab, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            destroyAction(this);
         }
 
     }

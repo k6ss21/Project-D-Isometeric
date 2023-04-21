@@ -121,8 +121,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You're Outside Home Point
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7793a8baff04e914e899cb9e0b32c594, type: 2}
-  m_sharedMaterial: {fileID: 7006196847360112032, guid: 7793a8baff04e914e899cb9e0b32c594, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 36cf785205321224196f767835de56e3, type: 2}
+  m_sharedMaterial: {fileID: 1516984297700663612, guid: 36cf785205321224196f767835de56e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

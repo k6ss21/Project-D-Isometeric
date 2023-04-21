@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7979470604244517612}
   - component: {fileID: 5862388357172320130}
   - component: {fileID: 4323541057701029803}
+  - component: {fileID: -8804559977709843358}
   m_Layer: 5
   m_Name: Ab_SlowLevelTimer
   m_TagString: Untagged
@@ -150,3 +151,17 @@ MonoBehaviour:
   cooldownTime: 5
   multi: 0.5
   time: 20
+--- !u!114 &-8804559977709843358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087320021809317702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8629807c8f8a64b8d7ce69e24251e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  description: 

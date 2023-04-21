@@ -508,10 +508,11 @@ MonoBehaviour:
   minCount: 3
   maxCount: 7
   canSpawn: 0
-  SpawnPoint: {fileID: 5888700802334709773}
+  spawnPoint: {fileID: 5888700802334709773}
   health: 100
   currentHealth: 0
   deadPS_VFX_Prefab: {fileID: 4481791881957023830, guid: 685e15be5a107bd4393d25885074794e, type: 3}
+  deathReward: {fileID: 4515910847765527907, guid: f8446016410ea5c4ba6618b1e4fc3770, type: 3}
 --- !u!114 &6040801900922296572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,8 +527,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5888700803555448796}
   trailRenderer: {fileID: 0}
+  sortingGroup: {fileID: 0}
   isStatic: 0
+  isSpriteRenderer: 0
   isProjectile: 0
+  isSortingGroup: 0
+  sortingOrderNumber: 0
 --- !u!114 &1958973805
 MonoBehaviour:
   m_ObjectHideFlags: 0

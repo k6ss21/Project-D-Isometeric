@@ -64,7 +64,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.8
+  orthographic size: 2.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_RefResolutionX: 640
   m_RefResolutionY: 320
   m_CropFrame: 0
-  m_GridSnapping: 0
+  m_GridSnapping: 1
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -190,4 +190,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 6438900274208085074, guid: 9166a1a3dbed05a4680f98546ed198e8, type: 3}
+  attenuationObject: {fileID: 0}

@@ -7,19 +7,19 @@ using UnityEngine.UI;
 public class AbilitySlot : MonoBehaviour, IDropHandler
 {
     Image IconImage;
-   public GameObject abilityPrefab;
+    public GameObject abilityPrefab;
 
     AbilitySpace abilitySpace;
     public void OnDrop(PointerEventData eventData)
     {
-      //  Debug.Log("Ondrop");
+        //  Debug.Log("Ondrop");
         if (eventData.pointerDrag != null)
         {
-            
             var abilityDragObj = eventData.pointerDrag.GetComponent<AbilityIcon>();
             IconImage.sprite = abilityDragObj.draggingObj.GetComponent<Image>().sprite;
             abilityPrefab = abilityDragObj.abilityButtonPrefab;
             abilitySpace.UpdateList();
+
         }
     }
 
