@@ -128,6 +128,20 @@ MonoBehaviour:
       Data3: -1115876185
       Data4: 477057991
     Path: event:/SFX/UI/Click
+  <lightningSound>k__BackingField:
+    Guid:
+      Data1: 205338562
+      Data2: 1169473917
+      Data3: 1360713396
+      Data4: -1976979412
+    Path: event:/SFX/Ability/Ab_LightningSFX
+  <lightningHitGround>k__BackingField:
+    Guid:
+      Data1: -1084410139
+      Data2: 1236600119
+      Data3: 1311500461
+      Data4: 1515041322
+    Path: event:/SFX/Ability/Ab_LightningGroundHitSFX
 --- !u!1 &4388320582716075238
 GameObject:
   m_ObjectHideFlags: 0

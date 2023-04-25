@@ -11,6 +11,11 @@ public class SkillPageAccess : MonoBehaviour
     public bool isSkillCanvasOpen;
     public GameObject skillCanvas;
 
+    public void Start()
+    {
+        skillCanvas.gameObject.SetActive(false);
+    }
+
     void Update()
     {
         var collider = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayerMask);

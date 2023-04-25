@@ -11,6 +11,9 @@ public class AbilityDetailsBox : MonoBehaviour
 
     public Button button;
     public AbilityIcon abilityIcon;
+    public SkillPoints skillPointsManager;
+
+    private int skillPointsNeed;
     void OnEnable()
     {
         AbilityIcon.OnAbilityIconClick += UpdateDetailsBox;
@@ -20,14 +23,23 @@ public class AbilityDetailsBox : MonoBehaviour
         AbilityIcon.OnAbilityIconClick -= UpdateDetailsBox;
     }
 
-    void Update()
+    void Awake()
     {
-        button.onClick.AddListener(OnUnlockButtonClick);
+        skillPointsManager = FindObjectOfType<SkillPoints>();
     }
-    private void UpdateDetailsBox(string a, string b, AbilityIcon ab_Icon)
+    private void UpdateDetailsBox(string a, string b,int points, AbilityIcon ab_Icon)
     {
         abilityIcon = ab_Icon;
+        skillPointsNeed = points;
+        UIShowHide(true);
         UpdateAbilityDetailsBoxText(a, b);
+    }
+
+    private void UIShowHide(bool value)
+    {
+        button.gameObject.SetActive(value);
+        abilityNameText.gameObject.SetActive(value);
+        abilityDescriptionText.gameObject.SetActive(value);
     }
 
     private void UpdateAbilityDetailsBoxText(string name, string description)
@@ -39,6 +51,12 @@ public class AbilityDetailsBox : MonoBehaviour
     public void OnUnlockButtonClick()
     {
         Debug.Log("Button Click");
+        if(skillPointsManager.currentSkillPoints >= skillPointsNeed)
+        {
         abilityIcon.isLocked = false;
+        }
+        else{
+            Debug.Log("Not Enogh Skill Points");
+        }
     }
 }

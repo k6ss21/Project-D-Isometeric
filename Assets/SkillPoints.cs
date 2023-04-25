@@ -5,7 +5,7 @@ using UnityEngine;
 public class SkillPoints : MonoBehaviour
 {
     private int totalSkillPoints;
-    private int currentSkillPoints;
+   [field: SerializeField]public int currentSkillPoints{get; private set;}
 
     void OnEnable()
     {

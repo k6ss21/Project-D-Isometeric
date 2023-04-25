@@ -80,12 +80,30 @@ MonoBehaviour:
   enemySpawners:
   - {fileID: 0}
   - {fileID: 0}
+  movingLights: []
+  sickColliders: []
+  sickChars: []
   sick: 0
+  stairway: {fileID: 0}
   boxPos: {fileID: 108781484528723440}
   boxVectors: {x: 7, y: 2}
   SickCharMask:
     serializedVersion: 2
     m_Bits: 4096
+  contactFilter2D:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 4096
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!60 &1936872175360210442
 PolygonCollider2D:
   m_ObjectHideFlags: 0

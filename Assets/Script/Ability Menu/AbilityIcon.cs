@@ -13,12 +13,14 @@ public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     public GameObject draggingObj;
     RectTransform draggingObjRectTransform;
 
-    public static event Action<string, string, AbilityIcon> OnAbilityIconClick;
+    public static event Action<string, string,int , AbilityIcon> OnAbilityIconClick;
+    
+       
 
     public void OnPointerClick(PointerEventData eventData)
     {
         Ab_Details ab_Details = abilityButtonPrefab.GetComponent<Ab_Details>();
-        OnAbilityIconClick?.Invoke(ab_Details.name,ab_Details.description, this);
+        OnAbilityIconClick?.Invoke(ab_Details.name,ab_Details.description,ab_Details.skillPointsNeeded, this);
         
     }
     public void OnBeginDrag(PointerEventData eventData)

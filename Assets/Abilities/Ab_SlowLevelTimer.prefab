@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -836706736, guid: b9de9b86d23c5cf42be22e132a34efc0, type: 3}
+  m_Sprite: {fileID: -1316067626, guid: cf7bd393e700679439dfd937ffbdc152, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -163,5 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8629807c8f8a64b8d7ce69e24251e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: Slow Level Timer
   description: 
+  skillPointsNeeded: 10

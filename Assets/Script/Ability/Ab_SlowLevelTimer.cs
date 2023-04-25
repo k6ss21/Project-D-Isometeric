@@ -27,7 +27,7 @@ public class Ab_SlowLevelTimer : MonoBehaviour
     {
         if (!coolDown)
         {
-           // Debug.Log("Slow Down Level Timer...");
+           Debug.Log("Slow Down Level Timer..." + multi);
             OnSlowLevelTimer?.Invoke(multi,time);
             coolDown = true;
             button.enabled = false;
@@ -35,7 +35,7 @@ public class Ab_SlowLevelTimer : MonoBehaviour
         }
         else
         {
-            Debug.Log("Slow Down Level Timer Ability cooldown");
+          //  Debug.Log("Slow Down Level Timer Ability cooldown");
         }
     }
 

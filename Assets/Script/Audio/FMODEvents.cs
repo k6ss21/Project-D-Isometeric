@@ -29,7 +29,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("UI")]
     [field: SerializeField] public EventReference clickSound { get; private set; }
 
-
+     [field: Header("ABILITY")]
+     [field: SerializeField] public EventReference lightningSound { get; private set; }
+       [field: SerializeField] public EventReference lightningHitGround{ get; private set; }
 
     public static FMODEvents instance;
 

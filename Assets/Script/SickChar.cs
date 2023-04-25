@@ -102,11 +102,13 @@ public class SickChar : MonoBehaviour
         var collider = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayer);
 
 
+
         if (collider != null)
         {
+            Player playerScript = collider.GetComponent<Player>();
             if (!_textVisible)
             {
-                if (collider.GetComponent<Player>().IsHealing)
+                if (playerScript.IsHealing)
                 {
                     // ShowInstructionCantHealText();
                 }
@@ -118,7 +120,7 @@ public class SickChar : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (collider.GetComponent<Player>().IsHealing)
+                if (playerScript.IsHealing)
                 {
                     // Debug.Log("You can Only heal One Person at a Time");
                     if (instructionBox != null)
@@ -130,12 +132,19 @@ public class SickChar : MonoBehaviour
                     }
                     return;
                 }
-                Debug.Log("Healing Started");
-                //collider.GetComponent<Player>().IsHealing = true;
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.healStarted,this.transform.position);
-                sliderCanvas.gameObject.SetActive(true);
-                OnSetHealing?.Invoke(true);
-                IsHealing = true;
+                if (playerScript.lowImmunity)
+                {
+                    // Debug.Log("You can Only heal One Person at a Time");
+                    if (instructionBox != null)
+                    {
+                        if (!IsHealing)
+                        {
+                            instructionBox.SpawnInstructionPopUpText("Can't Heal, Immunity is too low");
+                        }
+                    }
+                    return;
+                }
+                StarHealing();
 
             }
 
@@ -145,6 +154,16 @@ public class SickChar : MonoBehaviour
             DestroyText();
         }
 
+    }
+
+    public void StarHealing()
+    {
+        Debug.Log("Healing Started");
+        //collider.GetComponent<Player>().IsHealing = true;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.healStarted, this.transform.position);
+        sliderCanvas.gameObject.SetActive(true);
+        OnSetHealing?.Invoke(true);
+        IsHealing = true;
     }
 
     public void DisableOutline()

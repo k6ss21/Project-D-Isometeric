@@ -55,11 +55,13 @@ public class Player : MonoBehaviour
         CoolOverTime();
         AutoSelfHeal(); //Auto heal when health is low 95
         TakeImmunityTimer();
+        CheckLowImmunity();
 
         if (Input.GetKeyDown(KeyCode.K))    //Test Input
         {
-            ScreenCapture.CaptureScreenshot("screenshot.png");
-            Debug.Log("SS Taken");
+            // ScreenCapture.CaptureScreenshot("screenshot.png");
+            // Debug.Log("SS Taken");
+            TakeImmunity(20);
         }
         if (isLowTemp)
         {
@@ -88,6 +90,9 @@ public class Player : MonoBehaviour
         currentHealth = health;
         currentTemperature = temperature;
         currentImmunity = totalImmunity;
+        UpdateHealthBar();
+        UpdateImmunitySlider();
+        UpdateTemperatureBar();
     }
 
 
@@ -251,6 +256,8 @@ public class Player : MonoBehaviour
     float ImmunityLossTimer;
     public float ImmunityLossInterval;
 
+    public bool lowImmunity;
+
     bool immunityLossTimeOut;
 
     public Slider immunitySlider;
@@ -286,6 +293,18 @@ public class Player : MonoBehaviour
     {
         float value = currentImmunity / totalImmunity;
         immunitySlider.value = value;
+    }
+
+    void CheckLowImmunity()
+    {
+        if (currentImmunity <= 20)
+        {
+            lowImmunity = true;
+        }
+        else
+        {
+            lowImmunity = false;
+        }
     }
 
 

@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8629807c8f8a64b8d7ce69e24251e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  name: Shield
   description: 
+  skillPointsNeeded: 10

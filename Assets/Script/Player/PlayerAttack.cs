@@ -64,7 +64,7 @@ public class PlayerAttack : MonoBehaviour
             ManageInput();
         }
         AttackShootTimer();
-        UpdateSound();
+       // UpdateSound();
 
     }
 
@@ -81,6 +81,7 @@ public class PlayerAttack : MonoBehaviour
                 AttackSword();
                 playerAttackCollider.SetDamageValue(DefaultDamageValue);
                 StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
+              //  StartCoroutine(AttackDelayRoutine(.375f));
             }
             else
             {
@@ -103,6 +104,12 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public void OnFinishAttackAnim()
+    {
+        isAttacking = false;
+        isAttackSword = false; 
+    }
+
     #region ATTACK FUNCTIONS
 
     void SetCanAttack(bool b)
@@ -113,7 +120,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attackDelay = t;
         yield return new WaitForSeconds(attackDelay);
-        playerAnimationManger.PlayerIdle();
+      //  playerAnimationManger.PlayerIdle();
         isAttacking = false;
         isAttackSword = false;
     }
@@ -173,6 +180,7 @@ public class PlayerAttack : MonoBehaviour
 
 
 
+
     #endregion
 
     #region OBJECT POOL
@@ -209,7 +217,9 @@ public class PlayerAttack : MonoBehaviour
         //   Destroy(projectile.gameObject);
     }
 
-    #endregion  
+    #endregion
+
+  
 
     #region SFX & OTHERS
 
