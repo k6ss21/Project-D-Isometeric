@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
     public bool IsHealing = false;
     public TextMeshProUGUI _healCountText;
 
-    void AddHealCount() //ADD Heal count to Update UI.
+    void AddHealCount(SickChar sickChar) //ADD Heal count to Update UI.
     {
         healCount++;
         IsHealing = false;
@@ -143,6 +143,7 @@ public class Player : MonoBehaviour
             UpdateHealthBar();
             if (currentHealth <= 0)
             {
+                this.gameObject.SetActive(false);
                 Debug.Log("Player Is DEAD!!");
             }
         }

@@ -7,7 +7,7 @@ public class PlatformManager : MonoBehaviour
     public List<EnemySpawner> enemySpawners = new List<EnemySpawner>();
     public List<MovingLight> movingLights = new List<MovingLight>();
 
-    public List<Collider2D> sickColliders  = new List<Collider2D>();
+    public List<Collider2D> sickColliders = new List<Collider2D>();
     public List<SickChar> sickChars = new List<SickChar>();
     public bool sick;
     //public bool isLaboratory;
@@ -21,27 +21,30 @@ public class PlatformManager : MonoBehaviour
     void OnEnable()
     {
         Ab_Rehabilitation.OnRehabilitationTrigger += HealAllSick;
+        SickChar.OnHealComplete += RemoveSickFromList;
     }
 
     void OnDisable()
     {
         Ab_Rehabilitation.OnRehabilitationTrigger -= HealAllSick;
+        SickChar.OnHealComplete -= RemoveSickFromList;
 
 
     }
 
-    private void Start() {
-        
+    private void Start()
+    {
+
         sickContactFilter2D.layerMask = SickCharMask;
     }
-    
+
     void Update()
     {
 
-        var collider2D = Physics2D.OverlapBox(boxPos.position, boxVectors, 27,SickCharMask);
+        var collider2D = Physics2D.OverlapBox(boxPos.position, boxVectors, 27, SickCharMask);
         if (collider2D != null)
         {
-           
+
             sick = true;
             if (stairway != null)
             {
@@ -97,7 +100,14 @@ public class PlatformManager : MonoBehaviour
             }
 
         }
-        
+
+    }
+
+    void RemoveSickFromList(SickChar sickChar)
+    {
+        Debug.Log("sick char = "+sickChar);
+        sickChars.Remove(sickChar);
+
     }
 
     void HealAllSick()

@@ -49,7 +49,7 @@ public class SickChar : MonoBehaviour
 
     InstructionBox instructionBox;
 
-    public static event Action OnHealComplete;
+    public static event Action<SickChar> OnHealComplete;
     public static event Action<bool> OnSetHealing;
 
     void Start()
@@ -91,7 +91,7 @@ public class SickChar : MonoBehaviour
     void HealComplete()
     {
         IsHealing = false;
-        OnHealComplete?.Invoke();
+        OnHealComplete?.Invoke(this);
         Debug.Log("Healed!");
         animator.Play("SickChar_Disappear");
         Destroy(this.gameObject, .5f);
