@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - SickChar
   - Projecitle Destroy
+  - Fall Projectile Hit
   layers:
   - Default
   - TransparentFX

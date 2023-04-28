@@ -236,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootSpeed: 4
   ImpactPrefab: {fileID: 263573659014887356, guid: 1bfea6e44186474428d3886f46f8b38f, type: 3}
+  usingObjPool: 1
 --- !u!50 &9091234731909837566
 Rigidbody2D:
   serializedVersion: 4

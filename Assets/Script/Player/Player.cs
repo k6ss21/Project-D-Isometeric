@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
         //Ability Events
         Ab_Healing.OnAbilityHeal += TakeHealth;
         Ab_shield.OnShieldActive += ActivateShield;
+        Ab_Immunity.OnImmunityTrigger +=  TakeImmunity;
     }
     void OnDisable()
     {

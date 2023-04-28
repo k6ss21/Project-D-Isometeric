@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 using System;
 public class Projectile : MonoBehaviour
 {
-   
+
     private Vector3 shootDir;
     private float damage;
 
@@ -14,11 +14,12 @@ public class Projectile : MonoBehaviour
     public GameObject ImpactPrefab;
 
     private Action<Projectile> destroyAction;
+    public bool usingObjPool;
 
     void Awake()
     {
         Debug.Log("Objected Created ");
-       
+
     }
     public void Init(Action<Projectile> destroy)
     {
@@ -31,7 +32,7 @@ public class Projectile : MonoBehaviour
         shootDir = dir;
         damage = value;
         transform.eulerAngles = new Vector3(0, 0, GetAngleFromVectorFloat(shootDir));
-       
+
 
     }
 
@@ -59,15 +60,26 @@ public class Projectile : MonoBehaviour
             Instantiate(ImpactPrefab, transform.position, Quaternion.identity);
             target.TakeDamage(damage);
 
-            destroyAction(this);
-            //Destroy(gameObject);
+            if (usingObjPool)
+            {
+                destroyAction(this);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
         //        Debug.Log(other.gameObject.name);
         if (other.CompareTag("Projecitle Destroy"))
         {
-            destroyAction(this);
-            //zzDebug.Log("hiting Elevation");
-            //   Destroy(gameObject);
+            if (usingObjPool)
+            {
+                destroyAction(this);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
     }
