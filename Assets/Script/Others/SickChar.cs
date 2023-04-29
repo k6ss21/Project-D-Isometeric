@@ -108,14 +108,14 @@ public class SickChar : MonoBehaviour
             Player playerScript = collider.GetComponent<Player>();
             if (!_textVisible)
             {
-                if (playerScript.IsHealing)
-                {
-                    // ShowInstructionCantHealText();
-                }
-                else
-                {
-                    ShowInstructionText();
-                }
+                // if (playerScript.IsHealing)
+                // {
+                //     // ShowInstructionCantHealText();
+                // }
+                // else
+                // {
+                //     ShowInstructionText();
+                // }
             }
 
             if (Input.GetKeyDown(KeyCode.F))

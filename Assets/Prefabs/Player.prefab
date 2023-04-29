@@ -976,6 +976,37 @@ Transform:
   m_Father: {fileID: 2088548510}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1342303452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342303453}
+  m_Layer: 6
+  m_Name: Lighning Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1342303453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342303452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.028, y: 2.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6438900274208085086}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915454868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1964,7 @@ GameObject:
   - component: {fileID: 1731963487}
   - component: {fileID: 1866143655926177216}
   - component: {fileID: 1290056009}
+  - component: {fileID: 918963553}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1959,6 +1991,7 @@ Transform:
   - {fileID: 2088548510}
   - {fileID: 1320786741}
   - {fileID: 1938864399}
+  - {fileID: 1342303453}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2003,7 +2036,7 @@ SpriteRenderer:
   m_SortingLayerID: 1185239315
   m_SortingLayer: 8
   m_SortingOrder: 10
-  m_Sprite: {fileID: 1419558511, guid: cf95d2222f9c2a647b4058263efa195c, type: 3}
+  m_Sprite: {fileID: -131193068, guid: 80a6da80dcd0539469a34193a1ecaad6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2084,6 +2117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultWalkSpeed: 1.1
+  lastMoveDir: 
 --- !u!114 &6438900274208085084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,15 +2150,20 @@ MonoBehaviour:
   m_SelfShadows: 1
   m_ApplyToSortingLayers: e7c4abb48f9c6b85fb1059f08d9589b663067707231c8ecfa3d3a026
   m_ShapePath:
-  - {x: -0.054880515, y: -0.20400521, z: 0}
-  - {x: -0.0502757, y: -0.20269975, z: 0}
-  - {x: 0.028828382, y: -0.18000317, z: 0}
-  - {x: 0.041534662, y: -0.19470263, z: 0}
-  - {x: 0.0094869435, y: -0.20026028, z: 0}
-  - {x: -0.06016621, y: -0.21722355, z: 0}
-  m_ShapePathHash: 1673395557
+  - {x: -0.06132412, y: -0.23339653, z: 0}
+  - {x: -0.045334816, y: -0.2208271, z: 0}
+  - {x: -0.019889832, y: -0.21342278, z: 0}
+  - {x: -0.0009880066, y: -0.21292877, z: 0}
+  - {x: 0.046171665, y: -0.21398067, z: 0}
+  - {x: 0.06880236, y: -0.23122215, z: 0}
+  - {x: 0.06291103, y: -0.23636532, z: 0}
+  - {x: 0.045233727, y: -0.24314594, z: 0}
+  - {x: -0.0006070137, y: -0.24827099, z: 0}
+  - {x: -0.028111458, y: -0.2449007, z: 0}
+  - {x: -0.052630424, y: -0.24037266, z: 0}
+  m_ShapePathHash: 505109591
   m_Mesh: {fileID: 0}
-  m_InstanceId: -45546
+  m_InstanceId: -2438
 --- !u!114 &6438900274208085081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2156,8 +2195,9 @@ MonoBehaviour:
   coolRate: 5
   lowTempEffectInterval: 3
   lowTempDamage: 5
-  totalImmunity: 20
+  totalImmunity: 100
   ImmunityLossInterval: 5
+  lowImmunity: 0
   immunitySlider: {fileID: 0}
   selfHealInterval: 10
   selfHealRate: 5
@@ -2194,7 +2234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fd041c3e65325d4f8cdffc5d730ebbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePf: {fileID: 7059287526719168394, guid: 819ffe2b6cc462d4d98e9bcd883d3d2a, type: 3}
+  projectilePf: {fileID: 6822531191434441956, guid: 819ffe2b6cc462d4d98e9bcd883d3d2a, type: 3}
   attackPoint_SENE: {fileID: 1915454869}
   attackPoint_SWNW: {fileID: 439609035}
   attackPoint_N: {fileID: 66975497}
@@ -2203,6 +2243,8 @@ MonoBehaviour:
   attackPoint_W: {fileID: 1257521305}
   DefaultDamageValue: 15
   shootDamage: 30
+  isAbilityActive: 0
+  isAttackAbilityActive: 0
   attackShootTime: 0.1
 --- !u!114 &1290056009
 MonoBehaviour:
@@ -2216,3 +2258,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272d069b81671b046b7f5f6ff3046c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &918963553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438900274208085074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a43dd48979f3045a438fb31903bcd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightningVfxPrefab: {fileID: 1937539800240567977, guid: 7f872e61a3952a4489f3eac511ef4946, type: 3}
+  lightningPoint: {fileID: 1342303453}
+  skyFallVfxPrefab: {fileID: 1085072267662051625, guid: 7e095995316ecb74ba4cfe76ae5fe15b, type: 3}

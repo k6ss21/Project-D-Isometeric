@@ -77,6 +77,23 @@ public class PlayerAnimationManger : MonoBehaviour
 
     #endregion
 
+    #region MEGA ATTACK ANIMATION
+    const string PLAYER_MEGAATTACK_E = "Player_MegaAttack_E";
+    const string PLAYER_MEGAATTACK_SE = "Player_MegaAttack_SE";
+    const string PLAYER_MEGAATTACK_S = "Player_MegaAttack_S";
+    const string PLAYER_MEGAATTACK_SW = "Player_MegaAttack_SW";
+    const string PLAYER_MEGAATTACK_W = "Player_MegaAttack_W";
+    const string PLAYER_MEGAATTACK_NW = "Player_MegaAttack_NW";
+    const string PLAYER_MEGAATTACK_N = "Player_MegaAttack_N";
+    const string PLAYER_MEGAATTACK_NE = "Player_MegaAttack_NE";
+
+
+    #endregion
+
+    #region AB_GROWBIG ANIMATION
+    const string PLAYER_GROWBIG_GROW = "Player_GrowBig";
+    #endregion
+
 
     void Start()
     {
@@ -248,6 +265,43 @@ public class PlayerAnimationManger : MonoBehaviour
                 break;
         }
 
+    }
+
+    public void MegaAttack(string dir)
+    {
+        switch (dir)
+        {
+            case "NE":
+                ChangeAnimationState(PLAYER_MEGAATTACK_NE);
+                break;
+            case "NW":
+                ChangeAnimationState(PLAYER_MEGAATTACK_NW);
+                break;
+            case "SE":
+                ChangeAnimationState(PLAYER_MEGAATTACK_SE);
+                break;
+            case "SW":
+                ChangeAnimationState(PLAYER_MEGAATTACK_SW);
+                break;
+            case "N":
+                ChangeAnimationState(PLAYER_MEGAATTACK_N);
+                break;
+            case "S":
+                ChangeAnimationState(PLAYER_MEGAATTACK_S);
+                break;
+            case "E":
+                ChangeAnimationState(PLAYER_MEGAATTACK_E);
+                break;
+            case "W":
+                ChangeAnimationState(PLAYER_MEGAATTACK_W);
+                break;
+        }
+
+    }
+
+    public void Ab_GrowBig_Grow()
+    {
+        ChangeAnimationState(PLAYER_GROWBIG_GROW);
     }
 
 

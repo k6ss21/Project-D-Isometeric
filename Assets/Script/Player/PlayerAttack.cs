@@ -39,19 +39,24 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float DefaultDamageValue;
     [SerializeField] private float shootDamage;
 
-    bool isAbilityActive;
+    public bool isAbilityActive;
+    public bool isAttackAbilityActive;
     [SerializeField] float attackShootTime;
 
     private EventInstance slashAttack_SFX;
 
+    private Coroutine swordCoroutine;
+
     void OnEnable()
     {
-        Ab_SkyFallVFX.OnAbilityEnd += SetAblityActive;
+        Ab_SkyFallVFX.OnAbilityEnd += SetAttackAbilityActive;
+        Ab_MegaAttack.OnMegaAttackTrigger += MegaAttack;
     }
 
     void OnDisable()
     {
-        Ab_SkyFallVFX.OnAbilityEnd -= SetAblityActive;
+        Ab_SkyFallVFX.OnAbilityEnd -= SetAttackAbilityActive;
+        Ab_MegaAttack.OnMegaAttackTrigger -= MegaAttack;
     }
 
     void Start()
@@ -71,7 +76,7 @@ public class PlayerAttack : MonoBehaviour
     }
     void Update()
     {
-        if (canAttack && !isAbilityActive)
+        if (canAttack && !isAbilityActive && !isAttackAbilityActive)
         {
             ManageInput();
         }
@@ -80,13 +85,27 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
-    public void SetAblityActive(bool value)
+    public void SetAttackAbilityActive(bool value)
+    {
+        isAttackAbilityActive = value;
+    }
+     public void SetAbilityActive(bool value)
     {
         isAbilityActive = value;
     }
 
     void ManageInput()
     {
+
+        // if (Input.GetKeyDown(KeyCode.T))
+        // {
+        //     if (!isAttacking)
+        //     {
+        //         isAttacking = true;
+        //         MegaAttack();
+        //         StartCoroutine(AttackDelayRoutine(2.5f));
+        //     }
+        // }
         if (Input.GetMouseButtonDown(1))
         {
 
@@ -97,8 +116,9 @@ public class PlayerAttack : MonoBehaviour
                 isAttackSword = true;
                 AttackSword();
                 playerAttackCollider.SetDamageValue(DefaultDamageValue);
-                StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
-                //  StartCoroutine(AttackDelayRoutine(.375f));
+                // StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
+                swordCoroutine = StartCoroutine(AttackDelayRoutine(.375f));
+
             }
             else
             {
@@ -192,6 +212,15 @@ public class PlayerAttack : MonoBehaviour
         characterController.lastMoveDir = dir;
         playerAnimationManger.Attack(dir);
 
+
+    }
+
+    public void MegaAttack()
+    {
+        if (swordCoroutine != null) { StopCoroutine(swordCoroutine); } //Stops Coroutine of Sword Attack of it is running.
+        isAttacking = true;
+        playerAnimationManger.MegaAttack(characterController.lastMoveDir);
+        StartCoroutine(AttackDelayRoutine(2.5f));
 
     }
 

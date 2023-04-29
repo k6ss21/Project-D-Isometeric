@@ -188,7 +188,7 @@ public class IsoCharacterController : MonoBehaviour
     void HandleIdle()
     {
 
-        if (inputDir == Vector2.zero && !playerAttack.isAttacking)
+        if (inputDir == Vector2.zero && !playerAttack.isAttacking && !playerAttack.isAbilityActive)
         {
             isIdle = true;
             IdleAnim();
