@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1085072267506375812}
   - component: {fileID: 1085072267506375813}
-  - component: {fileID: 1085072267506375815}
+  - component: {fileID: 530063135674811938}
+  - component: {fileID: 6631132118144422941}
   m_Layer: 0
-  m_Name: isogroundCircleRef_0
+  m_Name: Aim_Ref
   m_TagString: Fall Projectile Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1085072267506375810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1085072267662051627}
@@ -74,18 +75,18 @@ SpriteRenderer:
   m_SortingLayerID: 1185239315
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1784958854, guid: 50b946f6b9dabaa48b40bf2ce0f773ac, type: 3}
+  m_Sprite: {fileID: -1333540232, guid: 8ab39afeaa49af74da3b918f72494bd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9, y: 0.49}
+  m_Size: {x: 0.55, y: 0.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1085072267506375815
+--- !u!61 &530063135674811938
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,19 +99,32 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012734413, y: -0.0065096878}
+  m_Offset: {x: 0, y: -0.0028877258}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9, y: 0.49}
-    newSize: {x: 0.9, y: 0.49}
+    oldSize: {x: 0.55, y: 0.29}
+    newSize: {x: 0.55, y: 0.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4784908, y: 0.07085484}
+  m_Size: {x: 0.55, y: 0.04452133}
   m_EdgeRadius: 0
+--- !u!114 &6631132118144422941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085072267506375810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa6c428ac816114285b3b3fb4de69ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canSetAim: 0
 --- !u!1 &1085072267662051625
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +137,7 @@ GameObject:
   - component: {fileID: 1085072267662051624}
   m_Layer: 0
   m_Name: SkyFall
-  m_TagString: Untagged
+  m_TagString: Fall Projectile Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimSprite: {fileID: 1085072267506375810}
   fallProjectilePrefab: {fileID: 3134742160870535719, guid: 631e96ae7d93c994298cdad393013151, type: 3}
+  ab_SkyFallAimRef: {fileID: 6631132118144422941}
   minInstantiateInterval: 0.1
   maxInstantiateInterval: 0.15
   posOffset: {x: 0, y: 3, z: 0}

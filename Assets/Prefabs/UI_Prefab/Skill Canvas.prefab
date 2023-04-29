@@ -4439,7 +4439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -966445197, guid: ff4e32103e7a5a14caaa04612f44fe3c, type: 3}
+  m_Sprite: {fileID: 370120257, guid: 23f2b896ec985f84684692b169566865, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4462,7 +4462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
-  abilityButtonPrefab: {fileID: 1464302649766752091, guid: 5cb0a00e18ac0104394fe6b175216d0d, type: 3}
+  abilityButtonPrefab: {fileID: 1464302649766752091, guid: e91bc41d0cd99844181a2a9a6d97dc24, type: 3}
   draggingObj: {fileID: 0}
 --- !u!1 &1013799528912489811
 GameObject:

@@ -39,9 +39,21 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private float DefaultDamageValue;
     [SerializeField] private float shootDamage;
 
+    bool isAbilityActive;
     [SerializeField] float attackShootTime;
 
     private EventInstance slashAttack_SFX;
+
+    void OnEnable()
+    {
+        Ab_SkyFallVFX.OnAbilityEnd += SetAblityActive;
+    }
+
+    void OnDisable()
+    {
+        Ab_SkyFallVFX.OnAbilityEnd -= SetAblityActive;
+    }
+
     void Start()
     {
         playerAnimationManger = GetComponent<PlayerAnimationManger>();
@@ -59,13 +71,18 @@ public class PlayerAttack : MonoBehaviour
     }
     void Update()
     {
-        if (canAttack)
+        if (canAttack && !isAbilityActive)
         {
             ManageInput();
         }
         AttackShootTimer();
-       // UpdateSound();
+        // UpdateSound();
 
+    }
+
+    public void SetAblityActive(bool value)
+    {
+        isAbilityActive = value;
     }
 
     void ManageInput()
@@ -81,7 +98,7 @@ public class PlayerAttack : MonoBehaviour
                 AttackSword();
                 playerAttackCollider.SetDamageValue(DefaultDamageValue);
                 StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
-              //  StartCoroutine(AttackDelayRoutine(.375f));
+                //  StartCoroutine(AttackDelayRoutine(.375f));
             }
             else
             {
@@ -107,7 +124,7 @@ public class PlayerAttack : MonoBehaviour
     public void OnFinishAttackAnim()
     {
         isAttacking = false;
-        isAttackSword = false; 
+        isAttackSword = false;
     }
 
     #region ATTACK FUNCTIONS
@@ -120,7 +137,7 @@ public class PlayerAttack : MonoBehaviour
     {
         attackDelay = t;
         yield return new WaitForSeconds(attackDelay);
-      //  playerAnimationManger.PlayerIdle();
+        //  playerAnimationManger.PlayerIdle();
         isAttacking = false;
         isAttackSword = false;
     }
@@ -219,7 +236,7 @@ public class PlayerAttack : MonoBehaviour
 
     #endregion
 
-  
+
 
     #region SFX & OTHERS
 

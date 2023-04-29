@@ -6,6 +6,8 @@ using System;
 public class Player_AbilityManger : MonoBehaviour
 {
 
+    PlayerAttack playerAttack;
+
     void OnEnable()
     {
         Ab_Lightning.OnLightningTrigger += Ab_LightningInitiate;
@@ -16,6 +18,11 @@ public class Player_AbilityManger : MonoBehaviour
     {
         Ab_Lightning.OnLightningTrigger -= Ab_LightningInitiate;
           Ab_SkyFall.OnSkyFallTrigger -= Ab_SkyFallInitiate;
+    }
+
+    void Start()
+    {
+        playerAttack = GetComponent<PlayerAttack>();
     }
 
     #region Ab_Lightning ATTACK
@@ -38,6 +45,7 @@ public class Player_AbilityManger : MonoBehaviour
     void Ab_SkyFallInitiate()
     {
         var skyFallVfx = Instantiate(skyFallVfxPrefab, transform.position, Quaternion.identity);
+        playerAttack.SetAblityActive(true);
         skyFallVfx.GetComponent<Ab_SkyFallVFX>().isAiming = true;
     }
     #endregion

@@ -9,6 +9,7 @@ TagManager:
   - SickChar
   - Projecitle Destroy
   - Fall Projectile Hit
+  - PlayZone
   layers:
   - Default
   - TransparentFX
