@@ -9,16 +9,20 @@ public class Player_AbilityManger : MonoBehaviour
     PlayerAttack playerAttack;
     PlayerAnimationManger playerAnimationManger;
 
+
+
     void OnEnable()
     {
         Ab_Lightning.OnLightningTrigger += Ab_LightningInitiate;
         Ab_SkyFall.OnSkyFallTrigger += Ab_SkyFallInitiate;
+        Ab_MagicHomePointCane.OnMagicHomePointCanePlaceTrigger += Ab_MagicHomePointInitiate;
     }
 
     void OnDisable()
     {
         Ab_Lightning.OnLightningTrigger -= Ab_LightningInitiate;
         Ab_SkyFall.OnSkyFallTrigger -= Ab_SkyFallInitiate;
+        Ab_MagicHomePointCane.OnMagicHomePointCanePlaceTrigger -= Ab_MagicHomePointInitiate;
     }
 
     void Start()
@@ -54,13 +58,13 @@ public class Player_AbilityManger : MonoBehaviour
 
     #region AB_GROWBIG 
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Ab_GrowBig_Grow();
-        }
-    }
+    // void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.T))
+    //     {
+    //         Ab_GrowBig_Grow();
+    //     }
+    // }
 
     void Ab_GrowBig_Grow()
     {
@@ -71,8 +75,35 @@ public class Player_AbilityManger : MonoBehaviour
     public void OnAbilityGrowBig()
     {
         playerAttack.SetAbilityActive(false);
-        this.gameObject.transform.localScale = new Vector3(2,2,2);
+        this.gameObject.transform.parent.localScale = new Vector3(2, 2, 2);
     }
 
     #endregion
+
+    #region Ab_MagicHomePoint
+
+    [SerializeField] GameObject magicHomePointStickPrefab;
+    public Transform labTeleportPoint;
+
+    public Canvas skillCanvas;
+
+    // void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.T))
+    //     {
+    //         Ab_MagicHomePointInitiate(5f);
+    //     }
+    // }
+
+    void Ab_MagicHomePointInitiate(float time)
+    {
+        var magicHomePointStick = Instantiate(magicHomePointStickPrefab, transform.position, Quaternion.identity);
+
+        magicHomePointStick.GetComponent<MagicHomePointStick>().InitiateCoroutine(time);
+        magicHomePointStick.GetComponent<HomePoint>().labTeleportPoint = labTeleportPoint;
+        magicHomePointStick.GetComponent<HomePoint>().skillCanvas = skillCanvas;
+
+    }
+    #endregion
+
 }

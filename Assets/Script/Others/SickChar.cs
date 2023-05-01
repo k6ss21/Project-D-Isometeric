@@ -52,6 +52,16 @@ public class SickChar : MonoBehaviour
     public static event Action<SickChar> OnHealComplete;
     public static event Action<bool> OnSetHealing;
 
+    void OnEnable()
+    {
+        Ab_CureStimulator.OnCureStimulateTrigger += ChangeHealingRate;
+    }
+
+    void OnDisable()
+    {
+        Ab_CureStimulator.OnCureStimulateTrigger -= ChangeHealingRate;
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -67,6 +77,7 @@ public class SickChar : MonoBehaviour
 
         HealPrompt();
         DisableOutline();
+
         if (IsHealing)
         {
             healingProgress += healingRate * Time.deltaTime;
@@ -78,6 +89,13 @@ public class SickChar : MonoBehaviour
                 HealComplete();
             }
         }
+    }
+
+    public void ChangeHealingRate(float boost)
+    {
+        
+        healingRate *= boost;
+        Debug.Log("Healing Rate Changed " + healingRate);
     }
 
     public void CancelHealing()

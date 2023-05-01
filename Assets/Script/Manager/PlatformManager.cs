@@ -21,12 +21,16 @@ public class PlatformManager : MonoBehaviour
     void OnEnable()
     {
         Ab_Rehabilitation.OnRehabilitationTrigger += HealAllSick;
+        Ab_InstantRehabilitation.OnInstantRehabilitationTrigger += InstantHealAllSick;
+        Ab_SpawnBreaker.OnSpawnBreakerTrigger += DisableEnemySpawner;
         SickChar.OnHealComplete += RemoveSickFromList;
     }
 
     void OnDisable()
     {
+        Ab_InstantRehabilitation.OnInstantRehabilitationTrigger -= InstantHealAllSick;
         Ab_Rehabilitation.OnRehabilitationTrigger -= HealAllSick;
+        Ab_SpawnBreaker.OnSpawnBreakerTrigger -= DisableEnemySpawner;
         SickChar.OnHealComplete -= RemoveSickFromList;
 
 
@@ -62,6 +66,24 @@ public class PlatformManager : MonoBehaviour
         }
 
 
+    }
+
+    void DisableEnemySpawner(float time)
+    {
+        foreach (EnemySpawner enemySpawner in enemySpawners)
+        {
+            enemySpawner.canSpawn = false;
+        }
+        StartCoroutine(ReEnableEnemySpawner(time));
+    }
+
+    IEnumerator ReEnableEnemySpawner(float time)
+    {
+        yield return new WaitForSeconds(time);
+        foreach (EnemySpawner enemySpawner in enemySpawners)
+        {
+            enemySpawner.canSpawn = true;
+        }
     }
 
 
@@ -105,7 +127,7 @@ public class PlatformManager : MonoBehaviour
 
     void RemoveSickFromList(SickChar sickChar)
     {
-        Debug.Log("sick char = "+sickChar);
+        Debug.Log("sick char = " + sickChar);
         sickChars.Remove(sickChar);
 
     }
@@ -120,6 +142,19 @@ public class PlatformManager : MonoBehaviour
             }
         }
     }
+
+    void InstantHealAllSick(float multi)
+    {
+        if (playerPresent)
+        {
+            foreach (SickChar sickChar in sickChars)
+            {
+                sickChar.StarHealing();
+                sickChar.ChangeHealingRate(multi);
+            }
+        }
+    }
+
 
     void OnDrawGizmos()
     {

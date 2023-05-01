@@ -2130,6 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f20fc30eedd1442a9a46886ab571a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 6438900274208085085}
 --- !u!114 &6438900274208085083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2163,7 +2164,7 @@ MonoBehaviour:
   - {x: -0.052630424, y: -0.24037266, z: 0}
   m_ShapePathHash: 505109591
   m_Mesh: {fileID: 0}
-  m_InstanceId: -2438
+  m_InstanceId: -2352
 --- !u!114 &6438900274208085081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,3 +2274,6 @@ MonoBehaviour:
   lightningVfxPrefab: {fileID: 1937539800240567977, guid: 7f872e61a3952a4489f3eac511ef4946, type: 3}
   lightningPoint: {fileID: 1342303453}
   skyFallVfxPrefab: {fileID: 1085072267662051625, guid: 7e095995316ecb74ba4cfe76ae5fe15b, type: 3}
+  magicHomePointStickPrefab: {fileID: 1468908793888830426, guid: cfb87812e1f1ad8479fa3be8cebdaf2c, type: 3}
+  labTeleportPoint: {fileID: 0}
+  skillCanvas: {fileID: 0}

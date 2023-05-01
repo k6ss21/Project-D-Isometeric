@@ -23,7 +23,7 @@ public class LabPoint : MonoBehaviour
 
           if(Input.GetKeyDown(KeyCode.E))
           {
-             OnReturnLastPos?.Invoke();
+            OnReturnLastPos?.Invoke();
           } 
         }
         

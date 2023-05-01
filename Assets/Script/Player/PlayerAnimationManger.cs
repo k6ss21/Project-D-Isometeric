@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimationManger : MonoBehaviour
 {
-    Animator _animator;
+    public Animator _animator;
 
     string _currentState;
 
@@ -97,7 +97,7 @@ public class PlayerAnimationManger : MonoBehaviour
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
+      //  _animator = GetComponent<Animator>();
     }
 
     public void PlayerWalk(string dir)

@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
         Ab_Healing.OnAbilityHeal += TakeHealth;
         Ab_shield.OnShieldActive += ActivateShield;
         Ab_Immunity.OnImmunityTrigger +=  TakeImmunity;
+        Ab_WarmUp.OnWarmUpTrigger += WarmUp;
     }
     void OnDisable()
     {
@@ -33,6 +34,9 @@ public class Player : MonoBehaviour
 
         //Ability Events
         Ab_Healing.OnAbilityHeal -= TakeHealth;
+         Ab_shield.OnShieldActive -= ActivateShield;
+        Ab_Immunity.OnImmunityTrigger -=  TakeImmunity;
+        Ab_WarmUp.OnWarmUpTrigger -= WarmUp;
     }
 
     void Start()
@@ -62,7 +66,7 @@ public class Player : MonoBehaviour
         {
             // ScreenCapture.CaptureScreenshot("screenshot.png");
             // Debug.Log("SS Taken");
-            TakeImmunity(20);
+            //TakeImmunity(20);
         }
         if (isLowTemp)
         {
