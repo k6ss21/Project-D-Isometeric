@@ -68,6 +68,11 @@ public class IsoCharacterController : MonoBehaviour
             UpdateMovement();
         }
         HandleIdle();
+        if(inputDir != Vector2.zero)
+        {
+            Debug.Log("Playing dust ps");
+            PlayDustPS();
+        }
     }
 
     #region PLAYER MOVEMENT
@@ -108,18 +113,21 @@ public class IsoCharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))//  MOve NW
         {
+           
             dir += Vector2.up;
             lastMoveDir = "NW";
             _playerAnimator.PlayerWalk("NW");
         }
         else if (Input.GetKey(KeyCode.A)) //Move SW
         {
+          
             dir += Vector2.left;
             lastMoveDir = "SW";
             _playerAnimator.PlayerWalk("SW");
         }
         else if (Input.GetKey(KeyCode.D)) //  Move NE
         {
+         
             dir += Vector2.right;
             lastMoveDir = "NE";
             _playerAnimator.PlayerWalk("NE");
@@ -127,6 +135,7 @@ public class IsoCharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S)) // Move SE
         {
+           
             dir += Vector2.down;
             lastMoveDir = "SE";
 
@@ -145,6 +154,7 @@ public class IsoCharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))//  MOve N
         {
+            
             dir += Vector2.up;
             lastMoveDir = "N";
 
@@ -153,6 +163,7 @@ public class IsoCharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A)) //Move W
         {
+            
             dir += Vector2.left;
             lastMoveDir = "W";
             _playerAnimator.PlayerWalk("W");
@@ -161,6 +172,7 @@ public class IsoCharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.D)) //  Move E
         {
+            
             dir += Vector2.right;
             lastMoveDir = "E";
 
@@ -172,6 +184,7 @@ public class IsoCharacterController : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.S)) // Move S
         {
+            
             dir += Vector2.down;
             lastMoveDir = "S";
             _playerAnimator.PlayerWalk("S");
@@ -237,7 +250,12 @@ public class IsoCharacterController : MonoBehaviour
     #endregion  
 
     #region SFX & OTHERS
-
+    
+    public ParticleSystem dustPS;
+    void PlayDustPS()
+    {
+        dustPS.Play();
+    }
     Vector2 CarToIso(Vector2 car)
     {
         Vector2 pos = new Vector2();

@@ -5,7 +5,8 @@ using System;
 
 public class Player_AbilityManger : MonoBehaviour
 {
-
+    Player player;
+    IsoCharacterController isoCharacterController;
     PlayerAttack playerAttack;
     PlayerAnimationManger playerAnimationManger;
 
@@ -16,17 +17,22 @@ public class Player_AbilityManger : MonoBehaviour
         Ab_Lightning.OnLightningTrigger += Ab_LightningInitiate;
         Ab_SkyFall.OnSkyFallTrigger += Ab_SkyFallInitiate;
         Ab_MagicHomePointCane.OnMagicHomePointCanePlaceTrigger += Ab_MagicHomePointInitiate;
+        Ab_Decamp.OnDecampTrigger += Ab_DecampInitiate;
     }
 
     void OnDisable()
     {
+
         Ab_Lightning.OnLightningTrigger -= Ab_LightningInitiate;
         Ab_SkyFall.OnSkyFallTrigger -= Ab_SkyFallInitiate;
         Ab_MagicHomePointCane.OnMagicHomePointCanePlaceTrigger -= Ab_MagicHomePointInitiate;
+        Ab_Decamp.OnDecampTrigger -= Ab_DecampInitiate;
     }
 
     void Start()
     {
+        isoCharacterController = GetComponent<IsoCharacterController>();
+        player = GetComponent<Player>();
         playerAttack = GetComponent<PlayerAttack>();
         playerAnimationManger = GetComponent<PlayerAnimationManger>();
     }
@@ -103,6 +109,15 @@ public class Player_AbilityManger : MonoBehaviour
         magicHomePointStick.GetComponent<HomePoint>().labTeleportPoint = labTeleportPoint;
         magicHomePointStick.GetComponent<HomePoint>().skillCanvas = skillCanvas;
 
+    }
+
+    #endregion
+
+    #region Ab_Decamp
+
+    void Ab_DecampInitiate()
+    {
+        isoCharacterController.Teleport(labTeleportPoint.position);
     }
     #endregion
 

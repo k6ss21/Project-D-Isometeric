@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 4213908674012624476}
   - component: {fileID: 7159344449361772980}
   - component: {fileID: 6349870041700460698}
-  - component: {fileID: 4202765040423250960}
   m_Layer: 5
-  m_Name: Ab_SpawnBreaker
+  m_Name: Test Ability 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1259089947, guid: 5463021f4adbf864e800b76f3b3f7fa2, type: 3}
+  m_Sprite: {fileID: -895808496, guid: ff4e32103e7a5a14caaa04612f44fe3c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -123,19 +122,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4213908674012624476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4202765040423250960}
-        m_TargetAssemblyTypeName: Ab_SpawnBreaker, Assembly-CSharp
-        m_MethodName: SpawnBreakerCall
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &6349870041700460698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,23 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8629807c8f8a64b8d7ce69e24251e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: SpawnBreaker
+  name: 
   description: 
-  skillPointsNeeded: 0
---- !u!114 &4202765040423250960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464302649766752091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b517f4474bb3f83489e62a0660f51936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 0
-  time: 8
 --- !u!1 &2645197499240887424
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7831604041595063393
 RectTransform:
   m_ObjectHideFlags: 0
