@@ -29,12 +29,15 @@ public class Player_AbilityManger : MonoBehaviour
         Ab_Decamp.OnDecampTrigger -= Ab_DecampInitiate;
     }
 
-    void Start()
+    void Awake()
     {
         isoCharacterController = GetComponent<IsoCharacterController>();
         player = GetComponent<Player>();
         playerAttack = GetComponent<PlayerAttack>();
         playerAnimationManger = GetComponent<PlayerAnimationManger>();
+        labTeleportPoint = ReferenceManager.instance.labTeleportPoint;
+        skillCanvas = ReferenceManager.instance.skillCanvas;
+
     }
 
     #region Ab_Lightning ATTACK

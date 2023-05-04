@@ -9,7 +9,7 @@ public class AbilityDetailsBox : MonoBehaviour
     public TextMeshProUGUI abilityNameText;
     public TextMeshProUGUI abilityDescriptionText;
 
-    public Button button;
+    public Button unlockButton;
     public AbilityIcon abilityIcon;
     public SkillPoints skillPointsManager;
 
@@ -27,17 +27,21 @@ public class AbilityDetailsBox : MonoBehaviour
     {
         skillPointsManager = FindObjectOfType<SkillPoints>();
     }
-    private void UpdateDetailsBox(string a, string b,int points, AbilityIcon ab_Icon)
+    private void UpdateDetailsBox(Ab_Details ab_Details, AbilityIcon ab_Icon)
     {
         abilityIcon = ab_Icon;
-        skillPointsNeed = points;
+        skillPointsNeed = ab_Details.skillPointsNeeded;
         UIShowHide(true);
-        UpdateAbilityDetailsBoxText(a, b);
+        if(ab_Icon.isLocked)
+        {
+            unlockButton.interactable = false;
+        }
+        UpdateAbilityDetailsBoxText(ab_Details.name, ab_Details.description);
     }
 
     private void UIShowHide(bool value)
     {
-        button.gameObject.SetActive(value);
+        unlockButton.gameObject.SetActive(value);
         abilityNameText.gameObject.SetActive(value);
         abilityDescriptionText.gameObject.SetActive(value);
     }
@@ -51,11 +55,13 @@ public class AbilityDetailsBox : MonoBehaviour
     public void OnUnlockButtonClick()
     {
         Debug.Log("Button Click");
-        if(skillPointsManager.currentSkillPoints >= skillPointsNeed)
+        if (skillPointsManager.currentSkillPoints >= skillPointsNeed)
         {
-        abilityIcon.isLocked = false;
+            skillPointsManager.RemoveSkillPoints(skillPointsNeed);
+            abilityIcon.isLocked = false;
         }
-        else{
+        else
+        {
             Debug.Log("Not Enogh Skill Points");
         }
     }

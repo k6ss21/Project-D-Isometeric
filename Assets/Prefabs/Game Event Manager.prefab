@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4274444497429081344}
   - component: {fileID: 4274444497429081345}
+  - component: {fileID: 1246855152}
   m_Layer: 0
   m_Name: Game Event Manager
   m_TagString: Untagged
@@ -52,3 +53,24 @@ MonoBehaviour:
   defaultTimeMulti: 1
   minText: {fileID: 0}
   secText: {fileID: 0}
+--- !u!114 &1246855152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4274444497429081346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b234ed68faa8db9498b2be8f8d3b1c06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodOverlay: {fileID: 0}
+  totalSickCount: {fileID: 0}
+  healCountText: {fileID: 0}
+  r_healthBarSlider: {fileID: 0}
+  l_healthBarSlider: {fileID: 0}
+  temperatureBarSlider: {fileID: 0}
+  immunitySlider: {fileID: 0}
+  labTeleportPoint: {fileID: 0}
+  skillCanvas: {fileID: 0}

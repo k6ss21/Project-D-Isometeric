@@ -39,6 +39,17 @@ public class Player : MonoBehaviour
         Ab_WarmUp.OnWarmUpTrigger -= WarmUp;
     }
 
+    void Awake()
+    {
+        bloodOverlay = ReferenceManager.instance.bloodOverlay;
+        totalSickCount = ReferenceManager.instance.totalSickCount;
+        _healCountText = ReferenceManager.instance.healCountText;
+        r_healthBarSlider = ReferenceManager.instance.r_healthBarSlider;
+        l_healthBarSlider = ReferenceManager.instance.l_healthBarSlider;
+        temperatureBarSlider = ReferenceManager.instance.temperatureBarSlider;
+        immunitySlider = ReferenceManager.instance.immunitySlider;
+    }
+
     void Start()
     {
         playerAttack = GetComponent<PlayerAttack>();

@@ -35,6 +35,12 @@ public class HomePoint : MonoBehaviour
 
     public static event Action<Vector3> OnTeleportToLab;
 
+    void Awake()
+    {
+        labTeleportPoint = ReferenceManager.instance.labTeleportPoint;
+        skillCanvas = ReferenceManager.instance.skillCanvas;
+    }
+
     void Start()
     {
         //  instructionBox = FindObjectOfType<InstructionBox>();

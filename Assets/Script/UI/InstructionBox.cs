@@ -20,7 +20,7 @@ public class InstructionBox : MonoBehaviour
 
     void Awake()
     {
-           if (instance != null)
+        if (instance != null)
         {
             Debug.LogError("Found more than one InstructionBox instance in scene");
         }
