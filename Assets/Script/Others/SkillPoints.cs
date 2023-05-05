@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class SkillPoints : MonoBehaviour
+public class SkillPoints : MonoBehaviour, IDataPersistence
 {
     private int totalSkillPoints;
     [field: SerializeField] public int currentSkillPoints { get; private set; }
@@ -39,5 +39,14 @@ public class SkillPoints : MonoBehaviour
         earnedSkillPointText.text = currentSkillPoints.ToString();
     }
 
+    public void LoadData(GameData data)
+    {
+        this.currentSkillPoints = data.skillPoints;
+    }
 
+    public void SaveData(ref GameData data)
+    {
+        data.skillPoints = this.currentSkillPoints;
+
+    }
 }

@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class SickChar : MonoBehaviour
 {
+
     // Healing duration in seconds
     public float healingDuration = 20f;
 
@@ -17,6 +18,8 @@ public class SickChar : MonoBehaviour
     float healingProgress = 0f;
 
     public bool IsHealing = false;
+
+    private bool healingCompleted;
 
     public float circleRadius;
     public LayerMask playerLayer;
@@ -109,6 +112,7 @@ public class SickChar : MonoBehaviour
     void HealComplete()
     {
         IsHealing = false;
+        healingCompleted = true;
         OnHealComplete?.Invoke(this);
         Debug.Log("Healed!");
         animator.Play("SickChar_Disappear");
@@ -243,5 +247,5 @@ public class SickChar : MonoBehaviour
         progressBar.value = fillAmount;
     }
 
-
+  
 }

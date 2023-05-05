@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDataPersistence
 {
 
     IsoCharacterController isoCharacterController;
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI totalSickCount;
     [SerializeField] private UI_BloodOverlay bloodOverlay;
-
+    
     void OnEnable()
     {
         SickChar.OnHealComplete += AddHealCount;
@@ -87,6 +87,21 @@ public class Player : MonoBehaviour
 
     }
 
+    #region DATA PERSISTENCE
+
+    public void LoadData(GameData data)
+    {
+      
+    }
+
+    public void SaveData(ref GameData data)
+    {
+     
+    }
+
+    #endregion
+
+
     #region OTHERS
     public List<Transform> followPoints = new List<Transform>();
     public Transform RandomFollowPos()
@@ -110,6 +125,8 @@ public class Player : MonoBehaviour
         UpdateImmunitySlider();
         UpdateTemperatureBar();
     }
+
+
 
 
     #endregion
@@ -369,6 +386,7 @@ public class Player : MonoBehaviour
         shield.SetActive(false);
 
     }
+
 
     #endregion
 

@@ -7,10 +7,11 @@ using System;
 [RequireComponent(typeof(StudioEventEmitter))]
 public class HomePoint : MonoBehaviour
 {
-    public Transform labTeleportPoint;
-    private bool canAccessLab;
 
+    private bool canAccessLab;
+    public Transform labTeleportPoint;
     public Canvas skillCanvas;
+
     private bool canAccessSkill;
     private bool SkillMenuOpen;
 
@@ -35,14 +36,17 @@ public class HomePoint : MonoBehaviour
 
     public static event Action<Vector3> OnTeleportToLab;
 
+    public bool test;
+
     void Awake()
     {
-        labTeleportPoint = ReferenceManager.instance.labTeleportPoint;
-        skillCanvas = ReferenceManager.instance.skillCanvas;
+        
     }
 
     void Start()
     {
+        skillCanvas = ReferenceManager.instance.skillCanvas;
+        labTeleportPoint = ReferenceManager.instance.labTeleportPoint;
         //  instructionBox = FindObjectOfType<InstructionBox>();
         emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.FirePlace, this.gameObject);
         emitter.Play();

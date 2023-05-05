@@ -5,8 +5,15 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
-public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler
+public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerClickHandler, IDataPersistence
 {
+    [SerializeField] private string id;
+
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
     public bool isLocked;
 
     public GameObject abilityButtonPrefab;
@@ -20,8 +27,8 @@ public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     public void OnPointerClick(PointerEventData eventData)
     {
         Ab_Details ab_Details = abilityButtonPrefab.GetComponent<Ab_Details>();
-       // OnAbilityIconClick?.Invoke(ab_Details.name, ab_Details.description, ab_Details.skillPointsNeeded, this);
-         OnAbilityIconClick?.Invoke(ab_Details, this);
+        // OnAbilityIconClick?.Invoke(ab_Details.name, ab_Details.description, ab_Details.skillPointsNeeded, this);
+        OnAbilityIconClick?.Invoke(ab_Details, this);
 
     }
     public void OnBeginDrag(PointerEventData eventData)
@@ -61,5 +68,19 @@ public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     }
 
+    public void LoadData(GameData data)
+    {
+        data.abilitiesUnlocked.TryGetValue(id, out isLocked);
+        Debug.Log("Ability Name : " + abilityButtonPrefab + " islocked : " + isLocked);
 
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        if (data.abilitiesUnlocked.ContainsKey(id))
+        {
+            data.abilitiesUnlocked.Remove(id);
+        }
+        data.abilitiesUnlocked.Add(id, isLocked);
+    }
 }
