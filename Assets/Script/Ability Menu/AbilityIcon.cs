@@ -15,7 +15,7 @@ public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         id = System.Guid.NewGuid().ToString();
     }
     public bool isLocked;
-
+    public int levelNeeded;
     public GameObject abilityButtonPrefab;
     public GameObject draggingObj;
     RectTransform draggingObjRectTransform;
@@ -70,17 +70,18 @@ public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
 
     public void LoadData(GameData data)
     {
-        data.abilitiesUnlocked.TryGetValue(id, out isLocked);
-        Debug.Log("Ability Name : " + abilityButtonPrefab + " islocked : " + isLocked);
+       data.abilitiesUnlocked.TryGetValue(id, out isLocked);
+//        Debug.Log("Ability Name : " + abilityButtonPrefab + " islocked : " + isLocked);
 
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         if (data.abilitiesUnlocked.ContainsKey(id))
         {
             data.abilitiesUnlocked.Remove(id);
         }
         data.abilitiesUnlocked.Add(id, isLocked);
+//        Debug.Log("AbilitiesUnlock Count= " + data.abilitiesUnlocked.Count );
     }
 }

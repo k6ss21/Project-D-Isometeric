@@ -94,7 +94,7 @@ public class Player : MonoBehaviour, IDataPersistence
       
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
      
     }
@@ -386,6 +386,7 @@ public class Player : MonoBehaviour, IDataPersistence
         shield.SetActive(false);
 
     }
+
 
 
     #endregion

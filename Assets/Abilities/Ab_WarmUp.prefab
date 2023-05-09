@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Warm Up
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &7538328379536402044
 MonoBehaviour:
   m_ObjectHideFlags: 0

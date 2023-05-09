@@ -8,10 +8,12 @@ public class AbilityDetailsBox : MonoBehaviour
 
     public TextMeshProUGUI abilityNameText;
     public TextMeshProUGUI abilityDescriptionText;
+    public TextMeshProUGUI errorText;
 
     public Button unlockButton;
     public AbilityIcon abilityIcon;
     public SkillPoints skillPointsManager;
+    public LevelUpSystem levelUpSystem;
 
     private int skillPointsNeed;
     void OnEnable()
@@ -26,15 +28,42 @@ public class AbilityDetailsBox : MonoBehaviour
     void Awake()
     {
         skillPointsManager = FindObjectOfType<SkillPoints>();
+        levelUpSystem = skillPointsManager.GetComponent<LevelUpSystem>();
+        unlockButton.interactable = false;
     }
     private void UpdateDetailsBox(Ab_Details ab_Details, AbilityIcon ab_Icon)
     {
         abilityIcon = ab_Icon;
         skillPointsNeed = ab_Details.skillPointsNeeded;
         UIShowHide(true);
-        if(ab_Icon.isLocked)
+        if (ab_Icon.isLocked)
         {
-            unlockButton.interactable = false;
+            if (ab_Icon.levelNeeded <= levelUpSystem.level) // Ability is locked and Can Unlock.
+            {
+                unlockButton.interactable = true;
+                if (skillPointsManager.currentSkillPoints >= skillPointsNeed)
+                {
+                    errorText.color = Color.white;
+                    errorText.text = $"{skillPointsNeed} SP";
+                }
+                else
+                {
+                     errorText.color = Color.red;
+                    errorText.text = $"{skillPointsNeed} SP"; 
+                }
+            }
+            else
+            {
+                unlockButton.interactable = false; // Ability is locked and Cant Unlock.
+                errorText.color = Color.red;
+                errorText.text = $"Level {ab_Icon.levelNeeded} Needed";
+            }
+        }
+        else
+        {
+            unlockButton.interactable = false;  //Ability is Unlocked already.
+            errorText.color = Color.white;
+            errorText.text = $"";
         }
         UpdateAbilityDetailsBoxText(ab_Details.name, ab_Details.description);
     }
@@ -59,6 +88,9 @@ public class AbilityDetailsBox : MonoBehaviour
         {
             skillPointsManager.RemoveSkillPoints(skillPointsNeed);
             abilityIcon.isLocked = false;
+            unlockButton.interactable = false; //After Ablility Unlocked Disable Button and Change the text.
+            errorText.color = Color.white;
+            errorText.text = $"";
         }
         else
         {

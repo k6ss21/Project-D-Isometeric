@@ -79,8 +79,8 @@ public class GameEventManager : MonoBehaviour
 
     void UpdateTimerText()
     {
-        minText.text = min.ToString();
-        secText.text = sec.ToString();
+        minText.text = min.ToString("00");
+        secText.text = sec.ToString("00");
     }
 
     void SlowTimerSpeed(float multi, float time)

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rehabilitation
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &6131553931254749373
 MonoBehaviour:
   m_ObjectHideFlags: 0

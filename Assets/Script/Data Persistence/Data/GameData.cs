@@ -6,15 +6,15 @@ using UnityEngine;
 public class GameData
 {
     public int skillPoints;
-
-    public SerializableDictionary<string , bool> abilitiesUnlocked;
+    public int gainedXp;
+    public Dictionary<string, bool> abilitiesUnlocked;
 
     //initial value when start a new game
     public GameData()
     {
         this.skillPoints = 0;
-        abilitiesUnlocked = new SerializableDictionary<string, bool>();
-        
-
+        this.gainedXp = 0;
+        abilitiesUnlocked = new Dictionary<string, bool>();
+      
     }
 }

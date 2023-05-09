@@ -42,9 +42,10 @@ public class SkillPoints : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.currentSkillPoints = data.skillPoints;
+        UpdateUIText();
     }
 
-    public void SaveData(ref GameData data)
+    public void SaveData(GameData data)
     {
         data.skillPoints = this.currentSkillPoints;
 

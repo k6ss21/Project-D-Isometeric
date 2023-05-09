@@ -1,0 +1,24 @@
+{
+  "skillPoints": 0,
+  "abilitiesUnlocked": {
+    "d109ce68-f386-4c5e-99c5-84f8daa9c7c6": true,
+    "364aab6a-f8f9-4754-abfb-041187d68ff7": false,
+    "01ee5293-91f3-420c-9677-87de53d49a39": false,
+    "d5c65cb1-551a-4b6d-b56b-dab19ed5b43b": true,
+    "f2afebdf-53c3-4664-a8c6-668ec060ddd7": true,
+    "d2ed0309-3ba2-4965-b6de-d981b21ab53c": true,
+    "5cd3c13c-f963-41c9-95c9-c659afc0316a": true,
+    "cb64af9c-bdee-477b-921c-bd9848205101": true,
+    "80df285c-d1a6-416c-b9af-b7c8c35fefb3": true,
+    "3c986c01-3691-4256-bef7-969c83187d59": true,
+    "56e3f0fd-81c9-4689-872a-5799704b89f2": true,
+    "07b0bd97-fa91-4c10-9d9f-fcfbba3fdb03": true,
+    "b1531c44-5cd8-463b-9ac8-f31d901c590b": true,
+    "2a3db847-5410-42c8-b183-787a616d04b6": true,
+    "2ab229d7-f356-4e53-a5e6-afbc10e0ebae": true,
+    "5aca7319-b436-4b62-875a-c66eb277124e": true,
+    "53cb39bb-03da-4095-800e-59d2992ca289": true,
+    "0057f4c7-810f-4cfa-93b7-283889521ac5": true,
+    "9302a6df-010e-4f77-9a31-b7f8808e1938": true
+  }
+}

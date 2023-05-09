@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.IO;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class DataPersistenceManager : MonoBehaviour
 {
     [Header("File Storage Config")]
     [SerializeField] private string fileName;
+    [SerializeField] private TextAsset defaultGameDataFile;
 
     private GameData gameData;
     public static DataPersistenceManager instance { get; private set; }
@@ -32,15 +37,20 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame()
     {
+        Debug.Log("New Game Created");
         this.gameData = new GameData();
+        // string defaultGameData = defaultGameDataFile.ToString();
+        // Debug.Log("Default Game Data : " + defaultGameData);
+        // dataHandler.CreateNewGameData(gameData, defaultGameData);
+
     }
     public void SaveGame()
     {
-         foreach(IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
-            dataPersistenceObj.SaveData(ref gameData);
+            dataPersistenceObj.SaveData(gameData);
         }
-      Debug.Log("Saved Skill count = " + gameData.skillPoints);
+        Debug.Log("Saved Skill count = " + gameData.skillPoints);
 
         dataHandler.Save(gameData);
     }
@@ -51,14 +61,15 @@ public class DataPersistenceManager : MonoBehaviour
         {
             Debug.Log("No Game Data Found. Initialize Default Game Data");
             NewGame();
+            return;
         }
 
-        foreach(IDataPersistence dataPersistenceObj in dataPersistenceObjects)
+        foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.LoadData(gameData);
         }
 
-       // Debug.Log("Loaded Skill count = " + gameData.skillPoints);
+        // Debug.Log("Loaded Skill count = " + gameData.skillPoints);
     }
 
     private void OnApplicationQuit()
@@ -68,7 +79,38 @@ public class DataPersistenceManager : MonoBehaviour
 
     private List<IDataPersistence> FindAllDataPersistence()
     {
-        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
+        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>(true).OfType<IDataPersistence>();
         return new List<IDataPersistence>(dataPersistenceObjects);
     }
+
+    public void Delete()
+    {
+        string path = Path.Combine(Application.persistentDataPath, fileName);
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+        }
+        else
+        {
+            Debug.Log("File Not Found!!");
+        }
+    }
 }
+
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(DataPersistenceManager))]
+class CustomDeleteButton : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        var dataPersistenceManager = (DataPersistenceManager)target;
+        if (dataPersistenceManager == null) return;
+        if (GUILayout.Button("Delete Persistent File"))
+        {
+            dataPersistenceManager.Delete();
+        }
+    }
+}
+
+#endif

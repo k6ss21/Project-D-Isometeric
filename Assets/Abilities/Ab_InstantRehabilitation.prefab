@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Instant Rehabilitation
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &5049061323352677243
 MonoBehaviour:
   m_ObjectHideFlags: 0

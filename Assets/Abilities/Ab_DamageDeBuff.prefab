@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: DamageDeBuff
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &510860668505508671
 MonoBehaviour:
   m_ObjectHideFlags: 0

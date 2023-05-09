@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: SpawnBreaker
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &4202765040423250960
 MonoBehaviour:
   m_ObjectHideFlags: 0

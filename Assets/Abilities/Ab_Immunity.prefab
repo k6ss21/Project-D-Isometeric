@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Immunity
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &3828534407427132462
 MonoBehaviour:
   m_ObjectHideFlags: 0

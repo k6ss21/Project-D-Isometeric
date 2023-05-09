@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   description: 
-  skillPointsNeeded: 0
+  skillPointsNeeded: 10
 --- !u!114 &234335512927708104
 MonoBehaviour:
   m_ObjectHideFlags: 0
