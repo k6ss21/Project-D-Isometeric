@@ -60,19 +60,26 @@ public class IsoCharacterController : MonoBehaviour
     void Update()
     {
         inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Get Input from Player
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            HandleDash();
+        }
     }
     void FixedUpdate()
     {
+
         if (canMove)
         {
             UpdateMovement();
         }
         HandleIdle();
-        if(inputDir != Vector2.zero)
+        if (inputDir != Vector2.zero)
         {
             Debug.Log("Playing dust ps");
             PlayDustPS();
         }
+
+
     }
 
     #region PLAYER MOVEMENT
@@ -95,8 +102,11 @@ public class IsoCharacterController : MonoBehaviour
         {
             if (!playerAttack.isAttacking) //cant move when attacking 
             {
-                HandleMovement();
-                UpdateSound();
+                if (!isDashing)
+                {
+                    HandleMovement();
+                    UpdateSound();
+                }
             }
             else
             {
@@ -110,24 +120,25 @@ public class IsoCharacterController : MonoBehaviour
 
         Vector2 dir = new Vector2();
         Vector2 motion = new Vector2();
+        Debug.Log("Handle Movement");
 
         if (Input.GetKey(KeyCode.W))//  MOve NW
         {
-           
+
             dir += Vector2.up;
             lastMoveDir = "NW";
             _playerAnimator.PlayerWalk("NW");
         }
         else if (Input.GetKey(KeyCode.A)) //Move SW
         {
-          
+
             dir += Vector2.left;
             lastMoveDir = "SW";
             _playerAnimator.PlayerWalk("SW");
         }
         else if (Input.GetKey(KeyCode.D)) //  Move NE
         {
-         
+
             dir += Vector2.right;
             lastMoveDir = "NE";
             _playerAnimator.PlayerWalk("NE");
@@ -135,7 +146,7 @@ public class IsoCharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.S)) // Move SE
         {
-           
+
             dir += Vector2.down;
             lastMoveDir = "SE";
 
@@ -154,7 +165,7 @@ public class IsoCharacterController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))//  MOve N
         {
-            
+
             dir += Vector2.up;
             lastMoveDir = "N";
 
@@ -163,7 +174,7 @@ public class IsoCharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A)) //Move W
         {
-            
+
             dir += Vector2.left;
             lastMoveDir = "W";
             _playerAnimator.PlayerWalk("W");
@@ -172,7 +183,7 @@ public class IsoCharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.D)) //  Move E
         {
-            
+
             dir += Vector2.right;
             lastMoveDir = "E";
 
@@ -184,7 +195,7 @@ public class IsoCharacterController : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.S)) // Move S
         {
-            
+
             dir += Vector2.down;
             lastMoveDir = "S";
             _playerAnimator.PlayerWalk("S");
@@ -196,12 +207,97 @@ public class IsoCharacterController : MonoBehaviour
     }
     #endregion
 
+    #region PLAYER DASH
+    [SerializeField] float startDashTime = 1f;
+    [SerializeField] float dashCooldownTime = 1f;
+    [SerializeField] float dashSpeed = 1f;
+
+    public float currentDashTime;
+    public float currentDashCoolDownTime;
+    bool isDashing;
+    bool canDash = true;
+
+    void HandleDash()
+    {
+        if (canDash)
+        {
+            if (!isDashing)
+            {
+                if (Input.GetKey(KeyCode.W))//  MOve NW
+                {
+
+                    StartCoroutine(Dash(Vector2.up));
+                    lastMoveDir = "NW";
+
+                }
+                else if (Input.GetKey(KeyCode.A)) //Move SW
+                {
+
+                    StartCoroutine(Dash(Vector2.left));
+                    lastMoveDir = "SW";
+
+                }
+                else if (Input.GetKey(KeyCode.D)) //  Move NE
+                {
+                    StartCoroutine(Dash(Vector2.right));
+                    lastMoveDir = "NE";
+
+
+                }
+                else if (Input.GetKey(KeyCode.S)) // Move SE
+                {
+                    StartCoroutine(Dash(Vector2.down));
+                    lastMoveDir = "SE";
+
+                }
+                else
+                {
+                    StartCoroutine(Dash(Vector2.down));
+                    lastMoveDir = "SE";
+                }
+            }
+        }
+    }
+    IEnumerator Dash(Vector2 direction)
+    {
+        Debug.Log("Dash");
+        isDashing = true;
+
+        currentDashTime = startDashTime;
+        while (currentDashTime > 0f)
+        {
+            currentDashTime -= Time.deltaTime;
+            Vector2 temp = CarToIso(direction * dashSpeed);
+
+            rb.velocity = temp;
+            yield return null;
+        }
+        canDash = false;
+        isDashing = false;
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(dashCooldownTime);
+        canDash = true;
+
+    }
+    IEnumerator DashCoolDown()
+    {
+        canDash = false;
+        currentDashCoolDownTime = dashCooldownTime;
+        while (currentDashCoolDownTime > 0)
+        {
+            currentDashCoolDownTime -= Time.deltaTime;
+            yield return null;
+        }
+        canDash = true;
+    }
+    #endregion
+
     #region PLAYER IDLE
 
     void HandleIdle()
     {
 
-        if (inputDir == Vector2.zero && !playerAttack.isAttacking && !playerAttack.isAbilityActive)
+        if (inputDir == Vector2.zero && !playerAttack.isAttacking && !playerAttack.isAbilityActive && !isDashing)
         {
             isIdle = true;
             IdleAnim();
@@ -247,10 +343,10 @@ public class IsoCharacterController : MonoBehaviour
         transform.position = lastPos;
     }
 
-    #endregion  
+    #endregion
 
     #region SFX & OTHERS
-    
+
     public ParticleSystem dustPS;
     void PlayDustPS()
     {

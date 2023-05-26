@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardPoint: 10
+  DestroyPS_Prefab: {fileID: 1527172937383017042, guid: 77370c259c711e5419df16d96659127a, type: 3}
 --- !u!58 &6084649803777383951
 CircleCollider2D:
   m_ObjectHideFlags: 0
