@@ -39,8 +39,8 @@ public class EnemyMovementAI : MonoBehaviour
         enemyAttackManger = gameObject.GetComponent<IEnemyAttackManger>();
         minSpeed = enemyData.minSpeed;
         maxSpeed = enemyData.maxSpeed;
-        speed =Mathf.Round(((Random.Range(minSpeed, maxSpeed))*100))/100;
-        
+
+        speed =Mathf.Round(((Random.Range(minSpeed, maxSpeed))*100))/100;       
         aiPath.maxSpeed = speed;
         lastMoveDir = "N";
         animationManager.Idle(lastMoveDir);
@@ -76,7 +76,13 @@ public class EnemyMovementAI : MonoBehaviour
         }
 
     }
-
+    public void SetDefault()
+    {
+        speed =Mathf.Round(((Random.Range(minSpeed, maxSpeed))*100))/100;       
+        aiPath.maxSpeed = speed;
+        lastMoveDir = "N";
+        animationManager.Idle(lastMoveDir);
+    }
     
     void LookAtTargetWhenIdle()
     {

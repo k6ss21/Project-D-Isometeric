@@ -13,7 +13,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
     [SerializeField] private TextMeshProUGUI totalSickCount;
     [SerializeField] private UI_BloodOverlay bloodOverlay;
-    
+
     void OnEnable()
     {
         SickChar.OnHealComplete += AddHealCount;
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour, IDataPersistence
         //Ability Events
         Ab_Healing.OnAbilityHeal += TakeHealth;
         Ab_shield.OnShieldActive += ActivateShield;
-        Ab_Immunity.OnImmunityTrigger +=  TakeImmunity;
+        Ab_Immunity.OnImmunityTrigger += TakeImmunity;
         Ab_WarmUp.OnWarmUpTrigger += WarmUp;
     }
     void OnDisable()
@@ -34,12 +34,17 @@ public class Player : MonoBehaviour, IDataPersistence
 
         //Ability Events
         Ab_Healing.OnAbilityHeal -= TakeHealth;
-         Ab_shield.OnShieldActive -= ActivateShield;
-        Ab_Immunity.OnImmunityTrigger -=  TakeImmunity;
+        Ab_shield.OnShieldActive -= ActivateShield;
+        Ab_Immunity.OnImmunityTrigger -= TakeImmunity;
         Ab_WarmUp.OnWarmUpTrigger -= WarmUp;
     }
 
     void Awake()
+    {
+
+    }
+
+    void Start()
     {
         bloodOverlay = ReferenceManager.instance.bloodOverlay;
         totalSickCount = ReferenceManager.instance.totalSickCount;
@@ -48,10 +53,6 @@ public class Player : MonoBehaviour, IDataPersistence
         l_healthBarSlider = ReferenceManager.instance.l_healthBarSlider;
         temperatureBarSlider = ReferenceManager.instance.temperatureBarSlider;
         immunitySlider = ReferenceManager.instance.immunitySlider;
-    }
-
-    void Start()
-    {
         playerAttack = GetComponent<PlayerAttack>();
         isoCharacterController = GetComponent<IsoCharacterController>();
         UpdateHealCountText();
@@ -91,12 +92,12 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-      
+
     }
 
     public void SaveData(GameData data)
     {
-     
+
     }
 
     #endregion

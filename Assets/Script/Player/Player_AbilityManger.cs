@@ -35,9 +35,13 @@ public class Player_AbilityManger : MonoBehaviour
         player = GetComponent<Player>();
         playerAttack = GetComponent<PlayerAttack>();
         playerAnimationManger = GetComponent<PlayerAnimationManger>();
+
+    }
+
+    void Start()
+    {
         labTeleportPoint = ReferenceManager.instance.labTeleportPoint;
         skillCanvas = ReferenceManager.instance.skillCanvas;
-
     }
 
     #region Ab_Lightning ATTACK

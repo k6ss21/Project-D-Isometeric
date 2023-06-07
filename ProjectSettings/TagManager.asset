@@ -62,6 +62,9 @@ TagManager:
   - name: LeftWall
     uniqueID: 4032368891
     locked: 0
+  - name: RightWall
+    uniqueID: 709216817
+    locked: 0
   - name: Items
     uniqueID: 3697979807
     locked: 0

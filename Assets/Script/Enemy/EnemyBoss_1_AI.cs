@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -8,6 +8,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     public GameObject ratPrefab;
 
     public GameObject floatinTextPrefab;
+    EnemyMovementAI enemyMovementAI;
 
     [Header("Timer")]
     public float minTime;
@@ -47,6 +48,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
     {
         GetRandomTimeAndCount();
         currentHealth = health;
+        enemyMovementAI = GetComponent<EnemyMovementAI>();
     }
 
     void Update()
@@ -93,6 +95,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
         AudioManager.instance.PlayOneShot(FMODEvents.instance.enemyDamage,this.transform.position);
         if (currentHealth <= 0)
         {
+            enemyMovementAI.SetDefault();
             Instantiate(deathReward, spawnPoint.position , Quaternion.identity);
             Instantiate(deadPS_VFX_Prefab, transform.position, Quaternion.identity);
             destroyAction(this);
