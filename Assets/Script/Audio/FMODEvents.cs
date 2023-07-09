@@ -13,6 +13,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference slashAttack { get; private set; }
     [field: SerializeField] public EventReference PlayerHurt { get; private set; }
     [field: SerializeField] public EventReference ProjectileShoot { get; private set; }
+    [field: SerializeField] public EventReference TeleportToLab { get; private set; }
 
     [field: Header("Env SFX")]
     [field: SerializeField] public EventReference FirePlace { get; private set; }
@@ -23,15 +24,33 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference enemyDamage { get; private set; }
     [field: SerializeField] public EventReference batsFlying { get; private set; }
     [field: SerializeField] public EventReference singleBatFlying { get; private set; }
-    
+
     [field: SerializeField] public EventReference enemySpawn { get; private set; }
 
     [field: Header("UI")]
     [field: SerializeField] public EventReference clickSound { get; private set; }
 
-     [field: Header("ABILITY")]
-     [field: SerializeField] public EventReference lightningSound { get; private set; }
-       [field: SerializeField] public EventReference lightningHitGround{ get; private set; }
+    [field: Header("ABILITY")]
+    [field: SerializeField] public EventReference lightningSound { get; private set; }
+    [field: SerializeField] public EventReference lightningHitGround { get; private set; }
+
+    [field: SerializeField] public EventReference ab_decamp { get; private set; }
+    [field: SerializeField] public EventReference Ab_CureSimulator { get; private set; }
+    [field: SerializeField] public EventReference Ab_SlowLevelTimer { get; private set; }
+    [field: SerializeField] public EventReference Ab_DamageDebuff { get; private set; }
+    [field: SerializeField] public EventReference Ab_Healing { get; private set; }
+    [field: SerializeField] public EventReference Ab_Immunity { get; private set; }
+    [field: SerializeField] public EventReference Ab_InstantCureSimulator { get; private set; }
+    [field: SerializeField] public EventReference Ab_MagicHomePointCane { get; private set; }
+    [field: SerializeField] public EventReference Ab_Regenesis { get; private set; }
+    [field: SerializeField] public EventReference Ab_Rehabilitation { get; private set; }
+     [field: SerializeField] public EventReference Ab_InstantRehabilitation { get; private set; }
+    [field: SerializeField] public EventReference Ab_Sheild { get; private set; }
+    [field: SerializeField] public EventReference Ab_SpawnBreaker { get; private set; }
+    [field: SerializeField] public EventReference Ab_StopTimer { get; private set; }
+    [field: SerializeField] public EventReference Ab_Speed { get; private set; }
+    [field: SerializeField] public EventReference Ab_WarmUp { get; private set; }
+
 
     public static FMODEvents instance;
 

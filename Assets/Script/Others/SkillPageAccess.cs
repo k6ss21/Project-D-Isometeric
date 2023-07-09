@@ -13,6 +13,7 @@ public class SkillPageAccess : MonoBehaviour
 
     public void Start()
     {
+        skillCanvas = ReferenceManager.instance.skillCanvas.gameObject;
         skillCanvas.gameObject.SetActive(false);
     }
 

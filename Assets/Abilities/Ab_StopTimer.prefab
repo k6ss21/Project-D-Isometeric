@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
-  cooldownTime: 7
+  cooldownTime: 25
   multi: 0
   time: 15
 --- !u!1 &2645197499240887424

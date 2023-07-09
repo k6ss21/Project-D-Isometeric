@@ -20,6 +20,8 @@ public class AdjustSortingOrder : MonoBehaviour
         // {
         //     spriteRenderer.sortingOrder = (int)(transform.position.y * -100);
         // }
+
+    
     }
 
     void Update()

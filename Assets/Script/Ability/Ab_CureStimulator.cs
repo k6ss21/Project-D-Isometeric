@@ -21,6 +21,7 @@ public class Ab_CureStimulator : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("CureStimulate Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_CureSimulator, this.transform.position);
             OnCureStimulateTrigger?.Invoke(amountMulti);
             coolDown = true;
             button.enabled = false;

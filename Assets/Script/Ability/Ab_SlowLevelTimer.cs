@@ -13,7 +13,7 @@ public class Ab_SlowLevelTimer : MonoBehaviour
 
     public float multi;
     public float time;
-    public static event Action<float,float> OnSlowLevelTimer;
+    public static event Action<float, float> OnSlowLevelTimer;
     Button button;
 
     void Start()
@@ -27,15 +27,16 @@ public class Ab_SlowLevelTimer : MonoBehaviour
     {
         if (!coolDown)
         {
-           Debug.Log("Slow Down Level Timer..." + multi);
-            OnSlowLevelTimer?.Invoke(multi,time);
+            Debug.Log("Slow Down Level Timer..." + multi);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_SlowLevelTimer, this.transform.position);
+            OnSlowLevelTimer?.Invoke(multi, time);
             coolDown = true;
             button.enabled = false;
             StartCoroutine(CoolDownRoutine());
         }
         else
         {
-          //  Debug.Log("Slow Down Level Timer Ability cooldown");
+            //  Debug.Log("Slow Down Level Timer Ability cooldown");
         }
     }
 

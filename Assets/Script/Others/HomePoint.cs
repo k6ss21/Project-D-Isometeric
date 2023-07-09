@@ -25,7 +25,8 @@ public class HomePoint : MonoBehaviour
 
     [Header("Floating Test")]
     [SerializeField] private GameObject _floatingTextPrefab;
-    [SerializeField] private string text = "Press I for Skill Menu";
+    public InstructionPopUp instructionPopUp;
+    [SerializeField] private string text = "Press E to teleport";
     private bool _textVisible = false;
     private GameObject floatingText;
     public Transform promptPoint;
@@ -40,7 +41,7 @@ public class HomePoint : MonoBehaviour
 
     void Awake()
     {
-        
+
     }
 
     void Start()
@@ -68,7 +69,7 @@ public class HomePoint : MonoBehaviour
         // if(skillCanvas!=null){
         // SkillMenu();
         // }
-        //   PopUpText();
+        PopUpText();
         if (Input.GetKeyDown(KeyCode.Q))
         {
             InstructionBox.instance.SpawnInstructionPopUpText("TEsting Instruction Box");
@@ -96,6 +97,7 @@ public class HomePoint : MonoBehaviour
             {
                 if (!coolDown)
                 {
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.TeleportToLab, this.transform.position);
                     OnTeleportToLab?.Invoke(labTeleportPoint.position);
                     coolDownTimer = coolDownTime;
                 }
@@ -108,26 +110,30 @@ public class HomePoint : MonoBehaviour
         }
     }
 
-    // void PopUpText()
-    // {
-    //     var collider = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayer);
+    void PopUpText()
+    {
+        var collider = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayer);
 
 
-    //     if (collider != null && canAccessSkill && !coolDown)
-    //     {
-    //         if (!_textVisible)
-    //         {
-    //             ShowInstructionText();
+        if (collider != null)
+        {
+            if ( canAccessLab && !coolDown)
+            {
+                if (!_textVisible)
+                {
+                    instructionPopUp.gameObject.SetActive(true);
+                 //   instructionPopUp.Show(text);
 
-    //         }
-    //     }
-    //     else
-    //     {
+                }
+            }
+        }
+        else
+        {
+             instructionPopUp.gameObject.SetActive(false);
+            //instructionPopUp.Hide();
+        }
 
-    //         DestroyText();
-    //     }
-
-    // }
+    }
     // void DestroyText()
     // {
     //     _textVisible = false;

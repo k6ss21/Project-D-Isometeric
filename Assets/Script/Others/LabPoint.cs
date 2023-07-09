@@ -21,15 +21,16 @@ public class LabPoint : MonoBehaviour
         if (collider != null)
         {
 
-          if(Input.GetKeyDown(KeyCode.E))
-          {
-            OnReturnLastPos?.Invoke();
-          } 
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.TeleportToLab, this.transform.position);
+                OnReturnLastPos?.Invoke();
+            }
         }
-        
+
     }
 
-     void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, circleRadius);

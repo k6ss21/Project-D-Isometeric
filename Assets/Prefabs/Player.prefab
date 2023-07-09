@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5019904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5019905}
+  m_Layer: 6
+  m_Name: Leg Pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5019905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.001, y: -0.194, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6438900274208085086}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &15145962
 GameObject:
   m_ObjectHideFlags: 0
@@ -6805,6 +6836,7 @@ Transform:
   - {fileID: 1938864399}
   - {fileID: 1342303453}
   - {fileID: 1434217431}
+  - {fileID: 5019905}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6936,6 +6968,7 @@ MonoBehaviour:
   dashSpeed: 5
   currentDashTime: 0
   currentDashCoolDownTime: 0
+  blackScreenAnimator: {fileID: 0}
   dustPS: {fileID: 1434217430}
 --- !u!114 &6438900274208085084
 MonoBehaviour:
@@ -6983,7 +7016,7 @@ MonoBehaviour:
   - {x: -0.052630424, y: -0.24037266, z: 0}
   m_ShapePathHash: 505109591
   m_Mesh: {fileID: 0}
-  m_InstanceId: -261584
+  m_InstanceId: -17904
 --- !u!114 &6438900274208085081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6998,6 +7031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalSickCount: {fileID: 0}
   bloodOverlay: {fileID: 0}
+  playerLegPos: {fileID: 5019905}
   followPoints:
   - {fileID: 135557695}
   - {fileID: 297109702}

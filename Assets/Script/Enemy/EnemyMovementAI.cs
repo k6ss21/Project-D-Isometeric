@@ -33,7 +33,7 @@ public class EnemyMovementAI : MonoBehaviour
 
     void Start()
     {
-        aIDestinationSetter.target = FindObjectOfType<Player>().RandomFollowPos();
+        aIDestinationSetter.target = FindObjectOfType<Player>().playerLegPos;
         isTopDown = FindObjectOfType<GameEventManager>().topDown;
         animationManager = GetComponent(typeof(IAnimationManager)) as IAnimationManager;
         enemyAttackManger = gameObject.GetComponent<IEnemyAttackManger>();

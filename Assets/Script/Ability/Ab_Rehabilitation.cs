@@ -20,6 +20,7 @@ public class Ab_Rehabilitation : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Rehabilitation Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Rehabilitation,this.transform.position);
             OnRehabilitationTrigger?.Invoke();
             coolDown = true;
             button.enabled = false;

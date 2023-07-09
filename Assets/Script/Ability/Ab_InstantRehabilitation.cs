@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 public class Ab_InstantRehabilitation : MonoBehaviour
 {
-    
+
     public float cooldownTime;
 
     public float amountMulti;
@@ -22,10 +22,11 @@ public class Ab_InstantRehabilitation : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Instant Rehabilitation Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_InstantRehabilitation, this.transform.position);
             OnInstantRehabilitationTrigger?.Invoke(amountMulti);
             coolDown = true;
             button.enabled = false;
-           // StartCoroutine(CoolDownRoutine());
+            // StartCoroutine(CoolDownRoutine());
 
         }
         else

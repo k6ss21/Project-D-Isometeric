@@ -8,6 +8,7 @@ public class Ab_Decamp : MonoBehaviour
     public float cooldownTime;
     bool coolDown;
     Button button;
+
     public static event Action OnDecampTrigger;
     void Start()
     {
@@ -19,6 +20,7 @@ public class Ab_Decamp : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Decamp Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.ab_decamp, this.transform.position);
             OnDecampTrigger?.Invoke();
             coolDown = true;
             button.enabled = false;

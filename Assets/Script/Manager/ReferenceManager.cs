@@ -31,5 +31,8 @@ public class ReferenceManager : MonoBehaviour
     public Transform labTeleportPoint;
     public Canvas skillCanvas;
 
+    public Animator blackScreenAnimator;
+   
+
 
 }

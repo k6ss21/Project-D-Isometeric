@@ -79,6 +79,13 @@ MonoBehaviour:
       Data3: -537906501
       Data4: 2067618383
     Path: event:/SFX/Player/Projectile/ProjectileFire
+  <TeleportToLab>k__BackingField:
+    Guid:
+      Data1: 463251087
+      Data2: 1196026064
+      Data3: -1142808650
+      Data4: 583535407
+    Path: event:/SFX/Env/TeleportToLabSFX
   <FirePlace>k__BackingField:
     Guid:
       Data1: 919291965
@@ -142,6 +149,118 @@ MonoBehaviour:
       Data3: 1311500461
       Data4: 1515041322
     Path: event:/SFX/Ability/Ab_LightningGroundHitSFX
+  <ab_decamp>k__BackingField:
+    Guid:
+      Data1: -1097089054
+      Data2: 1271507229
+      Data3: 542102673
+      Data4: 1379368711
+    Path: event:/SFX/Ability/Ab_DecampSFX
+  <Ab_CureSimulator>k__BackingField:
+    Guid:
+      Data1: 1953371152
+      Data2: 1258771366
+      Data3: 403708580
+      Data4: 1595030760
+    Path: event:/SFX/Ability/Ab_CureSimulator
+  <Ab_SlowLevelTimer>k__BackingField:
+    Guid:
+      Data1: 262784143
+      Data2: 1176300119
+      Data3: 1068455828
+      Data4: 1414857116
+    Path: event:/SFX/Ability/Ab_SlowTimerSFX
+  <Ab_DamageDebuff>k__BackingField:
+    Guid:
+      Data1: 884581140
+      Data2: 1215938604
+      Data3: -1945043287
+      Data4: -183964694
+    Path: event:/SFX/Ability/Ab_DamageDebuffSFX
+  <Ab_Healing>k__BackingField:
+    Guid:
+      Data1: -705125161
+      Data2: 1299245730
+      Data3: -1639587671
+      Data4: 672027882
+    Path: event:/SFX/Ability/Ab_HealingSFX
+  <Ab_Immunity>k__BackingField:
+    Guid:
+      Data1: 2128090617
+      Data2: 1321313617
+      Data3: -412820038
+      Data4: 411029269
+    Path: event:/SFX/Ability/Ab_ImmunitySFX
+  <Ab_InstantCureSimulator>k__BackingField:
+    Guid:
+      Data1: 1509072950
+      Data2: 1216155511
+      Data3: -1844617582
+      Data4: 1505263956
+    Path: event:/SFX/Ability/Ab_InstantCureSimulatorSFX
+  <Ab_MagicHomePointCane>k__BackingField:
+    Guid:
+      Data1: 1248184903
+      Data2: 1113691479
+      Data3: -1773006942
+      Data4: -2026102486
+    Path: event:/SFX/Ability/Ab_MagicHomePoint
+  <Ab_Regenesis>k__BackingField:
+    Guid:
+      Data1: 1080459521
+      Data2: 1107743668
+      Data3: 7267211
+      Data4: 1644132234
+    Path: event:/SFX/Ability/Ab_RegenisisSFX
+  <Ab_Rehabilitation>k__BackingField:
+    Guid:
+      Data1: -54544489
+      Data2: 1132319147
+      Data3: 2033526400
+      Data4: 804079595
+    Path: event:/SFX/Ability/Ab_InstantRehabilitationSFX
+  <Ab_InstantRehabilitation>k__BackingField:
+    Guid:
+      Data1: -54544489
+      Data2: 1132319147
+      Data3: 2033526400
+      Data4: 804079595
+    Path: event:/SFX/Ability/Ab_InstantRehabilitationSFX
+  <Ab_Sheild>k__BackingField:
+    Guid:
+      Data1: 280885702
+      Data2: 1150878275
+      Data3: 1709994417
+      Data4: 2031783801
+    Path: event:/SFX/Ability/Ab_Shield
+  <Ab_SpawnBreaker>k__BackingField:
+    Guid:
+      Data1: 439111640
+      Data2: 1277188142
+      Data3: -851739483
+      Data4: 1227511052
+    Path: event:/SFX/Ability/Ab_SpawnBreaker
+  <Ab_StopTimer>k__BackingField:
+    Guid:
+      Data1: -1372129145
+      Data2: 1108913412
+      Data3: 1552574395
+      Data4: -1712104125
+    Path: event:/SFX/Ability/Ab_StopTimerSFX
+  <Ab_Speed>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <Ab_WarmUp>k__BackingField:
+    Guid:
+      Data1: 1196896912
+      Data2: 1306671321
+      Data3: -126682966
+      Data4: -364725216
+    Path: event:/SFX/Ability/Ab_WarmUp
 --- !u!1 &4388320582716075238
 GameObject:
   m_ObjectHideFlags: 0

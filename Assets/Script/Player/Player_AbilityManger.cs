@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using FMOD.Studio;
 
 public class Player_AbilityManger : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class Player_AbilityManger : MonoBehaviour
     {
         labTeleportPoint = ReferenceManager.instance.labTeleportPoint;
         skillCanvas = ReferenceManager.instance.skillCanvas;
+
     }
 
     #region Ab_Lightning ATTACK
@@ -125,6 +127,7 @@ public class Player_AbilityManger : MonoBehaviour
     void Ab_DecampInitiate()
     {
         isoCharacterController.Teleport(labTeleportPoint.position);
+
     }
     #endregion
 

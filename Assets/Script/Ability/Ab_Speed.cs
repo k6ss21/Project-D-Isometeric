@@ -21,6 +21,7 @@ public class Ab_Speed : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Player Speed Boost Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Speed, this.transform.position);
             OnSpeedBoost?.Invoke(speed, time);
             coolDown = true;
             button.enabled = false;

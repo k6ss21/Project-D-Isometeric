@@ -13,6 +13,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
     [SerializeField] private TextMeshProUGUI totalSickCount;
     [SerializeField] private UI_BloodOverlay bloodOverlay;
+    [SerializeField] public Transform playerLegPos;
 
     void OnEnable()
     {

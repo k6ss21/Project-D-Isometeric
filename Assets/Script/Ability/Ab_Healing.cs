@@ -27,6 +27,7 @@ public class Ab_Healing : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Player Healing...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Healing, this.transform.position);
             OnAbilityHeal?.Invoke(healthValue);
             coolDown = true;
             button.enabled = false;

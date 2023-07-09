@@ -21,6 +21,7 @@ public class Ab_SpawnBreaker : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("SpawnBreaker Trigger Active...");
+             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_SpawnBreaker, this.transform.position);
             OnSpawnBreakerTrigger?.Invoke(time);
             coolDown = true;
             button.enabled = false;

@@ -32,6 +32,7 @@ public class SickChar : MonoBehaviour
 
     [Header("Floating Test")]
     [SerializeField] private GameObject _floatingTextPrefab;
+    public InstructionPopUp instructionPopUp;
     [SerializeField] private string text = "Press E to Loot";
     [SerializeField] private string cantHealtext;
     private bool _textVisible = false;
@@ -70,6 +71,7 @@ public class SickChar : MonoBehaviour
         animator = GetComponent<Animator>();
         material = GetComponent<SpriteRenderer>().material;
         instructionBox = FindObjectOfType<InstructionBox>();
+
         maxValue = healingDuration;
         sliderCanvas.gameObject.SetActive(false);
         UpdateProgressBar();
@@ -96,7 +98,6 @@ public class SickChar : MonoBehaviour
 
     public void ChangeHealingRate(float boost)
     {
-        
         healingRate *= boost;
         Debug.Log("Healing Rate Changed " + healingRate);
     }
@@ -138,6 +139,9 @@ public class SickChar : MonoBehaviour
                 // {
                 //     ShowInstructionText();
                 // }
+                instructionPopUp.gameObject.SetActive(true);
+               /// ShowInstructionText();
+
             }
 
             if (Input.GetKeyDown(KeyCode.F))
@@ -173,7 +177,8 @@ public class SickChar : MonoBehaviour
         }
         else
         {
-            DestroyText();
+            instructionPopUp.gameObject.SetActive(false);
+//            instructionPopUp.Hide();
         }
 
     }
@@ -211,28 +216,34 @@ public class SickChar : MonoBehaviour
 
     }
 
-    void ShowInstructionText()
-    {
-        if (_floatingTextPrefab)
-        {
-            _textVisible = true;
-            floatingText = Instantiate(_floatingTextPrefab, promptPoint.position, Quaternion.identity);
-            floatingText.transform.SetParent(this.transform);
-            floatingText.GetComponentInChildren<TextMesh>().text = text;
-
-        }
-    }
-    // void ShowInstructionCantHealText()
+    // void ShowInstructionText()
     // {
     //     if (_floatingTextPrefab)
     //     {
     //         _textVisible = true;
     //         floatingText = Instantiate(_floatingTextPrefab, promptPoint.position, Quaternion.identity);
     //         floatingText.transform.SetParent(this.transform);
-    //         floatingText.GetComponentInChildren<TextMesh>().text = cantHealtext;
+    //         floatingText.GetComponentInChildren<TextMesh>().text = text;
 
     //     }
     // }
+    // // void ShowInstructionCantHealText()
+    // // {
+    // //     if (_floatingTextPrefab)
+    // //     {
+    // //         _textVisible = true;
+    // //         floatingText = Instantiate(_floatingTextPrefab, promptPoint.position, Quaternion.identity);
+    // //         floatingText.transform.SetParent(this.transform);
+    // //         floatingText.GetComponentInChildren<TextMesh>().text = cantHealtext;
+
+    // //     }
+    // // }
+
+    void ShowInstructionText()
+    {
+        GameObject obj = Instantiate(instructionPopUp.gameObject);
+        obj.GetComponent<InstructionPopUp>().Show(text);
+    }
 
     void DestroyText()
     {
@@ -247,5 +258,5 @@ public class SickChar : MonoBehaviour
         progressBar.value = fillAmount;
     }
 
-  
+
 }

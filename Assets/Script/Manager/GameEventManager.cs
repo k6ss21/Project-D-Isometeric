@@ -85,6 +85,7 @@ public class GameEventManager : MonoBehaviour
 
     void SlowTimerSpeed(float multi, float time)
     {
+       
         Debug.Log("Slow Timer"+ multi);
         timeMulti = multi;
         StartCoroutine(SlowTimerRoutine(time));

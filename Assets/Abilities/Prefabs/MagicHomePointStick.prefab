@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1185239315
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 833787917, guid: 29fb1f55ccade604b9a2868684479804, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,11 +120,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 919291965
-      Data2: 1246829955
-      Data3: 1978555523
-      Data4: 1615794362
-    Path: event:/SFX/Env/FirePlace
+      Data1: 1248184903
+      Data2: 1113691479
+      Data3: -1773006942
+      Data4: -2026102486
+    Path: event:/SFX/Ability/Ab_MagicHomePoint
   Event: 
   PlayEvent: 0
   StopEvent: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  test: 0
 --- !u!114 &1709476682219475348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +191,7 @@ SortingGroup:
   m_GameObject: {fileID: 1468908793888830426}
   m_Enabled: 1
   m_SortingLayerID: 1185239315
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
 --- !u!114 &85655924
 MonoBehaviour:
@@ -218,7 +219,7 @@ MonoBehaviour:
   - {x: 0.017885566, y: -0.27067327, z: 0}
   m_ShapePathHash: -1578172523
   m_Mesh: {fileID: 0}
-  m_InstanceId: -143774
+  m_InstanceId: -11156
 --- !u!1 &1683986857537442993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5445,7 +5446,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1185239315
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0

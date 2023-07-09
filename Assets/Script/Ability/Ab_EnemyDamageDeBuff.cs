@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using System;
 public class Ab_EnemyDamageDeBuff : MonoBehaviour
 {
-     public float cooldownTime;
-     public float debuffMulti;
-     public float debuffTime;
+    public float cooldownTime;
+    public float debuffMulti;
+    public float debuffTime;
     bool coolDown;
     Button button;
     public static event Action<float, float> OnEnemyDamageDeBuffTrigger;
@@ -21,6 +21,7 @@ public class Ab_EnemyDamageDeBuff : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("EnemyDamageDeBuff Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_DamageDebuff, this.transform.position);
             OnEnemyDamageDeBuffTrigger?.Invoke(debuffMulti, debuffTime);
             coolDown = true;
             button.enabled = false;

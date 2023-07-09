@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: DamageDeBuff
-  description: 
+  description: Reduce Player Damage Rate
   skillPointsNeeded: 10
 --- !u!114 &510860668505508671
 MonoBehaviour:

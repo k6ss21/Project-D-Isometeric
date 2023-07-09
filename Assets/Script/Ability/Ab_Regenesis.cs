@@ -23,6 +23,7 @@ public class Ab_Regenesis : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Regenesis Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Regenesis,this.transform.position);
             player.gameObject.SetActive(true);
             player.TakeHealth(50);
             coolDown = true;

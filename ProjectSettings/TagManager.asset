@@ -77,9 +77,6 @@ TagManager:
   - name: ' Projectile'
     uniqueID: 1954869489
     locked: 0
-  - name: Right Wall
-    uniqueID: 125240931
-    locked: 0
   - name: Light
     uniqueID: 1449729725
     locked: 0
@@ -88,4 +85,10 @@ TagManager:
     locked: 0
   - name: Fog
     uniqueID: 1786535521
+    locked: 0
+  - name: N_Wall
+    uniqueID: 3828581043
+    locked: 0
+  - name: Right Wall
+    uniqueID: 125240931
     locked: 0

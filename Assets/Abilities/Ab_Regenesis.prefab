@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Regenesis
-  description: 
+  description: 'Self Revive '
   skillPointsNeeded: 10
 --- !u!114 &9043155954820520391
 MonoBehaviour:

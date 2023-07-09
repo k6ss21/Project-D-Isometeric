@@ -21,6 +21,7 @@ public class Ab_WarmUp : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("WarmUp Trigger Active...");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_WarmUp, this.transform.position);
             OnWarmUpTrigger?.Invoke(tempValue);
             coolDown = true;
             button.enabled = false;

@@ -51,7 +51,7 @@ public class IsoCharacterController : MonoBehaviour
         isTopDown = FindObjectOfType<GameEventManager>().topDown;
         _playerAnimator = GetComponent<PlayerAnimationManger>();
         playerAttack = GetComponent<PlayerAttack>();
-
+        blackScreenAnimator = ReferenceManager.instance.blackScreenAnimator;
         playerFootsteps = AudioManager.instance.CreateEventInstance(FMODEvents.instance.PlayerFootSteps); //Setting FMOD Evnets 
         lastMoveDir = "SW";
         walkSpeed = defaultWalkSpeed;
@@ -331,18 +331,36 @@ public class IsoCharacterController : MonoBehaviour
     #region OTHERS
 
     private Vector3 lastPos;
-
+    public Animator blackScreenAnimator;
     public void Teleport(Vector3 pos)
     {
         lastPos = transform.position;
-        transform.position = pos;
+        StartCoroutine(BlackScreenTransitionWithTeleport(pos));
 
+    }
+    public void NormalTeleport(Vector3 pos)
+    {
+        lastPos = transform.position;
+        transform.position = pos;
     }
     public void TeleportToLastPos()
     {
-        transform.position = lastPos;
+        //transform.position = lastPos;
+        StartCoroutine(BlackScreenTransitionWithTeleport(lastPos));
     }
+    IEnumerator BlackScreenTransitionWithTeleport(Vector3 pos)
+    {
+        blackScreenAnimator.gameObject.SetActive(true);
+        blackScreenAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(.3f);
+        transform.position = pos;
+        blackScreenAnimator.SetTrigger("End");
+        yield return new WaitForSeconds(.3f);
+        blackScreenAnimator.gameObject.SetActive(false);
 
+
+
+    }
     #endregion
 
     #region SFX & OTHERS

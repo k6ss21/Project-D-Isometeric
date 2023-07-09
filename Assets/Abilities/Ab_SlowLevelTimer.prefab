@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
-  cooldownTime: 5
+  cooldownTime: 30
   multi: 0.5
-  time: 20
+  time: 15
 --- !u!114 &-8804559977709843358
 MonoBehaviour:
   m_ObjectHideFlags: 0

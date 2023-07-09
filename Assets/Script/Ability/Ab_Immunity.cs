@@ -21,6 +21,7 @@ public class Ab_Immunity : MonoBehaviour
         if (!coolDown)
         {
             Debug.Log("Immunity Trigger Active...");
+             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Immunity,this.transform.position);
             OnImmunityTrigger?.Invoke(immunityValue);
             coolDown = true;
             button.enabled = false;

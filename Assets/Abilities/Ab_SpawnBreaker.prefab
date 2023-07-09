@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: SpawnBreaker
-  description: 
+  description: Disable All Enemy Spawn
   skillPointsNeeded: 10
 --- !u!114 &4202765040423250960
 MonoBehaviour:
