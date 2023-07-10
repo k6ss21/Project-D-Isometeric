@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4707449204362350883}
   - component: {fileID: 4707449204362350876}
   - component: {fileID: 4707449204362350877}
+  - component: {fileID: 8516225255373594570}
   m_Layer: 0
   m_Name: Box_Medium_Multiple_2_W
   m_TagString: Untagged
@@ -112,4 +113,38 @@ MonoBehaviour:
   - {x: 0.28143024, y: -0.12761426, z: 0}
   m_ShapePathHash: 1289203151
   m_Mesh: {fileID: 0}
-  m_InstanceId: 43732
+  m_InstanceId: 44382
+--- !u!60 &8516225255373594570
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707449204362350878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.58, y: 0.72}
+    newSize: {x: 0.58, y: 0.72}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.020167962, y: 0.35625538}
+      - {x: -0.16882202, y: 0.28130442}
+      - {x: -0.29, y: -0.11987403}
+      - {x: -0.28500703, y: -0.28883585}
+      - {x: -0.14764357, y: -0.35625514}
+      - {x: -0.02, y: -0.29758748}
+      - {x: 0.28375867, y: -0.15136024}
+      - {x: 0.2862549, y: 0.023842894}
+      - {x: 0.13887784, y: 0.28760156}

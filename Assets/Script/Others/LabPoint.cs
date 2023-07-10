@@ -7,6 +7,7 @@ public class LabPoint : MonoBehaviour
 
     public float circleRadius;
     public LayerMask playerLayerMask;
+    public GameObject instructionPopUp;
 
     public static event Action OnReturnLastPos;
 
@@ -20,12 +21,16 @@ public class LabPoint : MonoBehaviour
 
         if (collider != null)
         {
-
+            instructionPopUp.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.TeleportToLab, this.transform.position);
                 OnReturnLastPos?.Invoke();
             }
+        }
+        else
+        {
+            instructionPopUp.SetActive(false);
         }
 
     }

@@ -10,6 +10,7 @@ public class SkillPageAccess : MonoBehaviour
 
     public bool isSkillCanvasOpen;
     public GameObject skillCanvas;
+    public GameObject instructionPopUp;
 
     public void Start()
     {
@@ -21,14 +22,19 @@ public class SkillPageAccess : MonoBehaviour
     {
         var collider = Physics2D.OverlapCircle(transform.position, circleRadius, playerLayerMask);
 
-        if(collider != null)
+        if (collider != null)
         {
-            if(Input.GetKeyDown(KeyCode.I))
+            instructionPopUp.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.I))
             {
                 Debug.Log("Open SKill Menu");
                 isSkillCanvasOpen = true;
                 skillCanvas.SetActive(true);
             }
+        }
+        else
+        {
+             instructionPopUp.SetActive(false);
         }
     }
 

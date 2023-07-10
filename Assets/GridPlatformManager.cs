@@ -24,6 +24,7 @@ public class GridPlatformManager : MonoBehaviour
 
             playerPresent = true;
             lights.SetActive(true);
+            currentSicks.SetActive(true);
             foreach (GameObject platform in nextGridPlatForms)
             {
                 platform.SetActive(false);

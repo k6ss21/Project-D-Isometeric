@@ -32,7 +32,7 @@ public class SickChar : MonoBehaviour
 
     [Header("Floating Test")]
     [SerializeField] private GameObject _floatingTextPrefab;
-    public InstructionPopUp instructionPopUp;
+    public GameObject instructionPopUp;
     [SerializeField] private string text = "Press E to Loot";
     [SerializeField] private string cantHealtext;
     private bool _textVisible = false;

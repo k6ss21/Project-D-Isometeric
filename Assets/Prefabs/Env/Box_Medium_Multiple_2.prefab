@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733300016001561421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.057, y: -8.827, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -596987489
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 53580178, guid: ed13ca3d10fbcd241987b800517bff50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,7 +113,7 @@ MonoBehaviour:
   - {x: 0.13949585, y: -0.3494587, z: 0}
   m_ShapePathHash: -184817377
   m_Mesh: {fileID: 0}
-  m_InstanceId: -108532
+  m_InstanceId: 44668
 --- !u!60 &587715557435984165
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -139,8 +139,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.29064083, y: -0.11919308}
-      - {x: -0.28525877, y: 0.02226162}
-      - {x: -0.2855716, y: -0.14585444}
-      - {x: 0.14743452, y: -0.35598215}
-      - {x: 0.28598216, y: -0.2877222}
+    - - {x: 0.28178406, y: -0.117935754}
+      - {x: 0.21398932, y: 0.08562614}
+      - {x: 0.1579131, y: 0.28203475}
+      - {x: 0.012829781, y: 0.3561058}
+      - {x: -0.12900543, y: 0.28566265}
+      - {x: -0.20922378, y: 0.15260938}
+      - {x: -0.2862513, y: 0.028379004}
+      - {x: -0.2829861, y: -0.14074545}
+      - {x: 0.1452981, y: -0.355977}
+      - {x: 0.29739583, y: -0.28343692}

@@ -7,7 +7,7 @@ public class RechargeChamber : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Player player;
 
-
+    public GameObject instructionPopUp;
 
     [Header("Range Settings")]
     [SerializeField] float radius;
@@ -44,7 +44,7 @@ public class RechargeChamber : MonoBehaviour
             player = collider.GetComponent<Player>();
 
             //TODO:
-            // MAKE A POP UP TEXT.
+            instructionPopUp.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
                 // Debug.Log("Recharge");
@@ -55,6 +55,10 @@ public class RechargeChamber : MonoBehaviour
                 isRecharging = true;
                 StartCoroutine(RechargeTimer()); // Start Recharge Coroutine.
             }
+        }
+        else
+        {
+            instructionPopUp.SetActive(false);
         }
 
         if (isRecharging)
