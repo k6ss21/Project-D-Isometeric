@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healingDuration: 20
-  healingRate: 1
+  healingRate: 5
   IsHealing: 0
   circleRadius: 0.4
   playerLayer:

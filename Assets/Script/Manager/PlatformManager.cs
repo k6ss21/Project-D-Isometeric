@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class PlatformManager : MonoBehaviour
 {
     public List<EnemySpawner> enemySpawners = new List<EnemySpawner>();
@@ -12,12 +12,16 @@ public class PlatformManager : MonoBehaviour
     public bool sick;
     //public bool isLaboratory;
     public GameObject stairway;
+    public GameObject gate;
     bool playerPresent;
     public Transform boxPos;
-    public Vector2 boxVectors;
+    public Vector3 boxVectors;
     public LayerMask SickCharMask;
+    public float angle;
 
     ContactFilter2D sickContactFilter2D;
+
+
     void OnEnable()
     {
         Ab_Rehabilitation.OnRehabilitationTrigger += HealAllSick;
@@ -40,12 +44,13 @@ public class PlatformManager : MonoBehaviour
     {
 
         sickContactFilter2D.layerMask = SickCharMask;
+        angle = boxPos.eulerAngles.z;
     }
 
     void Update()
     {
 
-        var collider2D = Physics2D.OverlapBox(boxPos.position, boxVectors, 27, SickCharMask);
+        var collider2D = Physics2D.OverlapBox(boxPos.position, boxVectors, angle, SickCharMask);
         if (collider2D != null)
         {
 
@@ -55,6 +60,10 @@ public class PlatformManager : MonoBehaviour
 
                 stairway.SetActive(false);
             }
+            if (gate != null)
+            {
+                gate.SetActive(true);
+            }
         }
         else
         {
@@ -62,6 +71,10 @@ public class PlatformManager : MonoBehaviour
             if (stairway != null)
             {
                 stairway.SetActive(true);
+            }
+            if (gate != null)
+            {
+                gate.SetActive(false);
             }
         }
 

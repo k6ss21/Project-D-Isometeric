@@ -10,11 +10,16 @@ public class GridPlatformManager : MonoBehaviour
     public List<GameObject> nextSicks;
     public GameObject lights;
     public GameObject currentSicks;
+    public GameObject currentPlatformItems;
+
+    public GameObject projectileDestroyCollider;
     public bool playerPresent = false;
 
     void Start()
     {
         lights.SetActive(false);
+        projectileDestroyCollider.SetActive(false);
+        currentPlatformItems.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,14 +30,16 @@ public class GridPlatformManager : MonoBehaviour
             playerPresent = true;
             lights.SetActive(true);
             currentSicks.SetActive(true);
+            projectileDestroyCollider.SetActive(true);
+             currentPlatformItems.SetActive(true);
             foreach (GameObject platform in nextGridPlatForms)
             {
                 platform.SetActive(false);
             }
-            foreach (GameObject items in nextPlatFormItems)
-            {
-                items.SetActive(false);
-            }
+            // foreach (GameObject items in nextPlatFormItems)
+            // {
+            //     items.SetActive(false);
+            // }
             try
             {
                 foreach (GameObject sicks in nextSicks)
@@ -59,10 +66,12 @@ public class GridPlatformManager : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerPresent = false;
+            projectileDestroyCollider.SetActive(false);
             // foreach(GameObject platform in nextGridPlatForms)
             // {
             //     platform.SetActive(true);
             // }
+             currentPlatformItems.SetActive(false);
             nextGridPlatForms[0].SetActive(true);
             lights.SetActive(false);
             foreach (GameObject items in nextPlatFormItems)
