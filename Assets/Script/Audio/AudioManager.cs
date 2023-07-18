@@ -5,6 +5,21 @@ using FMODUnity;
 using FMOD.Studio;
 public class AudioManager : MonoBehaviour
 {
+    [Header("Volume")]
+    [Range(0, 1)]
+    public float masterVolume = 1;
+    [Range(0, 1)]
+    public float musicVolume = 1;
+    [Range(0, 1)]
+    public float ambienceVolume = 1;
+    [Range(0, 1)]
+    public float SFXVolume = 1;
+
+    private Bus masterBus;
+    private Bus musicBus;
+    private Bus AmbienceBus;
+    private Bus SFXBus;
+
     private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
     public static AudioManager instance;
@@ -20,11 +35,23 @@ public class AudioManager : MonoBehaviour
 
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
+        masterBus = RuntimeManager.GetBus("bus:/");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        AmbienceBus = RuntimeManager.GetBus("bus:/Ambience");
+        SFXBus = RuntimeManager.GetBus("bus:/SFX");
     }
-     void Start()
-     {
+    void Start()
+    {
         InitializeMusic(FMODEvents.instance.music);
-     }
+    }
+
+    void Update()
+    {
+        masterBus.setVolume(masterVolume);
+        musicBus.setVolume(musicVolume);
+        AmbienceBus.setVolume(ambienceVolume);
+        SFXBus.setVolume(SFXVolume);
+    }
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         RuntimeManager.PlayOneShot(sound, worldPos);
@@ -44,13 +71,13 @@ public class AudioManager : MonoBehaviour
         musicEventInstance.start();
     }
 
-   
+
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, GameObject emitterGameobject)
     {
         StudioEventEmitter emitter = emitterGameobject.GetComponent<StudioEventEmitter>();
-        emitter.EventReference= eventReference;
+        emitter.EventReference = eventReference;
         eventEmitters.Add(emitter);
-        return emitter; 
+        return emitter;
 
 
     }
@@ -63,7 +90,7 @@ public class AudioManager : MonoBehaviour
             eventInstance.release();
         }
 
-        foreach(StudioEventEmitter emitter in eventEmitters)
+        foreach (StudioEventEmitter emitter in eventEmitters)
         {
             emitter.Stop();
         }

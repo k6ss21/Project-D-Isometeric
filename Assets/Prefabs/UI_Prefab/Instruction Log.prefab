@@ -31,7 +31,7 @@ RectTransform:
   m_Children:
   - {fileID: 7248398017977332969}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -121,8 +121,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You're Outside Home Point
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 36cf785205321224196f767835de56e3, type: 2}
-  m_sharedMaterial: {fileID: 1516984297700663612, guid: 36cf785205321224196f767835de56e3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 32722b21fdd9a3347b7af2189e3f7ddc, type: 2}
+  m_sharedMaterial: {fileID: 5525314798939161590, guid: 32722b21fdd9a3347b7af2189e3f7ddc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!95 &7248398017977332971
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -207,7 +207,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7248398017977332968
 MonoBehaviour:
   m_ObjectHideFlags: 0

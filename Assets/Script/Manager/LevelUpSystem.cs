@@ -36,10 +36,10 @@ public class LevelUpSystem : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.G))
-        // {
-        //     GainXp(20);
-        // }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            ScreenCapture.CaptureScreenshot("ScreenShot.png");
+        }
         if (gainedXp >= requiredXp)
         {
             LevelUp();

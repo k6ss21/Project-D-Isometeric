@@ -1,7 +1,3776 @@
 fileFormatVersion: 2
 guid: 43914bf770e9cfb4aa6df391858d55b4
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Boss_Enemy_1_Anim_Attack_Frame_0
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 467
+      width: 12
+      height: 40
+    spriteID: d0438e4df8cc26940b1ca3922bb57424
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 467}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_1
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 191
+      y: 946
+      width: 12
+      height: 40
+    spriteID: 25a6dc2dae8d4d045ad8cdb2753abc32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 191, y: 946}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_2
+    originalName: 
+    pivot: {x: 0.625, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 650
+      width: 8
+      height: 40
+    spriteID: 7b02778aadeeb674f9bdde58c74e3e4c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 650}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_3
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 863
+      width: 12
+      height: 36
+    spriteID: 66b5ea72cd27f084cbe4cb18b5e0e9f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 863}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_4
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 907
+      width: 12
+      height: 36
+    spriteID: 8ce4798d8469e124c857bcdebcb057b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 907}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_5
+    originalName: 
+    pivot: {x: 0.61538464, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 359
+      width: 13
+      height: 35
+    spriteID: b3621ef1b1337a0498c75ff381f8170f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 359}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_6
+    originalName: 
+    pivot: {x: 0.6428572, y: -1.3333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 191
+      y: 903
+      width: 14
+      height: 33
+    spriteID: e66a26d7e85b4ca4ca78dff18f3c036e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 191, y: 903}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_7
+    originalName: 
+    pivot: {x: 0.6666667, y: -1.40625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 191
+      y: 860
+      width: 15
+      height: 32
+    spriteID: cf680210edcd176438cd5e1724b5d66b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 191, y: 860}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_8
+    originalName: 
+    pivot: {x: 0.6666667, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 816
+      width: 15
+      height: 36
+    spriteID: 8b67675af1714f04393cec4c3ac6b33f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 190, y: 816}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_9
+    originalName: 
+    pivot: {x: 0.6666667, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 657
+      width: 15
+      height: 36
+    spriteID: f754a0395648b9c408df7ca60649b4ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 657}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_10
+    originalName: 
+    pivot: {x: 0.6666667, y: -1.0263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 767
+      width: 15
+      height: 38
+    spriteID: 3a01c70c0d3620d4d96416374665ba70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 767}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_11
+    originalName: 
+    pivot: {x: 0.6666667, y: -1.0263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 192
+      y: 213
+      width: 15
+      height: 38
+    spriteID: cd33ce4613e05f148b7abec10c8db114
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 192, y: 213}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_12
+    originalName: 
+    pivot: {x: 0.42718446, y: -0.08219178}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 86
+      width: 103
+      height: 73
+    spriteID: 2427c96580bd94447a8da88c5d9fdc88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 86}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_13
+    originalName: 
+    pivot: {x: 0.4563107, y: -0.081081085}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 103
+      height: 74
+    spriteID: 10727bed8ff619a4d985e00ee2eb50d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_14
+    originalName: 
+    pivot: {x: 0.73846155, y: -0.08219178}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 60
+      width: 65
+      height: 73
+    spriteID: cb150c8c5f11f6f429c3178622a7a0a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 60}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_15
+    originalName: 
+    pivot: {x: 0.93617016, y: -0.234375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 528
+      width: 47
+      height: 64
+    spriteID: 6b67682d00f54c749bcf043aa19f1131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 528}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_16
+    originalName: 
+    pivot: {x: 0.61538464, y: -1.0526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 187
+      y: 276
+      width: 13
+      height: 38
+    spriteID: 3aa7c4b3a91f8ae4593a4ab59b776f09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 187, y: 276}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_17
+    originalName: 
+    pivot: {x: 0.61538464, y: -1.0526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 467
+      width: 13
+      height: 38
+    spriteID: f3243ae79e91b2d469c5ece001d18a01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 467}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_18
+    originalName: 
+    pivot: {x: 0.61538464, y: -1.1081082}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 404
+      width: 13
+      height: 37
+    spriteID: 84999f75ff1f0d4428aaac5ddc5a29b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 404}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_19
+    originalName: 
+    pivot: {x: 0.42718446, y: -0.08219178}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 167
+      width: 103
+      height: 73
+    spriteID: 220e00083f7d9134bbdf805450e101a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 167}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_20
+    originalName: 
+    pivot: {x: 0.18309858, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 790
+      width: 71
+      height: 72
+    spriteID: cca22d12e016fa94093a748dd80ee1b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 790}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_21
+    originalName: 
+    pivot: {x: 0.1594203, y: -0.43636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 213
+      width: 69
+      height: 55
+    spriteID: 092d3c4e0006ad74ab98b8dc5912f362
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 213}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_22
+    originalName: 
+    pivot: {x: 0.19642858, y: -1.0789474}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 90
+      width: 56
+      height: 38
+    spriteID: 6d14cf44f22b3bd4d80cbc6da6e2a588
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 90}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_23
+    originalName: 
+    pivot: {x: 0.61538464, y: -1.0526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 183
+      y: 340
+      width: 13
+      height: 38
+    spriteID: 49e0680f9c15acd47949308e80c0db50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 183, y: 340}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_24
+    originalName: 
+    pivot: {x: 0.625, y: -1.2424242}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 343
+      y: 222
+      width: 8
+      height: 33
+    spriteID: 0fd1e404c80c86d4f9705b2d867ed86e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 343, y: 222}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_25
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 60
+      width: 12
+      height: 40
+    spriteID: c857eab712997f44d92c645d82988fe8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 60}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_26
+    originalName: 
+    pivot: {x: 0.4166667, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 528
+      width: 12
+      height: 40
+    spriteID: d4102abe6a99ad04d958a083b33399e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 528}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_27
+    originalName: 
+    pivot: {x: 0.4166667, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 190
+      y: 528
+      width: 12
+      height: 40
+    spriteID: 0e97d16e332e1a04e89c98fa323201ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 190, y: 528}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_28
+    originalName: 
+    pivot: {x: 0.44444445, y: -0.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 342
+      y: 269
+      width: 9
+      height: 38
+    spriteID: 37955826d4a7a6248bf30bcf89c8b543
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 342, y: 269}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_29
+    originalName: 
+    pivot: {x: 0.4166667, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 951
+      width: 12
+      height: 36
+    spriteID: 0ec3759e43e04e345baf64e9a07337f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 951}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_30
+    originalName: 
+    pivot: {x: 0.4166667, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 445
+      width: 12
+      height: 36
+    spriteID: 3efc6c565f52cae47834c2e4c49d6628
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 445}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_31
+    originalName: 
+    pivot: {x: 0.4166667, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 489
+      width: 12
+      height: 36
+    spriteID: 383d8c9cb4aa74c4e95e80a1dd0cbefa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 489}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_32
+    originalName: 
+    pivot: {x: 0.4615385, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 402
+      width: 13
+      height: 35
+    spriteID: ed81da810b7acb447b3236c3ca9f20d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 402}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_33
+    originalName: 
+    pivot: {x: 0.4615385, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 315
+      width: 13
+      height: 36
+    spriteID: c257c557f8896954fbfdf1a025f5a02e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 315}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_34
+    originalName: 
+    pivot: {x: 0.4615385, y: -1.0810812}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 189
+      y: 141
+      width: 13
+      height: 37
+    spriteID: 12546ff17476c654fa170850df9c6010
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 189, y: 141}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_35
+    originalName: 
+    pivot: {x: 0.4615385, y: -1.0810812}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 83
+      y: 790
+      width: 13
+      height: 37
+    spriteID: 7053fb3a8929d0646b0ef86211bfc432
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 83, y: 790}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_36
+    originalName: 
+    pivot: {x: 0.4166667, y: -1.0263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 363
+      width: 12
+      height: 38
+    spriteID: d72f92486e894de4e96dfd310260a7be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 363}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_37
+    originalName: 
+    pivot: {x: 0.4166667, y: -1.0263158}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 409
+      width: 12
+      height: 38
+    spriteID: 3e903add209b84248937461f78f26543
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 409}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_38
+    originalName: 
+    pivot: {x: 0.39999998, y: -0.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 248
+      width: 100
+      height: 64
+    spriteID: 292c314c443c7014cb01a8bb9317342b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 248}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_39
+    originalName: 
+    pivot: {x: 0.10606061, y: -0.359375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 141
+      width: 66
+      height: 64
+    spriteID: cfe25006286a7b94c90a8038f487747b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 141}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_40
+    originalName: 
+    pivot: {x: 0.109375, y: -0.4107143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 276
+      width: 64
+      height: 56
+    spriteID: 1f4ea9e940e4ddc43848d2e50a079888
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 276}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_41
+    originalName: 
+    pivot: {x: 0.116666675, y: -0.4107143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 340
+      width: 60
+      height: 56
+    spriteID: 06cccd868a8979b4f97d347e2c663b44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 340}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: -1.0526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 455
+      width: 12
+      height: 38
+    spriteID: 604853e4a60c96b4e834ee02634c39a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 455}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_43
+    originalName: 
+    pivot: {x: 0.5, y: -1.0526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 501
+      width: 12
+      height: 38
+    spriteID: 146cb746f4b0c624c8af9c1e0d1dbd2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 501}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_44
+    originalName: 
+    pivot: {x: 0.5, y: -1.0526316}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 547
+      width: 12
+      height: 38
+    spriteID: 423ec1235dc4bad4da7d96a536239051
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 547}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_45
+    originalName: 
+    pivot: {x: 0.39999998, y: -0.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 320
+      width: 100
+      height: 64
+    spriteID: 425c2374eeaa447448e6e6091b3177c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 320}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_46
+    originalName: 
+    pivot: {x: 0.41414142, y: -0.8125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 4
+      width: 99
+      height: 48
+    spriteID: 7841c8db59ebd644f8f863d4ae3b97f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 4}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_47
+    originalName: 
+    pivot: {x: 0.7592593, y: -0.9111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 714
+      width: 54
+      height: 45
+    spriteID: f0e07189728e4f74984ac3d77d98d379
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 714}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_48
+    originalName: 
+    pivot: {x: 0.8913044, y: -1.0789474}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 269
+      width: 46
+      height: 38
+    spriteID: 9f289316d21102348929c9549933e5a6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 269}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_49
+    originalName: 
+    pivot: {x: 0.8723404, y: -1.0256411}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 222
+      width: 47
+      height: 39
+    spriteID: bdfc7607efdaabb4fbaed95c4889415a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 222}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_50
+    originalName: 
+    pivot: {x: 0.44444445, y: -0.8947368}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 205
+      y: 767
+      width: 9
+      height: 38
+    spriteID: 8af28c9ba773b634288930b3473ac881
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 205, y: 767}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_51
+    originalName: 
+    pivot: {x: 0.4166667, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 315
+      width: 12
+      height: 40
+    spriteID: 71c5a99242fed774aa5eb63bb0f0bfa8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 315}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_52
+    originalName: 
+    pivot: {x: 0.5, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 593
+      width: 12
+      height: 37
+    spriteID: 74938bdceab95554ab291cd7cd9ed016
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 593}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_53
+    originalName: 
+    pivot: {x: 0.5, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 638
+      width: 12
+      height: 37
+    spriteID: 58cce6a662eda96478b072642e45b8a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 638}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_54
+    originalName: 
+    pivot: {x: 0.5, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 939
+      width: 10
+      height: 36
+    spriteID: 00736e6a0be81ec4da123966f80d3eeb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 939}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_55
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 576
+      width: 12
+      height: 34
+    spriteID: a308f5b01b32d7c4185605c2b1196430
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 576}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 618
+      width: 12
+      height: 34
+    spriteID: 134ce4ffc0e20db46a9e00464fbcbc24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 618}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 660
+      width: 12
+      height: 34
+    spriteID: 90b2eca43da95ce4985128f8aee8f6c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 660}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_58
+    originalName: 
+    pivot: {x: 0.5, y: -1.3333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 777
+      width: 12
+      height: 33
+    spriteID: e360e2a307e651543bc096e5c44d68a2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 777}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_59
+    originalName: 
+    pivot: {x: 0.5, y: -1.40625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 859
+      width: 12
+      height: 32
+    spriteID: a696c309542490842a5e43d900a137de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 859}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_60
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 702
+      width: 12
+      height: 34
+    spriteID: 797e16ddf1e13fd4ba0b996f8a419d71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 702}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_61
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 744
+      width: 12
+      height: 34
+    spriteID: ec093764485be5140a389b9e4365a399
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 744}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_62
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 786
+      width: 12
+      height: 34
+    spriteID: 6ae38ee1e8a92f94797635fe3439cf23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 786}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_63
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 828
+      width: 12
+      height: 34
+    spriteID: 874dc207197107848929dcd171c2b026
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 828}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_64
+    originalName: 
+    pivot: {x: 0.5, y: -0.75000006}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 392
+      width: 102
+      height: 60
+    spriteID: 22e49c8f8a5c9fb4e8875fc7a3c40a9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 392}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_65
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.7627119}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 656
+      width: 91
+      height: 59
+    spriteID: 7d5f25cd59c8d284080a470f20023e9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 656}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_66
+    originalName: 
+    pivot: {x: 0.12068965, y: -0.8490566}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 467
+      width: 58
+      height: 53
+    spriteID: 75d9f022555dcbd4d98af84a15264d7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 467}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_67
+    originalName: 
+    pivot: {x: 0.12068965, y: -1.1538461}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 4
+      width: 58
+      height: 39
+    spriteID: 5e9fb000606daff40b86d7c693ffa930
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 4}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_68
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 870
+      width: 12
+      height: 34
+    spriteID: 3e352ca7d91b8d74ca6e81f133fe361d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 870}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_69
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 912
+      width: 12
+      height: 34
+    spriteID: 9ac547b49f3ec3c44bb9e6ccf27889b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 912}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_70
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 954
+      width: 12
+      height: 34
+    spriteID: e19465acf9b823b4cb45aba90489ef0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 954}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_71
+    originalName: 
+    pivot: {x: 0.5, y: -0.75000006}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 460
+      width: 102
+      height: 60
+    spriteID: 3875751029dab114ab92047c56a01cc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 460}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_72
+    originalName: 
+    pivot: {x: 0.5909091, y: -0.7627119}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 723
+      width: 88
+      height: 59
+    spriteID: 6fbedddc701050d40b4cc9338741c449
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 723}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_73
+    originalName: 
+    pivot: {x: 0.91525424, y: -0.8181818}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 404
+      width: 59
+      height: 55
+    spriteID: eeef2f4c8ddfa8549bc29d919ca320dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 404}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_74
+    originalName: 
+    pivot: {x: 0.91525424, y: -1.0975609}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 767
+      width: 59
+      height: 41
+    spriteID: 834c857164960f14695015039b779232
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 767}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_75
+    originalName: 
+    pivot: {x: 0.5, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 315
+      width: 12
+      height: 34
+    spriteID: e1c9d2d0b2f045e4d9d26957a58042ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 315}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_76
+    originalName: 
+    pivot: {x: 0.5, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 983
+      width: 10
+      height: 36
+    spriteID: 2b4864904add06743a5585945300d119
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 983}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_77
+    originalName: 
+    pivot: {x: 0.5, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 683
+      width: 12
+      height: 37
+    spriteID: 6f83d21054a06b24eb360fc17ad5e083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 683}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_78
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 728
+      width: 12
+      height: 37
+    spriteID: c1f345c66c0752c4795aea337000427c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 728}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_79
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 773
+      width: 12
+      height: 37
+    spriteID: 753c37174e95aef4ba80958b82b33ac7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 773}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_80
+    originalName: 
+    pivot: {x: 0.6, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 51
+      width: 10
+      height: 36
+    spriteID: e35b8c0e5435e5345a36d23bc9f9de0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 51}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_81
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 308
+      y: 533
+      width: 12
+      height: 35
+    spriteID: 1d652c14f3718e94cb415826ac538317
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 308, y: 533}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_82
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 357
+      width: 12
+      height: 34
+    spriteID: bc95213d09fcb4442ba5a34840de52c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 357}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_83
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 399
+      width: 12
+      height: 34
+    spriteID: 342dde2fec611c24584992cc9354710d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 399}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_84
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.3333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 818
+      width: 12
+      height: 33
+    spriteID: ff11216c5d4a0b84b88f1f539bb5a5d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 818}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_85
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.40625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 899
+      width: 12
+      height: 32
+    spriteID: ff2d333884767fe40b3ce5c542c47880
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 899}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_86
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 441
+      width: 12
+      height: 34
+    spriteID: e08ebe2497476ef47b04da2cb7349965
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 441}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_87
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 483
+      width: 12
+      height: 34
+    spriteID: f947cfc87b5944b4594258e978bc7e8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 483}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_88
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 525
+      width: 12
+      height: 34
+    spriteID: ed7bb5d9196433a4f9c8d24ec5443a16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 525}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_89
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 567
+      width: 12
+      height: 34
+    spriteID: 31aaf37c86f27a142b3787341b16b0cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 567}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_90
+    originalName: 
+    pivot: {x: 0.5, y: -0.4107143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 528
+      width: 102
+      height: 56
+    spriteID: 6775ddf167ade71408c13862fc3cb1bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 528}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_91
+    originalName: 
+    pivot: {x: 0.5714286, y: -0.43636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 870
+      width: 91
+      height: 55
+    spriteID: 29b99ac29036af04f9afbd3b4d7b5eb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 870}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_92
+    originalName: 
+    pivot: {x: 0.8947368, y: -0.6122449}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 600
+      width: 57
+      height: 49
+    spriteID: 52df6d9423348a04c8081e92a11b9c3c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 600}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_93
+    originalName: 
+    pivot: {x: 0.8947368, y: -1.2571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 136
+      width: 57
+      height: 35
+    spriteID: 64ac38c41e1c6b94f8fd8aa157ea9d0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 136}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_94
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 609
+      width: 12
+      height: 34
+    spriteID: 5dbead401be9267489bd47ac8b6efefe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 609}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_95
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 651
+      width: 12
+      height: 34
+    spriteID: ccfd6dc7545bf884c9e66bbc82905ff0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 651}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_96
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 693
+      width: 12
+      height: 34
+    spriteID: 8bb389448a8ee9244a62a3b7e1060d00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 693}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_97
+    originalName: 
+    pivot: {x: 0.5, y: -0.4107143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 592
+      width: 102
+      height: 56
+    spriteID: 20d491b1b07852348b58b77b6302295e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 592}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_98
+    originalName: 
+    pivot: {x: 0.42857143, y: -0.43636364}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 933
+      width: 91
+      height: 55
+    spriteID: b8cfcfe3698c7c846bd35d3d99df6407
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 933}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_99
+    originalName: 
+    pivot: {x: 0.10526316, y: -0.6122449}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 657
+      width: 57
+      height: 49
+    spriteID: 7fc7d0d6c13214e4a90cea7854a3e462
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 657}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_100
+    originalName: 
+    pivot: {x: 0.10526316, y: -1.2571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 179
+      width: 57
+      height: 35
+    spriteID: 6ddbe984f102d2c45b98d4b70bd9c92c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 179}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_101
+    originalName: 
+    pivot: {x: 0.5833334, y: -1.2647059}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 329
+      y: 735
+      width: 12
+      height: 34
+    spriteID: ba2b8676f3d65c74ba1f8f31b0b2b06e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 329, y: 735}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_102
+    originalName: 
+    pivot: {x: 0.6, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 95
+      width: 10
+      height: 36
+    spriteID: 766b2b9fe70c819478603082d9285bc6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 95}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_103
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 818
+      width: 12
+      height: 37
+    spriteID: 9e2b7dfcad5041b439c02ff55f44daf0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 818}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_104
+    originalName: 
+    pivot: {x: 0.6, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 657
+      width: 10
+      height: 37
+    spriteID: dd154530550df8d41b131acb51b61b6e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 657}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_105
+    originalName: 
+    pivot: {x: 0.6, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 203
+      y: 404
+      width: 10
+      height: 37
+    spriteID: 17ebc342678745f4db0548a64ef41b81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 203, y: 404}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_106
+    originalName: 
+    pivot: {x: 0.5714286, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 723
+      width: 7
+      height: 37
+    spriteID: eec3ba06ce8b9c94b820a137c300d85d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 723}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_107
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 139
+      width: 10
+      height: 35
+    spriteID: 602523876f7d36f4096c362c422d27c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 139}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_108
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 182
+      width: 10
+      height: 35
+    spriteID: 7fd86bff95202d94cba8eb37ee711e58
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 182}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_109
+    originalName: 
+    pivot: {x: 0.6, y: -1.2058823}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 483
+      width: 10
+      height: 34
+    spriteID: 497e85a7c1b32cc41a690b64e8d9720a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 483}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_110
+    originalName: 
+    pivot: {x: 0.6, y: -1.2727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 609
+      width: 10
+      height: 33
+    spriteID: 4cd03469567ac09469c6e360e84762ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 609}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_111
+    originalName: 
+    pivot: {x: 0.6363636, y: -1.34375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 51
+      width: 11
+      height: 32
+    spriteID: aa8493b9552806a418e4d5ac40f3299c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 51}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_112
+    originalName: 
+    pivot: {x: 0.6, y: -1.2058823}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 525
+      width: 10
+      height: 34
+    spriteID: e52db71a57d79dc46a198dec66981a12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 525}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_113
+    originalName: 
+    pivot: {x: 0.6, y: -1.2058823}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 567
+      width: 10
+      height: 34
+    spriteID: 7d034e989ddecb846b4f32fbe043a95e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 567}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_114
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 225
+      width: 10
+      height: 35
+    spriteID: c12a8542621488244b35cff3f1c9309a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 225}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_115
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 268
+      width: 10
+      height: 35
+    spriteID: 6c1193674d5313d4bb6cff3fb4f59125
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 268}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_116
+    originalName: 
+    pivot: {x: 0.1764706, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 860
+      width: 68
+      height: 35
+    spriteID: 856af3e275a27324d901910f80e99da1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 860}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_117
+    originalName: 
+    pivot: {x: 0.19117647, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 903
+      width: 68
+      height: 35
+    spriteID: 31ec1f7f144df704f879ecffd1938f00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 903}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_118
+    originalName: 
+    pivot: {x: 0.20895521, y: -1.138889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 816
+      width: 67
+      height: 36
+    spriteID: 1fea0888af31cbf4cb129d4ed7710b81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 816}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_119
+    originalName: 
+    pivot: {x: 0.3611111, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 714
+      width: 36
+      height: 35
+    spriteID: 02def95aca95f3c4aa15b03409616eff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 714}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_120
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 311
+      width: 10
+      height: 35
+    spriteID: de8fb76d42bb0af4e9624f86163ab260
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 311}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_121
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 354
+      width: 10
+      height: 35
+    spriteID: 7a844a8279d075c409e09e05c3c68dd4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 354}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_122
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 397
+      width: 10
+      height: 35
+    spriteID: 4b0ad1efe0079d445afea7b72c971b05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 397}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_123
+    originalName: 
+    pivot: {x: 0.1764706, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 946
+      width: 68
+      height: 35
+    spriteID: 15286ce3f63acf240b1185c326f85a0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 946}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_124
+    originalName: 
+    pivot: {x: 0.12698413, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 4
+      width: 63
+      height: 35
+    spriteID: 78d461c4cf080a44bad8008567076034
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 4}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_125
+    originalName: 
+    pivot: {x: 0.13114753, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 288
+      y: 47
+      width: 61
+      height: 35
+    spriteID: 594fcc443b2fd2943a651c316c08f10a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 288, y: 47}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_126
+    originalName: 
+    pivot: {x: 0.23529412, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 180
+      y: 600
+      width: 34
+      height: 35
+    spriteID: de4e35d4c67630f47abe9072bb34e81d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 180, y: 600}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_127
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 440
+      width: 10
+      height: 35
+    spriteID: 7ae8d10d69d62f74aba08ef2f8461204
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 440}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_128
+    originalName: 
+    pivot: {x: 0.5714286, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 222
+      y: 698
+      width: 7
+      height: 37
+    spriteID: a3e381ac18622314f8d6bcd7f8a1e497
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 222, y: 698}
+  - name: Boss_Enemy_1_Anim_Attack_Frame_129
+    originalName: 
+    pivot: {x: 0.6, y: -0.945946}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 204
+      y: 340
+      width: 10
+      height: 37
+    spriteID: 76b4195f8ef1e024abadf869d6a3e3e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 204, y: 340}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1343413009
+    name: Boss_Enemy_1_Anim_Attack
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Boss_Enemy_1_Anim_Attack_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 57
+        y: 32
+        width: 12
+        height: 40
+      spriteId: d0438e4df8cc26940b1ca3922bb57424
+    - name: Boss_Enemy_1_Anim_Attack_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 57
+        y: 32
+        width: 12
+        height: 40
+      spriteId: 25a6dc2dae8d4d045ad8cdb2753abc32
+    - name: Boss_Enemy_1_Anim_Attack_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 59
+        y: 34
+        width: 8
+        height: 40
+      spriteId: 7b02778aadeeb674f9bdde58c74e3e4c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 57
+        y: 41
+        width: 12
+        height: 36
+      spriteId: 66b5ea72cd27f084cbe4cb18b5e0e9f0
+    - name: Boss_Enemy_1_Anim_Attack_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 57
+        y: 41
+        width: 12
+        height: 36
+      spriteId: 8ce4798d8469e124c857bcdebcb057b8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 56
+        y: 42
+        width: 13
+        height: 35
+      spriteId: b3621ef1b1337a0498c75ff381f8170f
+    - name: Boss_Enemy_1_Anim_Attack_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 55
+        y: 44
+        width: 14
+        height: 33
+      spriteId: e66a26d7e85b4ca4ca78dff18f3c036e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 54
+        y: 45
+        width: 15
+        height: 32
+      spriteId: cf680210edcd176438cd5e1724b5d66b
+    - name: Boss_Enemy_1_Anim_Attack_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 54
+        y: 41
+        width: 15
+        height: 36
+      spriteId: 8b67675af1714f04393cec4c3ac6b33f
+    - name: Boss_Enemy_1_Anim_Attack_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 54
+        y: 41
+        width: 15
+        height: 36
+      spriteId: f754a0395648b9c408df7ca60649b4ac
+    - name: Boss_Enemy_1_Anim_Attack_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 54
+        y: 39
+        width: 15
+        height: 38
+      spriteId: 3a01c70c0d3620d4d96416374665ba70
+    - name: Boss_Enemy_1_Anim_Attack_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 54
+        y: 39
+        width: 15
+        height: 38
+      spriteId: cd33ce4613e05f148b7abec10c8db114
+    - name: Boss_Enemy_1_Anim_Attack_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 20
+        y: 6
+        width: 103
+        height: 73
+      spriteId: 2427c96580bd94447a8da88c5d9fdc88
+    - name: Boss_Enemy_1_Anim_Attack_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 17
+        y: 6
+        width: 103
+        height: 74
+      spriteId: 10727bed8ff619a4d985e00ee2eb50d8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 6
+        width: 65
+        height: 73
+      spriteId: cb150c8c5f11f6f429c3178622a7a0a8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 20
+        y: 15
+        width: 47
+        height: 64
+      spriteId: 6b67682d00f54c749bcf043aa19f1131
+    - name: Boss_Enemy_1_Anim_Attack_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 56
+        y: 40
+        width: 13
+        height: 38
+      spriteId: 3aa7c4b3a91f8ae4593a4ab59b776f09
+    - name: Boss_Enemy_1_Anim_Attack_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 56
+        y: 40
+        width: 13
+        height: 38
+      spriteId: f3243ae79e91b2d469c5ece001d18a01
+    - name: Boss_Enemy_1_Anim_Attack_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 56
+        y: 41
+        width: 13
+        height: 37
+      spriteId: 84999f75ff1f0d4428aaac5ddc5a29b8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 20
+        y: 6
+        width: 103
+        height: 73
+      spriteId: 220e00083f7d9134bbdf805450e101a7
+    - name: Boss_Enemy_1_Anim_Attack_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 51
+        y: 8
+        width: 71
+        height: 72
+      spriteId: cca22d12e016fa94093a748dd80ee1b7
+    - name: Boss_Enemy_1_Anim_Attack_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 53
+        y: 24
+        width: 69
+        height: 55
+      spriteId: 092d3c4e0006ad74ab98b8dc5912f362
+    - name: Boss_Enemy_1_Anim_Attack_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 53
+        y: 41
+        width: 56
+        height: 38
+      spriteId: 6d14cf44f22b3bd4d80cbc6da6e2a588
+    - name: Boss_Enemy_1_Anim_Attack_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 56
+        y: 40
+        width: 13
+        height: 38
+      spriteId: 49e0680f9c15acd47949308e80c0db50
+    - name: Boss_Enemy_1_Anim_Attack_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 59
+        y: 41
+        width: 8
+        height: 33
+      spriteId: 0fd1e404c80c86d4f9705b2d867ed86e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 57
+        y: 32
+        width: 12
+        height: 40
+      spriteId: c857eab712997f44d92c645d82988fe8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 59
+        y: 32
+        width: 12
+        height: 40
+      spriteId: d4102abe6a99ad04d958a083b33399e7
+    - name: Boss_Enemy_1_Anim_Attack_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 59
+        y: 32
+        width: 12
+        height: 40
+      spriteId: 0e97d16e332e1a04e89c98fa323201ab
+    - name: Boss_Enemy_1_Anim_Attack_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 60
+        y: 34
+        width: 9
+        height: 38
+      spriteId: 37955826d4a7a6248bf30bcf89c8b543
+    - name: Boss_Enemy_1_Anim_Attack_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 59
+        y: 41
+        width: 12
+        height: 36
+      spriteId: 0ec3759e43e04e345baf64e9a07337f1
+    - name: Boss_Enemy_1_Anim_Attack_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 59
+        y: 41
+        width: 12
+        height: 36
+      spriteId: 3efc6c565f52cae47834c2e4c49d6628
+    - name: Boss_Enemy_1_Anim_Attack_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 59
+        y: 41
+        width: 12
+        height: 36
+      spriteId: 383d8c9cb4aa74c4e95e80a1dd0cbefa
+    - name: Boss_Enemy_1_Anim_Attack_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 58
+        y: 42
+        width: 13
+        height: 35
+      spriteId: ed81da810b7acb447b3236c3ca9f20d2
+    - name: Boss_Enemy_1_Anim_Attack_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 58
+        y: 41
+        width: 13
+        height: 36
+      spriteId: c257c557f8896954fbfdf1a025f5a02e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 58
+        y: 40
+        width: 13
+        height: 37
+      spriteId: 12546ff17476c654fa170850df9c6010
+    - name: Boss_Enemy_1_Anim_Attack_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 58
+        y: 40
+        width: 13
+        height: 37
+      spriteId: 7053fb3a8929d0646b0ef86211bfc432
+    - name: Boss_Enemy_1_Anim_Attack_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 59
+        y: 39
+        width: 12
+        height: 38
+      spriteId: d72f92486e894de4e96dfd310260a7be
+    - name: Boss_Enemy_1_Anim_Attack_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 59
+        y: 39
+        width: 12
+        height: 38
+      spriteId: 3e903add209b84248937461f78f26543
+    - name: Boss_Enemy_1_Anim_Attack_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 24
+        y: 24
+        width: 100
+        height: 64
+      spriteId: 292c314c443c7014cb01a8bb9317342b
+    - name: Boss_Enemy_1_Anim_Attack_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 57
+        y: 23
+        width: 66
+        height: 64
+      spriteId: cfe25006286a7b94c90a8038f487747b
+    - name: Boss_Enemy_1_Anim_Attack_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 57
+        y: 23
+        width: 64
+        height: 56
+      spriteId: 1f4ea9e940e4ddc43848d2e50a079888
+    - name: Boss_Enemy_1_Anim_Attack_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 57
+        y: 23
+        width: 60
+        height: 56
+      spriteId: 06cccd868a8979b4f97d347e2c663b44
+    - name: Boss_Enemy_1_Anim_Attack_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 58
+        y: 40
+        width: 12
+        height: 38
+      spriteId: 604853e4a60c96b4e834ee02634c39a5
+    - name: Boss_Enemy_1_Anim_Attack_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 58
+        y: 40
+        width: 12
+        height: 38
+      spriteId: 146cb746f4b0c624c8af9c1e0d1dbd2e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 58
+        y: 40
+        width: 12
+        height: 38
+      spriteId: 423ec1235dc4bad4da7d96a536239051
+    - name: Boss_Enemy_1_Anim_Attack_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 24
+        y: 24
+        width: 100
+        height: 64
+      spriteId: 425c2374eeaa447448e6e6091b3177c7
+    - name: Boss_Enemy_1_Anim_Attack_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 23
+        y: 39
+        width: 99
+        height: 48
+      spriteId: 7841c8db59ebd644f8f863d4ae3b97f8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 23
+        y: 41
+        width: 54
+        height: 45
+      spriteId: f0e07189728e4f74984ac3d77d98d379
+    - name: Boss_Enemy_1_Anim_Attack_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 23
+        y: 41
+        width: 46
+        height: 38
+      spriteId: 9f289316d21102348929c9549933e5a6
+    - name: Boss_Enemy_1_Anim_Attack_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 23
+        y: 40
+        width: 47
+        height: 39
+      spriteId: bdfc7607efdaabb4fbaed95c4889415a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 60
+        y: 34
+        width: 9
+        height: 38
+      spriteId: 8af28c9ba773b634288930b3473ac881
+    - name: Boss_Enemy_1_Anim_Attack_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 59
+        y: 32
+        width: 12
+        height: 40
+      spriteId: 71c5a99242fed774aa5eb63bb0f0bfa8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 58
+        y: 35
+        width: 12
+        height: 37
+      spriteId: 74938bdceab95554ab291cd7cd9ed016
+    - name: Boss_Enemy_1_Anim_Attack_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 58
+        y: 35
+        width: 12
+        height: 37
+      spriteId: 58cce6a662eda96478b072642e45b8a3
+    - name: Boss_Enemy_1_Anim_Attack_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 59
+        y: 36
+        width: 10
+        height: 36
+      spriteId: 00736e6a0be81ec4da123966f80d3eeb
+    - name: Boss_Enemy_1_Anim_Attack_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: a308f5b01b32d7c4185605c2b1196430
+    - name: Boss_Enemy_1_Anim_Attack_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 134ce4ffc0e20db46a9e00464fbcbc24
+    - name: Boss_Enemy_1_Anim_Attack_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 90b2eca43da95ce4985128f8aee8f6c8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 58
+        y: 44
+        width: 12
+        height: 33
+      spriteId: e360e2a307e651543bc096e5c44d68a2
+    - name: Boss_Enemy_1_Anim_Attack_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 58
+        y: 45
+        width: 12
+        height: 32
+      spriteId: a696c309542490842a5e43d900a137de
+    - name: Boss_Enemy_1_Anim_Attack_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 797e16ddf1e13fd4ba0b996f8a419d71
+    - name: Boss_Enemy_1_Anim_Attack_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: ec093764485be5140a389b9e4365a399
+    - name: Boss_Enemy_1_Anim_Attack_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 6ae38ee1e8a92f94797635fe3439cf23
+    - name: Boss_Enemy_1_Anim_Attack_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 874dc207197107848929dcd171c2b026
+    - name: Boss_Enemy_1_Anim_Attack_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 13
+        y: 45
+        width: 102
+        height: 60
+      spriteId: 22e49c8f8a5c9fb4e8875fc7a3c40a9a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 25
+        y: 45
+        width: 91
+        height: 59
+      spriteId: 7d5f25cd59c8d284080a470f20023e9a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 57
+        y: 45
+        width: 58
+        height: 53
+      spriteId: 75d9f022555dcbd4d98af84a15264d7b
+    - name: Boss_Enemy_1_Anim_Attack_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 57
+        y: 45
+        width: 58
+        height: 39
+      spriteId: 5e9fb000606daff40b86d7c693ffa930
+    - name: Boss_Enemy_1_Anim_Attack_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 3e352ca7d91b8d74ca6e81f133fe361d
+    - name: Boss_Enemy_1_Anim_Attack_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 9ac547b49f3ec3c44bb9e6ccf27889b8
+    - name: Boss_Enemy_1_Anim_Attack_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: e19465acf9b823b4cb45aba90489ef0f
+    - name: Boss_Enemy_1_Anim_Attack_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 13
+        y: 45
+        width: 102
+        height: 60
+      spriteId: 3875751029dab114ab92047c56a01cc4
+    - name: Boss_Enemy_1_Anim_Attack_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 12
+        y: 45
+        width: 88
+        height: 59
+      spriteId: 6fbedddc701050d40b4cc9338741c449
+    - name: Boss_Enemy_1_Anim_Attack_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 10
+        y: 45
+        width: 59
+        height: 55
+      spriteId: eeef2f4c8ddfa8549bc29d919ca320dd
+    - name: Boss_Enemy_1_Anim_Attack_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 10
+        y: 45
+        width: 59
+        height: 41
+      spriteId: 834c857164960f14695015039b779232
+    - name: Boss_Enemy_1_Anim_Attack_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 58
+        y: 43
+        width: 12
+        height: 34
+      spriteId: e1c9d2d0b2f045e4d9d26957a58042ca
+    - name: Boss_Enemy_1_Anim_Attack_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 59
+        y: 36
+        width: 10
+        height: 36
+      spriteId: 2b4864904add06743a5585945300d119
+    - name: Boss_Enemy_1_Anim_Attack_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 58
+        y: 35
+        width: 12
+        height: 37
+      spriteId: 6f83d21054a06b24eb360fc17ad5e083
+    - name: Boss_Enemy_1_Anim_Attack_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: 57
+        y: 35
+        width: 12
+        height: 37
+      spriteId: c1f345c66c0752c4795aea337000427c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: 57
+        y: 35
+        width: 12
+        height: 37
+      spriteId: 753c37174e95aef4ba80958b82b33ac7
+    - name: Boss_Enemy_1_Anim_Attack_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: 58
+        y: 36
+        width: 10
+        height: 36
+      spriteId: e35b8c0e5435e5345a36d23bc9f9de0e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_81
+      frameIndex: 81
+      cellRect:
+        x: 57
+        y: 42
+        width: 12
+        height: 35
+      spriteId: 1d652c14f3718e94cb415826ac538317
+    - name: Boss_Enemy_1_Anim_Attack_Frame_82
+      frameIndex: 82
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: bc95213d09fcb4442ba5a34840de52c5
+    - name: Boss_Enemy_1_Anim_Attack_Frame_83
+      frameIndex: 83
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 342dde2fec611c24584992cc9354710d
+    - name: Boss_Enemy_1_Anim_Attack_Frame_84
+      frameIndex: 84
+      cellRect:
+        x: 57
+        y: 44
+        width: 12
+        height: 33
+      spriteId: ff11216c5d4a0b84b88f1f539bb5a5d9
+    - name: Boss_Enemy_1_Anim_Attack_Frame_85
+      frameIndex: 85
+      cellRect:
+        x: 57
+        y: 45
+        width: 12
+        height: 32
+      spriteId: ff2d333884767fe40b3ce5c542c47880
+    - name: Boss_Enemy_1_Anim_Attack_Frame_86
+      frameIndex: 86
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: e08ebe2497476ef47b04da2cb7349965
+    - name: Boss_Enemy_1_Anim_Attack_Frame_87
+      frameIndex: 87
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: f947cfc87b5944b4594258e978bc7e8c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_88
+      frameIndex: 88
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: ed7bb5d9196433a4f9c8d24ec5443a16
+    - name: Boss_Enemy_1_Anim_Attack_Frame_89
+      frameIndex: 89
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 31aaf37c86f27a142b3787341b16b0cd
+    - name: Boss_Enemy_1_Anim_Attack_Frame_90
+      frameIndex: 90
+      cellRect:
+        x: 13
+        y: 23
+        width: 102
+        height: 56
+      spriteId: 6775ddf167ade71408c13862fc3cb1bc
+    - name: Boss_Enemy_1_Anim_Attack_Frame_91
+      frameIndex: 91
+      cellRect:
+        x: 12
+        y: 24
+        width: 91
+        height: 55
+      spriteId: 29b99ac29036af04f9afbd3b4d7b5eb4
+    - name: Boss_Enemy_1_Anim_Attack_Frame_92
+      frameIndex: 92
+      cellRect:
+        x: 13
+        y: 30
+        width: 57
+        height: 49
+      spriteId: 52df6d9423348a04c8081e92a11b9c3c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_93
+      frameIndex: 93
+      cellRect:
+        x: 13
+        y: 44
+        width: 57
+        height: 35
+      spriteId: 64ac38c41e1c6b94f8fd8aa157ea9d0c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_94
+      frameIndex: 94
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 5dbead401be9267489bd47ac8b6efefe
+    - name: Boss_Enemy_1_Anim_Attack_Frame_95
+      frameIndex: 95
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: ccfd6dc7545bf884c9e66bbc82905ff0
+    - name: Boss_Enemy_1_Anim_Attack_Frame_96
+      frameIndex: 96
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: 8bb389448a8ee9244a62a3b7e1060d00
+    - name: Boss_Enemy_1_Anim_Attack_Frame_97
+      frameIndex: 97
+      cellRect:
+        x: 13
+        y: 23
+        width: 102
+        height: 56
+      spriteId: 20d491b1b07852348b58b77b6302295e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_98
+      frameIndex: 98
+      cellRect:
+        x: 25
+        y: 24
+        width: 91
+        height: 55
+      spriteId: b8cfcfe3698c7c846bd35d3d99df6407
+    - name: Boss_Enemy_1_Anim_Attack_Frame_99
+      frameIndex: 99
+      cellRect:
+        x: 58
+        y: 30
+        width: 57
+        height: 49
+      spriteId: 7fc7d0d6c13214e4a90cea7854a3e462
+    - name: Boss_Enemy_1_Anim_Attack_Frame_100
+      frameIndex: 100
+      cellRect:
+        x: 58
+        y: 44
+        width: 57
+        height: 35
+      spriteId: 6ddbe984f102d2c45b98d4b70bd9c92c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_101
+      frameIndex: 101
+      cellRect:
+        x: 57
+        y: 43
+        width: 12
+        height: 34
+      spriteId: ba2b8676f3d65c74ba1f8f31b0b2b06e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_102
+      frameIndex: 102
+      cellRect:
+        x: 58
+        y: 36
+        width: 10
+        height: 36
+      spriteId: 766b2b9fe70c819478603082d9285bc6
+    - name: Boss_Enemy_1_Anim_Attack_Frame_103
+      frameIndex: 103
+      cellRect:
+        x: 57
+        y: 35
+        width: 12
+        height: 37
+      spriteId: 9e2b7dfcad5041b439c02ff55f44daf0
+    - name: Boss_Enemy_1_Anim_Attack_Frame_104
+      frameIndex: 104
+      cellRect:
+        x: 58
+        y: 35
+        width: 10
+        height: 37
+      spriteId: dd154530550df8d41b131acb51b61b6e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_105
+      frameIndex: 105
+      cellRect:
+        x: 58
+        y: 35
+        width: 10
+        height: 37
+      spriteId: 17ebc342678745f4db0548a64ef41b81
+    - name: Boss_Enemy_1_Anim_Attack_Frame_106
+      frameIndex: 106
+      cellRect:
+        x: 60
+        y: 37
+        width: 7
+        height: 37
+      spriteId: eec3ba06ce8b9c94b820a137c300d85d
+    - name: Boss_Enemy_1_Anim_Attack_Frame_107
+      frameIndex: 107
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: 602523876f7d36f4096c362c422d27c2
+    - name: Boss_Enemy_1_Anim_Attack_Frame_108
+      frameIndex: 108
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: 7fd86bff95202d94cba8eb37ee711e58
+    - name: Boss_Enemy_1_Anim_Attack_Frame_109
+      frameIndex: 109
+      cellRect:
+        x: 58
+        y: 41
+        width: 10
+        height: 34
+      spriteId: 497e85a7c1b32cc41a690b64e8d9720a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_110
+      frameIndex: 110
+      cellRect:
+        x: 58
+        y: 42
+        width: 10
+        height: 33
+      spriteId: 4cd03469567ac09469c6e360e84762ce
+    - name: Boss_Enemy_1_Anim_Attack_Frame_111
+      frameIndex: 111
+      cellRect:
+        x: 57
+        y: 43
+        width: 11
+        height: 32
+      spriteId: aa8493b9552806a418e4d5ac40f3299c
+    - name: Boss_Enemy_1_Anim_Attack_Frame_112
+      frameIndex: 112
+      cellRect:
+        x: 58
+        y: 41
+        width: 10
+        height: 34
+      spriteId: e52db71a57d79dc46a198dec66981a12
+    - name: Boss_Enemy_1_Anim_Attack_Frame_113
+      frameIndex: 113
+      cellRect:
+        x: 58
+        y: 41
+        width: 10
+        height: 34
+      spriteId: 7d034e989ddecb846b4f32fbe043a95e
+    - name: Boss_Enemy_1_Anim_Attack_Frame_114
+      frameIndex: 114
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: c12a8542621488244b35cff3f1c9309a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_115
+      frameIndex: 115
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: 6c1193674d5313d4bb6cff3fb4f59125
+    - name: Boss_Enemy_1_Anim_Attack_Frame_116
+      frameIndex: 116
+      cellRect:
+        x: 52
+        y: 42
+        width: 68
+        height: 35
+      spriteId: 856af3e275a27324d901910f80e99da1
+    - name: Boss_Enemy_1_Anim_Attack_Frame_117
+      frameIndex: 117
+      cellRect:
+        x: 51
+        y: 42
+        width: 68
+        height: 35
+      spriteId: 31ec1f7f144df704f879ecffd1938f00
+    - name: Boss_Enemy_1_Anim_Attack_Frame_118
+      frameIndex: 118
+      cellRect:
+        x: 50
+        y: 41
+        width: 67
+        height: 36
+      spriteId: 1fea0888af31cbf4cb129d4ed7710b81
+    - name: Boss_Enemy_1_Anim_Attack_Frame_119
+      frameIndex: 119
+      cellRect:
+        x: 51
+        y: 42
+        width: 36
+        height: 35
+      spriteId: 02def95aca95f3c4aa15b03409616eff
+    - name: Boss_Enemy_1_Anim_Attack_Frame_120
+      frameIndex: 120
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: de8fb76d42bb0af4e9624f86163ab260
+    - name: Boss_Enemy_1_Anim_Attack_Frame_121
+      frameIndex: 121
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: 7a844a8279d075c409e09e05c3c68dd4
+    - name: Boss_Enemy_1_Anim_Attack_Frame_122
+      frameIndex: 122
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: 4b0ad1efe0079d445afea7b72c971b05
+    - name: Boss_Enemy_1_Anim_Attack_Frame_123
+      frameIndex: 123
+      cellRect:
+        x: 52
+        y: 42
+        width: 68
+        height: 35
+      spriteId: 15286ce3f63acf240b1185c326f85a0a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_124
+      frameIndex: 124
+      cellRect:
+        x: 56
+        y: 42
+        width: 63
+        height: 35
+      spriteId: 78d461c4cf080a44bad8008567076034
+    - name: Boss_Enemy_1_Anim_Attack_Frame_125
+      frameIndex: 125
+      cellRect:
+        x: 56
+        y: 42
+        width: 61
+        height: 35
+      spriteId: 594fcc443b2fd2943a651c316c08f10a
+    - name: Boss_Enemy_1_Anim_Attack_Frame_126
+      frameIndex: 126
+      cellRect:
+        x: 56
+        y: 42
+        width: 34
+        height: 35
+      spriteId: de4e35d4c67630f47abe9072bb34e81d
+    - name: Boss_Enemy_1_Anim_Attack_Frame_127
+      frameIndex: 127
+      cellRect:
+        x: 58
+        y: 40
+        width: 10
+        height: 35
+      spriteId: 7ae8d10d69d62f74aba08ef2f8461204
+    - name: Boss_Enemy_1_Anim_Attack_Frame_128
+      frameIndex: 128
+      cellRect:
+        x: 60
+        y: 37
+        width: 7
+        height: 37
+      spriteId: a3e381ac18622314f8d6bcd7f8a1e497
+    - name: Boss_Enemy_1_Anim_Attack_Frame_129
+      frameIndex: 129
+      cellRect:
+        x: 58
+        y: 35
+        width: 10
+        height: 37
+      spriteId: 76b4195f8ef1e024abadf869d6a3e3e3
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}

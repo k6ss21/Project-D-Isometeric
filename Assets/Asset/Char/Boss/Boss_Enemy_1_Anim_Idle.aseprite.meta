@@ -1,7 +1,1256 @@
 fileFormatVersion: 2
 guid: ef711c8f4c6601b43ac4b639ad7cfbe8
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Boss_Enemy_1_Anim_Idle_Frame_0
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 12
+      height: 40
+    spriteID: 23d6bd04497ec6a48b5fe3755c228501
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_1
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 24
+      y: 52
+      width: 12
+      height: 39
+    spriteID: 179efda71b551d84b83b67ecb5ab5e96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 24, y: 52}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_2
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 24
+      y: 99
+      width: 12
+      height: 39
+    spriteID: 5f42a36dae0927740ab4c8935126a55c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 24, y: 99}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_3
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 24
+      y: 146
+      width: 12
+      height: 39
+    spriteID: 143b91cf8d8bdd84089a8d7825202640
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 24, y: 146}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_4
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 24
+      y: 193
+      width: 12
+      height: 39
+    spriteID: ce4b603e0d40b284892c661a2f23960b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 24, y: 193}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_5
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 4
+      width: 12
+      height: 39
+    spriteID: 7b8a48a7e71b4204da39201bbab98e06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_6
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 52
+      width: 12
+      height: 40
+    spriteID: 213d39e35dec16e4e948925ee3d3337d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 52}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_7
+    originalName: 
+    pivot: {x: 0.6666667, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 100
+      width: 12
+      height: 40
+    spriteID: ac72241a8f662934db70b5f8d1824256
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 100}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 148
+      width: 12
+      height: 40
+    spriteID: 9718c0b7c3e685d4495ba10924be6669
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 148}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 51
+      width: 12
+      height: 39
+    spriteID: dd4b10175b308784899ba5b2342ec8f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 51}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 98
+      width: 12
+      height: 39
+    spriteID: 7c22bad2a33323e4b86f1a2b3e49aebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 98}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 145
+      width: 12
+      height: 39
+    spriteID: 60a8f61dc92b329499519046bb7cbfbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 145}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 44
+      y: 192
+      width: 12
+      height: 39
+    spriteID: 558a22e8347e781408aec75ddbe304a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 44, y: 192}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.2820513}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 4
+      width: 12
+      height: 39
+    spriteID: aa2382fd199b66a4289189d8fee0c436
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 196
+      width: 12
+      height: 40
+    spriteID: fd75118d4c1bd6540952ab4fadaa01c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 196}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 24
+      y: 4
+      width: 12
+      height: 40
+    spriteID: d33a456a7c7498b4188ea902d6ebd3f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 24, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 51
+      width: 12
+      height: 37
+    spriteID: 90ae4f60cdecf3c418412027533385ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 51}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 94
+      width: 12
+      height: 36
+    spriteID: 650cd306355ed144daa8c59ec523deab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 94}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 138
+      width: 12
+      height: 36
+    spriteID: d25029c9991a63d41ab2845926f42db8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 138}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 182
+      width: 12
+      height: 36
+    spriteID: c1f80c91bd4cec34aa9b533aa54c3d94
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 182}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 4
+      width: 12
+      height: 36
+    spriteID: e21335eafb4b3394fba8023751309131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 48
+      width: 12
+      height: 36
+    spriteID: 37bb6d1123db79744bb2be9bbbc50f3a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 48}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 96
+      width: 12
+      height: 37
+    spriteID: 10ea1ac22f25248488c9cf9985e85a9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 96}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 141
+      width: 12
+      height: 37
+    spriteID: cac13435c78dda942a15f1fdc44d90ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 141}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_24
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 186
+      width: 12
+      height: 37
+    spriteID: 578dc7608d4ed0841a3db0a111b9e17f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 64, y: 186}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_25
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 92
+      width: 12
+      height: 36
+    spriteID: c2850735cd3e76c4fa23b4e3554f35e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 92}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_26
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 136
+      width: 12
+      height: 36
+    spriteID: 718144a0631490b448494d773a61e303
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 136}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_27
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 180
+      width: 12
+      height: 36
+    spriteID: b270a6f6dc9941e439b656d7744441b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 180}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_28
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 4
+      width: 12
+      height: 36
+    spriteID: 34a9c0722520c314489f32065439351f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_29
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 48
+      width: 12
+      height: 36
+    spriteID: 2e86c5dcf69186749882717c69ac6bff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 48}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_30
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 4
+      width: 12
+      height: 37
+    spriteID: c41cb9a94b20e1949bdee71b734feeb3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_31
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 84
+      y: 49
+      width: 12
+      height: 37
+    spriteID: d5cb1b2c439af7b48a62943425563dc7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 84, y: 49}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_32
+    originalName: 
+    pivot: {x: 0.6, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 92
+      width: 10
+      height: 37
+    spriteID: d604a36593056bb4da606d3d4ed0dc40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 92}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_33
+    originalName: 
+    pivot: {x: 0.6, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 4
+      width: 10
+      height: 36
+    spriteID: c803648367842ec47a353951966f2122
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 4}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_34
+    originalName: 
+    pivot: {x: 0.6, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 48
+      width: 10
+      height: 36
+    spriteID: 3191ad035383d7b4bbdfadf18fefb731
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 48}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_35
+    originalName: 
+    pivot: {x: 0.6, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 92
+      width: 10
+      height: 36
+    spriteID: c8f699728694c5b4bbd1e759cdba6227
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 92}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_36
+    originalName: 
+    pivot: {x: 0.6, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 136
+      width: 10
+      height: 36
+    spriteID: 8914d2b00bc10cc4da44efe6d3acd292
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 136}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_37
+    originalName: 
+    pivot: {x: 0.6, y: -0.3888889}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 144
+      y: 180
+      width: 10
+      height: 36
+    spriteID: e06c67cc8fa08a949a3f3325f0947d78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 144, y: 180}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_38
+    originalName: 
+    pivot: {x: 0.6, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 137
+      width: 10
+      height: 37
+    spriteID: 4ed8859b725f7fa498503bcdaf17e679
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 137}
+  - name: Boss_Enemy_1_Anim_Idle_Frame_39
+    originalName: 
+    pivot: {x: 0.6, y: -0.3783784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 182
+      width: 10
+      height: 37
+    spriteID: 79f08fc548f90af40b722e0a8d6466d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 182}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -708175043
+    name: Boss_Enemy_1_Anim_Idle
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Boss_Enemy_1_Anim_Idle_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 40
+      spriteId: 23d6bd04497ec6a48b5fe3755c228501
+    - name: Boss_Enemy_1_Anim_Idle_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 179efda71b551d84b83b67ecb5ab5e96
+    - name: Boss_Enemy_1_Anim_Idle_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 5f42a36dae0927740ab4c8935126a55c
+    - name: Boss_Enemy_1_Anim_Idle_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 143b91cf8d8bdd84089a8d7825202640
+    - name: Boss_Enemy_1_Anim_Idle_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 39
+      spriteId: ce4b603e0d40b284892c661a2f23960b
+    - name: Boss_Enemy_1_Anim_Idle_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 7b8a48a7e71b4204da39201bbab98e06
+    - name: Boss_Enemy_1_Anim_Idle_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 40
+      spriteId: 213d39e35dec16e4e948925ee3d3337d
+    - name: Boss_Enemy_1_Anim_Idle_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 24
+        y: 11
+        width: 12
+        height: 40
+      spriteId: ac72241a8f662934db70b5f8d1824256
+    - name: Boss_Enemy_1_Anim_Idle_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 40
+      spriteId: 9718c0b7c3e685d4495ba10924be6669
+    - name: Boss_Enemy_1_Anim_Idle_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 39
+      spriteId: dd4b10175b308784899ba5b2342ec8f8
+    - name: Boss_Enemy_1_Anim_Idle_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 7c22bad2a33323e4b86f1a2b3e49aebc
+    - name: Boss_Enemy_1_Anim_Idle_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 60a8f61dc92b329499519046bb7cbfbe
+    - name: Boss_Enemy_1_Anim_Idle_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 39
+      spriteId: 558a22e8347e781408aec75ddbe304a5
+    - name: Boss_Enemy_1_Anim_Idle_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 39
+      spriteId: aa2382fd199b66a4289189d8fee0c436
+    - name: Boss_Enemy_1_Anim_Idle_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 40
+      spriteId: fd75118d4c1bd6540952ab4fadaa01c8
+    - name: Boss_Enemy_1_Anim_Idle_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 26
+        y: 11
+        width: 12
+        height: 40
+      spriteId: d33a456a7c7498b4188ea902d6ebd3f7
+    - name: Boss_Enemy_1_Anim_Idle_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 37
+      spriteId: 90ae4f60cdecf3c418412027533385ac
+    - name: Boss_Enemy_1_Anim_Idle_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 36
+      spriteId: 650cd306355ed144daa8c59ec523deab
+    - name: Boss_Enemy_1_Anim_Idle_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 36
+      spriteId: d25029c9991a63d41ab2845926f42db8
+    - name: Boss_Enemy_1_Anim_Idle_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 36
+      spriteId: c1f80c91bd4cec34aa9b533aa54c3d94
+    - name: Boss_Enemy_1_Anim_Idle_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 36
+      spriteId: e21335eafb4b3394fba8023751309131
+    - name: Boss_Enemy_1_Anim_Idle_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 36
+      spriteId: 37bb6d1123db79744bb2be9bbbc50f3a
+    - name: Boss_Enemy_1_Anim_Idle_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 37
+      spriteId: 10ea1ac22f25248488c9cf9985e85a9d
+    - name: Boss_Enemy_1_Anim_Idle_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 26
+        y: 14
+        width: 12
+        height: 37
+      spriteId: cac13435c78dda942a15f1fdc44d90ac
+    - name: Boss_Enemy_1_Anim_Idle_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 37
+      spriteId: 578dc7608d4ed0841a3db0a111b9e17f
+    - name: Boss_Enemy_1_Anim_Idle_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 36
+      spriteId: c2850735cd3e76c4fa23b4e3554f35e1
+    - name: Boss_Enemy_1_Anim_Idle_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 36
+      spriteId: 718144a0631490b448494d773a61e303
+    - name: Boss_Enemy_1_Anim_Idle_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 36
+      spriteId: b270a6f6dc9941e439b656d7744441b2
+    - name: Boss_Enemy_1_Anim_Idle_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 36
+      spriteId: 34a9c0722520c314489f32065439351f
+    - name: Boss_Enemy_1_Anim_Idle_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 36
+      spriteId: 2e86c5dcf69186749882717c69ac6bff
+    - name: Boss_Enemy_1_Anim_Idle_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 37
+      spriteId: c41cb9a94b20e1949bdee71b734feeb3
+    - name: Boss_Enemy_1_Anim_Idle_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 37
+      spriteId: d5cb1b2c439af7b48a62943425563dc7
+    - name: Boss_Enemy_1_Anim_Idle_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 37
+      spriteId: d604a36593056bb4da606d3d4ed0dc40
+    - name: Boss_Enemy_1_Anim_Idle_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 36
+      spriteId: c803648367842ec47a353951966f2122
+    - name: Boss_Enemy_1_Anim_Idle_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 36
+      spriteId: 3191ad035383d7b4bbdfadf18fefb731
+    - name: Boss_Enemy_1_Anim_Idle_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 36
+      spriteId: c8f699728694c5b4bbd1e759cdba6227
+    - name: Boss_Enemy_1_Anim_Idle_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 36
+      spriteId: 8914d2b00bc10cc4da44efe6d3acd292
+    - name: Boss_Enemy_1_Anim_Idle_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 36
+      spriteId: e06c67cc8fa08a949a3f3325f0947d78
+    - name: Boss_Enemy_1_Anim_Idle_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 37
+      spriteId: 4ed8859b725f7fa498503bcdaf17e679
+    - name: Boss_Enemy_1_Anim_Idle_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 26
+        y: 14
+        width: 10
+        height: 37
+      spriteId: 79f08fc548f90af40b722e0a8d6466d5
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

@@ -80,6 +80,7 @@ public class Player : MonoBehaviour, IDataPersistence
             // ScreenCapture.CaptureScreenshot("screenshot.png");
             // Debug.Log("SS Taken");
             //TakeImmunity(20);
+            LevelManager.instance.LoadNextLevel();
         }
         if (isLowTemp)
         {

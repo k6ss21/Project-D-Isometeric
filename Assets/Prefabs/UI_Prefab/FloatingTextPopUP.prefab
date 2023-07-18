@@ -109,8 +109,9 @@ SortingGroup:
   m_GameObject: {fileID: 1116508723222782441}
   m_Enabled: 1
   m_SortingLayerID: 1954869489
-  m_SortingLayer: 6
+  m_SortingLayer: 10
   m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!114 &7438296089794160739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +128,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0.4, z: 0}
 --- !u!95 &8195330416036633981
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -144,4 +145,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

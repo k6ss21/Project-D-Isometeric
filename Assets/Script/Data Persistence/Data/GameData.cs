@@ -7,6 +7,11 @@ public class GameData
 {
     public int skillPoints;
     public int gainedXp;
+    public float masterVolume;
+    public float musicVolume;
+    public float AmbienceVolume;
+    public float SFXVolume;
+    public string levelName;
     public Dictionary<string, bool> abilitiesUnlocked;
 
     //initial value when start a new game
@@ -14,7 +19,9 @@ public class GameData
     {
         this.skillPoints = 0;
         this.gainedXp = 0;
+        this.masterVolume = 1f;
+        this.levelName="Level_3";
         abilitiesUnlocked = new Dictionary<string, bool>();
-      
+
     }
 }

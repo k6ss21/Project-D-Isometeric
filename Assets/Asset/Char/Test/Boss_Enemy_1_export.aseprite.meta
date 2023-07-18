@@ -1,7 +1,976 @@
 fileFormatVersion: 2
 guid: 05d2e165aa184ab40b634e0f2d620f52
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Boss_Enemy_1_export_Frame_0
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.26829267}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 96
+      width: 12
+      height: 41
+    spriteID: f86833499f94f3f489b8b3b35dd9266d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 96}
+  - name: Boss_Enemy_1_export_Frame_1
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 4
+      width: 12
+      height: 40
+    spriteID: 013a9903c1d6fb4459b3bda27657bf60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 4}
+  - name: Boss_Enemy_1_export_Frame_2
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 52
+      width: 12
+      height: 40
+    spriteID: 5d1c3dbde4007cd4d9fbcf183fe7444b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 52}
+  - name: Boss_Enemy_1_export_Frame_3
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 52
+      width: 12
+      height: 39
+    spriteID: 648cf1b3b26422c44a329f84c7ab2366
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 52}
+  - name: Boss_Enemy_1_export_Frame_4
+    originalName: 
+    pivot: {x: 0.53846157, y: -0.34210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 13
+      height: 38
+    spriteID: f786026283cd95941853dfcf1831f259
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Boss_Enemy_1_export_Frame_5
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 100
+      width: 12
+      height: 40
+    spriteID: 50c5c654e5b74934bbd4c1b7848e38e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 100}
+  - name: Boss_Enemy_1_export_Frame_6
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 148
+      width: 12
+      height: 40
+    spriteID: 9053f755d1443e64ab84e12523fabf84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 148}
+  - name: Boss_Enemy_1_export_Frame_7
+    originalName: 
+    pivot: {x: 0.61538464, y: -0.34210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 50
+      width: 13
+      height: 38
+    spriteID: b050acfd5abd7844693ec70300735252
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 50}
+  - name: Boss_Enemy_1_export_Frame_8
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.3}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 25
+      y: 196
+      width: 12
+      height: 40
+    spriteID: 04e5756db790e494aa0a7830efa7d1dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 25, y: 196}
+  - name: Boss_Enemy_1_export_Frame_9
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.26829267}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 145
+      width: 12
+      height: 41
+    spriteID: 8500963cad5eaea4da1426ddb80bb4dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 145}
+  - name: Boss_Enemy_1_export_Frame_10
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 4
+      width: 12
+      height: 40
+    spriteID: 03e28ca5494e2c341aa78a9b4258c307
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 4}
+  - name: Boss_Enemy_1_export_Frame_11
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.26829267}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 194
+      width: 12
+      height: 41
+    spriteID: 9cd8bfbc78503384eaf111530050e22a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 194}
+  - name: Boss_Enemy_1_export_Frame_12
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.4054054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 50
+      width: 12
+      height: 37
+    spriteID: c8c48adb32d64c94eb01b7fd15a2d7a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 50}
+  - name: Boss_Enemy_1_export_Frame_13
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 146
+      width: 12
+      height: 38
+    spriteID: f272caebb61e5f24b9742d066f938a3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 146}
+  - name: Boss_Enemy_1_export_Frame_14
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.4054054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 95
+      width: 12
+      height: 37
+    spriteID: 1905024387499eb47a7a5ad92ad3b67b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 95}
+  - name: Boss_Enemy_1_export_Frame_15
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 192
+      width: 12
+      height: 38
+    spriteID: 482c52ca1f58b224c992ea08ff1a5d94
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 192}
+  - name: Boss_Enemy_1_export_Frame_16
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 45
+      y: 99
+      width: 12
+      height: 39
+    spriteID: 88531525643f5374db1bd109e5df5536
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 45, y: 99}
+  - name: Boss_Enemy_1_export_Frame_17
+    originalName: 
+    pivot: {x: 0.5833334, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 4
+      width: 12
+      height: 38
+    spriteID: 0f3cad86b5bbde048ba1771d2341667d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 4}
+  - name: Boss_Enemy_1_export_Frame_18
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 51
+      width: 11
+      height: 38
+    spriteID: c521afed3bdc97f4c8b5201074709424
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 51}
+  - name: Boss_Enemy_1_export_Frame_19
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.34210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 97
+      width: 11
+      height: 38
+    spriteID: b5e3032751b803b43983f576ee7743c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 97}
+  - name: Boss_Enemy_1_export_Frame_20
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 143
+      width: 11
+      height: 38
+    spriteID: a195f2d76306e3a4890b5fa3cb7c6f00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 143}
+  - name: Boss_Enemy_1_export_Frame_21
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 140
+      width: 11
+      height: 39
+    spriteID: 7e3b28bcb65e8c84cad598d277e81634
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 140}
+  - name: Boss_Enemy_1_export_Frame_22
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.30769232}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 65
+      y: 187
+      width: 11
+      height: 39
+    spriteID: be11f10ab2fd8914d882b04be415913e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 65, y: 187}
+  - name: Boss_Enemy_1_export_Frame_23
+    originalName: 
+    pivot: {x: 0.54545456, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 4
+      width: 11
+      height: 39
+    spriteID: 8a13699d28f74d840b2f438e4b03f993
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 4}
+  - name: Boss_Enemy_1_export_Frame_24
+    originalName: 
+    pivot: {x: 0.6, y: -0.4054054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 85
+      y: 189
+      width: 10
+      height: 37
+    spriteID: 047ef2d99611e9c4b8844b807867edcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 85, y: 189}
+  - name: Boss_Enemy_1_export_Frame_25
+    originalName: 
+    pivot: {x: 0.6, y: -0.41666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 139
+      width: 10
+      height: 36
+    spriteID: 1c54dae273c2a324e9d9477bde9841d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 139}
+  - name: Boss_Enemy_1_export_Frame_26
+    originalName: 
+    pivot: {x: 0.6, y: -0.4054054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 4
+      width: 10
+      height: 37
+    spriteID: 458bd766728307a4b899093b45d1c5c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 4}
+  - name: Boss_Enemy_1_export_Frame_27
+    originalName: 
+    pivot: {x: 0.6, y: -0.4054054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 49
+      width: 10
+      height: 37
+    spriteID: c4446de304b989445908520b00659cc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 49}
+  - name: Boss_Enemy_1_export_Frame_28
+    originalName: 
+    pivot: {x: 0.6, y: -0.41666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 183
+      width: 10
+      height: 36
+    spriteID: 5b0ea6f791ab450468b45d623d12d392
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 183}
+  - name: Boss_Enemy_1_export_Frame_29
+    originalName: 
+    pivot: {x: 0.6, y: -0.4054054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 94
+      width: 10
+      height: 37
+    spriteID: 5b4fc2ab1e0da3147a7ded23598190e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 94}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -232430939
+    name: Boss_Enemy_1_export
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Boss_Enemy_1_export_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 25
+        y: 11
+        width: 12
+        height: 41
+      spriteId: f86833499f94f3f489b8b3b35dd9266d
+    - name: Boss_Enemy_1_export_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 25
+        y: 11
+        width: 12
+        height: 40
+      spriteId: 013a9903c1d6fb4459b3bda27657bf60
+    - name: Boss_Enemy_1_export_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 25
+        y: 12
+        width: 12
+        height: 40
+      spriteId: 5d1c3dbde4007cd4d9fbcf183fe7444b
+    - name: Boss_Enemy_1_export_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 25
+        y: 13
+        width: 12
+        height: 39
+      spriteId: 648cf1b3b26422c44a329f84c7ab2366
+    - name: Boss_Enemy_1_export_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 25
+        y: 13
+        width: 13
+        height: 38
+      spriteId: f786026283cd95941853dfcf1831f259
+    - name: Boss_Enemy_1_export_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 25
+        y: 12
+        width: 12
+        height: 40
+      spriteId: 50c5c654e5b74934bbd4c1b7848e38e6
+    - name: Boss_Enemy_1_export_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 25
+        y: 12
+        width: 12
+        height: 40
+      spriteId: 9053f755d1443e64ab84e12523fabf84
+    - name: Boss_Enemy_1_export_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 24
+        y: 13
+        width: 13
+        height: 38
+      spriteId: b050acfd5abd7844693ec70300735252
+    - name: Boss_Enemy_1_export_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 25
+        y: 12
+        width: 12
+        height: 40
+      spriteId: 04e5756db790e494aa0a7830efa7d1dc
+    - name: Boss_Enemy_1_export_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 25
+        y: 11
+        width: 12
+        height: 41
+      spriteId: 8500963cad5eaea4da1426ddb80bb4dc
+    - name: Boss_Enemy_1_export_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 25
+        y: 11
+        width: 12
+        height: 40
+      spriteId: 03e28ca5494e2c341aa78a9b4258c307
+    - name: Boss_Enemy_1_export_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 25
+        y: 11
+        width: 12
+        height: 41
+      spriteId: 9cd8bfbc78503384eaf111530050e22a
+    - name: Boss_Enemy_1_export_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 25
+        y: 15
+        width: 12
+        height: 37
+      spriteId: c8c48adb32d64c94eb01b7fd15a2d7a9
+    - name: Boss_Enemy_1_export_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 38
+      spriteId: f272caebb61e5f24b9742d066f938a3d
+    - name: Boss_Enemy_1_export_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 25
+        y: 15
+        width: 12
+        height: 37
+      spriteId: 1905024387499eb47a7a5ad92ad3b67b
+    - name: Boss_Enemy_1_export_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 38
+      spriteId: 482c52ca1f58b224c992ea08ff1a5d94
+    - name: Boss_Enemy_1_export_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 25
+        y: 13
+        width: 12
+        height: 39
+      spriteId: 88531525643f5374db1bd109e5df5536
+    - name: Boss_Enemy_1_export_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 25
+        y: 14
+        width: 12
+        height: 38
+      spriteId: 0f3cad86b5bbde048ba1771d2341667d
+    - name: Boss_Enemy_1_export_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 26
+        y: 14
+        width: 11
+        height: 38
+      spriteId: c521afed3bdc97f4c8b5201074709424
+    - name: Boss_Enemy_1_export_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 26
+        y: 13
+        width: 11
+        height: 38
+      spriteId: b5e3032751b803b43983f576ee7743c0
+    - name: Boss_Enemy_1_export_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 26
+        y: 14
+        width: 11
+        height: 38
+      spriteId: a195f2d76306e3a4890b5fa3cb7c6f00
+    - name: Boss_Enemy_1_export_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 26
+        y: 13
+        width: 11
+        height: 39
+      spriteId: 7e3b28bcb65e8c84cad598d277e81634
+    - name: Boss_Enemy_1_export_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 26
+        y: 12
+        width: 11
+        height: 39
+      spriteId: be11f10ab2fd8914d882b04be415913e
+    - name: Boss_Enemy_1_export_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 26
+        y: 13
+        width: 11
+        height: 39
+      spriteId: 8a13699d28f74d840b2f438e4b03f993
+    - name: Boss_Enemy_1_export_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 26
+        y: 15
+        width: 10
+        height: 37
+      spriteId: 047ef2d99611e9c4b8844b807867edcd
+    - name: Boss_Enemy_1_export_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 26
+        y: 15
+        width: 10
+        height: 36
+      spriteId: 1c54dae273c2a324e9d9477bde9841d4
+    - name: Boss_Enemy_1_export_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 26
+        y: 15
+        width: 10
+        height: 37
+      spriteId: 458bd766728307a4b899093b45d1c5c4
+    - name: Boss_Enemy_1_export_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 26
+        y: 15
+        width: 10
+        height: 37
+      spriteId: c4446de304b989445908520b00659cc4
+    - name: Boss_Enemy_1_export_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 26
+        y: 15
+        width: 10
+        height: 36
+      spriteId: 5b0ea6f791ab450468b45d623d12d392
+    - name: Boss_Enemy_1_export_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 26
+        y: 15
+        width: 10
+        height: 37
+      spriteId: 5b4fc2ab1e0da3147a7ded23598190e1
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

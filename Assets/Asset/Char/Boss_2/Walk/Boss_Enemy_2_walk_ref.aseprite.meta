@@ -1,7 +1,584 @@
 fileFormatVersion: 2
 guid: f81e2a0784ef6ef41a580c1b463c9cb5
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Boss_Enemy_2_walk_ref_Frame_0
+    originalName: 
+    pivot: {x: 0.46875, y: 0.22834645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 271
+      width: 64
+      height: 127
+    spriteID: 0b1df1d11dbf0cb4891467ba9c825429
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 271}
+  - name: Boss_Enemy_2_walk_ref_Frame_1
+    originalName: 
+    pivot: {x: 0.46875, y: 0.3580247}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 280
+      width: 64
+      height: 81
+    spriteID: fa8bc370f8c619d4b824a52622cfb221
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 280}
+  - name: Boss_Enemy_2_walk_ref_Frame_2
+    originalName: 
+    pivot: {x: 0.46875, y: 0.3580247}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 369
+      width: 64
+      height: 81
+    spriteID: 11fe8504eea058d44b70a924fa70188c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 369}
+  - name: Boss_Enemy_2_walk_ref_Frame_3
+    originalName: 
+    pivot: {x: 0.46875, y: 0.453125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 229
+      y: 4
+      width: 64
+      height: 64
+    spriteID: d7079a997c04c194bbce082740f9b5c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 229, y: 4}
+  - name: Boss_Enemy_2_walk_ref_Frame_4
+    originalName: 
+    pivot: {x: 0.46875, y: 0.453125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 229
+      y: 76
+      width: 64
+      height: 64
+    spriteID: 7d662b85099cc3147a7fc44f61b3804a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 229, y: 76}
+  - name: Boss_Enemy_2_walk_ref_Frame_5
+    originalName: 
+    pivot: {x: 0.46875, y: 0.453125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 229
+      y: 148
+      width: 64
+      height: 64
+    spriteID: f37e5799ee80093499759879af64d524
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 229, y: 148}
+  - name: Boss_Enemy_2_walk_ref_Frame_6
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.22834645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 67
+      height: 127
+    spriteID: e9eeb1dac7143a34fb8c6c0d6853d310
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Boss_Enemy_2_walk_ref_Frame_7
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.3452381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 408
+      width: 67
+      height: 84
+    spriteID: 58cd370281821a14e9735b64a0d553ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 408}
+  - name: Boss_Enemy_2_walk_ref_Frame_8
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.3452381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 406
+      width: 67
+      height: 84
+    spriteID: 852264fd0684ebb47900b3bb37ffdadb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 406}
+  - name: Boss_Enemy_2_walk_ref_Frame_9
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.3452381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 4
+      width: 67
+      height: 84
+    spriteID: 39a5d8847f329cf479f3962cb006d6c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 4}
+  - name: Boss_Enemy_2_walk_ref_Frame_10
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.3452381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 96
+      width: 67
+      height: 84
+    spriteID: b7410c97a7931ee4d802bb9871f39b87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 96}
+  - name: Boss_Enemy_2_walk_ref_Frame_11
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.3452381}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 188
+      width: 67
+      height: 84
+    spriteID: e0b5155d8b5b04f48bb2ef97dc10fc77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 188}
+  - name: Boss_Enemy_2_walk_ref_Frame_12
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.22834645}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 139
+      width: 67
+      height: 127
+    spriteID: e873d109ba5fad746a938034de5cdf01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 139}
+  - name: Boss_Enemy_2_walk_ref_Frame_13
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.23015875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 274
+      width: 67
+      height: 126
+    spriteID: 58ee64830ccdc654e83c98f2ee1997b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 274}
+  - name: Boss_Enemy_2_walk_ref_Frame_14
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.23015875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 4
+      width: 67
+      height: 126
+    spriteID: ef4e0eb851050e24ea84e98fea372eb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 4}
+  - name: Boss_Enemy_2_walk_ref_Frame_15
+    originalName: 
+    pivot: {x: 0.46268657, y: 0.23200001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 79
+      y: 138
+      width: 67
+      height: 125
+    spriteID: 07b2d65fab6ca7d48bc21d5dd2024153
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 79, y: 138}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -2143142959
+    name: Boss_Enemy_2_walk_ref
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Boss_Enemy_2_walk_ref_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 34
+        y: -29
+        width: 64
+        height: 127
+      spriteId: 0b1df1d11dbf0cb4891467ba9c825429
+    - name: Boss_Enemy_2_walk_ref_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 34
+        y: -29
+        width: 64
+        height: 81
+      spriteId: fa8bc370f8c619d4b824a52622cfb221
+    - name: Boss_Enemy_2_walk_ref_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 34
+        y: -29
+        width: 64
+        height: 81
+      spriteId: 11fe8504eea058d44b70a924fa70188c
+    - name: Boss_Enemy_2_walk_ref_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 34
+        y: -29
+        width: 64
+        height: 64
+      spriteId: d7079a997c04c194bbce082740f9b5c7
+    - name: Boss_Enemy_2_walk_ref_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 34
+        y: -29
+        width: 64
+        height: 64
+      spriteId: 7d662b85099cc3147a7fc44f61b3804a
+    - name: Boss_Enemy_2_walk_ref_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 34
+        y: -29
+        width: 64
+        height: 64
+      spriteId: f37e5799ee80093499759879af64d524
+    - name: Boss_Enemy_2_walk_ref_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 127
+      spriteId: e9eeb1dac7143a34fb8c6c0d6853d310
+    - name: Boss_Enemy_2_walk_ref_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 84
+      spriteId: 58cd370281821a14e9735b64a0d553ba
+    - name: Boss_Enemy_2_walk_ref_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 84
+      spriteId: 852264fd0684ebb47900b3bb37ffdadb
+    - name: Boss_Enemy_2_walk_ref_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 84
+      spriteId: 39a5d8847f329cf479f3962cb006d6c2
+    - name: Boss_Enemy_2_walk_ref_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 84
+      spriteId: b7410c97a7931ee4d802bb9871f39b87
+    - name: Boss_Enemy_2_walk_ref_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 84
+      spriteId: e0b5155d8b5b04f48bb2ef97dc10fc77
+    - name: Boss_Enemy_2_walk_ref_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 127
+      spriteId: e873d109ba5fad746a938034de5cdf01
+    - name: Boss_Enemy_2_walk_ref_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 126
+      spriteId: 58ee64830ccdc654e83c98f2ee1997b4
+    - name: Boss_Enemy_2_walk_ref_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 126
+      spriteId: ef4e0eb851050e24ea84e98fea372eb4
+    - name: Boss_Enemy_2_walk_ref_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 33
+        y: -29
+        width: 67
+        height: 125
+      spriteId: 07b2d65fab6ca7d48bc21d5dd2024153
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}

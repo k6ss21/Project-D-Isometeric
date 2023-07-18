@@ -74,3 +74,4 @@ MonoBehaviour:
   immunitySlider: {fileID: 0}
   labTeleportPoint: {fileID: 0}
   skillCanvas: {fileID: 0}
+  blackScreenAnimator: {fileID: 0}

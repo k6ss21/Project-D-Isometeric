@@ -1,7 +1,976 @@
 fileFormatVersion: 2
 guid: 4f16a14019e546a4baf6fb0e359b981c
-DefaultImporter:
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Char Redesign Animation_Frame_18
+    originalName: 
+    pivot: {x: 0.82258064, y: -0.78}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 63
+      width: 62
+      height: 50
+    spriteID: f1199a6b83e7e994b8ff4da7b18eae55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 63}
+  - name: Char Redesign Animation_Frame_19
+    originalName: 
+    pivot: {x: 0.82258064, y: -0.78}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 121
+      width: 62
+      height: 50
+    spriteID: d7d1b7305ab50b749b612f71133bfc4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 121}
+  - name: Char Redesign Animation_Frame_20
+    originalName: 
+    pivot: {x: 0.82258064, y: -0.78}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 179
+      width: 62
+      height: 50
+    spriteID: 4310d8eddc4d06441b7752aa66d1d42d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 179}
+  - name: Char Redesign Animation_Frame_21
+    originalName: 
+    pivot: {x: 0.82258064, y: -0.78}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 237
+      width: 62
+      height: 50
+    spriteID: fd1ace0f8988e6643bf4879e9ca73061
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 237}
+  - name: Char Redesign Animation_Frame_22
+    originalName: 
+    pivot: {x: 0.82258064, y: -0.74509805}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 62
+      height: 51
+    spriteID: 77c20db38e3815b49918ecb5f7a450eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Char Redesign Animation_Frame_23
+    originalName: 
+    pivot: {x: 0.82258064, y: -0.78}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 295
+      width: 62
+      height: 50
+    spriteID: aad60c3556028814e9291c3548a5d8c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 295}
+  - name: Char Redesign Animation_Frame_0
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.8163265}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 114
+      width: 15
+      height: 49
+    spriteID: d0a525e44dae4ea47bc325eae98c5022
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 114}
+  - name: Char Redesign Animation_Frame_1
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.7755102}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 31
+      y: 353
+      width: 18
+      height: 49
+    spriteID: 4c8603b17a3084344aa0c2c9033c0398
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 31, y: 353}
+  - name: Char Redesign Animation_Frame_2
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.8723404}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 340
+      width: 15
+      height: 47
+    spriteID: 1a9f0c66d70d5eb4580d7e6a2b78fe3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 340}
+  - name: Char Redesign Animation_Frame_3
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.8541667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 228
+      width: 15
+      height: 48
+    spriteID: dddeb00e2f97d6447b50de84ea5577f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 228}
+  - name: Char Redesign Animation_Frame_4
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.97727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 463
+      width: 19
+      height: 44
+    spriteID: da2bcb14e3d795747aed122757e6fa9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 463}
+  - name: Char Redesign Animation_Frame_5
+    originalName: 
+    pivot: {x: 0.53333336, y: -0.9130435}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 450
+      width: 15
+      height: 46
+    spriteID: 9a1f3f1e1f11b9f41b6af9c31b299e6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 450}
+  - name: Char Redesign Animation_Frame_6
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.91489357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 353
+      width: 19
+      height: 47
+    spriteID: 39564e32694d5f0458a2ba1bbaffde61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 353}
+  - name: Char Redesign Animation_Frame_7
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.8723404}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 166
+      width: 18
+      height: 47
+    spriteID: d802464312077fb4496a9b1cfae906a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 166}
+  - name: Char Redesign Animation_Frame_8
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.9347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 31
+      y: 410
+      width: 19
+      height: 46
+    spriteID: a6728b3a5e104354e99793e64f557646
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 31, y: 410}
+  - name: Char Redesign Animation_Frame_9
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.91489357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 408
+      width: 19
+      height: 47
+    spriteID: 0b1a1490b8212cb42beb76c37c67f8c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 408}
+  - name: Char Redesign Animation_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.8723404}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 221
+      width: 18
+      height: 47
+    spriteID: b204f8754f605184e8e661fefa024c35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 221}
+  - name: Char Redesign Animation_Frame_11
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.9347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 4
+      width: 19
+      height: 46
+    spriteID: 39c0efcae3a67494e91970280f07540e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 4}
+  - name: Char Redesign Animation_Frame_12
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.91489357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 332
+      width: 17
+      height: 47
+    spriteID: 8dc2e7799b5a3eb4fbc225f87c0ae6b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 332}
+  - name: Char Redesign Animation_Frame_13
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.8333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 276
+      width: 17
+      height: 48
+    spriteID: ad126276ba5a25f46b5897c49a13fea5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 276}
+  - name: Char Redesign Animation_Frame_14
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.9347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 58
+      width: 19
+      height: 46
+    spriteID: 6c9407236e39ccb46a8f2082019b9935
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 58}
+  - name: Char Redesign Animation_Frame_15
+    originalName: 
+    pivot: {x: 0.5882353, y: -0.91489357}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 387
+      width: 17
+      height: 47
+    spriteID: 8df72548dff5dc64b8502a62d8d7db6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 387}
+  - name: Char Redesign Animation_Frame_16
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.8723404}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 442
+      width: 17
+      height: 47
+    spriteID: 9cbb9e14c363e804484ffcfbdf0dc6f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 442}
+  - name: Char Redesign Animation_Frame_17
+    originalName: 
+    pivot: {x: 0.5263158, y: -0.9347826}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 74
+      y: 112
+      width: 19
+      height: 46
+    spriteID: 93ab8265a241640449859db55886f4da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 74, y: 112}
+  - name: Char Redesign Animation_Frame_24
+    originalName: 
+    pivot: {x: 0.40000004, y: -0.8163265}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 171
+      width: 15
+      height: 49
+    spriteID: 12b9eb5c71c06c84dab9ec29ec693763
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 171}
+  - name: Char Redesign Animation_Frame_25
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.8510638}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 4
+      width: 17
+      height: 47
+    spriteID: 353b42e1122aeb743bcb51dadbb95d1e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 4}
+  - name: Char Redesign Animation_Frame_26
+    originalName: 
+    pivot: {x: 0.40000004, y: -0.95555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 126
+      y: 4
+      width: 15
+      height: 45
+    spriteID: b1071466004f92b4d95f0c8a3f04ed20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 126, y: 4}
+  - name: Char Redesign Animation_Frame_27
+    originalName: 
+    pivot: {x: 0.40000004, y: -0.893617}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 395
+      width: 15
+      height: 47
+    spriteID: 5c8266b7126f0344abe5d6db6394ccfd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 395}
+  - name: Char Redesign Animation_Frame_28
+    originalName: 
+    pivot: {x: 0.47058824, y: -0.8510638}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 59
+      width: 17
+      height: 47
+    spriteID: 5d9a11ad491f5944da4cb92ffd05ce51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 59}
+  - name: Char Redesign Animation_Frame_29
+    originalName: 
+    pivot: {x: 0.40000004, y: -0.8333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 101
+      y: 284
+      width: 15
+      height: 48
+    spriteID: 60fabc1a72a867e4aa369a1896ab97ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 101, y: 284}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1889959771
+    name: Char Redesign Animation
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Char Redesign Animation_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 13
+        y: 39
+        width: 62
+        height: 50
+      spriteId: f1199a6b83e7e994b8ff4da7b18eae55
+    - name: Char Redesign Animation_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 13
+        y: 39
+        width: 62
+        height: 50
+      spriteId: d7d1b7305ab50b749b612f71133bfc4e
+    - name: Char Redesign Animation_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 13
+        y: 39
+        width: 62
+        height: 50
+      spriteId: 4310d8eddc4d06441b7752aa66d1d42d
+    - name: Char Redesign Animation_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 13
+        y: 39
+        width: 62
+        height: 50
+      spriteId: fd1ace0f8988e6643bf4879e9ca73061
+    - name: Char Redesign Animation_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 13
+        y: 38
+        width: 62
+        height: 51
+      spriteId: 77c20db38e3815b49918ecb5f7a450eb
+    - name: Char Redesign Animation_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 13
+        y: 39
+        width: 62
+        height: 50
+      spriteId: aad60c3556028814e9291c3548a5d8c2
+    - name: Char Redesign Animation_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 56
+        y: 40
+        width: 15
+        height: 49
+      spriteId: d0a525e44dae4ea47bc325eae98c5022
+    - name: Char Redesign Animation_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 54
+        y: 38
+        width: 18
+        height: 49
+      spriteId: 4c8603b17a3084344aa0c2c9033c0398
+    - name: Char Redesign Animation_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 56
+        y: 41
+        width: 15
+        height: 47
+      spriteId: 1a9f0c66d70d5eb4580d7e6a2b78fe3d
+    - name: Char Redesign Animation_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 56
+        y: 41
+        width: 15
+        height: 48
+      spriteId: dddeb00e2f97d6447b50de84ea5577f9
+    - name: Char Redesign Animation_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 44
+      spriteId: da2bcb14e3d795747aed122757e6fa9e
+    - name: Char Redesign Animation_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 56
+        y: 42
+        width: 15
+        height: 46
+      spriteId: 9a1f3f1e1f11b9f41b6af9c31b299e6b
+    - name: Char Redesign Animation_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 47
+      spriteId: 39564e32694d5f0458a2ba1bbaffde61
+    - name: Char Redesign Animation_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 54
+        y: 41
+        width: 18
+        height: 47
+      spriteId: d802464312077fb4496a9b1cfae906a9
+    - name: Char Redesign Animation_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 46
+      spriteId: a6728b3a5e104354e99793e64f557646
+    - name: Char Redesign Animation_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 47
+      spriteId: 0b1a1490b8212cb42beb76c37c67f8c0
+    - name: Char Redesign Animation_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 55
+        y: 41
+        width: 18
+        height: 47
+      spriteId: b204f8754f605184e8e661fefa024c35
+    - name: Char Redesign Animation_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 46
+      spriteId: 39c0efcae3a67494e91970280f07540e
+    - name: Char Redesign Animation_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 56
+        y: 43
+        width: 17
+        height: 47
+      spriteId: 8dc2e7799b5a3eb4fbc225f87c0ae6b2
+    - name: Char Redesign Animation_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 55
+        y: 40
+        width: 17
+        height: 48
+      spriteId: ad126276ba5a25f46b5897c49a13fea5
+    - name: Char Redesign Animation_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 46
+      spriteId: 6c9407236e39ccb46a8f2082019b9935
+    - name: Char Redesign Animation_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 54
+        y: 43
+        width: 17
+        height: 47
+      spriteId: 8df72548dff5dc64b8502a62d8d7db6b
+    - name: Char Redesign Animation_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 55
+        y: 41
+        width: 17
+        height: 47
+      spriteId: 9cbb9e14c363e804484ffcfbdf0dc6f7
+    - name: Char Redesign Animation_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 54
+        y: 43
+        width: 19
+        height: 46
+      spriteId: 93ab8265a241640449859db55886f4da
+    - name: Char Redesign Animation_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 58
+        y: 40
+        width: 15
+        height: 49
+      spriteId: 12b9eb5c71c06c84dab9ec29ec693763
+    - name: Char Redesign Animation_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 56
+        y: 40
+        width: 17
+        height: 47
+      spriteId: 353b42e1122aeb743bcb51dadbb95d1e
+    - name: Char Redesign Animation_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 58
+        y: 43
+        width: 15
+        height: 45
+      spriteId: b1071466004f92b4d95f0c8a3f04ed20
+    - name: Char Redesign Animation_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 58
+        y: 42
+        width: 15
+        height: 47
+      spriteId: 5c8266b7126f0344abe5d6db6394ccfd
+    - name: Char Redesign Animation_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 56
+        y: 40
+        width: 17
+        height: 47
+      spriteId: 5d9a11ad491f5944da4cb92ffd05ce51
+    - name: Char Redesign Animation_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 58
+        y: 40
+        width: 15
+        height: 48
+      spriteId: 60fabc1a72a867e4aa369a1896ab97ad
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}

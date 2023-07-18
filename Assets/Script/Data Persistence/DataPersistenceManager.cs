@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.IO;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -23,17 +24,39 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than one Data Persistance Manager in the scene.");
+            Debug.Log("Found more than one Data Persistance Manager in the scene. Destroyed New One");
+            Destroy(this.gameObject);
+            return;
         }
         instance = this;
+        DontDestroyOnLoad(this.gameObject);
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+    }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
-    void Start()
+    void OnDisable()
     {
-        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+
         this.dataPersistenceObjects = FindAllDataPersistence();
         LoadGame();
     }
+    public void OnSceneUnloaded(Scene scene)
+    {
+
+        SaveGame();
+    }
+
+
 
     public void NewGame()
     {
@@ -46,6 +69,12 @@ public class DataPersistenceManager : MonoBehaviour
     }
     public void SaveGame()
     {
+        if (this.gameData == null)
+        {
+            Debug.LogError("No Game Data Found. A New Game needs to be started ");
+            return;
+        }
+
         foreach (IDataPersistence dataPersistenceObj in dataPersistenceObjects)
         {
             dataPersistenceObj.SaveData(gameData);
@@ -59,8 +88,7 @@ public class DataPersistenceManager : MonoBehaviour
         this.gameData = dataHandler.Load();
         if (this.gameData == null)
         {
-            Debug.Log("No Game Data Found. Initialize Default Game Data");
-            NewGame();
+            Debug.Log("No Game Data Found. A New Game needs to be started ");
             return;
         }
 
@@ -94,6 +122,10 @@ public class DataPersistenceManager : MonoBehaviour
         {
             Debug.Log("File Not Found!!");
         }
+    }
+    public bool HasGameData()
+    {
+        return gameData != null;
     }
 }
 

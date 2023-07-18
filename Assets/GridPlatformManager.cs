@@ -74,10 +74,10 @@ public class GridPlatformManager : MonoBehaviour
              currentPlatformItems.SetActive(false);
             nextGridPlatForms[0].SetActive(true);
             lights.SetActive(false);
-            foreach (GameObject items in nextPlatFormItems)
-            {
-                items.SetActive(true);
-            }
+            // foreach (GameObject items in nextPlatFormItems)
+            // {
+            //     items.SetActive(true);
+            // }
 
         }
 
