@@ -21,10 +21,12 @@ public class LevelUpSystem : MonoBehaviour, IDataPersistence
     void OnEnable()
     {
         Reward.OnRewardCollected += GainXp;
+        GameOver.OnRetry += LoseXp;
     }
     void OnDisable()
     {
         Reward.OnRewardCollected -= GainXp;
+        GameOver.OnRetry -= LoseXp;
     }
     void Start()
     {
@@ -36,10 +38,11 @@ public class LevelUpSystem : MonoBehaviour, IDataPersistence
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            ScreenCapture.CaptureScreenshot("ScreenShot.png");
-        }
+        // if (Input.GetKeyDown(KeyCode.G))
+        // {
+        //     //   ScreenCapture.CaptureScreenshot("ScreenShot.png");
+        //     GainXp(100);
+        // }
         if (gainedXp >= requiredXp)
         {
             LevelUp();
@@ -52,6 +55,18 @@ public class LevelUpSystem : MonoBehaviour, IDataPersistence
         int gain = (int)xpGained / (int)2;
         gainedXp += gain;
         UpdateLevelBar();
+
+    }
+    void LoseXp(int xpLosed)
+    {
+        int lose = (int)xpLosed / (int)2;
+        gainedXp -= lose;
+        UpdateLevelBar();
+        if(gainedXp <=0)
+        {
+            gainedXp = 0;
+            UpdateLevelBar();
+        }
 
     }
 

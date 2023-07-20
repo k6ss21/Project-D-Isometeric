@@ -163,5 +163,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Healing
-  description: '- Restore the player''s health '
+  description: '- Restore the player''s health  (20 hp)'
   skillPointsNeeded: 10

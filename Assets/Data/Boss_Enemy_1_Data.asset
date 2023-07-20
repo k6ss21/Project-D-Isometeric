@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b57f93ec643d4b4ba73b5bd92ad755c, type: 3}
   m_Name: Boss_Enemy_1_Data
   m_EditorClassIdentifier: 
-  minSpeed: 0.85
-  maxSpeed: 1
+  minSpeed: 1
+  maxSpeed: 1.25

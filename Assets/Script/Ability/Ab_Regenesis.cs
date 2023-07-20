@@ -12,6 +12,7 @@ public class Ab_Regenesis : MonoBehaviour
     bool coolDown;
     Button button;
    
+   public static event Action OnRegenesisCall;
     void Start()
     {
         player = FindObjectOfType<Player>();
@@ -24,6 +25,7 @@ public class Ab_Regenesis : MonoBehaviour
         {
             Debug.Log("Regenesis Trigger Active...");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Regenesis,this.transform.position);
+            OnRegenesisCall?.Invoke();
             player.gameObject.SetActive(true);
             player.TakeHealth(50);
             coolDown = true;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
+using Random = UnityEngine.Random;
 public class Player : MonoBehaviour, IDataPersistence
 {
 
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour, IDataPersistence
         //Ability Events
         Ab_Healing.OnAbilityHeal += TakeHealth;
         Ab_shield.OnShieldActive += ActivateShield;
-        Ab_Immunity.OnImmunityTrigger += TakeImmunity;
+        Ab_Immunity.OnImmunityTrigger += IntakeImmunity;
         Ab_WarmUp.OnWarmUpTrigger += WarmUp;
     }
     void OnDisable()
@@ -36,7 +38,7 @@ public class Player : MonoBehaviour, IDataPersistence
         //Ability Events
         Ab_Healing.OnAbilityHeal -= TakeHealth;
         Ab_shield.OnShieldActive -= ActivateShield;
-        Ab_Immunity.OnImmunityTrigger -= TakeImmunity;
+        Ab_Immunity.OnImmunityTrigger -= IntakeImmunity;
         Ab_WarmUp.OnWarmUpTrigger -= WarmUp;
     }
 
@@ -80,7 +82,8 @@ public class Player : MonoBehaviour, IDataPersistence
             // ScreenCapture.CaptureScreenshot("screenshot.png");
             // Debug.Log("SS Taken");
             //TakeImmunity(20);
-            LevelManager.instance.LoadNextLevel();
+            //LevelManager.instance.LoadNextLevel();
+            OnPlayerDead?.Invoke();
         }
         if (isLowTemp)
         {
@@ -145,6 +148,7 @@ public class Player : MonoBehaviour, IDataPersistence
         healCount++;
         IsHealing = false;
         UpdateHealCountText();
+        TakeImmunity(10); // Reduce immunity after Healing
     }
 
     void UpdateHealCountText() //Update Heal Count UI.
@@ -168,6 +172,8 @@ public class Player : MonoBehaviour, IDataPersistence
     public Slider l_healthBarSlider;
 
     bool invulnerability;
+
+    public static event Action OnPlayerDead;
     public void TakeDamage(float damage)
     {
         if (!invulnerability)
@@ -179,6 +185,7 @@ public class Player : MonoBehaviour, IDataPersistence
             UpdateHealthBar();
             if (currentHealth <= 0)
             {
+                OnPlayerDead?.Invoke();
                 this.gameObject.SetActive(false);
                 Debug.Log("Player Is DEAD!!");
             }
@@ -313,6 +320,18 @@ public class Player : MonoBehaviour, IDataPersistence
 
     }
 
+    public void IntakeImmunity(float value)
+    {
+        currentImmunity -= value;
+        UpdateImmunitySlider();
+          if (currentImmunity >= totalImmunity)
+        {
+            currentImmunity = totalImmunity;
+            UpdateImmunitySlider();
+            //DO SOMETHING
+        }
+    }
+
     public void TakeImmunity(float value)
     {
         if (immunityLossTimeOut) return;
@@ -322,6 +341,7 @@ public class Player : MonoBehaviour, IDataPersistence
         if (currentImmunity <= 0)
         {
             currentImmunity = 0;
+            UpdateImmunitySlider();
             //DO SOMETHING
         }
     }

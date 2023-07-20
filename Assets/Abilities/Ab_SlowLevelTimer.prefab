@@ -164,5 +164,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Slow Level Timer
-  description: 
+  description: '- Ability grants its user the power to slowing down Timer (15 Sec)'
   skillPointsNeeded: 10

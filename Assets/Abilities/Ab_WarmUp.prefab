@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Warm Up
-  description: 
+  description: '- Restore the player''s Temperature  (20 hp)'
   skillPointsNeeded: 10
 --- !u!114 &7538328379536402044
 MonoBehaviour:

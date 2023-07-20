@@ -20,6 +20,7 @@ public class EnlargeOnMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerE
     {
         // Store the original font size
         originalSize = text.fontSize;
+        enlargedSize = originalSize + 5f;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {

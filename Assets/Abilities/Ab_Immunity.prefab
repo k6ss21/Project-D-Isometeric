@@ -149,7 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Immunity
-  description: 
+  description: '- Restore the player''s Immunity  (20 hp)
+
+    - immunity is  Needed 
+    to Heal Sicks '
   skillPointsNeeded: 10
 --- !u!114 &3828534407427132462
 MonoBehaviour:
@@ -164,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 10
-  immunityValue: 50
+  immunityValue: 30
 --- !u!1 &2645197499240887424
 GameObject:
   m_ObjectHideFlags: 0

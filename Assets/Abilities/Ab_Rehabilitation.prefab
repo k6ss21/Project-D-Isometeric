@@ -149,7 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Rehabilitation
-  description: 
+  description: '- Enables the Player to simultaneously heal all Sick within the same
+    platform.'
   skillPointsNeeded: 10
 --- !u!114 &6131553931254749373
 MonoBehaviour:

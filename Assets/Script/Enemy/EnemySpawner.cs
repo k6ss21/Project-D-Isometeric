@@ -31,6 +31,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     enemyBoss_1.transform.position = transform.position;
                     enemyBoss_1.gameObject.SetActive(true);
+                    enemyBoss_1.gameObject.GetComponent<EnemyBoss_1_AttackAI>().isAttacking = false;
                     enemyBoss_1.Init(DestroyEnemyBoss_1);
                 }
                 

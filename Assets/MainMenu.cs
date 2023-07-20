@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour, IDataPersistence
 {
-
+    [SerializeField] private Canvas mainCanvas;
     [SerializeField] private Canvas skillMenuCanvas;
     [SerializeField] private Canvas SettingCanvas;
     [SerializeField] private GameObject LevelsCanvas;
@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour, IDataPersistence
     [SerializeField] private Button skillMenuButton;
     [SerializeField] private Button settingsButton;
 
-    public string newGameLevelName =  "Level_3";
+    public string newGameLevelName = "Level_3";
     private string currentLevelName;
 
     void Start()
@@ -43,30 +43,36 @@ public class MainMenu : MonoBehaviour, IDataPersistence
     }
     public void SkillMenuButton()
     {
+        mainCanvas.gameObject.SetActive(false);
         skillMenuCanvas.gameObject.SetActive(true);
     }
     public void SettingsButton()
     {
+        mainCanvas.gameObject.SetActive(false);
         SettingCanvas.gameObject.SetActive(true);
     }
     public void SettingsBackButton()
     {
+        mainCanvas.gameObject.SetActive(true);
         SettingCanvas.gameObject.SetActive(false);
     }
     public void skillMenuCloseButton()
     {
+        mainCanvas.gameObject.SetActive(true);
         skillMenuCanvas.gameObject.SetActive(false);
     }
     public void LevelsButton()
     {
+        mainCanvas.gameObject.SetActive(false);
         LevelsCanvas.SetActive(true);
     }
     public void LevelsCloseButton()
     {
-       LevelsCanvas.SetActive(false);
+        mainCanvas.gameObject.SetActive(true);
+        LevelsCanvas.SetActive(false);
     }
     public void ExitButton()
-    {   
+    {
         Application.Quit();
     }
     private void DisableAllButtonAfterPress()

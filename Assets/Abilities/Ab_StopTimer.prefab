@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Stop Time
-  description: 
+  description: Ability grants its user the power to Stop  Timer (15 Sec)
   skillPointsNeeded: 10
 --- !u!114 &6528581706260335707
 MonoBehaviour:

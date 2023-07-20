@@ -28,6 +28,8 @@ public class GameEventManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI minText; //Minute Text
     [SerializeField] private TextMeshProUGUI secText; //Sec Text
 
+    public static event Action OnTimeOutCall;
+
     void OnEnable()
     {
         Ab_SlowLevelTimer.OnSlowLevelTimer += SlowTimerSpeed;
@@ -61,10 +63,10 @@ public class GameEventManager : MonoBehaviour
             spawnTimer = Random.Range(minTime, maxTime);
 
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            OnSpawnWaveCall?.Invoke();
-        }
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     OnSpawnWaveCall?.Invoke();
+        // }
 
     }
 
@@ -73,7 +75,7 @@ public class GameEventManager : MonoBehaviour
     {
         if (timeRemaining <= 0)
         {
-            Debug.Log("TIMEOUT!!! GAME OVER!!");
+            OnTimeOutCall?.Invoke();
         }
     }
 

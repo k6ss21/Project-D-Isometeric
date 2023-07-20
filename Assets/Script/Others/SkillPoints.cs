@@ -22,6 +22,15 @@ public class SkillPoints : MonoBehaviour, IDataPersistence
     {
         UpdateUIText();
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            //   ScreenCapture.CaptureScreenshot("ScreenShot.png");
+            //GainXp(100);
+            Debug.Log("Current Skill Points = " + currentSkillPoints);
+        }
+    }
     public void AddSkillPoints(int amount)
     {
         currentSkillPoints += amount;
@@ -42,7 +51,7 @@ public class SkillPoints : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.currentSkillPoints = data.skillPoints;
-        UpdateUIText();
+        //UpdateUIText();
     }
 
     public void SaveData(GameData data)

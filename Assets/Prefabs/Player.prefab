@@ -6110,10 +6110,10 @@ MonoBehaviour:
   attackPoint_E: {fileID: 1025699380}
   attackPoint_W: {fileID: 1257521305}
   DefaultDamageValue: 15
-  shootDamage: 30
+  shootDamage: 25
   isAbilityActive: 0
   isAttackAbilityActive: 0
-  attackShootTime: 0.1
+  attackShootTime: 0.25
 --- !u!114 &1290056009
 MonoBehaviour:
   m_ObjectHideFlags: 0

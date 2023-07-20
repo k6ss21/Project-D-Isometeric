@@ -1,31 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class AbilityFill : MonoBehaviour
 {
-    AbilityData abilityData;
+   AbilityData _abilityData;
     public List<GameObject> abilityButtonList;
     AbilityBar abilityBar;
 
     void OnEnable()
     {
+       
         AbilityData.OnAbilityDataUpdate += UpdateAbilityList;
     }
     void OnDisable()
     {
+       
         AbilityData.OnAbilityDataUpdate -= UpdateAbilityList;
     }
+    
     void Awake()
     {
         abilityBar = GetComponent<AbilityBar>();
-        abilityData = FindObjectOfType<AbilityData>();
-        this.abilityButtonList = abilityData.abilityButtonList;
+        // abilityData = FindObjectOfType<AbilityData>();
+        // this.abilityButtonList = abilityData.abilityButtonList;
 
     }
 
     void Start()
     {
+       
+
         ClearAbilityChildGameObject();
         UpdateAbilityButton();
     }
@@ -42,8 +47,9 @@ public class AbilityFill : MonoBehaviour
 
     }
 
-    void UpdateAbilityList()
+    void UpdateAbilityList(AbilityData abilityData)
     {
+        this._abilityData = abilityData;
         this.abilityButtonList = abilityData.abilityButtonList;
         ClearAbilityChildGameObject();
         UpdateAbilityButton();
@@ -52,12 +58,12 @@ public class AbilityFill : MonoBehaviour
     void ClearAbilityChildGameObject()
     {
         int childCount = transform.childCount;
-      //  Debug.Log("ChildCount = " + childCount);
+        //  Debug.Log("ChildCount = " + childCount);
         if (childCount > 0)
         {
-            foreach(Transform child in transform)
+            foreach (Transform child in transform)
             {
-               // Debug.Log("Destroyed = "+ child.gameObject.name);
+                // Debug.Log("Destroyed = "+ child.gameObject.name);
                 Destroy(child.gameObject);
             }
 

@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: CureStimulator
-  description: Speed Up Curing Sick Char
+  description: '- Instant Healing  Sicks'
   skillPointsNeeded: 10
 --- !u!114 &5746798972075668987
 MonoBehaviour:

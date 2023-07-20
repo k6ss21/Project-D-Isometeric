@@ -78,6 +78,13 @@ public class LevelManager : MonoBehaviour, IDataPersistence
 
         LoadLevel(GetSceneNameFromBuildIndex(sceneIndex));
     }
+     public void ReloadLevel()
+    {
+        // Debug.Log("Loading Next Level...");
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        LoadLevel(GetSceneNameFromBuildIndex(sceneIndex));
+    }
 
     public static string GetSceneNameFromBuildIndex(int index)
     {

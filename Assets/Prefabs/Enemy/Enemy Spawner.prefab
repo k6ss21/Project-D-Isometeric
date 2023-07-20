@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyboss_1_Prefab: {fileID: 5888700803722226323, guid: 687e8175af08b5f4183774ae8126d4bc, type: 3}
   minTime: 5
-  maxTime: 10
+  maxTime: 8
   canSpawn: 0

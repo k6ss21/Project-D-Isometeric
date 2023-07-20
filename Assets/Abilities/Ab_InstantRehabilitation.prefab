@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Instant Rehabilitation
-  description: 
+  description: '- Instant Healing  Sicks On Same Platform'
   skillPointsNeeded: 10
 --- !u!114 &5049061323352677243
 MonoBehaviour:

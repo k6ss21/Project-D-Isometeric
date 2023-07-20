@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4aaeb89c1493047a3f881e9d366fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackInterval: 1
+  attackInterval: 0.2
   canAttack: 0
   circleRadius: 0.5
   playerLayerMask:

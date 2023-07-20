@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class SettingsMenu : MonoBehaviour, IDataPersistence
 {
-    float volumeAmount = 0.5f;
+    float volumeAmount = 1f;
     public TextMeshProUGUI VolumeAmountText;
     public Canvas pauseMenuCanvas;
 

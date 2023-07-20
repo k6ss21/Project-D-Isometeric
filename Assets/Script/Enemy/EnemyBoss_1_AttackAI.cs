@@ -81,18 +81,18 @@ public class EnemyBoss_1_AttackAI : MonoBehaviour, IEnemyAttackManger
             isAttacking = true;
             attackTimer = attackInterval;
             animationManager.Attack1(enemyMovementAI.GetLastMoveDir());
-            //  StartCoroutine(AttackAnimInterval((animator.GetCurrentAnimatorStateInfo(0).normalizedTime)% 1< 0.99fz));
+            //  StartCoroutine(AttackAnimInterval((animator.GetCurrentAnimatorStateInfo(0).normalizedTime)));
+            StartCoroutine(AttackAnimInterval(attackInterval));
         }
     }
 
-    // IEnumerator AttackAnimInterval(float t)
-    // {
-    //     animtestTime = t;
-    //     yield return new WaitForSeconds(t);
-    //     attackTimerActivate = true;
-    //     isAttacking = false;
+    IEnumerator AttackAnimInterval(float t)
+    {
 
-    // }
+        yield return new WaitForSeconds(t);
+        isAttacking = false;
+
+    }
 
 
     public void EndAttackAnim()

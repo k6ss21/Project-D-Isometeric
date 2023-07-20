@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Decamp
-  description: Instantly escape from current situation
+  description: '- Instantly escape from current situation'
   skillPointsNeeded: 10
 --- !u!114 &1236794295508925587
 MonoBehaviour:

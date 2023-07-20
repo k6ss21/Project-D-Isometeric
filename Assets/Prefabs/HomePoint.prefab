@@ -106,7 +106,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663502593}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0061366125, w: 0.99998116}
+  m_LocalRotation: {x: -0, y: -0, z: 0.028599767, w: 0.99959093}
   m_LocalPosition: {x: 0.042000055, y: -0.034999847, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -129,9 +129,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.75
+  m_FalloffIntensity: 0.697
   m_Color: {r: 1, g: 0.9202541, b: 0, a: 1}
-  m_Intensity: 0.41
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b9eed1e1a3d3a0269fb16adcf1f08474bd1e6956231c8ecf615e7c6a63067707e7c4abb4
@@ -152,8 +152,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.27
-  m_PointLightOuterRadius: 1
+  m_PointLightInnerRadius: 0.11
+  m_PointLightOuterRadius: 0.9778886
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -188,7 +188,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730903206}
-  m_LocalRotation: {x: -0, y: -0, z: -0.0061366125, w: 0.99998116}
+  m_LocalRotation: {x: -0, y: -0, z: -0.036412753, w: 0.99933684}
   m_LocalPosition: {x: 0.042000055, y: -0.034999847, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.75
+  m_FalloffIntensity: 0.569
   m_Color: {r: 1, g: 0.9202541, b: 0, a: 1}
   m_Intensity: 2.09
   m_LightVolumeIntensity: 1
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.56
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 1.7939173
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -393,7 +393,7 @@ Transform:
   - {fileID: 1628914930}
   - {fileID: 6359520231999252089}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2139728828415204256
 MonoBehaviour:
@@ -10386,13 +10386,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2139728828415204257}
     m_Modifications:
+    - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
     - target: {fileID: 6359520231105140962, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_text
       value: Press I to Teleport
       objectReference: {fileID: 0}
+    - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
     - target: {fileID: 6359520231724708324, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_Name
       value: InstructionPopUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520231724708324, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231724708326, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_RootOrder
