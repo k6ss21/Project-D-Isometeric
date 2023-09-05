@@ -29,12 +29,13 @@ public class SkillPageAccess : MonoBehaviour
             {
                 Debug.Log("Open SKill Menu");
                 isSkillCanvasOpen = true;
+                FindObjectOfType<GameEventManager>().PauseTimer();
                 skillCanvas.SetActive(true);
             }
         }
         else
         {
-             instructionPopUp.SetActive(false);
+            instructionPopUp.SetActive(false);
         }
     }
 
@@ -46,6 +47,8 @@ public class SkillPageAccess : MonoBehaviour
 
     public void CloseSkillCanvas()
     {
+        FindObjectOfType<GameEventManager>().ResumeTimer();
         isSkillCanvasOpen = false;
+
     }
 }

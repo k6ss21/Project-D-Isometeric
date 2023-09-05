@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ffe6c4acf4533b4484251179cebc15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTime: 15
-  maxTime: 20
+  minTime: 25
+  maxTime: 30
   topDown: 0
   sickPersonCount: 3
   maxLevelTimer: 300

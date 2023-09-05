@@ -43,7 +43,10 @@ public class SickChar : MonoBehaviour
     [Header("Progress Bar")]
     public Slider progressBar;
     public Canvas sliderCanvas;
-
+    public Image sliderFillImage;
+    // Color activeColor = Color.HSVToRGB(.96f, .83f, .87f);
+    Color activeColor = Color.green;
+    Color inActiveColor = Color.red;
     public float maxValue;
     public float currentValue;
 
@@ -81,7 +84,7 @@ public class SickChar : MonoBehaviour
     {
 
         HealPrompt();
-        DisableOutline();
+        //DisableOutline();
 
         if (IsHealing)
         {
@@ -104,9 +107,14 @@ public class SickChar : MonoBehaviour
 
     public void CancelHealing()
     {
-        IsHealing = false;
-        OnSetHealing?.Invoke(false);
-
+        // Debug.Log("Cancel Healing");
+        if (IsHealing)
+        {
+            instructionBox.SpawnInstructionPopUpText("Sick healing Canceled");
+            sliderFillImage.color = inActiveColor;
+            IsHealing = false;
+            OnSetHealing?.Invoke(false);
+        }
 
     }
 
@@ -140,7 +148,7 @@ public class SickChar : MonoBehaviour
                 //     ShowInstructionText();
                 // }
                 instructionPopUp.gameObject.SetActive(true);
-               /// ShowInstructionText();
+                /// ShowInstructionText();
 
             }
 
@@ -178,7 +186,7 @@ public class SickChar : MonoBehaviour
         else
         {
             instructionPopUp.gameObject.SetActive(false);
-//            instructionPopUp.Hide();
+            //            instructionPopUp.Hide();
         }
 
     }
@@ -189,6 +197,7 @@ public class SickChar : MonoBehaviour
         //collider.GetComponent<Player>().IsHealing = true;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.healStarted, this.transform.position);
         sliderCanvas.gameObject.SetActive(true);
+        sliderFillImage.color = activeColor;
         OnSetHealing?.Invoke(true);
         IsHealing = true;
     }
@@ -208,6 +217,15 @@ public class SickChar : MonoBehaviour
             //   Debug.Log("ouline = " + true);
         }
     }
+
+    // #region 
+    // [SerializeField] float randomTime;
+
+    // IEnumerator CoughingSfxPlay(float timer)
+    // {
+    //     yield return new WaitForSeconds(cou)
+    // }
+    // #endregion
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;

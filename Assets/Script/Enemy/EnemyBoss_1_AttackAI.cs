@@ -82,7 +82,7 @@ public class EnemyBoss_1_AttackAI : MonoBehaviour, IEnemyAttackManger
             attackTimer = attackInterval;
             animationManager.Attack1(enemyMovementAI.GetLastMoveDir());
             //  StartCoroutine(AttackAnimInterval((animator.GetCurrentAnimatorStateInfo(0).normalizedTime)));
-            StartCoroutine(AttackAnimInterval(attackInterval));
+            //llStartCoroutine(AttackAnimInterval(attackInterval));
         }
     }
 

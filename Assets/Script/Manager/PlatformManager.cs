@@ -9,6 +9,7 @@ public class PlatformManager : MonoBehaviour
 
     public List<Collider2D> sickColliders = new List<Collider2D>();
     public List<SickChar> sickChars = new List<SickChar>();
+    public FlyingEnemySpawner flyingEnemySpawner;
     public bool sick;
     //public bool isLaboratory;
     public GameObject stairway;
@@ -18,6 +19,7 @@ public class PlatformManager : MonoBehaviour
     public Vector3 boxVectors;
     public LayerMask SickCharMask;
     public float angle;
+    private bool isAllSickHealed;
 
     ContactFilter2D sickContactFilter2D;
 
@@ -63,6 +65,7 @@ public class PlatformManager : MonoBehaviour
             if (gate != null)
             {
                 gate.SetActive(true);
+
             }
         }
         else
@@ -74,11 +77,18 @@ public class PlatformManager : MonoBehaviour
             }
             if (gate != null)
             {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.gateDestroy, this.transform.position);
                 gate.SetActive(false);
             }
         }
 
 
+
+
+    }
+    void AllSickHealCheck()
+    {
+        isAllSickHealed = true;
     }
 
     void DisableEnemySpawner(float time)
@@ -86,6 +96,11 @@ public class PlatformManager : MonoBehaviour
         foreach (EnemySpawner enemySpawner in enemySpawners)
         {
             enemySpawner.canSpawn = false;
+        }
+        if (flyingEnemySpawner != null)
+        {
+
+            flyingEnemySpawner.canSpawn = false;
         }
         StartCoroutine(ReEnableEnemySpawner(time));
     }
@@ -96,6 +111,10 @@ public class PlatformManager : MonoBehaviour
         foreach (EnemySpawner enemySpawner in enemySpawners)
         {
             enemySpawner.canSpawn = true;
+        }
+        if (flyingEnemySpawner != null)
+        {
+            flyingEnemySpawner.canSpawn = true;
         }
     }
 
@@ -115,6 +134,10 @@ public class PlatformManager : MonoBehaviour
             {
                 movingLight.isOpen = true;
             }
+            if (flyingEnemySpawner != null)
+            {
+                flyingEnemySpawner.canSpawn = true;
+            }
         }
 
 
@@ -132,6 +155,10 @@ public class PlatformManager : MonoBehaviour
             foreach (MovingLight movingLight in movingLights)
             {
                 movingLight.isOpen = false;
+            }
+            if (flyingEnemySpawner != null)
+            {
+                flyingEnemySpawner.canSpawn = false;
             }
 
         }

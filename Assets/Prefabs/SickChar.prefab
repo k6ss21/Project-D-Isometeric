@@ -378,7 +378,7 @@ Transform:
   - {fileID: 5094214600605666838}
   - {fileID: 6359520231647744168}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6855408475788735608
 SpriteRenderer:
@@ -459,6 +459,7 @@ MonoBehaviour:
   promptPoint: {fileID: 6855408475554482113}
   progressBar: {fileID: 6855408474227354348}
   sliderCanvas: {fileID: 6855408476074209540}
+  sliderFillImage: {fileID: 6855408475359495910}
   maxValue: 0
   currentValue: 0
   animator: {fileID: 0}
@@ -663,7 +664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231724708324, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231724708326, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_RootOrder

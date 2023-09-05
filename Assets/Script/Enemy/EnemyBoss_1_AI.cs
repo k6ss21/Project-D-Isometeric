@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -85,19 +85,26 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 
     #region HEALTH
 
+    private int randomNumber;
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        if(floatinTextPrefab && currentHealth > 0)
+        if (floatinTextPrefab && currentHealth > 0)
         {
             ShowFloatingText(currentHealth);
         }
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.enemyDamage,this.transform.position);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.enemyDamage, this.transform.position);
         if (currentHealth <= 0)
         {
+            randomNumber = Random.Range(1, 4);
             enemyMovementAI.SetDefault();
-            Instantiate(deathReward, spawnPoint.position , Quaternion.identity);
+            if (randomNumber % 2 == 0)
+            {
+                Instantiate(deathReward, spawnPoint.position, Quaternion.identity);
+            }
             Instantiate(deadPS_VFX_Prefab, transform.position, Quaternion.identity);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.enemyDead, this.transform.position);
             destroyAction(this);
         }
 
@@ -107,7 +114,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
 
     void ShowFloatingText(float text) //PopUp Current Health.
     {
-       var popUp = Instantiate(floatinTextPrefab, transform.position,  Quaternion.identity, transform);
-       popUp.GetComponent<TextMesh>().text = text.ToString();
+        var popUp = Instantiate(floatinTextPrefab, transform.position, Quaternion.identity, transform);
+        popUp.GetComponent<TextMesh>().text = text.ToString();
     }
 }

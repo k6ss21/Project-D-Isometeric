@@ -18,9 +18,9 @@ public class GameEventManager : MonoBehaviour
     public int sickPersonCount;
 
     [Header("Level Timer Settings")]
-    [SerializeField]private float maxLevelTimer;
+    [SerializeField] private float maxLevelTimer;
     private float timeRemaining;
-    [SerializeField]private float defaultTimeMulti;
+    [SerializeField] private float defaultTimeMulti;
     private float timeMulti;
     private float min;
     private float sec;
@@ -65,7 +65,7 @@ public class GameEventManager : MonoBehaviour
         }
         // if (Input.GetKeyDown(KeyCode.Q))
         // {
-        //     OnSpawnWaveCall?.Invoke();
+        //    StopTimer();
         // }
 
     }
@@ -84,11 +84,22 @@ public class GameEventManager : MonoBehaviour
         minText.text = min.ToString("00");
         secText.text = sec.ToString("00");
     }
+    public void PauseTimer()
+    {
+        timeMulti = 0.001f;
+
+    }
+    public void ResumeTimer()
+    {
+        Debug.Log("Resume timer");
+        timeMulti = defaultTimeMulti;
+    }
+
 
     void SlowTimerSpeed(float multi, float time)
     {
-       
-        Debug.Log("Slow Timer"+ multi);
+
+        //   Debug.Log("Slow Timer"+ multi);
         timeMulti = multi;
         StartCoroutine(SlowTimerRoutine(time));
     }
@@ -99,5 +110,6 @@ public class GameEventManager : MonoBehaviour
         yield return new WaitForSeconds(time);
         timeMulti = defaultTimeMulti;
     }
+
 }
 

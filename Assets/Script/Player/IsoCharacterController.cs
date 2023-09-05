@@ -18,7 +18,7 @@ public class IsoCharacterController : MonoBehaviour
     public float defaultWalkSpeed; //Player default Walk Speed.
     private float walkSpeed; //Player changing walkspeed when abilities active.
 
-    private Vector2 inputDir; // Movement Input Vector.
+    private Vector2 inputDir = new(0, 0); // Movement Input Vector.
 
     public bool isIdle { get; set; }
     private bool isTopDown;
@@ -260,9 +260,9 @@ public class IsoCharacterController : MonoBehaviour
     }
     IEnumerator Dash(Vector2 direction)
     {
-        Debug.Log("Dash");
+        //  Debug.Log("Dash");
         isDashing = true;
-
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.dash, transform.position);
         currentDashTime = startDashTime;
         while (currentDashTime > 0f)
         {

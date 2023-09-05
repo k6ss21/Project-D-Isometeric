@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: ladder
     originalName: 
-    pivot: {x: 0.6818182, y: -0.075555556}
+    pivot: {x: 0.3181818, y: -0.075555556}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -151,7 +151,7 @@ ScriptedImporter:
     - name: ladder
       frameIndex: 0
       cellRect:
-        x: 113
+        x: 121
         y: 17
         width: 22
         height: 225

@@ -4,8 +4,11 @@ using UnityEngine;
 using FMODUnity;
 public class FMODEvents : MonoBehaviour
 {
-    [field: Header("Heal SFX")]
+    [field: Header("Sick Char")]
     [field: SerializeField] public EventReference healStarted { get; private set; }
+    [field: SerializeField] public EventReference coughing { get; private set; }
+
+
 
 
     [field: Header("Player SFX")]
@@ -14,14 +17,19 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference PlayerHurt { get; private set; }
     [field: SerializeField] public EventReference ProjectileShoot { get; private set; }
     [field: SerializeField] public EventReference TeleportToLab { get; private set; }
+    [field: SerializeField] public EventReference dash { get; private set; }
+
+
 
     [field: Header("Env SFX")]
     [field: SerializeField] public EventReference FirePlace { get; private set; }
+    [field: SerializeField] public EventReference gateDestroy { get; private set; }
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
 
     [field: Header("Enemy")]
     [field: SerializeField] public EventReference enemyDamage { get; private set; }
+    [field: SerializeField] public EventReference enemyDead { get; private set; }
     [field: SerializeField] public EventReference batsFlying { get; private set; }
     [field: SerializeField] public EventReference singleBatFlying { get; private set; }
 
@@ -44,12 +52,13 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference Ab_MagicHomePointCane { get; private set; }
     [field: SerializeField] public EventReference Ab_Regenesis { get; private set; }
     [field: SerializeField] public EventReference Ab_Rehabilitation { get; private set; }
-     [field: SerializeField] public EventReference Ab_InstantRehabilitation { get; private set; }
+    [field: SerializeField] public EventReference Ab_InstantRehabilitation { get; private set; }
     [field: SerializeField] public EventReference Ab_Sheild { get; private set; }
     [field: SerializeField] public EventReference Ab_SpawnBreaker { get; private set; }
     [field: SerializeField] public EventReference Ab_StopTimer { get; private set; }
     [field: SerializeField] public EventReference Ab_Speed { get; private set; }
     [field: SerializeField] public EventReference Ab_WarmUp { get; private set; }
+
 
 
     public static FMODEvents instance;

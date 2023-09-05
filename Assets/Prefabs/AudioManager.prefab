@@ -51,6 +51,13 @@ MonoBehaviour:
       Data3: -1744276812
       Data4: 1498899053
     Path: event:/SFX/Sick Char/Heal
+  <coughing>k__BackingField:
+    Guid:
+      Data1: 1291063737
+      Data2: 1112827544
+      Data3: -1067390056
+      Data4: -885896405
+    Path: event:/SFX/Sick Char/Coughing
   <PlayerFootSteps>k__BackingField:
     Guid:
       Data1: -546611508
@@ -86,6 +93,13 @@ MonoBehaviour:
       Data3: -1142808650
       Data4: 583535407
     Path: event:/SFX/Env/TeleportToLabSFX
+  <dash>k__BackingField:
+    Guid:
+      Data1: -205296700
+      Data2: 1207108860
+      Data3: -2054042468
+      Data4: -917980029
+    Path: event:/SFX/Player/Projectile/Dash
   <FirePlace>k__BackingField:
     Guid:
       Data1: 919291965
@@ -93,6 +107,13 @@ MonoBehaviour:
       Data3: 1978555523
       Data4: 1615794362
     Path: event:/SFX/Env/FirePlace
+  <gateDestroy>k__BackingField:
+    Guid:
+      Data1: 1198335391
+      Data2: 1272607126
+      Data3: 1276880007
+      Data4: 29656169
+    Path: event:/SFX/Env/GateDestroy
   <music>k__BackingField:
     Guid:
       Data1: -1824666829
@@ -107,6 +128,13 @@ MonoBehaviour:
       Data3: -1724632923
       Data4: 1299443446
     Path: event:/SFX/Enemy/Damage
+  <enemyDead>k__BackingField:
+    Guid:
+      Data1: 1941207498
+      Data2: 1296503527
+      Data3: 507153850
+      Data4: 1664585873
+    Path: event:/SFX/Enemy/EnemyDead
   <batsFlying>k__BackingField:
     Guid:
       Data1: 1955992608
@@ -292,7 +320,7 @@ Transform:
   m_Children:
   - {fileID: 4388320582065210104}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4388320582716075232
 MonoBehaviour:
@@ -306,3 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2bbb4f06e538143927b31942fdf108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterVolume: 1
+  musicVolume: 1
+  ambienceVolume: 1
+  SFXVolume: 1

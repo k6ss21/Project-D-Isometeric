@@ -118,9 +118,46 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  animatedSpriteImportData: []
+  animatedSpriteImportData:
+  - name: WallDoor
+    originalName: 
+    pivot: {x: 0.2857143, y: -0.8219178}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 35
+      height: 73
+    spriteID: 10bbd92bc6917ec49bcb1d00beaa5319
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
-  asepriteLayers: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 230433638
+    name: WallDoor
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: WallDoor
+      frameIndex: 0
+      cellRect:
+        x: 54
+        y: 60
+        width: 35
+        height: 73
+      spriteId: 10bbd92bc6917ec49bcb1d00beaa5319
+    linkedCells: []
+    parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 

@@ -9,6 +9,9 @@ public class FlyingEnemySpawner : MonoBehaviour
     public float spawnRate = 1f;
 
     float nextSpawnTime;
+    public bool canSpawn;
+
+    public List<Transform> spawnPoints;
 
     public enum Direction
     {
@@ -28,7 +31,7 @@ public class FlyingEnemySpawner : MonoBehaviour
 
     void OnDisable()
     {
-         GameEventManager.OnSpawnWaveCall -= Spawn;
+        GameEventManager.OnSpawnWaveCall -= Spawn;
     }
 
     void Start()
@@ -37,10 +40,10 @@ public class FlyingEnemySpawner : MonoBehaviour
     }
     void Update()
     {
-       // UpdateSound();
+        // UpdateSound();
     }
 
-  
+
 
     void DirectonSelector()
     {
@@ -48,7 +51,6 @@ public class FlyingEnemySpawner : MonoBehaviour
         {
             case Direction.NE:
                 dir = Vector2.right;
-
                 break;
             case Direction.SE:
                 dir = Vector2.down;
@@ -58,7 +60,7 @@ public class FlyingEnemySpawner : MonoBehaviour
                 break;
 
             case Direction.SW:
-            dir = Vector2.left;
+                dir = Vector2.left;
                 break;
 
 
@@ -67,12 +69,17 @@ public class FlyingEnemySpawner : MonoBehaviour
 
     public void Spawn()
     {
-
-            GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        if(canSpawn)
+        {
+        foreach (Transform points in spawnPoints)
+        {
+            GameObject enemy = Instantiate(enemyPrefab, points.transform.position, Quaternion.identity);
             enemy.GetComponent<FlyingEnemyMovementAI>().SetDir(dir);
             nextSpawnTime = Time.time + spawnRate;
-        
+        }
+        }
+
     }
 
- 
+
 }

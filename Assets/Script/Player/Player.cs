@@ -12,8 +12,8 @@ public class Player : MonoBehaviour, IDataPersistence
 
 
     private PlayerAttack playerAttack;
-
-    [SerializeField] private TextMeshProUGUI totalSickCount;
+    private int totalSickCount;
+    [SerializeField] private TextMeshProUGUI totalSickCountText;
     [SerializeField] private UI_BloodOverlay bloodOverlay;
     [SerializeField] public Transform playerLegPos;
 
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour, IDataPersistence
     void Start()
     {
         bloodOverlay = ReferenceManager.instance.bloodOverlay;
-        totalSickCount = ReferenceManager.instance.totalSickCount;
+        totalSickCountText = ReferenceManager.instance.totalSickCount;
         _healCountText = ReferenceManager.instance.healCountText;
         r_healthBarSlider = ReferenceManager.instance.r_healthBarSlider;
         l_healthBarSlider = ReferenceManager.instance.l_healthBarSlider;
@@ -66,7 +66,8 @@ public class Player : MonoBehaviour, IDataPersistence
         UpdateTemperatureBar();
         UpdateImmunitySlider();
         coolTimer = coolInterval;
-        totalSickCount.text = FindObjectOfType<GameEventManager>().sickPersonCount.ToString();
+        totalSickCount =  FindObjectOfType<GameEventManager>().sickPersonCount;
+        totalSickCountText.text = totalSickCount.ToString();
         DeActivateShield();
 
     }
@@ -143,12 +144,18 @@ public class Player : MonoBehaviour, IDataPersistence
     public bool IsHealing = false;
     public TextMeshProUGUI _healCountText;
 
+    public static event Action OnAllSickHealed;
+
     void AddHealCount(SickChar sickChar) //ADD Heal count to Update UI.
     {
         healCount++;
         IsHealing = false;
         UpdateHealCountText();
         TakeImmunity(10); // Reduce immunity after Healing
+        if(healCount == totalSickCount)
+        {
+            OnAllSickHealed?.Invoke();
+        }
     }
 
     void UpdateHealCountText() //Update Heal Count UI.
@@ -160,6 +167,7 @@ public class Player : MonoBehaviour, IDataPersistence
     {
         IsHealing = healing;
     }
+   
 
     #endregion
 
@@ -322,7 +330,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
     public void IntakeImmunity(float value)
     {
-        currentImmunity -= value;
+        currentImmunity += value;
         UpdateImmunitySlider();
           if (currentImmunity >= totalImmunity)
         {
