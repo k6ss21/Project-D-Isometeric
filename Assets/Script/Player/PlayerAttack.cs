@@ -79,6 +79,7 @@ public class PlayerAttack : MonoBehaviour
         if (canAttack && !isAbilityActive && !isAttackAbilityActive)
         {
             ManageInput();
+            ManageInputMobile();
         }
         AttackShootTimer();
         // UpdateSound();
@@ -89,7 +90,7 @@ public class PlayerAttack : MonoBehaviour
     {
         isAttackAbilityActive = value;
     }
-     public void SetAbilityActive(bool value)
+    public void SetAbilityActive(bool value)
     {
         isAbilityActive = value;
     }
@@ -141,6 +142,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+ 
     public void OnFinishAttackAnim()
     {
         isAttacking = false;
@@ -213,6 +215,61 @@ public class PlayerAttack : MonoBehaviour
         playerAnimationManger.Attack(dir);
 
 
+    }
+
+    void ManageInputMobile()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))//  MOve NW
+        {
+            InitializeAttackSwordMobile("NW");
+
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow)) //Move SW
+        {
+            InitializeAttackSwordMobile("SW");
+        }
+        else if (Input.GetKey(KeyCode.RightArrow)) //  Move NE
+        {
+            InitializeAttackSwordMobile("NE");
+
+        }
+        else if (Input.GetKey(KeyCode.DownArrow)) // Move SE
+        {
+            InitializeAttackSwordMobile("SE");
+        }
+        else if (Input.GetKey(KeyCode.M)) // Move SE
+        {
+            InitializeAttackSwordMobile(characterController.lastMoveDir);
+        }
+
+
+    }
+    void InitializeAttackSwordMobile(string direction)
+    {
+          if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                isAttackSword = true;
+                AttackSwordMobile(direction);
+                playerAttackCollider.SetDamageValue(DefaultDamageValue);
+                // StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
+                swordCoroutine = StartCoroutine(AttackDelayRoutine(.375f));
+
+            }
+            else
+            {
+                //Debug.Log("Attack CoolDown");
+            }
+
+    }
+
+    void AttackSwordMobile(string direction)
+    {
+        string dir = direction;
+        //  Debug.Log("Dir = " + dir);
+        characterController.lastMoveDir = dir;
+        playerAnimationManger.Attack(dir);
     }
 
     public void MegaAttack()

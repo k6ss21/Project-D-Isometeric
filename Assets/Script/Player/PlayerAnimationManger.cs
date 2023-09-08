@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimationManger : MonoBehaviour
 {
     public Animator _animator;
+    public Animator _slashAnimator;
 
     string _currentState;
 
@@ -94,10 +95,17 @@ public class PlayerAnimationManger : MonoBehaviour
     const string PLAYER_GROWBIG_GROW = "Player_GrowBig";
     #endregion
 
+    #region AB_GROWBIG ANIMATION
+    const string SLASH_SE = "Slash_SE";
+    const string SLASH_NE = "Slash_NE";
+    const string SLASH_SW = "Slash_SW";
+    const string SLASH_NW = "Slash_NW";
+    #endregion
+
 
     void Start()
     {
-      //  _animator = GetComponent<Animator>();
+        //  _animator = GetComponent<Animator>();
     }
 
     public void PlayerWalk(string dir)
@@ -177,15 +185,19 @@ public class PlayerAnimationManger : MonoBehaviour
         {
             case "NE":
                 ChangeAnimationState(PLAYER_ATTACK1_NE);
+                _slashAnimator.Play(SLASH_NE);
                 break;
             case "NW":
                 ChangeAnimationState(PLAYER_ATTACK1_NW);
+                _slashAnimator.Play(SLASH_NW);
                 break;
             case "SE":
                 ChangeAnimationState(PLAYER_ATTACK1_SE);
+                _slashAnimator.Play(SLASH_SE);
                 break;
             case "SW":
                 ChangeAnimationState(PLAYER_ATTACK1_SW);
+                _slashAnimator.Play(SLASH_SW);
                 break;
             case "N":
                 ChangeAnimationState(PLAYER_ATTACK1_N);
@@ -241,15 +253,19 @@ public class PlayerAnimationManger : MonoBehaviour
         {
             case "NE":
                 ChangeAnimationState(PLAYER_ATTACK2IDLE_NE);
+
                 break;
             case "NW":
                 ChangeAnimationState(PLAYER_ATTACK2IDLE_NW);
+
                 break;
             case "SE":
                 ChangeAnimationState(PLAYER_ATTACK2IDLE_SE);
+
                 break;
             case "SW":
                 ChangeAnimationState(PLAYER_ATTACK2IDLE_SW);
+
                 break;
             case "N":
                 ChangeAnimationState(PLAYER_ATTACK2IDLE_N);

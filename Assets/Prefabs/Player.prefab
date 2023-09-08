@@ -6012,7 +6012,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 0
   m_CastsShadows: 1
   m_SelfShadows: 1
-  m_ApplyToSortingLayers: 00000000e7c4abb4b9eed1e18f9c6b85a3d3a026fb1059f09fb16adc8d9589b61351a546f1f0847463067707bd1e6956231c8ecf615e7c6a
+  m_ApplyToSortingLayers: 00000000e7c4abb4b9eed1e18f9c6b85a3d3a026fb1059f09fb16adc8d9589b6f1f0847463067707bd1e6956231c8ecf615e7c6a
   m_ShapePath:
   - {x: -0.06132412, y: -0.23339653, z: 0}
   - {x: -0.045334816, y: -0.2208271, z: 0}
@@ -6043,7 +6043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5099e20d3c092f549906f78d3e4fabf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalSickCount: {fileID: 0}
+  totalSickCountText: {fileID: 0}
   bloodOverlay: {fileID: 0}
   playerLegPos: {fileID: 5019905}
   followPoints:
