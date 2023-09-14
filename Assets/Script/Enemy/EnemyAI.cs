@@ -46,7 +46,7 @@ public class EnemyAI : MonoBehaviour, IDamagable
         {
             Destroy(gameObject);
         }
-        Debug.Log("Hitting Enemy!!!!");
+        //Debug.Log("Hitting Enemy!!!!");
     }
     void OnDrawGizmos()
     {

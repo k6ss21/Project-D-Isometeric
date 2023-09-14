@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FpsConter : MonoBehaviour
 {
     private float count;
+    public TextMeshProUGUI text;
     private IEnumerator  Start()
     {
-        GUI.depth = 2;
         while(true)
         {
             count = 1f/Time.unscaledDeltaTime;
@@ -15,8 +16,11 @@ public class FpsConter : MonoBehaviour
 
         }
     }
-    private void  OnGUI()
+
+    void Update()
     {
-        GUI.Label(new Rect(5, 40,100, 25), "FPS:" + Mathf.Round(count));
+        int c = (int)count;
+        text.text = c.ToString();
     }
+   
 }

@@ -195,12 +195,12 @@ public class Player : MonoBehaviour, IDataPersistence
             {
                 OnPlayerDead?.Invoke();
                 this.gameObject.SetActive(false);
-                Debug.Log("Player Is DEAD!!");
+                //Debug.Log("Player Is DEAD!!");
             }
         }
         else
         {
-            Debug.Log("Invulnerable");
+          //  Debug.Log("Invulnerable");
         }
     }
 

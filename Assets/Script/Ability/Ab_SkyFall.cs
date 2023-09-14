@@ -18,7 +18,7 @@ public class Ab_SkyFall : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("SkyFall Trigger Active...");
+           // Debug.Log("SkyFall Trigger Active...");
             OnSkyFallTrigger?.Invoke();
             coolDown = true;
             button.enabled = false;
@@ -27,7 +27,7 @@ public class Ab_SkyFall : MonoBehaviour
         }
         else
         {
-            Debug.Log(" Cant use SkyFall Twice");
+            //Debug.Log(" Cant use SkyFall Twice");
         }
         IEnumerator CoolDownRoutine()
         {

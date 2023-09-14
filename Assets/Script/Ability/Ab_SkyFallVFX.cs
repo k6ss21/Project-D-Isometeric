@@ -68,7 +68,7 @@ public class Ab_SkyFallVFX : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Cant Use Here!!!");
+                 //   Debug.Log("Cant Use Here!!!");
                 }
             }
         }

@@ -58,7 +58,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void SettingsButton()
     {
-        Debug.Log("Settings Button Pressed");
+       // Debug.Log("Settings Button Pressed");
         pauseCanvas.gameObject.SetActive(false);
         settingsCanvas.gameObject.SetActive(true);
         this.GetComponent<SettingsMenu>().UpdateVolumeAmount();

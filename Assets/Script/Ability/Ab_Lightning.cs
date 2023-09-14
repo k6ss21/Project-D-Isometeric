@@ -19,7 +19,7 @@ public class Ab_Lightning : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("Lightning Attack Trigger Active...");
+           // Debug.Log("Lightning Attack Trigger Active...");
             OnLightningTrigger?.Invoke();
             coolDown = true;
             button.enabled = false;
@@ -28,7 +28,7 @@ public class Ab_Lightning : MonoBehaviour
         }
         else
         {
-            Debug.Log("Lightning Attack  cooldown");
+          //  Debug.Log("Lightning Attack  cooldown");
         }
         IEnumerator CoolDownRoutine()
         {

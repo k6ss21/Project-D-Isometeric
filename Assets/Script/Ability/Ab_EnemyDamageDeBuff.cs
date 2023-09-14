@@ -20,7 +20,7 @@ public class Ab_EnemyDamageDeBuff : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("EnemyDamageDeBuff Trigger Active...");
+          //  Debug.Log("EnemyDamageDeBuff Trigger Active...");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_DamageDebuff, this.transform.position);
             OnEnemyDamageDeBuffTrigger?.Invoke(debuffMulti, debuffTime);
             coolDown = true;
@@ -30,7 +30,7 @@ public class Ab_EnemyDamageDeBuff : MonoBehaviour
         }
         else
         {
-            Debug.Log(" EnemyDamageDeBuff CoolDown");
+          //  Debug.Log(" EnemyDamageDeBuff CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {

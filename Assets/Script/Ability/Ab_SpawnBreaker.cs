@@ -20,7 +20,7 @@ public class Ab_SpawnBreaker : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("SpawnBreaker Trigger Active...");
+           // Debug.Log("SpawnBreaker Trigger Active...");
              AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_SpawnBreaker, this.transform.position);
             OnSpawnBreakerTrigger?.Invoke(time);
             coolDown = true;
@@ -30,7 +30,7 @@ public class Ab_SpawnBreaker : MonoBehaviour
         }
         else
         {
-            Debug.Log("SpawnBreaker Ability CoolDown");
+            //Debug.Log("SpawnBreaker Ability CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {

@@ -56,7 +56,7 @@ public class GridPlatformManager : MonoBehaviour
             catch (System.Exception)
             {
 
-                Debug.Log("No Sicks...");
+                //Debug.Log("No Sicks...");
             }
 
 

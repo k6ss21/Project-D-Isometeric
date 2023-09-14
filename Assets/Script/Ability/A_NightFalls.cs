@@ -22,7 +22,7 @@ public class A_NightFalls : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Abilities 1");
+           // Debug.Log("Abilities 1");
             transform.position = player.transform.position;
             animator.Play("Ability1");
         

@@ -37,7 +37,7 @@ public class FileDataHandler
                 // //Deserialize the data from Json file to game data c# obj.
 
                 // loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
-                Debug.Log("File Path = " + fullPath);
+               // Debug.Log("File Path = " + fullPath);
                 loadedData = JsonConvert.DeserializeObject<GameData>(File.ReadAllText(fullPath));
 
 
@@ -80,7 +80,7 @@ public class FileDataHandler
             }
             else
             {
-                Debug.Log("Writing File For the First Time!!");
+              //  Debug.Log("Writing File For the First Time!!");
             }
             using FileStream stream = File.Create(fullPath);
             stream.Close();
@@ -103,7 +103,7 @@ public class FileDataHandler
         }
         else
         {
-            Debug.Log("No File Found");
+           // Debug.Log("No File Found");
         }
 
     }

@@ -27,7 +27,8 @@ public class MouseOverUICheck : MonoBehaviour
     //Returns 'true' if we touched or hovering on Unity UI element.
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
     {
-        for (int index = 0; index < eventSystemRaysastResults.Count; index++)
+        int count = eventSystemRaysastResults.Count;
+        for (int index = 0; index < count; index++)
         {
             RaycastResult curRaysastResult = eventSystemRaysastResults[index];
             if (curRaysastResult.gameObject.layer == UILayer)

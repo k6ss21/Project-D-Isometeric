@@ -12,12 +12,12 @@ public class Ab_LightningColiision : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         events = particleSystem.GetCollisionEvents(other, collisionEvents);
-        Debug.Log("Events " + events);
+       // Debug.Log("Events " + events);
 
-        Debug.Log("Hit Name " + other.name);
+        //Debug.Log("Hit Name " + other.name);
         if(other.TryGetComponent(out IDamagable enemy))
         {
-            Debug.Log("Enemy Found");
+           // Debug.Log("Enemy Found");
             enemy.TakeDamage(20);
         }
 

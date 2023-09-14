@@ -19,7 +19,7 @@ public class Ab_Rehabilitation : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("Rehabilitation Trigger Active...");
+            //Debug.Log("Rehabilitation Trigger Active...");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Rehabilitation,this.transform.position);
             OnRehabilitationTrigger?.Invoke();
             coolDown = true;
@@ -29,7 +29,7 @@ public class Ab_Rehabilitation : MonoBehaviour
         }
         else
         {
-            Debug.Log(" Cant use Rehabilitation Twice");
+            //Debug.Log(" Cant use Rehabilitation Twice");
         }
         IEnumerator CoolDownRoutine()
         {

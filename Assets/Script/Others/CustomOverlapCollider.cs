@@ -21,6 +21,6 @@ public class CustomOverlapCollider : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Collider = " + other.gameObject.name);
+        // Debug.Log("Collider = " + other.gameObject.name);
     }
 }

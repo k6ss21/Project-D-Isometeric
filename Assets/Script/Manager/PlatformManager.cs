@@ -5,7 +5,6 @@ using System;
 public class PlatformManager : MonoBehaviour
 {
     public List<EnemySpawner> enemySpawners = new List<EnemySpawner>();
-    public List<MovingLight> movingLights = new List<MovingLight>();
 
     public List<Collider2D> sickColliders = new List<Collider2D>();
     public List<SickChar> sickChars = new List<SickChar>();
@@ -130,10 +129,6 @@ public class PlatformManager : MonoBehaviour
             {
                 enemySpawner.canSpawn = true;
             }
-            foreach (MovingLight movingLight in movingLights)
-            {
-                movingLight.isOpen = true;
-            }
             if (flyingEnemySpawner != null)
             {
                 flyingEnemySpawner.canSpawn = true;
@@ -152,10 +147,6 @@ public class PlatformManager : MonoBehaviour
             {
                 enemySpawner.canSpawn = false;
             }
-            foreach (MovingLight movingLight in movingLights)
-            {
-                movingLight.isOpen = false;
-            }
             if (flyingEnemySpawner != null)
             {
                 flyingEnemySpawner.canSpawn = false;
@@ -167,7 +158,7 @@ public class PlatformManager : MonoBehaviour
 
     void RemoveSickFromList(SickChar sickChar)
     {
-        Debug.Log("sick char = " + sickChar);
+       // Debug.Log("sick char = " + sickChar);
         sickChars.Remove(sickChar);
 
     }

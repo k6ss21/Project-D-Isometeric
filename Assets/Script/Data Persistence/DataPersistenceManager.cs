@@ -24,7 +24,7 @@ public class DataPersistenceManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Found more than one Data Persistance Manager in the scene. Destroyed New One");
+            Debug.LogError("Found more than one Data Persistance Manager in the scene. Destroyed New One");
             Destroy(this.gameObject);
             return;
         }
@@ -60,7 +60,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void NewGame()
     {
-        Debug.Log("New Game Created");
+       // Debug.Log("New Game Created");
         this.gameData = new GameData();
         // string defaultGameData = defaultGameDataFile.ToString();
         // Debug.Log("Default Game Data : " + defaultGameData);
@@ -79,7 +79,7 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.SaveData(gameData);
         }
-        Debug.Log("Saved Skill count = " + gameData.skillPoints);
+       // Debug.Log("Saved Skill count = " + gameData.skillPoints);
 
         dataHandler.Save(gameData);
     }
@@ -88,7 +88,7 @@ public class DataPersistenceManager : MonoBehaviour
         this.gameData = dataHandler.Load();
         if (this.gameData == null)
         {
-            Debug.Log("No Game Data Found. A New Game needs to be started ");
+          //  Debug.Log("No Game Data Found. A New Game needs to be started ");
             return;
         }
 
@@ -120,7 +120,7 @@ public class DataPersistenceManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("File Not Found!!");
+           // Debug.Log("File Not Found!!");
         }
     }
     public bool HasGameData()

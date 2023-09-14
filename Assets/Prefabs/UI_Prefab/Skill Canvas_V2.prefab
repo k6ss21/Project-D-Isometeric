@@ -7325,7 +7325,6 @@ GameObject:
   - component: {fileID: 6329767204558924012}
   - component: {fileID: 4728423449348782859}
   - component: {fileID: 7461143301681463683}
-  - component: {fileID: 5336147592866758489}
   m_Layer: 5
   m_Name: Ability Menu
   m_TagString: Untagged
@@ -7394,18 +7393,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5336147592866758489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8538648916043127010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47e79ad4c592f994f89b50ddd2fe5f93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8611072810618104214
 GameObject:
   m_ObjectHideFlags: 0
@@ -7441,7 +7428,7 @@ RectTransform:
   - {fileID: 94318868667944891}
   - {fileID: 8720254421876193859}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

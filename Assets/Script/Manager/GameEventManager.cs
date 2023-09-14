@@ -88,7 +88,7 @@ public class GameEventManager : MonoBehaviour
     }
     public void ResumeTimer()
     {
-        Debug.Log("Resume timer");
+       // Debug.Log("Resume timer");
         timeMulti = defaultTimeMulti;
     }
 

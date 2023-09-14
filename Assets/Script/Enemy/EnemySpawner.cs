@@ -62,7 +62,8 @@ public class EnemySpawner : MonoBehaviour
 
     private EnemyBoss_1_AI GetPooledEnmeyBoss_1_Object()
     {
-        for (int i = 0; i < enemyboss_1_PooledObjects.Count; i++)
+        int pooledCount = enemyboss_1_PooledObjects.Count;
+        for (int i = 0; i < pooledCount; i++)
         {
             if (!enemyboss_1_PooledObjects[i].gameObject.activeInHierarchy)
             {

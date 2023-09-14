@@ -58,7 +58,7 @@ public class EnemyBoss_1_AI : MonoBehaviour, IDamagable
         {
             if (spawnTimer <= 0)
             {
-                Debug.Log("SpawnRat");
+               // Debug.Log("SpawnRat");
                 SpawnEnemy();
                 GetRandomTimeAndCount();
             }

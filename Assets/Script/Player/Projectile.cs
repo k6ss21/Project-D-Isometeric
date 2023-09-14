@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Objected Created ");
+        //Debug.Log("Objected Created ");
 
     }
     public void Init(Action<Projectile> destroy)
@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.position += shootDir * shootSpeed * Time.deltaTime;
+        transform.position += shootSpeed * Time.deltaTime * shootDir;
         //  Destroy(gameObject, 5f);
     }
 

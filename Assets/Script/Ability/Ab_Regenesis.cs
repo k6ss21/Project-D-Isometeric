@@ -23,7 +23,7 @@ public class Ab_Regenesis : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("Regenesis Trigger Active...");
+            //Debug.Log("Regenesis Trigger Active...");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Regenesis,this.transform.position);
             OnRegenesisCall?.Invoke();
             player.gameObject.SetActive(true);
@@ -35,7 +35,7 @@ public class Ab_Regenesis : MonoBehaviour
         }
         else
         {
-            Debug.Log(" Cant use Regenesis Twice");
+           // Debug.Log(" Cant use Regenesis Twice");
         }
         IEnumerator CoolDownRoutine()
         {

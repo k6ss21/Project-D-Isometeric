@@ -23,7 +23,7 @@ public class CinemachineCameraShake : MonoBehaviour
     public void ShakeCamera(float intensity, float timer)
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
-      cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = intensity;
         startingIntensity = intensity;
         shakeTimerTotal = timer;

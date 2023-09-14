@@ -30,7 +30,7 @@ public class FlyingEnemyMovementAI : MonoBehaviour
 
         dir += moveDir;
 
-        motion = dir.normalized * speed;
+        motion = speed * dir.normalized;
         Vector2 temp = CarToIso(motion);
         rb.velocity = temp;
 

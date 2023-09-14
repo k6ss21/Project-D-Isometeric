@@ -40,7 +40,7 @@ public class SkillPageAccess : MonoBehaviour
             instructionPopUp.SetActive(true);
             if (input.Player.SkillPage.WasPerformedThisFrame())
             {
-                Debug.Log("Open SKill Menu");
+              //  Debug.Log("Open SKill Menu");
                 isSkillCanvasOpen = true;
                 FindObjectOfType<GameEventManager>().PauseTimer();
                 skillCanvas.SetActive(true);

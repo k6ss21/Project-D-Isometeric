@@ -19,7 +19,7 @@ public class Ab_Decamp : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("Decamp Trigger Active...");
+           // Debug.Log("Decamp Trigger Active...");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.ab_decamp, this.transform.position);
             OnDecampTrigger?.Invoke();
             coolDown = true;
@@ -29,7 +29,7 @@ public class Ab_Decamp : MonoBehaviour
         }
         else
         {
-            Debug.Log(" Decamp CoolDown");
+           // Debug.Log(" Decamp CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {

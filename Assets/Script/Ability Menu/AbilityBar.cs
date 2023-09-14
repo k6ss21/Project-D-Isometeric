@@ -46,33 +46,33 @@ public class AbilityBar : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Alpha 1 Press");
+           // Debug.Log("Alpha 1 Press");
             this.transform.GetChild(0).gameObject.GetComponent<Button>().onClick.Invoke();
         }
     }
     private void Slot_2_Performed(InputAction.CallbackContext context)
     {
-        Debug.Log("Alpha 2 Press");
+        //Debug.Log("Alpha 2 Press");
         this.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.Invoke();
     }
     private void Slot_3_Performed(InputAction.CallbackContext context)
     {
-        Debug.Log("Alpha 3 Press");
+       // Debug.Log("Alpha 3 Press");
         this.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.Invoke();
     }
     private void Slot_4_Performed(InputAction.CallbackContext context)
     {
-        Debug.Log("Alpha 4 Press");
+       // Debug.Log("Alpha 4 Press");
         this.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.Invoke();
     }
     private void Slot_5_Performed(InputAction.CallbackContext context)
     {
-        Debug.Log("Alpha 5 Press");
+       // Debug.Log("Alpha 5 Press");
         this.transform.GetChild(4).gameObject.GetComponent<Button>().onClick.Invoke();
     }
     private void Slot_6_Performed(InputAction.CallbackContext context)
     {
-        Debug.Log("Alpha 6 Press");
+       // Debug.Log("Alpha 6 Press");
         this.transform.GetChild(5).gameObject.GetComponent<Button>().onClick.Invoke();
     }
 
@@ -83,24 +83,24 @@ public class AbilityBar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             //  CurrentAbilityList[0].GetComponent<Button>().onClick.Invoke();
-            Debug.Log("Alpha 1 Press");
+           // Debug.Log("Alpha 1 Press");
             this.transform.GetChild(0).gameObject.GetComponent<Button>().onClick.Invoke();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //CurrentAbilityList[1].GetComponent<Button>().onClick.Invoke();
-            Debug.Log("Alpha 2 Press");
+           // Debug.Log("Alpha 2 Press");
             this.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.Invoke();
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("Alpha 3 Press");
+           // Debug.Log("Alpha 3 Press");
             //CurrentAbilityList[1].GetComponent<Button>().onClick.Invoke();
             this.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.Invoke();
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Debug.Log("Alpha 4 Press");
+           // Debug.Log("Alpha 4 Press");
             //CurrentAbilityList[1].GetComponent<Button>().onClick.Invoke();
             this.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.Invoke();
         }

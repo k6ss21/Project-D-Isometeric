@@ -28,7 +28,8 @@ public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IS
             + keys.Count + ")does not match the number of values 9" + values.Count +
              ") means something went wrong");
         }
-        for (int i = 0; i < keys.Count; i++)
+        int keyCount  = keys.Count;
+        for (int i = 0; i < keyCount; i++)
         {
             this.Add(keys[i], values[i]);
         }

@@ -98,49 +98,49 @@ public class EnemyMovementAI : MonoBehaviour
         {
             spriteRenderer.flipX = false;
 
-            Debug.Log("NE");
+          //  Debug.Log("NE");
         }
         if ((direction.x >= 0.98f) && (direction.y <= 0.26f && direction.y >= -0.26f))
         {
-            Debug.Log("E");
+          //  Debug.Log("E");
             spriteRenderer.flipX = false;
 
         }
         if ((direction.x >= 0.27f && direction.x <= .97f) && (direction.y >= -.97f && direction.y <= -0.27f))
         {
-            Debug.Log("SE");
+           // Debug.Log("SE");
             spriteRenderer.flipX = false;
 
         }
 
         if ((direction.x <= 0.26f && direction.x >= -0.26f) && (direction.y <= 0.98f))
         {
-            Debug.Log("S");
+          //  Debug.Log("S");
             spriteRenderer.flipX = false;
 
         }
         if ((direction.x <= -0.27f && direction.x >= -.97f) && (direction.y >= -.97f && direction.y <= -0.27f))
         {
-            Debug.Log("SW");
+            //Debug.Log("SW");
             spriteRenderer.flipX = true;
 
         }
         if ((direction.x <= -0.98f) && (direction.y <= 0.26f && direction.y >= -0.26f))
         {
-            Debug.Log("W");
-            Debug.Log("E");
+           // Debug.Log("W");
+            //Debug.Log("E");
             spriteRenderer.flipX = true;
 
         }
         if ((direction.x <= -0.27f && direction.x >= -.97f) && (direction.y <= .97f && direction.y >= 0.27f))
         {
-            Debug.Log("NW");
+           // Debug.Log("NW");
             spriteRenderer.flipX = true;
-            Debug.Log("NE");
+          //  Debug.Log("NE");
         }
         if ((direction.x >= -0.26f && direction.x <= 0.26f) && (direction.y <= 0.98f))
         {
-            Debug.Log("N");
+           // Debug.Log("N");
             spriteRenderer.flipX = false;
             //  spriteRenderer.sprite = nSprite;
         }

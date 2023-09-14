@@ -10480,7 +10480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231724708327, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: text
-      value: Press E to Teleport
+      value: Teleport
       objectReference: {fileID: 0}
     - target: {fileID: 6359520232035618626, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_MatchWidthOrHeight

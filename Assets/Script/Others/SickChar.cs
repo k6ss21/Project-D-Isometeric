@@ -110,7 +110,7 @@ public class SickChar : MonoBehaviour
     public void ChangeHealingRate(float boost)
     {
         healingRate *= boost;
-        Debug.Log("Healing Rate Changed " + healingRate);
+       // Debug.Log("Healing Rate Changed " + healingRate);
     }
 
     public void CancelHealing()
@@ -131,7 +131,7 @@ public class SickChar : MonoBehaviour
         IsHealing = false;
         healingCompleted = true;
         OnHealComplete?.Invoke(this);
-        Debug.Log("Healed!");
+      //  Debug.Log("Healed!");
         animator.Play("SickChar_Disappear");
         Destroy(this.gameObject, .5f);
     }

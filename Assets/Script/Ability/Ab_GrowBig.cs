@@ -18,7 +18,7 @@ public class Ab_GrowBig : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("GrowBig Trigger Active...");
+           // Debug.Log("GrowBig Trigger Active...");
             OnGrowBigTrigger?.Invoke();
             coolDown = true;
             button.enabled = false;
@@ -27,7 +27,7 @@ public class Ab_GrowBig : MonoBehaviour
         }
         else
         {
-            Debug.Log(" GrowBig CoolDown");
+           // Debug.Log(" GrowBig CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {

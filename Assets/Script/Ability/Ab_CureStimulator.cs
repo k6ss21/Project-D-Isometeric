@@ -20,7 +20,7 @@ public class Ab_CureStimulator : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("CureStimulate Trigger Active...");
+         //   Debug.Log("CureStimulate Trigger Active...");
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_CureSimulator, this.transform.position);
             OnCureStimulateTrigger?.Invoke(amountMulti);
             coolDown = true;
@@ -30,7 +30,7 @@ public class Ab_CureStimulator : MonoBehaviour
         }
         else
         {
-            Debug.Log(" CureStimulator Ability CoolDown");
+           // Debug.Log(" CureStimulator Ability CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {

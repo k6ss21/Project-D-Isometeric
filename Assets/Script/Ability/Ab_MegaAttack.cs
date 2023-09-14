@@ -18,7 +18,7 @@ public class Ab_MegaAttack : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("MegaAttack Trigger Active...");
+           // Debug.Log("MegaAttack Trigger Active...");
             OnMegaAttackTrigger?.Invoke();
             coolDown = true;
             button.enabled = false;
@@ -27,7 +27,7 @@ public class Ab_MegaAttack : MonoBehaviour
         }
         else
         {
-            Debug.Log(" MegaAttack CoolDown");
+           // Debug.Log(" MegaAttack CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {

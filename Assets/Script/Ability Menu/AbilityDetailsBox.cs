@@ -83,7 +83,7 @@ public class AbilityDetailsBox : MonoBehaviour
 
     public void OnUnlockButtonClick()
     {
-        Debug.Log("Button Click");
+       // Debug.Log("Button Click");
         if (skillPointsManager.currentSkillPoints >= skillPointsNeed)
         {
             skillPointsManager.RemoveSkillPoints(skillPointsNeed);
@@ -94,7 +94,7 @@ public class AbilityDetailsBox : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not Enogh Skill Points");
+         //   Debug.Log("Not Enogh Skill Points");
         }
     }
 }

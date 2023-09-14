@@ -34,9 +34,9 @@ public class FallProjectile : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        transform.position += shootDir * shootSpeed * Time.deltaTime;
+        transform.position +=  shootSpeed * Time.deltaTime * shootDir ;
         //  Destroy(gameObject, 5f);
     }
 

@@ -324,7 +324,8 @@ public class PlayerAttack : MonoBehaviour
 
     private Projectile GetPooledProjectileObject()
     {
-        for (int i = 0; i < projectilePooledObjects.Count; i++)
+         int pooledCount = projectilePooledObjects.Count;
+        for (int i = 0; i < pooledCount ; i++)
         {
             if (!projectilePooledObjects[i].gameObject.activeInHierarchy)
             {

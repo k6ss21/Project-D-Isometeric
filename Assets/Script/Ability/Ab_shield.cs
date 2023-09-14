@@ -20,7 +20,7 @@ public class Ab_shield : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("Player Shield Active...");
+           // Debug.Log("Player Shield Active...");
             OnShieldActive?.Invoke(time);
             coolDown = true;
             button.enabled = false;
@@ -29,7 +29,7 @@ public class Ab_shield : MonoBehaviour
         }
         else
         {
-            Debug.Log("Ab_shield cooldown");
+           // Debug.Log("Ab_shield cooldown");
         }
     }
 

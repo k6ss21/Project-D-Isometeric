@@ -22,8 +22,6 @@ public class AbilityFill : MonoBehaviour
     void Awake()
     {
         abilityBar = GetComponent<AbilityBar>();
-        // abilityData = FindObjectOfType<AbilityData>();
-        // this.abilityButtonList = abilityData.abilityButtonList;
 
     }
 

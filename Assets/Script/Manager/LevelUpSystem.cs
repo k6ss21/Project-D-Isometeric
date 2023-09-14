@@ -79,7 +79,7 @@ public class LevelUpSystem : MonoBehaviour, IDataPersistence
 
         if (level >= reqLevelXp.Length)
         {
-            Debug.Log("Max level reached");
+           // Debug.Log("Max level reached");
             return;
         }
         level++;

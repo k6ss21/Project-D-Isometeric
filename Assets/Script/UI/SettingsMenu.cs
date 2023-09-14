@@ -16,7 +16,7 @@ public class SettingsMenu : MonoBehaviour, IDataPersistence
 
     public void AddVolumeButton()
     {
-        Debug.Log("Add Volume");
+      //  Debug.Log("Add Volume");
         volumeAmount += 0.1f;
         UpdateVolumeAmount();
         if (volumeAmount >= 1f)
@@ -27,7 +27,7 @@ public class SettingsMenu : MonoBehaviour, IDataPersistence
     }
     public void ReduceVolumeButton()
     {
-        Debug.Log("Reduce Volume");
+      //  Debug.Log("Reduce Volume");
         volumeAmount -= 0.1f;
         UpdateVolumeAmount();
         if (volumeAmount <= 0f)

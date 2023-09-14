@@ -20,7 +20,7 @@ public class Ab_Immunity : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("Immunity Trigger Active...");
+           // Debug.Log("Immunity Trigger Active...");
              AudioManager.instance.PlayOneShot(FMODEvents.instance.Ab_Immunity,this.transform.position);
             OnImmunityTrigger?.Invoke(immunityValue);
             coolDown = true;
@@ -30,7 +30,7 @@ public class Ab_Immunity : MonoBehaviour
         }
         else
         {
-            Debug.Log(" Ability Immunity Cooldown");
+         //   Debug.Log(" Ability Immunity Cooldown");
         }
         IEnumerator CoolDownRoutine()
         {

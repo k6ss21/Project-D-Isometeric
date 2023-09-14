@@ -109,7 +109,7 @@ public class IsoCharacterController : MonoBehaviour
         HandleIdle();
         if (inputDir != Vector2.zero)
         {
-            Debug.Log("Playing dust ps");
+            // Debug.Log("Playing dust ps");
             PlayDustPS();
         }
 
@@ -154,7 +154,7 @@ public class IsoCharacterController : MonoBehaviour
 
         Vector2 dir = new Vector2();
         Vector2 motion = new Vector2();
-        Debug.Log("Handle Movement");
+        //Debug.Log("Handle Movement");
         if (inputDir != Vector2.zero)
         {
             string moveDir = ChangeDirectionUsingAngle(GetAngleFromVectorFloat(inputDir));
@@ -190,7 +190,7 @@ public class IsoCharacterController : MonoBehaviour
             }
         }
         // Debug.Log("Nor =" + dir);
-        motion = dir.normalized * walkSpeed;
+        motion = walkSpeed * dir.normalized;
         Vector2 temp = CarToIso(motion);
         rb.velocity = temp;
     }
@@ -238,7 +238,7 @@ public class IsoCharacterController : MonoBehaviour
             _playerAnimator.PlayerWalk("S");
         }
         // Debug.Log("Nor =" + dir);
-        motion = dir.normalized * walkSpeed;
+        motion = walkSpeed * dir.normalized;
         // Vector2 temp = CarToIso(motion);
         rb.velocity = motion;
     }
@@ -297,9 +297,9 @@ public class IsoCharacterController : MonoBehaviour
                         lastMoveDir = "SE";
                     }
 
-                    
+
                 }
-                
+
             }
         }
     }
@@ -374,7 +374,7 @@ public class IsoCharacterController : MonoBehaviour
     #region  SPEED FUNTIONS
     void SpeedBoost(float speed, float time)
     {
-        Debug.Log("speed Boost");
+       // Debug.Log("speed Boost");
         walkSpeed = speed;
         StartCoroutine(SpeedBoostTimer(time));
     }
@@ -472,7 +472,7 @@ public class IsoCharacterController : MonoBehaviour
             return dir;
         }
 
-        if (angle <= 226 && angle >= 136 ) //done
+        if (angle <= 226 && angle >= 136) //done
         {
             //Debug.Log("E");
             dir = "SW";
@@ -498,26 +498,7 @@ public class IsoCharacterController : MonoBehaviour
 
     #region TEST
 
-    void TestMovement()
-    {
-
-        if (inputDir.y > 0)//  MOve NW
-        {
-            Debug.Log("Move NW");
-        }
-        if (inputDir.x < 0) //Move SW
-        {
-            Debug.Log("Move SW");
-        }
-        if (inputDir.x > 0) //  Move NE
-        {
-            Debug.Log("Move NE");
-        }
-        if (inputDir.y < 0) // Move SE
-        {
-            Debug.Log("Move SE");
-        }
-    }
+  
     #endregion
 
 }

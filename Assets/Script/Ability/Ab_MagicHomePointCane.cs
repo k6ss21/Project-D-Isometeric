@@ -20,7 +20,7 @@ public class Ab_MagicHomePointCane : MonoBehaviour
     {
         if (!coolDown)
         {
-            Debug.Log("MagicHomePointCanePlace Trigger Active...");
+            //Debug.Log("MagicHomePointCanePlace Trigger Active...");
             OnMagicHomePointCanePlaceTrigger?.Invoke(activeTime);
             coolDown = true;
             button.enabled = false;
@@ -29,7 +29,7 @@ public class Ab_MagicHomePointCane : MonoBehaviour
         }
         else
         {
-            Debug.Log(" MagicHomePointCane Ability CoolDown");
+           // Debug.Log(" MagicHomePointCane Ability CoolDown");
         }
         IEnumerator CoolDownRoutine()
         {
