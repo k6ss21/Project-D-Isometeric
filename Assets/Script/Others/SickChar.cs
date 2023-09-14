@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class SickChar : MonoBehaviour
 {
+    private CustomInput input = null;
 
     // Healing duration in seconds
     public float healingDuration = 20f;
@@ -58,14 +59,20 @@ public class SickChar : MonoBehaviour
 
     public static event Action<SickChar> OnHealComplete;
     public static event Action<bool> OnSetHealing;
+    private void Awake() {
+        input = new CustomInput();
+        
+    }
 
     void OnEnable()
     {
+        input.Enable();
         Ab_CureStimulator.OnCureStimulateTrigger += ChangeHealingRate;
     }
 
     void OnDisable()
     {
+        input.Disable();
         Ab_CureStimulator.OnCureStimulateTrigger -= ChangeHealingRate;
     }
 
@@ -82,6 +89,7 @@ public class SickChar : MonoBehaviour
 
     void Update()
     {
+      
 
         HealPrompt();
         //DisableOutline();
@@ -152,8 +160,9 @@ public class SickChar : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (input.Player.Use.WasPerformedThisFrame())
             {
+              //  Debug.Log("Healing Started");
                 if (playerScript.IsHealing)
                 {
                     // Debug.Log("You can Only heal One Person at a Time");
@@ -193,7 +202,7 @@ public class SickChar : MonoBehaviour
 
     public void StarHealing()
     {
-        Debug.Log("Healing Started");
+       // Debug.Log("Healing Started");
         //collider.GetComponent<Player>().IsHealing = true;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.healStarted, this.transform.position);
         sliderCanvas.gameObject.SetActive(true);

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class RechargeChamber : MonoBehaviour
 {
+    private CustomInput input = null;
     SpriteRenderer spriteRenderer;
     Player player;
 
@@ -30,6 +31,18 @@ public class RechargeChamber : MonoBehaviour
     [SerializeField] Canvas sliderCanvas;
 
     float timer;
+    private void Awake()
+    {
+        input = new CustomInput();
+    }
+    private void OnEnable()
+    {
+        input.Enable();
+    }
+    private void OnDisable()
+    {
+        input.Disable();
+    }
 
     void Start()
     {
@@ -45,7 +58,7 @@ public class RechargeChamber : MonoBehaviour
 
             //TODO:
             instructionPopUp.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.F))
+            if (input.Player.Use.WasPerformedThisFrame())
             {
                 // Debug.Log("Recharge");
                 spriteRenderer.sprite = rechargeSprite; //Change Recharge Chamber sprite.

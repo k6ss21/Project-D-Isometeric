@@ -7,7 +7,7 @@ using System;
 [RequireComponent(typeof(StudioEventEmitter))]
 public class HomePoint : MonoBehaviour
 {
-
+    private CustomInput input = null;
     private bool canAccessLab;
     public Transform labTeleportPoint;
     public Canvas skillCanvas;
@@ -24,12 +24,8 @@ public class HomePoint : MonoBehaviour
     bool coolDown;
 
     [Header("Floating Test")]
-    [SerializeField] private GameObject _floatingTextPrefab;
     public InstructionPopUp instructionPopUp;
-    [SerializeField] private string text = "Press E to teleport";
     private bool _textVisible = false;
-    private GameObject floatingText;
-    public Transform promptPoint;
 
     public LayerMask playerLayer;
 
@@ -37,11 +33,20 @@ public class HomePoint : MonoBehaviour
 
     public static event Action<Vector3> OnTeleportToLab;
 
-    public bool test;
 
     void Awake()
     {
+        input = new CustomInput();
+    }
 
+    private void OnEnable()
+    {
+        input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        input.Disable();
     }
 
     void Start()
@@ -70,10 +75,10 @@ public class HomePoint : MonoBehaviour
         // SkillMenu();
         // }
         PopUpText();
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            InstructionBox.instance.SpawnInstructionPopUpText("TEsting Instruction Box");
-        }
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     InstructionBox.instance.SpawnInstructionPopUpText("TEsting Instruction Box");
+        // }
 
     }
 
@@ -91,7 +96,7 @@ public class HomePoint : MonoBehaviour
 
     void TeleportToLab()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (input.Player.Interact.WasPerformedThisFrame())
         {
             if (canAccessLab)
             {
@@ -117,40 +122,24 @@ public class HomePoint : MonoBehaviour
 
         if (collider != null)
         {
-            if ( canAccessLab && !coolDown)
+            if (canAccessLab && !coolDown)
             {
                 if (!_textVisible)
                 {
                     instructionPopUp.gameObject.SetActive(true);
-                 //   instructionPopUp.Show(text);
+                    //   instructionPopUp.Show(text);
 
                 }
             }
         }
         else
         {
-             instructionPopUp.gameObject.SetActive(false);
+            instructionPopUp.gameObject.SetActive(false);
             //instructionPopUp.Hide();
         }
 
     }
-    // void DestroyText()
-    // {
-    //     _textVisible = false;
-    //     Destroy(floatingText, .1f);
-    // }
 
-    // void ShowInstructionText()
-    // {
-    //     if (_floatingTextPrefab)
-    //     {
-    //         _textVisible = true;
-    //         floatingText = Instantiate(_floatingTextPrefab, promptPoint.position, Quaternion.identity);
-    //         floatingText.transform.SetParent(this.transform);
-    //         floatingText.GetComponentInChildren<TextMesh>().text = text;
-
-    //     }
-    // }
     // void SkillMenu()
     // {
 

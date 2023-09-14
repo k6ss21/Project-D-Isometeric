@@ -7,16 +7,7 @@ public class InstructionBox : MonoBehaviour
    public  GameObject instructionLogPrefab;
    public static InstructionBox instance;
 
-   // int count = 1;
-    // void Update()
-    // {
-    //     if(Input.GetKeyDown(KeyCode.P))
-    //     {
-
-    //         SpawnInstructionPopUpText("this Is A Test "+ count);
-    //         count++;
-    //     }
-    // }
+   
 
     void Awake()
     {

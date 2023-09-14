@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
+using UnityEngine.InputSystem;
 
 public class IsoCharacterController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class IsoCharacterController : MonoBehaviour
     public float defaultWalkSpeed; //Player default Walk Speed.
     private float walkSpeed; //Player changing walkspeed when abilities active.
 
+    private CustomInput input = null;
     private Vector2 inputDir = new(0, 0); // Movement Input Vector.
 
     public bool isIdle { get; set; }
@@ -31,19 +33,50 @@ public class IsoCharacterController : MonoBehaviour
 
     #endregion
 
+    private void Awake()
+    {
+        input = new CustomInput();
+    }
+
     void OnEnable()
     {
+        #region Ability Enable Events
         Ab_Speed.OnSpeedBoost += SpeedBoost;
         Stairway.OnPlayerTeleport += Teleport;
         HomePoint.OnTeleportToLab += Teleport;
         LabPoint.OnReturnLastPos += TeleportToLastPos;
+        #endregion
+
+        #region  InputSystem
+        input.Enable();
+        input.Player.Movement.performed += OnMovementPerformed;
+        input.Player.Movement.canceled += OnMovementCanceled;
+
+        input.Player.Dash.performed += OnDashPerformed;
+        input.Player.Movement.canceled += OnDashCanceled;
+
+        #endregion
+
     }
     void OnDisable()
     {
+        #region  Ability Disable Events
         Ab_Speed.OnSpeedBoost -= SpeedBoost;
         Stairway.OnPlayerTeleport -= Teleport;
         HomePoint.OnTeleportToLab -= Teleport;
         LabPoint.OnReturnLastPos -= TeleportToLastPos;
+        #endregion
+
+        #region  InputSystem
+        input.Disable();
+        input.Player.Movement.performed -= OnMovementPerformed;
+        input.Player.Movement.canceled -= OnMovementCanceled;
+
+        input.Player.Dash.performed -= OnDashPerformed;
+        input.Player.Movement.canceled -= OnDashCanceled;
+
+        #endregion
+
     }
     void Start()
     {
@@ -59,12 +92,13 @@ public class IsoCharacterController : MonoBehaviour
     }
     void Update()
     {
-        inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Get Input from Player
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            HandleDash();
-        }
+        //  inputDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Get Input from Player
+        // if (input.Ability.Touch.WasPerformedThisFrame())
+        // {
+        //     Debug.Log(input.Ability.Touch.ReadValue<Vector2>());
+        // }
     }
+
     void FixedUpdate()
     {
 
@@ -121,36 +155,39 @@ public class IsoCharacterController : MonoBehaviour
         Vector2 dir = new Vector2();
         Vector2 motion = new Vector2();
         Debug.Log("Handle Movement");
-
-        if (Input.GetKey(KeyCode.W))//  MOve NW
+        if (inputDir != Vector2.zero)
         {
+            string moveDir = ChangeDirectionUsingAngle(GetAngleFromVectorFloat(inputDir));
+            if (moveDir == "NW")//  MOve NW
+            {
 
-            dir += Vector2.up;
-            lastMoveDir = "NW";
-            _playerAnimator.PlayerWalk("NW");
-        }
-        else if (Input.GetKey(KeyCode.A)) //Move SW
-        {
+                dir += Vector2.up;
+                lastMoveDir = "NW";
+                _playerAnimator.PlayerWalk("NW");
+            }
+            else if (moveDir == "SW") //Move SW
+            {
 
-            dir += Vector2.left;
-            lastMoveDir = "SW";
-            _playerAnimator.PlayerWalk("SW");
-        }
-        else if (Input.GetKey(KeyCode.D)) //  Move NE
-        {
+                dir += Vector2.left;
+                lastMoveDir = "SW";
+                _playerAnimator.PlayerWalk("SW");
+            }
+            else if (moveDir == "NE") //  Move NE
+            {
 
-            dir += Vector2.right;
-            lastMoveDir = "NE";
-            _playerAnimator.PlayerWalk("NE");
+                dir += Vector2.right;
+                lastMoveDir = "NE";
+                _playerAnimator.PlayerWalk("NE");
 
-        }
-        else if (Input.GetKey(KeyCode.S)) // Move SE
-        {
+            }
+            else if (moveDir == "SE") // Move SE
+            {
 
-            dir += Vector2.down;
-            lastMoveDir = "SE";
+                dir += Vector2.down;
+                lastMoveDir = "SE";
 
-            _playerAnimator.PlayerWalk("SE");
+                _playerAnimator.PlayerWalk("SE");
+            }
         }
         // Debug.Log("Nor =" + dir);
         motion = dir.normalized * walkSpeed;
@@ -205,6 +242,15 @@ public class IsoCharacterController : MonoBehaviour
         // Vector2 temp = CarToIso(motion);
         rb.velocity = motion;
     }
+
+    private void OnMovementPerformed(InputAction.CallbackContext value)
+    {
+        inputDir = value.ReadValue<Vector2>();
+    }
+    private void OnMovementCanceled(InputAction.CallbackContext value)
+    {
+        inputDir = Vector2.zero;
+    }
     #endregion
 
     #region PLAYER DASH
@@ -223,38 +269,37 @@ public class IsoCharacterController : MonoBehaviour
         {
             if (!isDashing)
             {
-                if (Input.GetKey(KeyCode.W))//  MOve NW
+                if (inputDir != Vector2.zero)
                 {
+                    string dir = ChangeDirectionUsingAngle(GetAngleFromVectorFloat(inputDir));
+                    if (dir == "NW")//  MOve NW
+                    {
 
-                    StartCoroutine(Dash(Vector2.up));
-                    lastMoveDir = "NW";
+                        StartCoroutine(Dash(Vector2.up));
+                        lastMoveDir = "NW";
 
+                    }
+                    else if (dir == "SW")//Move SW
+                    {
+
+                        StartCoroutine(Dash(Vector2.left));
+                        lastMoveDir = "SW";
+
+                    }
+                    else if (dir == "NE")//  Move NE
+                    {
+                        StartCoroutine(Dash(Vector2.right));
+                        lastMoveDir = "NE";
+                    }
+                    else if (dir == "SE") // Move SE
+                    {
+                        StartCoroutine(Dash(Vector2.down));
+                        lastMoveDir = "SE";
+                    }
+
+                    
                 }
-                else if (Input.GetKey(KeyCode.A)) //Move SW
-                {
-
-                    StartCoroutine(Dash(Vector2.left));
-                    lastMoveDir = "SW";
-
-                }
-                else if (Input.GetKey(KeyCode.D)) //  Move NE
-                {
-                    StartCoroutine(Dash(Vector2.right));
-                    lastMoveDir = "NE";
-
-
-                }
-                else if (Input.GetKey(KeyCode.S)) // Move SE
-                {
-                    StartCoroutine(Dash(Vector2.down));
-                    lastMoveDir = "SE";
-
-                }
-                else
-                {
-                    StartCoroutine(Dash(Vector2.down));
-                    lastMoveDir = "SE";
-                }
+                
             }
         }
     }
@@ -289,6 +334,18 @@ public class IsoCharacterController : MonoBehaviour
             yield return null;
         }
         canDash = true;
+    }
+
+    private void OnDashPerformed(InputAction.CallbackContext value)
+    {
+        if (value.performed)
+        {
+            HandleDash();
+        }
+    }
+    private void OnDashCanceled(InputAction.CallbackContext value)
+    {
+
     }
     #endregion
 
@@ -361,6 +418,7 @@ public class IsoCharacterController : MonoBehaviour
 
 
     }
+
     #endregion
 
     #region SFX & OTHERS
@@ -393,6 +451,48 @@ public class IsoCharacterController : MonoBehaviour
         {
             playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);
         }
+    }
+
+    public static float GetAngleFromVectorFloat(Vector3 dir)
+    {
+        dir = dir.normalized;
+        float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        if (n < 0) n += 360;
+        return n;
+    }
+
+    string ChangeDirectionUsingAngle(float angle)
+    {
+        string dir;
+
+        if (angle <= 46 && angle >= 0 || angle <= 360 && angle >= 315) // done
+        {
+            //Debug.Log("E");
+            dir = "NE";
+            return dir;
+        }
+
+        if (angle <= 226 && angle >= 136 ) //done
+        {
+            //Debug.Log("E");
+            dir = "SW";
+            return dir;
+        }
+        if (angle <= 315 && angle >= 225) // done
+        {
+            // Debug.Log("SE");
+            dir = "SE";
+            return dir;
+        }
+
+        if (angle <= 135 && angle >= 45) //done
+        {
+            // Debug.Log("NW");
+            dir = "NW";
+            return dir;
+
+        }
+        return null;
     }
     #endregion
 

@@ -21,10 +21,10 @@ public class ActivityManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            MangeHealing();
-        }
+        // if(Input.GetKeyDown(KeyCode.T))
+        // {
+        //     MangeHealing();
+        // }
     }
 
     void AddActivitySlot()

@@ -78,14 +78,14 @@ public class Player : MonoBehaviour, IDataPersistence
         TakeImmunityTimer();
         CheckLowImmunity();
 
-        if (Input.GetKeyDown(KeyCode.K))    //Test Input
-        {
-            // ScreenCapture.CaptureScreenshot("screenshot.png");
-            // Debug.Log("SS Taken");
-            //TakeImmunity(20);
-            //LevelManager.instance.LoadNextLevel();
-            OnPlayerDead?.Invoke();
-        }
+        // if (Input.GetKeyDown(KeyCode.K))    //Test Input
+        // {
+        //     // ScreenCapture.CaptureScreenshot("screenshot.png");
+        //     // Debug.Log("SS Taken");
+        //     //TakeImmunity(20);
+        //     //LevelManager.instance.LoadNextLevel();
+        //     OnPlayerDead?.Invoke();
+        // }
         if (isLowTemp)
         {
             LowTemperatureEffect();

@@ -155,14 +155,10 @@ MonoBehaviour:
     m_Bits: 64
   coolDownTime: 30
   coolDownTimer: 0
-  _floatingTextPrefab: {fileID: 7567314636701734159, guid: 4d53b6a32b564b149a8f5b61f8cc517c, type: 3}
   instructionPopUp: {fileID: 0}
-  text: Press I for Skill Menu
-  promptPoint: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  test: 0
 --- !u!114 &1709476682219475348
 MonoBehaviour:
   m_ObjectHideFlags: 0

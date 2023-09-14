@@ -4,13 +4,25 @@ using UnityEngine;
 using System;
 public class LabPoint : MonoBehaviour
 {
-
+    private CustomInput input = null;
     public float circleRadius;
     public LayerMask playerLayerMask;
     public GameObject instructionPopUp;
 
     public static event Action OnReturnLastPos;
+    private void Awake()
+    {
+        input = new CustomInput();
+    }
+    private void OnEnable()
+    {
+        input.Enable();
+    }
 
+    private void OnDisable()
+    {
+        input.Disable();
+    }
     void Update()
     {
         LabPointRange();
@@ -22,8 +34,9 @@ public class LabPoint : MonoBehaviour
         if (collider != null)
         {
             instructionPopUp.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (input.Player.Interact.WasPerformedThisFrame())
             {
+               // Debug.Log("Is presssed");
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.TeleportToLab, this.transform.position);
                 OnReturnLastPos?.Invoke();
             }

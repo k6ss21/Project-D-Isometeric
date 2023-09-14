@@ -3,7 +3,7 @@ guid: 1e11ef661f54d8d4687fa1d22f2e7d7b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -98,18 +103,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 47
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -122,6 +129,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -684,35 +692,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boss_Enemy_1_Anim_Attack1-SE_9: 1119767521
-      Boss_Enemy_1_Anim_Attack1-SE_10: -1235590749
-      Boss_Enemy_1_Anim_Attack1-SE_8: 1714289360
-      Boss_Enemy_1_Anim_Attack1-SE_14: -148235583
-      Boss_Enemy_1_Anim_Attack1-SE_20: -333013012
-      Boss_Enemy_1_Anim_Attack1-SE_3: -950279580
-      Boss_Enemy_1_Anim_Attack1-SE_13: -388370970
-      Boss_Enemy_1_Anim_Attack1-SE_19: -844246851
-      Boss_Enemy_1_Anim_Attack1-SE_7: -560682421
-      Boss_Enemy_1_Anim_Attack1-SE_25: 1608443077
-      Boss_Enemy_1_Anim_Attack1-SE_5: -1269120050
-      Boss_Enemy_1_Anim_Attack1-SE_23: 2071325410
-      Boss_Enemy_1_Anim_Attack1-SE_2: -460442955
-      Boss_Enemy_1_Anim_Attack1-SE_1: -480433037
-      Boss_Enemy_1_Anim_Attack1-SE_4: 166664052
-      Boss_Enemy_1_Anim_Attack1-SE_6: -1653798268
-      Boss_Enemy_1_Anim_Attack1-SE_17: 1543844026
-      Boss_Enemy_1_Anim_Attack1-SE_22: -2133983454
-      Boss_Enemy_1_Anim_Attack1-SE_11: -944177210
-      Boss_Enemy_1_Anim_Attack1-SE_16: -1559499279
-      Boss_Enemy_1_Anim_Attack1-SE_15: -2069791344
       Boss_Enemy_1_Anim_Attack1-SE_0: 1764665507
-      Boss_Enemy_1_Anim_Attack1-SE_21: -1705936489
-      Boss_Enemy_1_Anim_Attack1-SE_24: -620058734
+      Boss_Enemy_1_Anim_Attack1-SE_1: -480433037
+      Boss_Enemy_1_Anim_Attack1-SE_10: -1235590749
+      Boss_Enemy_1_Anim_Attack1-SE_11: -944177210
       Boss_Enemy_1_Anim_Attack1-SE_12: 234294913
+      Boss_Enemy_1_Anim_Attack1-SE_13: -388370970
+      Boss_Enemy_1_Anim_Attack1-SE_14: -148235583
+      Boss_Enemy_1_Anim_Attack1-SE_15: -2069791344
+      Boss_Enemy_1_Anim_Attack1-SE_16: -1559499279
+      Boss_Enemy_1_Anim_Attack1-SE_17: 1543844026
       Boss_Enemy_1_Anim_Attack1-SE_18: -1353817340
-  spritePackingTag: 
+      Boss_Enemy_1_Anim_Attack1-SE_19: -844246851
+      Boss_Enemy_1_Anim_Attack1-SE_2: -460442955
+      Boss_Enemy_1_Anim_Attack1-SE_20: -333013012
+      Boss_Enemy_1_Anim_Attack1-SE_21: -1705936489
+      Boss_Enemy_1_Anim_Attack1-SE_22: -2133983454
+      Boss_Enemy_1_Anim_Attack1-SE_23: 2071325410
+      Boss_Enemy_1_Anim_Attack1-SE_24: -620058734
+      Boss_Enemy_1_Anim_Attack1-SE_25: 1608443077
+      Boss_Enemy_1_Anim_Attack1-SE_3: -950279580
+      Boss_Enemy_1_Anim_Attack1-SE_4: 166664052
+      Boss_Enemy_1_Anim_Attack1-SE_5: -1269120050
+      Boss_Enemy_1_Anim_Attack1-SE_6: -1653798268
+      Boss_Enemy_1_Anim_Attack1-SE_7: -560682421
+      Boss_Enemy_1_Anim_Attack1-SE_8: 1714289360
+      Boss_Enemy_1_Anim_Attack1-SE_9: 1119767521
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

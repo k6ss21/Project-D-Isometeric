@@ -415,14 +415,10 @@ MonoBehaviour:
     m_Bits: 64
   coolDownTime: 30
   coolDownTimer: 0
-  _floatingTextPrefab: {fileID: 7567314636701734159, guid: 4d53b6a32b564b149a8f5b61f8cc517c, type: 3}
   instructionPopUp: {fileID: 6359520231999252088}
-  text: Press I for Skill Menu
-  promptPoint: {fileID: 2139728828415204257}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  test: 0
 --- !u!114 &4860714959008457698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10387,24 +10383,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 2139728828415204257}
     m_Modifications:
     - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
-      propertyPath: m_AnchoredPosition.x
+      propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520230906169185, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420
+      value: 134
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231105140962, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_text
       value: Press I to Teleport
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
-      propertyPath: m_AnchoredPosition.x
+      propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520231105140964, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -420
+      value: 136.34271
       objectReference: {fileID: 0}
     - target: {fileID: 6359520231724708324, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: m_Name
@@ -10461,6 +10481,10 @@ PrefabInstance:
     - target: {fileID: 6359520231724708327, guid: 47fc3864228be034eb14653314a506dd, type: 3}
       propertyPath: text
       value: Press E to Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359520232035618626, guid: 47fc3864228be034eb14653314a506dd, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

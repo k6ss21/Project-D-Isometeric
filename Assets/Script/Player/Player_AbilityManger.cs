@@ -73,13 +73,7 @@ public class Player_AbilityManger : MonoBehaviour
 
     #region AB_GROWBIG 
 
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.T))
-    //     {
-    //         Ab_GrowBig_Grow();
-    //     }
-    // }
+   
 
     void Ab_GrowBig_Grow()
     {
@@ -102,13 +96,7 @@ public class Player_AbilityManger : MonoBehaviour
 
     public Canvas skillCanvas;
 
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.T))
-    //     {
-    //         Ab_MagicHomePointInitiate(5f);
-    //     }
-    // }
+   
 
     void Ab_MagicHomePointInitiate(float time)
     {

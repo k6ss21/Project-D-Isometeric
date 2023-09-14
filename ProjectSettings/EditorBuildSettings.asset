@@ -12,15 +12,30 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: c1603aed467108e4683e7f7d1b09e661
   - enabled: 1
-    path: Assets/Scenes/Levels/Level_3.unity
-    guid: d967d8d7904b6de4fbbb7034578abe87
-  - enabled: 1
     path: Assets/Scenes/Levels/Level_2.unity
     guid: 0961f5a633b78f84aacbf7b345a4e995
   - enabled: 1
+    path: Assets/Scenes/Levels/Level_3.unity
+    guid: d967d8d7904b6de4fbbb7034578abe87
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_6.unity
+    guid: 8ab49370ca563bc498d37e62276064a9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_7.unity
+    guid: 8de85dfae3087ca4abd088a123472eea
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_8.unity
+    guid: 25edc7983d7a09e4084a6deeba073fcc
+  - enabled: 1
     path: Assets/Scenes/Levels/Level_5.unity
     guid: fdc0c6765b2e3a84ab470759fff27bb1
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/Levels/Level_1.unity
+    guid: 78cedbd33c79eee49b80d281341f46f0
+  - enabled: 0
     path: Assets/Scenes/Levels/Level_4.unity
     guid: f27abc9b70a7ff045a7ea6b9e698c114
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: c81782fcf325ddf4493bc441e28e5a6a, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 46c6934ea15827640a122322739a0458, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8c400f6a12ccdf6438792ca261375a13, type: 2}

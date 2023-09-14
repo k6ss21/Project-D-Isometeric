@@ -21,7 +21,22 @@ public class Ab_SkyFallVFX : MonoBehaviour
     private bool aimSet;
 
     public static event Action<bool> OnAbilityEnd;
+    private CustomInput input = null;
 
+
+
+    private void Awake()
+    {
+        input = new CustomInput();
+    }
+    private void OnEnable()
+    {
+        input.Enable();
+    }
+    private void OnDisable()
+    {
+        input.Disable();
+    }
     void Update()
     {
         // if (aimTimer > 0)
@@ -30,26 +45,23 @@ public class Ab_SkyFallVFX : MonoBehaviour
 
         // }
 
-        // if (Input.GetKeyDown(KeyCode.U))
-        // {
-        //     isAiming = true;
-        // }
+
 
         if (isAiming && !aimSet)
         {
             // aimTimer = aimTime;
-            AimSprite.SetActive(true);
-            var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;
-            AimSprite.transform.position = mousePos;
+            // AimSprite.SetActive(true);
+            // var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // mousePos.z = 0;
+            // AimSprite.transform.position = mousePos;
 
-            if (Input.GetMouseButtonDown(0))
+            if (input.Ability.Touch.WasPerformedThisFrame())
             {
                 if (ab_SkyFallAimRef.canSetAim)
                 {
                     aimSet = true;
-                    var shootPos = mousePos;
-                    shootPos.z = 0;
+                    var touchPos = input.Ability.Touch.ReadValue<Vector2>();
+                    Vector3 shootPos = new Vector3(touchPos.x, touchPos.y, 0);
                     Vector3 shootDir = (shootPos - (shootPos + posOffset)).normalized;
                     AimSprite.transform.position = shootPos;
                     StartCoroutine(StartAttack(shootPos));

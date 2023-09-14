@@ -12,10 +12,7 @@ public class TestMovement : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            HandleDash();
-        }
+        
     }
 
     [SerializeField] float startDashTime = 1f;

@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class SkillPageAccess : MonoBehaviour
 {
-
+    private CustomInput input = null;
     [SerializeField] float circleRadius;
     [SerializeField] LayerMask playerLayerMask;
 
     public bool isSkillCanvasOpen;
     public GameObject skillCanvas;
     public GameObject instructionPopUp;
+
+    private void Awake()
+    {
+        input = new CustomInput();
+    }
+    private void OnEnable()
+    {
+        input.Enable();
+    }
+    private void OnDisable()
+    {
+        input.Disable();
+    }
 
     public void Start()
     {
@@ -25,7 +38,7 @@ public class SkillPageAccess : MonoBehaviour
         if (collider != null)
         {
             instructionPopUp.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.I))
+            if (input.Player.SkillPage.WasPerformedThisFrame())
             {
                 Debug.Log("Open SKill Menu");
                 isSkillCanvasOpen = true;

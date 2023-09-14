@@ -51,7 +51,7 @@ public class AbilityIcon : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         // Debug.Log("OnDragging");
         if (eventData.button == PointerEventData.InputButton.Right) return;
         if (isLocked) { InstructionBox.instance.SpawnInstructionPopUpText("Ability Locked!!"); return; }
-        draggingObjRectTransform.anchoredPosition += eventData.delta;
+        draggingObjRectTransform.anchoredPosition += eventData.delta ;
     }
 
     public void OnEndDrag(PointerEventData eventData)

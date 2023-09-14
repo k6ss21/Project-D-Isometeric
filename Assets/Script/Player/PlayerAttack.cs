@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 using FMOD.Studio;
+using UnityEngine.InputSystem;
 public class PlayerAttack : MonoBehaviour
 {
     #region COMPONENTS
@@ -13,6 +14,9 @@ public class PlayerAttack : MonoBehaviour
     PlayerAttackCollider playerAttackCollider;
     #endregion
 
+    #region INPUT 
+    private CustomInput input = null;
+    #endregion
     public Projectile projectilePf;
 
     [Header("Attack Points")]
@@ -33,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
     public bool isAttackSword { get; private set; }
     public bool isAttackShoot { get; private set; }
     private float attackShootTimer;
+    private Vector2 fireDir;
 
     [Header("Attack Settings")]
 
@@ -43,20 +48,40 @@ public class PlayerAttack : MonoBehaviour
     public bool isAttackAbilityActive;
     [SerializeField] float attackShootTime;
 
+
+
     private EventInstance slashAttack_SFX;
 
     private Coroutine swordCoroutine;
+    private void Awake()
+    {
+        input = new CustomInput();
+    }
 
     void OnEnable()
     {
         Ab_SkyFallVFX.OnAbilityEnd += SetAttackAbilityActive;
         Ab_MegaAttack.OnMegaAttackTrigger += MegaAttack;
+
+        input.Enable();
+        input.Player.Fire.performed += OnFirePerformed;
+        input.Player.Fire.canceled += OnFireCanceled;
+
+        input.Player.Slash.performed += OnSlashPerformed;
+        input.Player.Slash.performed += OnSlashCanceled;
     }
 
     void OnDisable()
     {
         Ab_SkyFallVFX.OnAbilityEnd -= SetAttackAbilityActive;
         Ab_MegaAttack.OnMegaAttackTrigger -= MegaAttack;
+
+        input.Disable();
+        input.Player.Fire.performed -= OnFirePerformed;
+        input.Player.Fire.canceled -= OnFireCanceled;
+
+        input.Player.Slash.performed -= OnSlashPerformed;
+        input.Player.Slash.performed -= OnSlashCanceled;
     }
 
     void Start()
@@ -74,12 +99,11 @@ public class PlayerAttack : MonoBehaviour
         isAttackSword = false;
         isAttackShoot = false;
     }
-    void Update()
+    void FixedUpdate()
     {
         if (canAttack && !isAbilityActive && !isAttackAbilityActive)
         {
-            ManageInput();
-            ManageInputMobile();
+            InitializeShootAttack();
         }
         AttackShootTimer();
         // UpdateSound();
@@ -95,22 +119,30 @@ public class PlayerAttack : MonoBehaviour
         isAbilityActive = value;
     }
 
-    void ManageInput()
+    void InitializeShootAttack()
     {
 
-        // if (Input.GetKeyDown(KeyCode.T))
-        // {
-        //     if (!isAttacking)
-        //     {
-        //         isAttacking = true;
-        //         MegaAttack();
-        //         StartCoroutine(AttackDelayRoutine(2.5f));
-        //     }
-        // }
-        if (Input.GetMouseButtonDown(1))
+        if (fireDir != Vector2.zero)
         {
 
-            if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
+            //  if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
+            //Debug.Log("Attack shoot");
+            if (!isAttacking)
+            {
+                isAttacking = true;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.ProjectileShoot, this.transform.position);
+                AttackShoot();
+                StartCoroutine(AttackDelayRoutine(attackShootTime));
+            }
+        }
+    }
+
+    void InitializeSwordAttack()
+    {
+        if (canAttack && !isAbilityActive && !isAttackAbilityActive)
+        {
+
+            //if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
             if (!isAttacking)
             {
                 isAttacking = true;
@@ -126,23 +158,11 @@ public class PlayerAttack : MonoBehaviour
                 //Debug.Log("Attack CoolDown");
             }
 
-        }
 
-        if (Input.GetMouseButtonDown(0)) //Projectile Shoot
-        {
-            if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
-            //Debug.Log("Attack shoot");
-            if (!isAttacking)
-            {
-                isAttacking = true;
-                AudioManager.instance.PlayOneShot(FMODEvents.instance.ProjectileShoot, this.transform.position);
-                AttackShoot();
-                StartCoroutine(AttackDelayRoutine(attackShootTime));
-            }
         }
     }
 
- 
+
     public void OnFinishAttackAnim()
     {
         isAttacking = false;
@@ -150,6 +170,8 @@ public class PlayerAttack : MonoBehaviour
     }
 
     #region ATTACK FUNCTIONS
+
+
 
     void SetCanAttack(bool b)
     {
@@ -165,13 +187,14 @@ public class PlayerAttack : MonoBehaviour
     }
     public void AttackShoot()
     {
+
         isAttackShoot = true;
         attackShootTimer = attackShootTime;
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-        Vector3 shootDir = (mousePos - transform.position).normalized;
-        float angle = GetAngleFromVectorFloat(shootDir);
-        string dir = ChangeDirectionUsingAngle(angle);
+        // var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // mousePos.z = 0;
+        // Vector3 shootDir = (mousePos - transform.position).normalized;
+        // float angle = GetAngleFromVectorFloat(shootDir);
+        string dir = ChangeDirectionUsingAngle(GetAngleFromVectorFloat(fireDir));
         ChangeAttackPoint(dir);
         characterController.lastMoveDir = dir;
         playerAnimationManger.Attack2Idle(dir);
@@ -181,9 +204,10 @@ public class PlayerAttack : MonoBehaviour
 
         if (projectile != null)
         {
+
             projectile.transform.position = attackPoint.position;
             projectile.gameObject.SetActive(true);
-            projectile.Setup(shootDir, shootDamage);
+            projectile.Setup(fireDir, shootDamage);
             projectile.Init(DestroyProjectile);
         }
 
@@ -203,64 +227,38 @@ public class PlayerAttack : MonoBehaviour
     }
     public void AttackSword()
     {
-        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-
-        Vector3 shootDir = (mousePos - transform.position).normalized;
-        float angle = GetAngleFromVectorFloat(shootDir);
+        // var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // mousePos.z = 0;
+        // Vector3 shootDir = (mousePos - transform.position).normalized;
+        // float angle = GetAngleFromVectorFloat(shootDir);
         // Debug.Log("Angle  =" + angle);
-        string dir = ChangeDirectionUsingAngle(angle);
-        //  Debug.Log("Dir = " + dir);
-        characterController.lastMoveDir = dir;
+        // string dir = ChangeDirectionUsingAngle(angle);
+        // //  Debug.Log("Dir = " + dir);
+        // characterController.lastMoveDir = dir;
+        string dir = characterController.lastMoveDir;
         playerAnimationManger.Attack(dir);
 
 
     }
 
-    void ManageInputMobile()
-    {
-        if (Input.GetKey(KeyCode.UpArrow))//  MOve NW
-        {
-            InitializeAttackSwordMobile("NW");
 
-        }
-        else if (Input.GetKey(KeyCode.LeftArrow)) //Move SW
-        {
-            InitializeAttackSwordMobile("SW");
-        }
-        else if (Input.GetKey(KeyCode.RightArrow)) //  Move NE
-        {
-            InitializeAttackSwordMobile("NE");
-
-        }
-        else if (Input.GetKey(KeyCode.DownArrow)) // Move SE
-        {
-            InitializeAttackSwordMobile("SE");
-        }
-        else if (Input.GetKey(KeyCode.M)) // Move SE
-        {
-            InitializeAttackSwordMobile(characterController.lastMoveDir);
-        }
-
-
-    }
     void InitializeAttackSwordMobile(string direction)
     {
-          if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
-            if (!isAttacking)
-            {
-                isAttacking = true;
-                isAttackSword = true;
-                AttackSwordMobile(direction);
-                playerAttackCollider.SetDamageValue(DefaultDamageValue);
-                // StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
-                swordCoroutine = StartCoroutine(AttackDelayRoutine(.375f));
+        if (mouseOverUICheck.IsPointerOverUIElement()) {; return; }
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            isAttackSword = true;
+            AttackSwordMobile(direction);
+            playerAttackCollider.SetDamageValue(DefaultDamageValue);
+            // StartCoroutine(AttackDelayRoutine(animator.GetCurrentAnimatorStateInfo(0).length));
+            swordCoroutine = StartCoroutine(AttackDelayRoutine(.375f));
 
-            }
-            else
-            {
-                //Debug.Log("Attack CoolDown");
-            }
+        }
+        else
+        {
+            //Debug.Log("Attack CoolDown");
+        }
 
     }
 
@@ -281,6 +279,29 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+    private void OnFirePerformed(InputAction.CallbackContext value)
+    {
+        fireDir = value.ReadValue<Vector2>();
+    }
+    private void OnFireCanceled(InputAction.CallbackContext value)
+    {
+        fireDir = Vector2.zero;
+    }
+    private void OnSlashPerformed(InputAction.CallbackContext value)
+    {
+        if (value.performed)
+        {
+            InitializeSwordAttack();
+        }
+    }
+    private void OnSlashCanceled(InputAction.CallbackContext value)
+    {
+        if (value.canceled)
+        {
+            //  Debug.Log("Slash Canceled");
+        }
+
+    }
 
 
 
