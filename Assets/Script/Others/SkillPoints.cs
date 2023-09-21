@@ -35,7 +35,7 @@ public class SkillPoints : MonoBehaviour, IDataPersistence
     }
     public void AddSkillPoints(int amount)
     {
-        currentSkillPoints += amount;
+        currentSkillPoints += (amount/amount);
         if (currentSkillPoints >= totalSkillPoints)
         {
             currentSkillPoints = totalSkillPoints;

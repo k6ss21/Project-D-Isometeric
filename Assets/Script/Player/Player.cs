@@ -49,6 +49,7 @@ public class Player : MonoBehaviour, IDataPersistence
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         bloodOverlay = ReferenceManager.instance.bloodOverlay;
         totalSickCountText = ReferenceManager.instance.totalSickCount;
         _healCountText = ReferenceManager.instance.healCountText;

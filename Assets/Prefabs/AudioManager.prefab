@@ -72,6 +72,13 @@ MonoBehaviour:
       Data3: 975886245
       Data4: -648754805
     Path: event:/SFX/Player/Slash
+  <swordSlash>k__BackingField:
+    Guid:
+      Data1: 1434396966
+      Data2: 1166482466
+      Data3: 881051781
+      Data4: 633450649
+    Path: event:/SFX/Player/SwordSlash
   <PlayerHurt>k__BackingField:
     Guid:
       Data1: 1870189512

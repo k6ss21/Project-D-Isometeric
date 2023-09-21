@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
+   [SerializeField] bool lastLevel;
    void Start()
    {
       
@@ -12,6 +13,11 @@ public class Portal : MonoBehaviour
    {
       if(other.CompareTag("Player"))
       {
+         if(lastLevel)
+         {
+            LevelManager.instance.LoadLevel("Main Menu");
+            return;
+         }
          LevelManager.instance.LoadNextLevel();
       }
    }

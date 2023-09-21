@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: c1603aed467108e4683e7f7d1b09e661
   - enabled: 1
-    path: Assets/Scenes/Levels/Level_2.unity
-    guid: 0961f5a633b78f84aacbf7b345a4e995
+    path: Assets/Scenes/StoryMenu.unity
+    guid: f2fe67c8b79f1f54aa83af30e78b7ca2
   - enabled: 1
     path: Assets/Scenes/Levels/Level_3.unity
     guid: d967d8d7904b6de4fbbb7034578abe87
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_2.unity
+    guid: 0961f5a633b78f84aacbf7b345a4e995
   - enabled: 1
     path: Assets/Scenes/Levels/Level_6.unity
     guid: 8ab49370ca563bc498d37e62276064a9
@@ -35,7 +38,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Levels/Level_4.unity
     guid: f27abc9b70a7ff045a7ea6b9e698c114
+  - enabled: 0
+    path: Assets/Scenes/Levels/TestLevel.unity
+    guid: 0dcd3d9e45662754ca4c6993824f8435
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: c81782fcf325ddf4493bc441e28e5a6a, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 46c6934ea15827640a122322739a0458, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: c7b086d8c60c00346a7f6ea1f3042959, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8c400f6a12ccdf6438792ca261375a13, type: 2}

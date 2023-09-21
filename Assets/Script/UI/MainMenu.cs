@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour, IDataPersistence
     [SerializeField] private Button skillMenuButton;
     [SerializeField] private Button settingsButton;
 
-    public string newGameLevelName = "Level_3";
+    public string newGameLevelName = "Level_2";
     private string currentLevelName;
 
     void Start()
@@ -39,7 +39,7 @@ public class MainMenu : MonoBehaviour, IDataPersistence
     public void ContinueButton()
     {
         DisableAllButtonAfterPress();
-        LevelManager.instance.LoadLevel(currentLevelName);
+        LevelManager.instance.LoadLastPlayedLevel();
     }
     public void SkillMenuButton()
     {
@@ -84,11 +84,11 @@ public class MainMenu : MonoBehaviour, IDataPersistence
     }
     public void LoadData(GameData data)
     {
-        this.currentLevelName = data.levelName;
+      //  this.currentLevelName = data.levelName;
     }
 
     public void SaveData(GameData data)
     {
-        data.levelName = this.currentLevelName;
+       // data.levelName = this.currentLevelName;
     }
 }

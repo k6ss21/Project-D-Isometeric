@@ -110,7 +110,7 @@ public class IsoCharacterController : MonoBehaviour
         if (inputDir != Vector2.zero)
         {
             // Debug.Log("Playing dust ps");
-            PlayDustPS();
+           // PlayDustPS();
         }
 
 

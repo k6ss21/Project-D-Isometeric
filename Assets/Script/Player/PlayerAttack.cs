@@ -236,6 +236,7 @@ public class PlayerAttack : MonoBehaviour
         // //  Debug.Log("Dir = " + dir);
         // characterController.lastMoveDir = dir;
         string dir = characterController.lastMoveDir;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.swordSlash, transform.position);
         playerAnimationManger.Attack(dir);
 
 

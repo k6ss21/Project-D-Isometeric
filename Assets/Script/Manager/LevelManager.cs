@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,11 +8,18 @@ public class LevelManager : MonoBehaviour, IDataPersistence
 {
     public static LevelManager instance;
     string levelName;
-
+    int levelIndexNumber;
+    int counter = 0;
     [SerializeField] private GameObject loadingCanvas;
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private Image fillImage;
+
+
     private float target;
+    //test
+    int number;
+
+    string level;
 
     void Awake()
     {
@@ -25,19 +33,43 @@ public class LevelManager : MonoBehaviour, IDataPersistence
     }
     void OnEnable()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
+       // SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnLoaded;
     }
 
     void OnDisable()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
+       // SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnLoaded;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneUnLoaded(Scene scene)
     {
-        levelName = SceneManager.GetActiveScene().name;
-        // Debug.Log("Next Level : " + levelName);
+      //StartCoroutine(SaveLevelInfo());
+        
+        number = SceneManager.GetActiveScene().buildIndex + 1;
+        level =GetSceneNameFromBuildIndex(number) ;
+        // if (level == "Main Menu" || number != 0)
+        // {
+        //     Debug.Log("Main Menu");
+        // }
+        // else
+        if(number != 0)
+         {
+           //Debug.Log("Next Level : " + level + levelIndexNumber);          
+            levelName = level;
+            levelIndexNumber = number;
+         }
+
     }
+
+    // IEnumerator SaveLevelInfo()
+    // {
+        
+    //     yield return new WaitForSeconds(.5f);
+       
+    //     // Debug.Log("Next Level : " + levelName);
+    // }
 
     public async void LoadLevel(string sceneName)
     {
@@ -71,6 +103,10 @@ public class LevelManager : MonoBehaviour, IDataPersistence
         fillImage.fillAmount = Mathf.MoveTowards(fillImage.fillAmount, target, 3 * Time.deltaTime);
 
     }
+    public void LoadLastPlayedLevel()
+    {
+        LoadLevel(levelName);
+    }
     public void LoadNextLevel()
     {
         // Debug.Log("Loading Next Level...");
@@ -78,7 +114,7 @@ public class LevelManager : MonoBehaviour, IDataPersistence
 
         LoadLevel(GetSceneNameFromBuildIndex(sceneIndex));
     }
-     public void ReloadLevel()
+    public void ReloadLevel()
     {
         // Debug.Log("Loading Next Level...");
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -96,11 +132,13 @@ public class LevelManager : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-
+        this.levelIndexNumber = data.levelIndexNumber;
+        this.levelName = data.levelName;
     }
 
     public void SaveData(GameData data)
     {
         data.levelName = this.levelName;
+        data.levelIndexNumber = this.levelIndexNumber;
     }
 }
